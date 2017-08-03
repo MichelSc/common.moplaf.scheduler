@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scheduler" nsURI="http://www.misc.com/common/moplaf/scheduler/model/0.1"
+    nsPrefix="sched">
+  <eClassifiers xsi:type="ecore:EClass" name="Scheduler">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solutions" upperBound="-1"
+        eType="#//Solution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
+        eType="#//Resource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
+        eType="#//Task" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Task"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Solution">
+    <eOperations name="duplicate"/>
+    <eOperations name="setCandidate">
+      <eParameters name="move" eType="#//Move"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Moves" upperBound="-1"
+        eType="#//Move" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
+        eType="#//SolutionTask" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
+        eType="#//SolutionResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateMove" eType="#//Move"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
+        eType="#//SolutionExpression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Move">
+    <eOperations name="accept"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
+        eType="#//MoveExpression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AssignedTasks" upperBound="-1"
+        eType="#//SolutionTask" eOpposite="#//SolutionTask/AssignedResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateAssignedTasks"
+        upperBound="-1" eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateAssignedResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
+        eType="#//ResourceExpression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionTask">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="NextTask" eType="#//SolutionTask"
+        eOpposite="#//SolutionTask/PreviousTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousTask" eType="#//SolutionTask"
+        eOpposite="#//SolutionTask/NextTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AssignedResource" eType="#//SolutionResource"
+        eOpposite="#//SolutionResource/AssignedTasks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateAssignedResource"
+        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateAssignedTasks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateNextTask" eType="#//SolutionTask"
+        eOpposite="#//SolutionTask/CandidatePreviousTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidatePreviousTask"
+        eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateNextTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
+        eType="#//TaskExpression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskExpression" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcValue" lowerBound="1"
+        eType="#//CalcTaskExpressionValue" eOpposite="#//CalcTaskExpressionValue/Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcCandidateValue" lowerBound="1"
+        eType="#//CalcTaskExpressionCandidateValue" eOpposite="#//CalcTaskExpressionCandidateValue/Expression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskExpressionValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
+        eType="#//TaskExpression" eOpposite="#//TaskExpression/CalcValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
+        eType="#//TaskExpression" eOpposite="#//TaskExpression/CalcCandidateValue"/>
+  </eClassifiers>
+</ecore:EPackage>
