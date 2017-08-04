@@ -19,18 +19,17 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Moves" upperBound="-1"
         eType="#//Move" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
-        eType="#//SolutionTask" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
+        eType="#//SolutionTask" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
         eType="#//SolutionResource" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateMove" eType="#//Move"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//SolutionExpression" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Move">
-    <eOperations name="accept"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//MoveExpression" containment="true"/>
+        eType="#//SolutionExpression" containment="true" eOpposite="#//SolutionExpression/Solution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResetSolutionAllExpressionCandidateValues"
+        lowerBound="1" eType="#//ResetSolutionAllExpressionCandidateValues" eOpposite="#//ResetSolutionAllExpressionCandidateValues/Solution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcSolutionAllExpressionCandidateValues"
+        lowerBound="1" eType="#//CalcSolutionAllExpressionCandidateValues" eOpposite="#//CalcSolutionAllExpressionCandidateValues/Solution"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
@@ -40,7 +39,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateAssignedTasks"
         upperBound="-1" eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateAssignedResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//ResourceExpression" containment="true"/>
+        eType="#//ResourceExpression" containment="true" eOpposite="#//ResourceExpression/Resource"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//Task"/>
@@ -57,53 +56,70 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidatePreviousTask"
         eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateNextTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//TaskExpression" containment="true"/>
+        eType="#//TaskExpression" containment="true" eOpposite="#//TaskExpression/Task"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MoveExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskExpression" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ResetCandidateValue" lowerBound="1"
-        eType="#//ResetTaskExpressionCandidateValue" eOpposite="#//ResetTaskExpressionCandidateValue/Expression"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcCandidateValue" lowerBound="1"
-        eType="#//CalcTaskExpressionCandidateValue" eOpposite="#//CalcTaskExpressionCandidateValue/Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Move">
+    <eOperations name="accept"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
+        eType="#//MoveExpression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
-        eType="#//TaskExpression" eOpposite="#//TaskExpression/ResetCandidateValue"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
-        eType="#//TaskExpression" eOpposite="#//TaskExpression/CalcCandidateValue"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetResourceExpressionCandidateValue"
-      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
-        eType="#//ResourceExpression"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcResourceExpressionCandidateValue"
-      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
-        eType="#//ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveExpression" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
+        eType="#//Solution" eOpposite="#//Solution/Expressions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionAllExpressionCandidateValues"
       eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
-        eType="#//Solution"/>
+        eType="#//Solution" eOpposite="#//Solution/CalcSolutionAllExpressionCandidateValues"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResetSolutionAllExpressionCandidateValues"
       eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
-        eType="#//Solution"/>
+        eType="#//Solution" eOpposite="#//Solution/ResetSolutionAllExpressionCandidateValues"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionExpressionCandidateValue"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
+        eType="#//SolutionExpression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResetSolutionExpressionCandidateValue"
       eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
         eType="#//SolutionExpression"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionExpressionCandidateValue"
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpression" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//SolutionResource" eOpposite="#//SolutionResource/Expressions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcResourceExpressionCandidateValue"
       eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
-        eType="#//SolutionExpression"/>
+        eType="#//ResourceExpression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetResourceExpressionCandidateValue"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
+        eType="#//ResourceExpression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskExpression" abstract="true" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResetCandidateValue" lowerBound="1"
+        eType="#//ResetTaskExpressionCandidateValue" eOpposite="#//ResetTaskExpressionCandidateValue/Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CalcCandidateValue" lowerBound="1"
+        eType="#//CalcTaskExpressionCandidateValue" eOpposite="#//CalcTaskExpressionCandidateValue/Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//SolutionTask"
+        eOpposite="#//SolutionTask/Expressions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
+        eType="#//TaskExpression" eOpposite="#//TaskExpression/CalcCandidateValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expression" lowerBound="1"
+        eType="#//TaskExpression" eOpposite="#//TaskExpression/ResetCandidateValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskFloatExpression" eSuperTypes="#//TaskExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CandidateValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
 </ecore:EPackage>
