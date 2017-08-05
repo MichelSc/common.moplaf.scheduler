@@ -34,10 +34,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="SolutionResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
         eType="#//Resource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="AssignedTasks" upperBound="-1"
-        eType="#//SolutionTask" eOpposite="#//SolutionTask/AssignedResource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateAssignedTasks"
-        upperBound="-1" eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateAssignedResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledTasks" upperBound="-1"
+        eType="#//SolutionTask" eOpposite="#//SolutionTask/ScheduledResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledTasks"
+        upperBound="-1" eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateScheduledResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
         eType="#//ResourceExpression" containment="true" eOpposite="#//ResourceExpression/Resource"/>
   </eClassifiers>
@@ -47,10 +47,10 @@
         eOpposite="#//SolutionTask/PreviousTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/NextTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="AssignedResource" eType="#//SolutionResource"
-        eOpposite="#//SolutionResource/AssignedTasks"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateAssignedResource"
-        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateAssignedTasks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//SolutionResource"
+        eOpposite="#//SolutionResource/ScheduledTasks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledResource"
+        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateScheduledTasks"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateNextTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/CandidatePreviousTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidatePreviousTask"
@@ -62,6 +62,8 @@
     <eOperations name="accept"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
         eType="#//MoveExpression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Changes" upperBound="-1"
+        eType="#//MoveChange" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MoveExpression" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression" abstract="true">
@@ -122,4 +124,26 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CandidateValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveChange">
+    <eOperations name="change"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskToSchedule" lowerBound="1"
+        eType="#//SolutionTask"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScheduleAfter" eSuperTypes="#//MoveChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskBefore" lowerBound="1"
+        eType="#//SolutionTask"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScheduleBefore" eSuperTypes="#//MoveChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskAfter" lowerBound="1"
+        eType="#//SolutionTask"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScheduleFirst" eSuperTypes="#//MoveChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//SolutionResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScheduleLast" eSuperTypes="#//MoveChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//SolutionResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Unschedule" eSuperTypes="#//MoveChange"/>
 </ecore:EPackage>
