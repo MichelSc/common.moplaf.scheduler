@@ -8,13 +8,9 @@ import com.misc.common.moplaf.scheduler.ResetTaskExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
+import com.misc.common.moplaf.scheduler.TaskExpressionPropagatorFunction;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,22 +20,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResetTaskExpressionCandidateValueImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResetTaskExpressionCandidateValueImpl#getTaskExpression <em>Task Expression</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ResetTaskExpressionCandidateValueImpl extends PropagatorFunctionBindingsImpl implements ResetTaskExpressionCandidateValue {
-	/**
-	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpression()
-	 * @generated
-	 * @ordered
-	 */
-	protected TaskExpression expression;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,16 +50,9 @@ public class ResetTaskExpressionCandidateValueImpl extends PropagatorFunctionBin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskExpression getExpression() {
-		if (expression != null && expression.eIsProxy()) {
-			InternalEObject oldExpression = (InternalEObject)expression;
-			expression = (TaskExpression)eResolveProxy(oldExpression);
-			if (expression != oldExpression) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION, oldExpression, expression));
-			}
-		}
-		return expression;
+	public TaskExpression getTaskExpression() {
+		TaskExpression taskExpression = basicGetTaskExpression();
+		return taskExpression != null && taskExpression.eIsProxy() ? (TaskExpression)eResolveProxy((InternalEObject)taskExpression) : taskExpression;
 	}
 
 	/**
@@ -81,72 +60,11 @@ public class ResetTaskExpressionCandidateValueImpl extends PropagatorFunctionBin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskExpression basicGetExpression() {
-		return expression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExpression(TaskExpression newExpression, NotificationChain msgs) {
-		TaskExpression oldExpression = expression;
-		expression = newExpression;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION, oldExpression, newExpression);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExpression(TaskExpression newExpression) {
-		if (newExpression != expression) {
-			NotificationChain msgs = null;
-			if (expression != null)
-				msgs = ((InternalEObject)expression).eInverseRemove(this, SchedulerPackage.TASK_EXPRESSION__RESET_CANDIDATE_VALUE, TaskExpression.class, msgs);
-			if (newExpression != null)
-				msgs = ((InternalEObject)newExpression).eInverseAdd(this, SchedulerPackage.TASK_EXPRESSION__RESET_CANDIDATE_VALUE, TaskExpression.class, msgs);
-			msgs = basicSetExpression(newExpression, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION, newExpression, newExpression));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION:
-				if (expression != null)
-					msgs = ((InternalEObject)expression).eInverseRemove(this, SchedulerPackage.TASK_EXPRESSION__RESET_CANDIDATE_VALUE, TaskExpression.class, msgs);
-				return basicSetExpression((TaskExpression)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION:
-				return basicSetExpression(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public TaskExpression basicGetTaskExpression() {
+		// TODO: implement this method to return the 'Task Expression' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -157,9 +75,9 @@ public class ResetTaskExpressionCandidateValueImpl extends PropagatorFunctionBin
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION:
-				if (resolve) return getExpression();
-				return basicGetExpression();
+			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__TASK_EXPRESSION:
+				if (resolve) return getTaskExpression();
+				return basicGetTaskExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,42 +88,44 @@ public class ResetTaskExpressionCandidateValueImpl extends PropagatorFunctionBin
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION:
-				setExpression((TaskExpression)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION:
-				setExpression((TaskExpression)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__EXPRESSION:
-				return expression != null;
+			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__TASK_EXPRESSION:
+				return basicGetTaskExpression() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == TaskExpressionPropagatorFunction.class) {
+			switch (derivedFeatureID) {
+				case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__TASK_EXPRESSION: return SchedulerPackage.TASK_EXPRESSION_PROPAGATOR_FUNCTION__TASK_EXPRESSION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == TaskExpressionPropagatorFunction.class) {
+			switch (baseFeatureID) {
+				case SchedulerPackage.TASK_EXPRESSION_PROPAGATOR_FUNCTION__TASK_EXPRESSION: return SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE__TASK_EXPRESSION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //ResetTaskExpressionCandidateValueImpl

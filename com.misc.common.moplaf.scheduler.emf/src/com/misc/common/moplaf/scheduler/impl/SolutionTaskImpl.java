@@ -3,6 +3,7 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.Task;
@@ -20,8 +21,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -35,11 +36,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getPreviousTask <em>Previous Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getAssignedResource <em>Assigned Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidateAssignedResource <em>Candidate Assigned Resource</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getScheduledResource <em>Scheduled Resource</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidateNextTask <em>Candidate Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidatePreviousTask <em>Candidate Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getExpressions <em>Expressions</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getSolution <em>Solution</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,24 +79,24 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	protected SolutionTask previousTask;
 
 	/**
-	 * The cached value of the '{@link #getAssignedResource() <em>Assigned Resource</em>}' reference.
+	 * The cached value of the '{@link #getScheduledResource() <em>Scheduled Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAssignedResource()
+	 * @see #getScheduledResource()
 	 * @generated
 	 * @ordered
 	 */
-	protected SolutionResource assignedResource;
+	protected SolutionResource scheduledResource;
 
 	/**
-	 * The cached value of the '{@link #getCandidateAssignedResource() <em>Candidate Assigned Resource</em>}' reference.
+	 * The cached value of the '{@link #getCandidateScheduledResource() <em>Candidate Scheduled Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCandidateAssignedResource()
+	 * @see #getCandidateScheduledResource()
 	 * @generated
 	 * @ordered
 	 */
-	protected SolutionResource candidateAssignedResource;
+	protected SolutionResource candidateScheduledResource;
 
 	/**
 	 * The cached value of the '{@link #getCandidateNextTask() <em>Candidate Next Task</em>}' reference.
@@ -124,6 +127,16 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * @ordered
 	 */
 	protected EList<TaskExpression> expressions;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -307,16 +320,16 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SolutionResource getAssignedResource() {
-		if (assignedResource != null && assignedResource.eIsProxy()) {
-			InternalEObject oldAssignedResource = (InternalEObject)assignedResource;
-			assignedResource = (SolutionResource)eResolveProxy(oldAssignedResource);
-			if (assignedResource != oldAssignedResource) {
+	public SolutionResource getScheduledResource() {
+		if (scheduledResource != null && scheduledResource.eIsProxy()) {
+			InternalEObject oldScheduledResource = (InternalEObject)scheduledResource;
+			scheduledResource = (SolutionResource)eResolveProxy(oldScheduledResource);
+			if (scheduledResource != oldScheduledResource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE, oldAssignedResource, assignedResource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE, oldScheduledResource, scheduledResource));
 			}
 		}
-		return assignedResource;
+		return scheduledResource;
 	}
 
 	/**
@@ -324,8 +337,8 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SolutionResource basicGetAssignedResource() {
-		return assignedResource;
+	public SolutionResource basicGetScheduledResource() {
+		return scheduledResource;
 	}
 
 	/**
@@ -333,11 +346,11 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAssignedResource(SolutionResource newAssignedResource, NotificationChain msgs) {
-		SolutionResource oldAssignedResource = assignedResource;
-		assignedResource = newAssignedResource;
+	public NotificationChain basicSetScheduledResource(SolutionResource newScheduledResource, NotificationChain msgs) {
+		SolutionResource oldScheduledResource = scheduledResource;
+		scheduledResource = newScheduledResource;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE, oldAssignedResource, newAssignedResource);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE, oldScheduledResource, newScheduledResource);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -348,18 +361,18 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssignedResource(SolutionResource newAssignedResource) {
-		if (newAssignedResource != assignedResource) {
+	public void setScheduledResource(SolutionResource newScheduledResource) {
+		if (newScheduledResource != scheduledResource) {
 			NotificationChain msgs = null;
-			if (assignedResource != null)
-				msgs = ((InternalEObject)assignedResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__ASSIGNED_TASKS, SolutionResource.class, msgs);
-			if (newAssignedResource != null)
-				msgs = ((InternalEObject)newAssignedResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__ASSIGNED_TASKS, SolutionResource.class, msgs);
-			msgs = basicSetAssignedResource(newAssignedResource, msgs);
+			if (scheduledResource != null)
+				msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SolutionResource.class, msgs);
+			if (newScheduledResource != null)
+				msgs = ((InternalEObject)newScheduledResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SolutionResource.class, msgs);
+			msgs = basicSetScheduledResource(newScheduledResource, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE, newAssignedResource, newAssignedResource));
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE, newScheduledResource, newScheduledResource));
 	}
 
 	/**
@@ -367,16 +380,16 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SolutionResource getCandidateAssignedResource() {
-		if (candidateAssignedResource != null && candidateAssignedResource.eIsProxy()) {
-			InternalEObject oldCandidateAssignedResource = (InternalEObject)candidateAssignedResource;
-			candidateAssignedResource = (SolutionResource)eResolveProxy(oldCandidateAssignedResource);
-			if (candidateAssignedResource != oldCandidateAssignedResource) {
+	public SolutionResource getCandidateScheduledResource() {
+		if (candidateScheduledResource != null && candidateScheduledResource.eIsProxy()) {
+			InternalEObject oldCandidateScheduledResource = (InternalEObject)candidateScheduledResource;
+			candidateScheduledResource = (SolutionResource)eResolveProxy(oldCandidateScheduledResource);
+			if (candidateScheduledResource != oldCandidateScheduledResource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE, oldCandidateAssignedResource, candidateAssignedResource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE, oldCandidateScheduledResource, candidateScheduledResource));
 			}
 		}
-		return candidateAssignedResource;
+		return candidateScheduledResource;
 	}
 
 	/**
@@ -384,8 +397,8 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SolutionResource basicGetCandidateAssignedResource() {
-		return candidateAssignedResource;
+	public SolutionResource basicGetCandidateScheduledResource() {
+		return candidateScheduledResource;
 	}
 
 	/**
@@ -393,11 +406,11 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCandidateAssignedResource(SolutionResource newCandidateAssignedResource, NotificationChain msgs) {
-		SolutionResource oldCandidateAssignedResource = candidateAssignedResource;
-		candidateAssignedResource = newCandidateAssignedResource;
+	public NotificationChain basicSetCandidateScheduledResource(SolutionResource newCandidateScheduledResource, NotificationChain msgs) {
+		SolutionResource oldCandidateScheduledResource = candidateScheduledResource;
+		candidateScheduledResource = newCandidateScheduledResource;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE, oldCandidateAssignedResource, newCandidateAssignedResource);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE, oldCandidateScheduledResource, newCandidateScheduledResource);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -408,18 +421,18 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCandidateAssignedResource(SolutionResource newCandidateAssignedResource) {
-		if (newCandidateAssignedResource != candidateAssignedResource) {
+	public void setCandidateScheduledResource(SolutionResource newCandidateScheduledResource) {
+		if (newCandidateScheduledResource != candidateScheduledResource) {
 			NotificationChain msgs = null;
-			if (candidateAssignedResource != null)
-				msgs = ((InternalEObject)candidateAssignedResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_ASSIGNED_TASKS, SolutionResource.class, msgs);
-			if (newCandidateAssignedResource != null)
-				msgs = ((InternalEObject)newCandidateAssignedResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_ASSIGNED_TASKS, SolutionResource.class, msgs);
-			msgs = basicSetCandidateAssignedResource(newCandidateAssignedResource, msgs);
+			if (candidateScheduledResource != null)
+				msgs = ((InternalEObject)candidateScheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SolutionResource.class, msgs);
+			if (newCandidateScheduledResource != null)
+				msgs = ((InternalEObject)newCandidateScheduledResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SolutionResource.class, msgs);
+			msgs = basicSetCandidateScheduledResource(newCandidateScheduledResource, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE, newCandidateAssignedResource, newCandidateAssignedResource));
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE, newCandidateScheduledResource, newCandidateScheduledResource));
 	}
 
 	/**
@@ -549,7 +562,7 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 */
 	public EList<TaskExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectContainmentEList<TaskExpression>(TaskExpression.class, this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS);
+			expressions = new EObjectContainmentWithInverseEList<TaskExpression>(TaskExpression.class, this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SchedulerPackage.TASK_EXPRESSION__TASK);
 		}
 		return expressions;
 	}
@@ -557,8 +570,61 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public String getDescription() {
+		Solution solution = this.getSolution();
+		Task task = this.getTask();
+		String description = String.format("sol %d, task %s", solution.getSolutionNr(), task.getName());
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Solution getSolution() {
+		if (eContainerFeatureID() != SchedulerPackage.SOLUTION_TASK__SOLUTION) return null;
+		return (Solution)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSolution(Solution newSolution, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newSolution, SchedulerPackage.SOLUTION_TASK__SOLUTION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSolution(Solution newSolution) {
+		if (newSolution != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.SOLUTION_TASK__SOLUTION && newSolution != null)) {
+			if (EcoreUtil.isAncestor(this, newSolution))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newSolution != null)
+				msgs = ((InternalEObject)newSolution).eInverseAdd(this, SchedulerPackage.SOLUTION__TASKS, Solution.class, msgs);
+			msgs = basicSetSolution(newSolution, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SOLUTION, newSolution, newSolution));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -570,14 +636,14 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				if (previousTask != null)
 					msgs = ((InternalEObject)previousTask).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__NEXT_TASK, SolutionTask.class, msgs);
 				return basicSetPreviousTask((SolutionTask)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE:
-				if (assignedResource != null)
-					msgs = ((InternalEObject)assignedResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__ASSIGNED_TASKS, SolutionResource.class, msgs);
-				return basicSetAssignedResource((SolutionResource)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE:
-				if (candidateAssignedResource != null)
-					msgs = ((InternalEObject)candidateAssignedResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_ASSIGNED_TASKS, SolutionResource.class, msgs);
-				return basicSetCandidateAssignedResource((SolutionResource)otherEnd, msgs);
+			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
+				if (scheduledResource != null)
+					msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SolutionResource.class, msgs);
+				return basicSetScheduledResource((SolutionResource)otherEnd, msgs);
+			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
+				if (candidateScheduledResource != null)
+					msgs = ((InternalEObject)candidateScheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SolutionResource.class, msgs);
+				return basicSetCandidateScheduledResource((SolutionResource)otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK:
 				if (candidateNextTask != null)
 					msgs = ((InternalEObject)candidateNextTask).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK, SolutionTask.class, msgs);
@@ -586,6 +652,12 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				if (candidatePreviousTask != null)
 					msgs = ((InternalEObject)candidatePreviousTask).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK, SolutionTask.class, msgs);
 				return basicSetCandidatePreviousTask((SolutionTask)otherEnd, msgs);
+			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExpressions()).basicAdd(otherEnd, msgs);
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetSolution((Solution)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -602,18 +674,34 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return basicSetNextTask(null, msgs);
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
 				return basicSetPreviousTask(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE:
-				return basicSetAssignedResource(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE:
-				return basicSetCandidateAssignedResource(null, msgs);
+			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
+				return basicSetScheduledResource(null, msgs);
+			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
+				return basicSetCandidateScheduledResource(null, msgs);
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK:
 				return basicSetCandidateNextTask(null, msgs);
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK:
 				return basicSetCandidatePreviousTask(null, msgs);
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
 				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				return basicSetSolution(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SOLUTION__TASKS, Solution.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -633,12 +721,12 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
 				if (resolve) return getPreviousTask();
 				return basicGetPreviousTask();
-			case SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE:
-				if (resolve) return getAssignedResource();
-				return basicGetAssignedResource();
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE:
-				if (resolve) return getCandidateAssignedResource();
-				return basicGetCandidateAssignedResource();
+			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
+				if (resolve) return getScheduledResource();
+				return basicGetScheduledResource();
+			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
+				if (resolve) return getCandidateScheduledResource();
+				return basicGetCandidateScheduledResource();
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK:
 				if (resolve) return getCandidateNextTask();
 				return basicGetCandidateNextTask();
@@ -647,6 +735,10 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return basicGetCandidatePreviousTask();
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
 				return getExpressions();
+			case SchedulerPackage.SOLUTION_TASK__DESCRIPTION:
+				return getDescription();
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				return getSolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -669,11 +761,11 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
 				setPreviousTask((SolutionTask)newValue);
 				return;
-			case SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE:
-				setAssignedResource((SolutionResource)newValue);
+			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
+				setScheduledResource((SolutionResource)newValue);
 				return;
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE:
-				setCandidateAssignedResource((SolutionResource)newValue);
+			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
+				setCandidateScheduledResource((SolutionResource)newValue);
 				return;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK:
 				setCandidateNextTask((SolutionTask)newValue);
@@ -684,6 +776,9 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
 				getExpressions().clear();
 				getExpressions().addAll((Collection<? extends TaskExpression>)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				setSolution((Solution)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -706,11 +801,11 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
 				setPreviousTask((SolutionTask)null);
 				return;
-			case SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE:
-				setAssignedResource((SolutionResource)null);
+			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
+				setScheduledResource((SolutionResource)null);
 				return;
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE:
-				setCandidateAssignedResource((SolutionResource)null);
+			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
+				setCandidateScheduledResource((SolutionResource)null);
 				return;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK:
 				setCandidateNextTask((SolutionTask)null);
@@ -720,6 +815,9 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return;
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
 				getExpressions().clear();
+				return;
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				setSolution((Solution)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -739,16 +837,20 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return nextTask != null;
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
 				return previousTask != null;
-			case SchedulerPackage.SOLUTION_TASK__ASSIGNED_RESOURCE:
-				return assignedResource != null;
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_ASSIGNED_RESOURCE:
-				return candidateAssignedResource != null;
+			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
+				return scheduledResource != null;
+			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
+				return candidateScheduledResource != null;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_NEXT_TASK:
 				return candidateNextTask != null;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK:
 				return candidatePreviousTask != null;
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
 				return expressions != null && !expressions.isEmpty();
+			case SchedulerPackage.SOLUTION_TASK__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
+				return getSolution() != null;
 		}
 		return super.eIsSet(featureID);
 	}

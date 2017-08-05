@@ -18,11 +18,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getPreviousTask <em>Previous Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getAssignedResource <em>Assigned Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateAssignedResource <em>Candidate Assigned Resource</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getScheduledResource <em>Scheduled Resource</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateNextTask <em>Candidate Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidatePreviousTask <em>Candidate Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getSolution <em>Solution</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask()
@@ -113,60 +115,60 @@ public interface SolutionTask extends EObject {
 	void setPreviousTask(SolutionTask value);
 
 	/**
-	 * Returns the value of the '<em><b>Assigned Resource</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getAssignedTasks <em>Assigned Tasks</em>}'.
+	 * Returns the value of the '<em><b>Scheduled Resource</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getScheduledTasks <em>Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Assigned Resource</em>' reference isn't clear,
+	 * If the meaning of the '<em>Scheduled Resource</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assigned Resource</em>' reference.
-	 * @see #setAssignedResource(SolutionResource)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_AssignedResource()
-	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getAssignedTasks
-	 * @model opposite="AssignedTasks"
+	 * @return the value of the '<em>Scheduled Resource</em>' reference.
+	 * @see #setScheduledResource(SolutionResource)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_ScheduledResource()
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getScheduledTasks
+	 * @model opposite="ScheduledTasks"
 	 * @generated
 	 */
-	SolutionResource getAssignedResource();
+	SolutionResource getScheduledResource();
 
 	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getAssignedResource <em>Assigned Resource</em>}' reference.
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getScheduledResource <em>Scheduled Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assigned Resource</em>' reference.
-	 * @see #getAssignedResource()
+	 * @param value the new value of the '<em>Scheduled Resource</em>' reference.
+	 * @see #getScheduledResource()
 	 * @generated
 	 */
-	void setAssignedResource(SolutionResource value);
+	void setScheduledResource(SolutionResource value);
 
 	/**
-	 * Returns the value of the '<em><b>Candidate Assigned Resource</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateAssignedTasks <em>Candidate Assigned Tasks</em>}'.
+	 * Returns the value of the '<em><b>Candidate Scheduled Resource</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateScheduledTasks <em>Candidate Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Candidate Assigned Resource</em>' reference isn't clear,
+	 * If the meaning of the '<em>Candidate Scheduled Resource</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Candidate Assigned Resource</em>' reference.
-	 * @see #setCandidateAssignedResource(SolutionResource)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_CandidateAssignedResource()
-	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getCandidateAssignedTasks
-	 * @model opposite="CandidateAssignedTasks"
+	 * @return the value of the '<em>Candidate Scheduled Resource</em>' reference.
+	 * @see #setCandidateScheduledResource(SolutionResource)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_CandidateScheduledResource()
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getCandidateScheduledTasks
+	 * @model opposite="CandidateScheduledTasks"
 	 * @generated
 	 */
-	SolutionResource getCandidateAssignedResource();
+	SolutionResource getCandidateScheduledResource();
 
 	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateAssignedResource <em>Candidate Assigned Resource</em>}' reference.
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Candidate Assigned Resource</em>' reference.
-	 * @see #getCandidateAssignedResource()
+	 * @param value the new value of the '<em>Candidate Scheduled Resource</em>' reference.
+	 * @see #getCandidateScheduledResource()
 	 * @generated
 	 */
-	void setCandidateAssignedResource(SolutionResource value);
+	void setCandidateScheduledResource(SolutionResource value);
 
 	/**
 	 * Returns the value of the '<em><b>Candidate Next Task</b></em>' reference.
@@ -227,6 +229,7 @@ public interface SolutionTask extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Expressions</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.TaskExpression}.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Expressions</em>' containment reference list isn't clear,
@@ -235,9 +238,53 @@ public interface SolutionTask extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expressions</em>' containment reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_Expressions()
-	 * @model containment="true"
+	 * @see com.misc.common.moplaf.scheduler.TaskExpression#getTask
+	 * @model opposite="Task" containment="true"
 	 * @generated
 	 */
 	EList<TaskExpression> getExpressions();
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_Description()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Returns the value of the '<em><b>Solution</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Solution#getTasks <em>Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Solution</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Solution</em>' container reference.
+	 * @see #setSolution(Solution)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_Solution()
+	 * @see com.misc.common.moplaf.scheduler.Solution#getTasks
+	 * @model opposite="Tasks" required="true" transient="false"
+	 * @generated
+	 */
+	Solution getSolution();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getSolution <em>Solution</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Solution</em>' container reference.
+	 * @see #getSolution()
+	 * @generated
+	 */
+	void setSolution(Solution value);
 
 } // SolutionTask
