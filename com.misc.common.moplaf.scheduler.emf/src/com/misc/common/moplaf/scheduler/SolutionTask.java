@@ -287,4 +287,20 @@ public interface SolutionTask extends EObject {
 	 */
 	void setSolution(Solution value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void unsetCandidatePreviousNext();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void setCandidatePreviousNext(SolutionTask previous, SolutionTask next);
+
 } // SolutionTask

@@ -552,13 +552,31 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_TASK_FEATURE_COUNT = 10;
 
 	/**
+	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT = 0;
+
+	/**
+	 * The operation id for the '<em>Set Candidate Previous Next</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONTASK_SOLUTIONTASK = 1;
+
+	/**
 	 * The number of operations of the '<em>Solution Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK_OPERATION_COUNT = 0;
+	int SOLUTION_TASK_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.MoveImpl <em>Move</em>}' class.
@@ -5945,6 +5963,26 @@ public interface SchedulerPackage extends EPackage {
 	EReference getSolutionTask_Solution();
 
 	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.SolutionTask#unsetCandidatePreviousNext() <em>Unset Candidate Previous Next</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Unset Candidate Previous Next</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.SolutionTask#unsetCandidatePreviousNext()
+	 * @generated
+	 */
+	EOperation getSolutionTask__UnsetCandidatePreviousNext();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.SolutionTask#setCandidatePreviousNext(com.misc.common.moplaf.scheduler.SolutionTask, com.misc.common.moplaf.scheduler.SolutionTask) <em>Set Candidate Previous Next</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Candidate Previous Next</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.SolutionTask#setCandidatePreviousNext(com.misc.common.moplaf.scheduler.SolutionTask, com.misc.common.moplaf.scheduler.SolutionTask)
+	 * @generated
+	 */
+	EOperation getSolutionTask__SetCandidatePreviousNext__SolutionTask_SolutionTask();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Move <em>Move</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6886,6 +6924,22 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SOLUTION_TASK__SOLUTION = eINSTANCE.getSolutionTask_Solution();
+
+		/**
+		 * The meta object literal for the '<em><b>Unset Candidate Previous Next</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT = eINSTANCE.getSolutionTask__UnsetCandidatePreviousNext();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Candidate Previous Next</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONTASK_SOLUTIONTASK = eINSTANCE.getSolutionTask__SetCandidatePreviousNext__SolutionTask_SolutionTask();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveImpl <em>Move</em>}' class.

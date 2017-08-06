@@ -170,6 +170,7 @@ public class SolutionResourceItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(SchedulerPackage.Literals.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS);
 			childrenFeatures.add(SchedulerPackage.Literals.SOLUTION_RESOURCE__EXPRESSIONS);
 		}
 		return childrenFeatures;
@@ -229,6 +230,7 @@ public class SolutionResourceItemProvider
 			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
 			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

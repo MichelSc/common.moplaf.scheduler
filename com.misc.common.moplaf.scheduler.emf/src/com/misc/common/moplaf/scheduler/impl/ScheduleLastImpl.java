@@ -4,6 +4,12 @@ package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.ScheduleLast;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.SolutionResource;
+import com.misc.common.moplaf.scheduler.SolutionTask;
+
+import java.util.ListIterator;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -47,5 +53,33 @@ public class ScheduleLastImpl extends MoveChangeResourceImpl implements Schedule
 				                           this.getTaskToSchedule().getTask().getName(),
 				                           this.getInsertionPoint().getResource().getName());
 		return description;
+	}
+	
+	/**
+	 * 
+	 */
+	@Override
+	public boolean change() {
+		SolutionTask task = this.getTaskToSchedule();
+		SolutionResource asis_resource = task.getCandidateScheduledResource();
+		SolutionResource tobe_resource = this.getInsertionPoint();
+		EList<SolutionTask> tobe_task_sequence = tobe_resource.getCandidateScheduledTasks();
+		ListIterator<SolutionTask> after_last = tobe_task_sequence.listIterator(tobe_task_sequence.size());
+		SolutionTask tobe_resource_asis_last = after_last.hasPrevious() ? after_last.previous() : null;
+
+		// association scheduled tasks
+		if ( asis_resource==tobe_resource) {
+			tobe_task_sequence.move(tobe_task_sequence.size()-1, task);
+		} else {
+			if ( asis_resource!=null) {
+				asis_resource.getCandidateScheduledTasks().remove(task);
+			}
+			tobe_task_sequence.add(tobe_task_sequence.size(), task);
+		}
+			
+		// association previous next
+		task.unsetCandidatePreviousNext();
+		task.setCandidatePreviousNext(tobe_resource_asis_last, null);
+		return true;
 	}
 } //ScheduleLastImpl

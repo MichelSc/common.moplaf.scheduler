@@ -3,6 +3,8 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.SolutionResource;
+import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.Unschedule;
 
 import org.eclipse.emf.ecore.EClass;
@@ -47,6 +49,25 @@ public class UnscheduleImpl extends MoveChangeImpl implements Unschedule {
 		String description = String.format("Unschedule %s", 
 				                           this.getTaskToSchedule().getTask().getName());
 		return description;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public boolean change() {
+		SolutionTask task = this.getTaskToSchedule();
+		SolutionResource scheduled_resource = task.getCandidateScheduledResource();
+		if ( scheduled_resource==null) {
+			return false;
+		}
+
+		// association scheduled tasks
+		scheduled_resource.getCandidateScheduledTasks().remove(task);
+
+		// association previous next
+		task.unsetCandidatePreviousNext();
+		return true;
 	}
 
 } //UnscheduleImpl

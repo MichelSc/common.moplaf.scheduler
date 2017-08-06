@@ -9,6 +9,7 @@ import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -622,6 +623,34 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void unsetCandidatePreviousNext() {
+		SolutionTask previous = this.getCandidatePreviousTask();
+		if ( previous!=null) {
+			previous.setCandidateNextTask(this.getCandidateNextTask());
+		} 
+		SolutionTask next = this.getCandidateNextTask();
+		if ( next!=null){
+			next.setCandidatePreviousTask(this.getCandidatePreviousTask());
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void setCandidatePreviousNext(SolutionTask previous, SolutionTask next) {
+		// assert previous.next = next.previous
+		// or previous is null and next is first
+		// or next is null and previous is last
+		this.unsetCandidatePreviousNext();
+		this.setCandidatePreviousTask(previous);
+		this.setCandidateNextTask(next);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -853,6 +882,24 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return getSolution() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case SchedulerPackage.SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT:
+				unsetCandidatePreviousNext();
+				return null;
+			case SchedulerPackage.SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONTASK_SOLUTIONTASK:
+				setCandidatePreviousNext((SolutionTask)arguments.get(0), (SolutionTask)arguments.get(1));
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //SolutionTaskImpl

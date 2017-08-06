@@ -787,6 +787,24 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getSolutionTask__UnsetCandidatePreviousNext() {
+		return solutionTaskEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSolutionTask__SetCandidatePreviousNext__SolutionTask_SolutionTask() {
+		return solutionTaskEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSolutionExpression() {
 		return solutionExpressionEClass;
 	}
@@ -1299,6 +1317,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(solutionTaskEClass, SOLUTION_TASK__EXPRESSIONS);
 		createEAttribute(solutionTaskEClass, SOLUTION_TASK__DESCRIPTION);
 		createEReference(solutionTaskEClass, SOLUTION_TASK__SOLUTION);
+		createEOperation(solutionTaskEClass, SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT);
+		createEOperation(solutionTaskEClass, SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONTASK_SOLUTIONTASK);
 
 		moveEClass = createEClass(MOVE);
 		createEReference(moveEClass, MOVE__EXPRESSIONS);
@@ -1496,6 +1516,12 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSolutionTask_Expressions(), this.getTaskExpression(), this.getTaskExpression_Task(), "Expressions", null, 0, -1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionTask_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_Solution(), this.getSolution(), this.getSolution_Tasks(), "Solution", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getSolutionTask__UnsetCandidatePreviousNext(), null, "unsetCandidatePreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSolutionTask__SetCandidatePreviousNext__SolutionTask_SolutionTask(), null, "setCandidatePreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getSolutionTask(), "previous", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getSolutionTask(), "next", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(moveEClass, Move.class, "Move", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMove_Expressions(), this.getMoveExpression(), null, "Expressions", null, 0, -1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

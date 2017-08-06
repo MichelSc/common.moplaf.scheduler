@@ -57,7 +57,6 @@ public class MoveChangeResourceItemProvider extends MoveChangeItemProvider {
 	 * This adds a property descriptor for the Insertion Point feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected void addInsertionPointPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add

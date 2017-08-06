@@ -75,6 +75,11 @@
         eType="#//Solution" eOpposite="#//Solution/Resources"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionTask">
+    <eOperations name="unsetCandidatePreviousNext"/>
+    <eOperations name="setCandidatePreviousNext">
+      <eParameters name="previous" eType="#//SolutionTask"/>
+      <eParameters name="next" eType="#//SolutionTask"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="NextTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/PreviousTask"/>

@@ -3,7 +3,6 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 
@@ -339,11 +338,6 @@ public class SolutionTaskItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SOLUTION_TASK__EXPRESSIONS,
-				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
 	}
 
 	/**

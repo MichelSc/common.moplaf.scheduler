@@ -2,7 +2,9 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.Move;
+import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
@@ -302,23 +304,33 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void setCandidate(Move move) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// restore the candidate move to the solution
+		this.resetCandidate();
+		// execute the candidate move
+		if ( move != null) {
+			for ( MoveChange change : move.getChanges()) {
+				if ( !change.isValid()) {
+					Plugin.INSTANCE.logError("invalid move change"+change.getDescription());
+					break;
+				}
+				boolean success  = change.change();
+				if ( !success ) {
+					Plugin.INSTANCE.logError("unexecutable move change"+change.getDescription());
+					break;
+				}
+			}
+		}
+		// set the candidate move
+		this.setCandidateMove(move);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void resetCandidate() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
