@@ -598,13 +598,22 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Solution</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE__SOLUTION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Move</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_FEATURE_COUNT = 3;
+	int MOVE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Move</em>' class.
@@ -706,7 +715,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolutionPropagatorFunction()
 	 * @generated
 	 */
-	int SOLUTION_PROPAGATOR_FUNCTION = 29;
+	int SOLUTION_PROPAGATOR_FUNCTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2242,7 +2251,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResourceExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION = 26;
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION = 28;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3236,7 +3245,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int TASK_EXPRESSION_PROPAGATOR_FUNCTION = 28;
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION = 30;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4269,13 +4278,31 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_CHANGE__DESCRIPTION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE__VALID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE__MOVE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Move Change</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_CHANGE_FEATURE_COUNT = 2;
+	int MOVE_CHANGE_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Change</em>' operation.
@@ -4296,14 +4323,14 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_CHANGE_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleAfterImpl <em>Schedule After</em>}' class.
+	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.MoveChangeTaskImpl <em>Move Change Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.ScheduleAfterImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleAfter()
+	 * @see com.misc.common.moplaf.scheduler.impl.MoveChangeTaskImpl
+	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChangeTask()
 	 * @generated
 	 */
-	int SCHEDULE_AFTER = 21;
+	int MOVE_CHANGE_TASK = 21;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4312,7 +4339,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER__TASK_TO_SCHEDULE = MOVE_CHANGE__TASK_TO_SCHEDULE;
+	int MOVE_CHANGE_TASK__TASK_TO_SCHEDULE = MOVE_CHANGE__TASK_TO_SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4321,25 +4348,43 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
+	int MOVE_CHANGE_TASK__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Task Before</b></em>' reference.
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER__TASK_BEFORE = MOVE_CHANGE_FEATURE_COUNT + 0;
+	int MOVE_CHANGE_TASK__VALID = MOVE_CHANGE__VALID;
 
 	/**
-	 * The number of structural features of the '<em>Schedule After</em>' class.
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER_FEATURE_COUNT = MOVE_CHANGE_FEATURE_COUNT + 1;
+	int MOVE_CHANGE_TASK__MOVE = MOVE_CHANGE__MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_TASK__INSERTION_POINT = MOVE_CHANGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Move Change Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_TASK_FEATURE_COUNT = MOVE_CHANGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Change</em>' operation.
@@ -4348,7 +4393,89 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER___CHANGE = MOVE_CHANGE___CHANGE;
+	int MOVE_CHANGE_TASK___CHANGE = MOVE_CHANGE___CHANGE;
+
+	/**
+	 * The number of operations of the '<em>Move Change Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_TASK_OPERATION_COUNT = MOVE_CHANGE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleAfterImpl <em>Schedule After</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.scheduler.impl.ScheduleAfterImpl
+	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleAfter()
+	 * @generated
+	 */
+	int SCHEDULE_AFTER = 22;
+
+	/**
+	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__TASK_TO_SCHEDULE = MOVE_CHANGE_TASK__TASK_TO_SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__DESCRIPTION = MOVE_CHANGE_TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__VALID = MOVE_CHANGE_TASK__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__MOVE = MOVE_CHANGE_TASK__MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__INSERTION_POINT = MOVE_CHANGE_TASK__INSERTION_POINT;
+
+	/**
+	 * The number of structural features of the '<em>Schedule After</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER_FEATURE_COUNT = MOVE_CHANGE_TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Change</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER___CHANGE = MOVE_CHANGE_TASK___CHANGE;
 
 	/**
 	 * The number of operations of the '<em>Schedule After</em>' class.
@@ -4357,7 +4484,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER_OPERATION_COUNT = MOVE_CHANGE_OPERATION_COUNT + 0;
+	int SCHEDULE_AFTER_OPERATION_COUNT = MOVE_CHANGE_TASK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleBeforeImpl <em>Schedule Before</em>}' class.
@@ -4367,7 +4494,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleBefore()
 	 * @generated
 	 */
-	int SCHEDULE_BEFORE = 22;
+	int SCHEDULE_BEFORE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4376,7 +4503,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE__TASK_TO_SCHEDULE = MOVE_CHANGE__TASK_TO_SCHEDULE;
+	int SCHEDULE_BEFORE__TASK_TO_SCHEDULE = MOVE_CHANGE_TASK__TASK_TO_SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4385,16 +4512,34 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
+	int SCHEDULE_BEFORE__DESCRIPTION = MOVE_CHANGE_TASK__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Task After</b></em>' reference.
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE__TASK_AFTER = MOVE_CHANGE_FEATURE_COUNT + 0;
+	int SCHEDULE_BEFORE__VALID = MOVE_CHANGE_TASK__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__MOVE = MOVE_CHANGE_TASK__MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__INSERTION_POINT = MOVE_CHANGE_TASK__INSERTION_POINT;
 
 	/**
 	 * The number of structural features of the '<em>Schedule Before</em>' class.
@@ -4403,7 +4548,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE_FEATURE_COUNT = MOVE_CHANGE_FEATURE_COUNT + 1;
+	int SCHEDULE_BEFORE_FEATURE_COUNT = MOVE_CHANGE_TASK_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Change</em>' operation.
@@ -4412,7 +4557,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE___CHANGE = MOVE_CHANGE___CHANGE;
+	int SCHEDULE_BEFORE___CHANGE = MOVE_CHANGE_TASK___CHANGE;
 
 	/**
 	 * The number of operations of the '<em>Schedule Before</em>' class.
@@ -4421,7 +4566,89 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE_OPERATION_COUNT = MOVE_CHANGE_OPERATION_COUNT + 0;
+	int SCHEDULE_BEFORE_OPERATION_COUNT = MOVE_CHANGE_TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.MoveChangeResourceImpl <em>Move Change Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.scheduler.impl.MoveChangeResourceImpl
+	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChangeResource()
+	 * @generated
+	 */
+	int MOVE_CHANGE_RESOURCE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE__TASK_TO_SCHEDULE = MOVE_CHANGE__TASK_TO_SCHEDULE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE__VALID = MOVE_CHANGE__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE__MOVE = MOVE_CHANGE__MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE__INSERTION_POINT = MOVE_CHANGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Move Change Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE_FEATURE_COUNT = MOVE_CHANGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Change</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE___CHANGE = MOVE_CHANGE___CHANGE;
+
+	/**
+	 * The number of operations of the '<em>Move Change Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_CHANGE_RESOURCE_OPERATION_COUNT = MOVE_CHANGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleFirstImpl <em>Schedule First</em>}' class.
@@ -4431,7 +4658,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleFirst()
 	 * @generated
 	 */
-	int SCHEDULE_FIRST = 23;
+	int SCHEDULE_FIRST = 25;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4440,7 +4667,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST__TASK_TO_SCHEDULE = MOVE_CHANGE__TASK_TO_SCHEDULE;
+	int SCHEDULE_FIRST__TASK_TO_SCHEDULE = MOVE_CHANGE_RESOURCE__TASK_TO_SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4449,16 +4676,34 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
+	int SCHEDULE_FIRST__DESCRIPTION = MOVE_CHANGE_RESOURCE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST__RESOURCE = MOVE_CHANGE_FEATURE_COUNT + 0;
+	int SCHEDULE_FIRST__VALID = MOVE_CHANGE_RESOURCE__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__MOVE = MOVE_CHANGE_RESOURCE__MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__INSERTION_POINT = MOVE_CHANGE_RESOURCE__INSERTION_POINT;
 
 	/**
 	 * The number of structural features of the '<em>Schedule First</em>' class.
@@ -4467,7 +4712,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST_FEATURE_COUNT = MOVE_CHANGE_FEATURE_COUNT + 1;
+	int SCHEDULE_FIRST_FEATURE_COUNT = MOVE_CHANGE_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Change</em>' operation.
@@ -4476,7 +4721,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST___CHANGE = MOVE_CHANGE___CHANGE;
+	int SCHEDULE_FIRST___CHANGE = MOVE_CHANGE_RESOURCE___CHANGE;
 
 	/**
 	 * The number of operations of the '<em>Schedule First</em>' class.
@@ -4485,7 +4730,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST_OPERATION_COUNT = MOVE_CHANGE_OPERATION_COUNT + 0;
+	int SCHEDULE_FIRST_OPERATION_COUNT = MOVE_CHANGE_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleLastImpl <em>Schedule Last</em>}' class.
@@ -4495,7 +4740,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleLast()
 	 * @generated
 	 */
-	int SCHEDULE_LAST = 24;
+	int SCHEDULE_LAST = 26;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4504,7 +4749,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST__TASK_TO_SCHEDULE = MOVE_CHANGE__TASK_TO_SCHEDULE;
+	int SCHEDULE_LAST__TASK_TO_SCHEDULE = MOVE_CHANGE_RESOURCE__TASK_TO_SCHEDULE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4513,16 +4758,34 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
+	int SCHEDULE_LAST__DESCRIPTION = MOVE_CHANGE_RESOURCE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST__RESOURCE = MOVE_CHANGE_FEATURE_COUNT + 0;
+	int SCHEDULE_LAST__VALID = MOVE_CHANGE_RESOURCE__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__MOVE = MOVE_CHANGE_RESOURCE__MOVE;
+
+	/**
+	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__INSERTION_POINT = MOVE_CHANGE_RESOURCE__INSERTION_POINT;
 
 	/**
 	 * The number of structural features of the '<em>Schedule Last</em>' class.
@@ -4531,7 +4794,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST_FEATURE_COUNT = MOVE_CHANGE_FEATURE_COUNT + 1;
+	int SCHEDULE_LAST_FEATURE_COUNT = MOVE_CHANGE_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Change</em>' operation.
@@ -4540,7 +4803,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST___CHANGE = MOVE_CHANGE___CHANGE;
+	int SCHEDULE_LAST___CHANGE = MOVE_CHANGE_RESOURCE___CHANGE;
 
 	/**
 	 * The number of operations of the '<em>Schedule Last</em>' class.
@@ -4549,7 +4812,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST_OPERATION_COUNT = MOVE_CHANGE_OPERATION_COUNT + 0;
+	int SCHEDULE_LAST_OPERATION_COUNT = MOVE_CHANGE_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.UnscheduleImpl <em>Unschedule</em>}' class.
@@ -4559,7 +4822,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getUnschedule()
 	 * @generated
 	 */
-	int UNSCHEDULE = 25;
+	int UNSCHEDULE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4578,6 +4841,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNSCHEDULE__DESCRIPTION = MOVE_CHANGE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__VALID = MOVE_CHANGE__VALID;
+
+	/**
+	 * The feature id for the '<em><b>Move</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__MOVE = MOVE_CHANGE__MOVE;
 
 	/**
 	 * The number of structural features of the '<em>Unschedule</em>' class.
@@ -4614,7 +4895,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcSolutionExpressionCandidateValue()
 	 * @generated
 	 */
-	int CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 27;
+	int CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4912,7 +5193,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcTaksExpressionCandidateValueCumulative()
 	 * @generated
 	 */
-	int CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE = 30;
+	int CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -5707,6 +5988,17 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getMove_Name();
 
 	/**
+	 * Returns the meta object for the container reference '{@link com.misc.common.moplaf.scheduler.Move#getSolution <em>Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Solution</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Move#getSolution()
+	 * @see #getMove()
+	 * @generated
+	 */
+	EReference getMove_Solution();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.MoveExpression <em>Move Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6010,6 +6302,28 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getMoveChange_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.MoveChange#isValid <em>Valid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveChange#isValid()
+	 * @see #getMoveChange()
+	 * @generated
+	 */
+	EAttribute getMoveChange_Valid();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.misc.common.moplaf.scheduler.MoveChange#getMove <em>Move</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Move</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveChange#getMove()
+	 * @see #getMoveChange()
+	 * @generated
+	 */
+	EReference getMoveChange_Move();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.MoveChange#change() <em>Change</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6018,6 +6332,27 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getMoveChange__Change();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.MoveChangeTask <em>Move Change Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Change Task</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveChangeTask
+	 * @generated
+	 */
+	EClass getMoveChangeTask();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.MoveChangeTask#getInsertionPoint <em>Insertion Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Insertion Point</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveChangeTask#getInsertionPoint()
+	 * @see #getMoveChangeTask()
+	 * @generated
+	 */
+	EReference getMoveChangeTask_InsertionPoint();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleAfter <em>Schedule After</em>}'.
@@ -6030,17 +6365,6 @@ public interface SchedulerPackage extends EPackage {
 	EClass getScheduleAfter();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.ScheduleAfter#getTaskBefore <em>Task Before</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Task Before</em>'.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleAfter#getTaskBefore()
-	 * @see #getScheduleAfter()
-	 * @generated
-	 */
-	EReference getScheduleAfter_TaskBefore();
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleBefore <em>Schedule Before</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6051,15 +6375,25 @@ public interface SchedulerPackage extends EPackage {
 	EClass getScheduleBefore();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.ScheduleBefore#getTaskAfter <em>Task After</em>}'.
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.MoveChangeResource <em>Move Change Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Task After</em>'.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleBefore#getTaskAfter()
-	 * @see #getScheduleBefore()
+	 * @return the meta object for class '<em>Move Change Resource</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveChangeResource
 	 * @generated
 	 */
-	EReference getScheduleBefore_TaskAfter();
+	EClass getMoveChangeResource();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.MoveChangeResource#getInsertionPoint <em>Insertion Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Insertion Point</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveChangeResource#getInsertionPoint()
+	 * @see #getMoveChangeResource()
+	 * @generated
+	 */
+	EReference getMoveChangeResource_InsertionPoint();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleFirst <em>Schedule First</em>}'.
@@ -6072,17 +6406,6 @@ public interface SchedulerPackage extends EPackage {
 	EClass getScheduleFirst();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.ScheduleFirst#getResource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Resource</em>'.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleFirst#getResource()
-	 * @see #getScheduleFirst()
-	 * @generated
-	 */
-	EReference getScheduleFirst_Resource();
-
-	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleLast <em>Schedule Last</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6091,17 +6414,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getScheduleLast();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.ScheduleLast#getResource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Resource</em>'.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleLast#getResource()
-	 * @see #getScheduleLast()
-	 * @generated
-	 */
-	EReference getScheduleLast_Resource();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Unschedule <em>Unschedule</em>}'.
@@ -6610,6 +6922,14 @@ public interface SchedulerPackage extends EPackage {
 		EAttribute MOVE__NAME = eINSTANCE.getMove_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Solution</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOVE__SOLUTION = eINSTANCE.getMove_Solution();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveExpressionImpl <em>Move Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6870,12 +7190,46 @@ public interface SchedulerPackage extends EPackage {
 		EAttribute MOVE_CHANGE__DESCRIPTION = eINSTANCE.getMoveChange_Description();
 
 		/**
+		 * The meta object literal for the '<em><b>Valid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_CHANGE__VALID = eINSTANCE.getMoveChange_Valid();
+
+		/**
+		 * The meta object literal for the '<em><b>Move</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOVE_CHANGE__MOVE = eINSTANCE.getMoveChange_Move();
+
+		/**
 		 * The meta object literal for the '<em><b>Change</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation MOVE_CHANGE___CHANGE = eINSTANCE.getMoveChange__Change();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveChangeTaskImpl <em>Move Change Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.scheduler.impl.MoveChangeTaskImpl
+		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChangeTask()
+		 * @generated
+		 */
+		EClass MOVE_CHANGE_TASK = eINSTANCE.getMoveChangeTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Insertion Point</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOVE_CHANGE_TASK__INSERTION_POINT = eINSTANCE.getMoveChangeTask_InsertionPoint();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleAfterImpl <em>Schedule After</em>}' class.
@@ -6888,14 +7242,6 @@ public interface SchedulerPackage extends EPackage {
 		EClass SCHEDULE_AFTER = eINSTANCE.getScheduleAfter();
 
 		/**
-		 * The meta object literal for the '<em><b>Task Before</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEDULE_AFTER__TASK_BEFORE = eINSTANCE.getScheduleAfter_TaskBefore();
-
-		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleBeforeImpl <em>Schedule Before</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6906,12 +7252,22 @@ public interface SchedulerPackage extends EPackage {
 		EClass SCHEDULE_BEFORE = eINSTANCE.getScheduleBefore();
 
 		/**
-		 * The meta object literal for the '<em><b>Task After</b></em>' reference feature.
+		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveChangeResourceImpl <em>Move Change Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.scheduler.impl.MoveChangeResourceImpl
+		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChangeResource()
+		 * @generated
+		 */
+		EClass MOVE_CHANGE_RESOURCE = eINSTANCE.getMoveChangeResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Insertion Point</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHEDULE_BEFORE__TASK_AFTER = eINSTANCE.getScheduleBefore_TaskAfter();
+		EReference MOVE_CHANGE_RESOURCE__INSERTION_POINT = eINSTANCE.getMoveChangeResource_InsertionPoint();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleFirstImpl <em>Schedule First</em>}' class.
@@ -6924,14 +7280,6 @@ public interface SchedulerPackage extends EPackage {
 		EClass SCHEDULE_FIRST = eINSTANCE.getScheduleFirst();
 
 		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEDULE_FIRST__RESOURCE = eINSTANCE.getScheduleFirst_Resource();
-
-		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleLastImpl <em>Schedule Last</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6940,14 +7288,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SCHEDULE_LAST = eINSTANCE.getScheduleLast();
-
-		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEDULE_LAST__RESOURCE = eINSTANCE.getScheduleLast_Resource();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.UnscheduleImpl <em>Unschedule</em>}' class.

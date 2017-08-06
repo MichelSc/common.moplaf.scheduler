@@ -37,6 +37,7 @@ public interface Solution extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Moves</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Move}.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Move#getSolution <em>Solution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Moves</em>' containment reference list isn't clear,
@@ -45,7 +46,8 @@ public interface Solution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Moves</em>' containment reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_Moves()
-	 * @model containment="true"
+	 * @see com.misc.common.moplaf.scheduler.Move#getSolution
+	 * @model opposite="Solution" containment="true"
 	 * @generated
 	 */
 	EList<Move> getMoves();

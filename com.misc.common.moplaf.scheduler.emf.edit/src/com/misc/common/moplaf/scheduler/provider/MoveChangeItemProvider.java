@@ -3,8 +3,10 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
+import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 
 import java.util.Collection;
 import java.util.List;
@@ -62,6 +64,7 @@ public class MoveChangeItemProvider
 
 			addTaskToSchedulePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addValidPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -70,11 +73,10 @@ public class MoveChangeItemProvider
 	 * This adds a property descriptor for the Task To Schedule feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected void addTaskToSchedulePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
+			(new ItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
 				 getString("_UI_MoveChange_TaskToSchedule_feature"),
@@ -85,7 +87,15 @@ public class MoveChangeItemProvider
 				 true,
 				 null,
 				 null,
-				 null));
+				 null){
+					@Override
+					public Collection<?> getChoiceOfValues(Object object) {
+						MoveChange move_change = (MoveChange) object;
+						Move move = move_change.getMove();
+						Solution solution = move.getSolution();
+						return solution.getTasks();
+					}
+				});
 	}
 
 	/**
@@ -106,6 +116,28 @@ public class MoveChangeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Valid feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValidPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MoveChange_Valid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MoveChange_Valid_feature", "_UI_MoveChange_type"),
+				 SchedulerPackage.Literals.MOVE_CHANGE__VALID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -148,7 +180,9 @@ public class MoveChangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MoveChange.class)) {
+			case SchedulerPackage.MOVE_CHANGE__TASK_TO_SCHEDULE:
 			case SchedulerPackage.MOVE_CHANGE__DESCRIPTION:
+			case SchedulerPackage.MOVE_CHANGE__VALID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -184,11 +184,6 @@ public class MoveItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SchedulerPackage.Literals.MOVE__CHANGES,
-				 SchedulerFactory.eINSTANCE.createMoveChange()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.MOVE__CHANGES,
 				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
 
 		newChildDescriptors.add

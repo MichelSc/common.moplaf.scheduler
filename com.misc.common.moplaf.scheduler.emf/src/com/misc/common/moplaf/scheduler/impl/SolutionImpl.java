@@ -27,8 +27,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -149,7 +147,7 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	 */
 	public EList<Move> getMoves() {
 		if (moves == null) {
-			moves = new EObjectContainmentEList<Move>(Move.class, this, SchedulerPackage.SOLUTION__MOVES);
+			moves = new EObjectContainmentWithInverseEList<Move>(Move.class, this, SchedulerPackage.SOLUTION__MOVES, SchedulerPackage.MOVE__SOLUTION);
 		}
 		return moves;
 	}
@@ -382,6 +380,8 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case SchedulerPackage.SOLUTION__MOVES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMoves()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION__TASKS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTasks()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION__RESOURCES:

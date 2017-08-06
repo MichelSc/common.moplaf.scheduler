@@ -156,12 +156,20 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createMoveChangeAdapter();
 			}
 			@Override
+			public Adapter caseMoveChangeTask(MoveChangeTask object) {
+				return createMoveChangeTaskAdapter();
+			}
+			@Override
 			public Adapter caseScheduleAfter(ScheduleAfter object) {
 				return createScheduleAfterAdapter();
 			}
 			@Override
 			public Adapter caseScheduleBefore(ScheduleBefore object) {
 				return createScheduleBeforeAdapter();
+			}
+			@Override
+			public Adapter caseMoveChangeResource(MoveChangeResource object) {
+				return createMoveChangeResourceAdapter();
 			}
 			@Override
 			public Adapter caseScheduleFirst(ScheduleFirst object) {
@@ -424,6 +432,20 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.MoveChangeTask <em>Move Change Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.MoveChangeTask
+	 * @generated
+	 */
+	public Adapter createMoveChangeTaskAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ScheduleAfter <em>Schedule After</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -448,6 +470,20 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScheduleBeforeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.MoveChangeResource <em>Move Change Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.MoveChangeResource
+	 * @generated
+	 */
+	public Adapter createMoveChangeResourceAdapter() {
 		return null;
 	}
 

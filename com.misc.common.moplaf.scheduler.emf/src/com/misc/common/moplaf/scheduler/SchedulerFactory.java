@@ -166,15 +166,6 @@ public interface SchedulerFactory extends EFactory {
 	TaskFloatExpression createTaskFloatExpression();
 
 	/**
-	 * Returns a new object of class '<em>Move Change</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Move Change</em>'.
-	 * @generated
-	 */
-	MoveChange createMoveChange();
-
-	/**
 	 * Returns a new object of class '<em>Schedule After</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

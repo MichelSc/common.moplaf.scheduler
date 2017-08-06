@@ -72,7 +72,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			case SchedulerPackage.CALC_TASK_EXPRESSION_CANDIDATE_VALUE: return createCalcTaskExpressionCandidateValue();
 			case SchedulerPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE: return createResetTaskExpressionCandidateValue();
 			case SchedulerPackage.TASK_FLOAT_EXPRESSION: return createTaskFloatExpression();
-			case SchedulerPackage.MOVE_CHANGE: return createMoveChange();
 			case SchedulerPackage.SCHEDULE_AFTER: return createScheduleAfter();
 			case SchedulerPackage.SCHEDULE_BEFORE: return createScheduleBefore();
 			case SchedulerPackage.SCHEDULE_FIRST: return createScheduleFirst();
@@ -176,16 +175,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public TaskFloatExpression createTaskFloatExpression() {
 		TaskFloatExpressionImpl taskFloatExpression = new TaskFloatExpressionImpl();
 		return taskFloatExpression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MoveChange createMoveChange() {
-		MoveChangeImpl moveChange = new MoveChangeImpl();
-		return moveChange;
 	}
 
 	/**

@@ -4,15 +4,11 @@ package com.misc.common.moplaf.scheduler.provider;
 
 
 import com.misc.common.moplaf.scheduler.ScheduleFirst;
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -21,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScheduleFirstItemProvider extends MoveChangeItemProvider {
+public class ScheduleFirstItemProvider extends MoveChangeResourceItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -43,31 +39,8 @@ public class ScheduleFirstItemProvider extends MoveChangeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Resource feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ScheduleFirst_Resource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ScheduleFirst_Resource_feature", "_UI_ScheduleFirst_type"),
-				 SchedulerPackage.Literals.SCHEDULE_FIRST__RESOURCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

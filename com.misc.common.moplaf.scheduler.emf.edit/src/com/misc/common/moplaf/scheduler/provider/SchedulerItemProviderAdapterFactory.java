@@ -440,29 +440,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.MoveChange} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MoveChangeItemProvider moveChangeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.MoveChange}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMoveChangeAdapter() {
-		if (moveChangeItemProvider == null) {
-			moveChangeItemProvider = new MoveChangeItemProvider(this);
-		}
-
-		return moveChangeItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.ScheduleAfter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -807,7 +784,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 		if (calcTaskExpressionCandidateValueItemProvider != null) calcTaskExpressionCandidateValueItemProvider.dispose();
 		if (resetTaskExpressionCandidateValueItemProvider != null) resetTaskExpressionCandidateValueItemProvider.dispose();
 		if (taskFloatExpressionItemProvider != null) taskFloatExpressionItemProvider.dispose();
-		if (moveChangeItemProvider != null) moveChangeItemProvider.dispose();
 		if (scheduleAfterItemProvider != null) scheduleAfterItemProvider.dispose();
 		if (scheduleBeforeItemProvider != null) scheduleBeforeItemProvider.dispose();
 		if (scheduleFirstItemProvider != null) scheduleFirstItemProvider.dispose();

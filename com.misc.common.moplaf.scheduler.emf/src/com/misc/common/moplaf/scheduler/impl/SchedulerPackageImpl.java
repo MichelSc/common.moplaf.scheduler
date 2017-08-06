@@ -11,6 +11,8 @@ import com.misc.common.moplaf.scheduler.CalcTaksExpressionCandidateValueCumulati
 import com.misc.common.moplaf.scheduler.CalcTaskExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
+import com.misc.common.moplaf.scheduler.MoveChangeResource;
+import com.misc.common.moplaf.scheduler.MoveChangeTask;
 import com.misc.common.moplaf.scheduler.MoveExpression;
 import com.misc.common.moplaf.scheduler.ResetResourceExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.ResetSolutionAllExpressionCandidateValues;
@@ -156,6 +158,13 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass moveChangeTaskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass scheduleAfterEClass = null;
 
 	/**
@@ -164,6 +173,13 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	private EClass scheduleBeforeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moveChangeResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -600,6 +616,15 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMove_Solution() {
+		return (EReference)moveEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSolutionResource() {
 		return solutionResourceEClass;
 	}
@@ -951,8 +976,44 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMoveChange_Valid() {
+		return (EAttribute)moveChangeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMoveChange_Move() {
+		return (EReference)moveChangeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getMoveChange__Change() {
 		return moveChangeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveChangeTask() {
+		return moveChangeTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMoveChangeTask_InsertionPoint() {
+		return (EReference)moveChangeTaskEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -969,15 +1030,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScheduleAfter_TaskBefore() {
-		return (EReference)scheduleAfterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getScheduleBefore() {
 		return scheduleBeforeEClass;
 	}
@@ -987,8 +1039,17 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScheduleBefore_TaskAfter() {
-		return (EReference)scheduleBeforeEClass.getEStructuralFeatures().get(0);
+	public EClass getMoveChangeResource() {
+		return moveChangeResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMoveChangeResource_InsertionPoint() {
+		return (EReference)moveChangeResourceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1005,26 +1066,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScheduleFirst_Resource() {
-		return (EReference)scheduleFirstEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getScheduleLast() {
 		return scheduleLastEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScheduleLast_Resource() {
-		return (EReference)scheduleLastEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1261,6 +1304,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(moveEClass, MOVE__EXPRESSIONS);
 		createEReference(moveEClass, MOVE__CHANGES);
 		createEAttribute(moveEClass, MOVE__NAME);
+		createEReference(moveEClass, MOVE__SOLUTION);
 
 		moveExpressionEClass = createEClass(MOVE_EXPRESSION);
 		createEAttribute(moveExpressionEClass, MOVE_EXPRESSION__DESCRIPTION);
@@ -1304,19 +1348,23 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		moveChangeEClass = createEClass(MOVE_CHANGE);
 		createEReference(moveChangeEClass, MOVE_CHANGE__TASK_TO_SCHEDULE);
 		createEAttribute(moveChangeEClass, MOVE_CHANGE__DESCRIPTION);
+		createEAttribute(moveChangeEClass, MOVE_CHANGE__VALID);
+		createEReference(moveChangeEClass, MOVE_CHANGE__MOVE);
 		createEOperation(moveChangeEClass, MOVE_CHANGE___CHANGE);
 
+		moveChangeTaskEClass = createEClass(MOVE_CHANGE_TASK);
+		createEReference(moveChangeTaskEClass, MOVE_CHANGE_TASK__INSERTION_POINT);
+
 		scheduleAfterEClass = createEClass(SCHEDULE_AFTER);
-		createEReference(scheduleAfterEClass, SCHEDULE_AFTER__TASK_BEFORE);
 
 		scheduleBeforeEClass = createEClass(SCHEDULE_BEFORE);
-		createEReference(scheduleBeforeEClass, SCHEDULE_BEFORE__TASK_AFTER);
+
+		moveChangeResourceEClass = createEClass(MOVE_CHANGE_RESOURCE);
+		createEReference(moveChangeResourceEClass, MOVE_CHANGE_RESOURCE__INSERTION_POINT);
 
 		scheduleFirstEClass = createEClass(SCHEDULE_FIRST);
-		createEReference(scheduleFirstEClass, SCHEDULE_FIRST__RESOURCE);
 
 		scheduleLastEClass = createEClass(SCHEDULE_LAST);
-		createEReference(scheduleLastEClass, SCHEDULE_LAST__RESOURCE);
 
 		unscheduleEClass = createEClass(UNSCHEDULE);
 
@@ -1376,10 +1424,12 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		resetTaskExpressionCandidateValueEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		resetTaskExpressionCandidateValueEClass.getESuperTypes().add(this.getTaskExpressionPropagatorFunction());
 		taskFloatExpressionEClass.getESuperTypes().add(this.getTaskExpression());
-		scheduleAfterEClass.getESuperTypes().add(this.getMoveChange());
-		scheduleBeforeEClass.getESuperTypes().add(this.getMoveChange());
-		scheduleFirstEClass.getESuperTypes().add(this.getMoveChange());
-		scheduleLastEClass.getESuperTypes().add(this.getMoveChange());
+		moveChangeTaskEClass.getESuperTypes().add(this.getMoveChange());
+		scheduleAfterEClass.getESuperTypes().add(this.getMoveChangeTask());
+		scheduleBeforeEClass.getESuperTypes().add(this.getMoveChangeTask());
+		moveChangeResourceEClass.getESuperTypes().add(this.getMoveChange());
+		scheduleFirstEClass.getESuperTypes().add(this.getMoveChangeResource());
+		scheduleLastEClass.getESuperTypes().add(this.getMoveChangeResource());
 		unscheduleEClass.getESuperTypes().add(this.getMoveChange());
 		resourceExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		calcSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
@@ -1402,7 +1452,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEAttribute(getTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(solutionEClass, Solution.class, "Solution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolution_Moves(), this.getMove(), null, "Moves", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolution_Moves(), this.getMove(), this.getMove_Solution(), "Moves", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolution_Tasks(), this.getSolutionTask(), this.getSolutionTask_Solution(), "Tasks", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolution_Resources(), this.getSolutionResource(), this.getSolutionResource_Solution(), "Resources", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolution_CandidateMove(), this.getMove(), null, "CandidateMove", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1449,8 +1499,9 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		initEClass(moveEClass, Move.class, "Move", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMove_Expressions(), this.getMoveExpression(), null, "Expressions", null, 0, -1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMove_Changes(), this.getMoveChange(), null, "Changes", null, 0, -1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMove_Changes(), this.getMoveChange(), this.getMoveChange_Move(), "Changes", null, 0, -1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMove_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMove_Solution(), this.getSolution(), this.getSolution_Moves(), "Solution", null, 1, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moveExpressionEClass, MoveExpression.class, "MoveExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMoveExpression_Description(), ecorePackage.getEString(), "Description", null, 0, 1, MoveExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1493,23 +1544,27 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEAttribute(getTaskFloatExpression_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, TaskFloatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskFloatExpression_CandidateValue(), ecorePackage.getEFloat(), "CandidateValue", null, 0, 1, TaskFloatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(moveChangeEClass, MoveChange.class, "MoveChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(moveChangeEClass, MoveChange.class, "MoveChange", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMoveChange_TaskToSchedule(), this.getSolutionTask(), null, "TaskToSchedule", null, 1, 1, MoveChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMoveChange_Description(), ecorePackage.getEString(), "Description", null, 0, 1, MoveChange.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveChange_Valid(), ecorePackage.getEBoolean(), "Valid", null, 0, 1, MoveChange.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getMoveChange_Move(), this.getMove(), this.getMove_Changes(), "Move", null, 1, 1, MoveChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getMoveChange__Change(), null, "change", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getMoveChange__Change(), ecorePackage.getEBoolean(), "change", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(moveChangeTaskEClass, MoveChangeTask.class, "MoveChangeTask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMoveChangeTask_InsertionPoint(), this.getSolutionTask(), null, "InsertionPoint", null, 1, 1, MoveChangeTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleAfterEClass, ScheduleAfter.class, "ScheduleAfter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScheduleAfter_TaskBefore(), this.getSolutionTask(), null, "TaskBefore", null, 1, 1, ScheduleAfter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleBeforeEClass, ScheduleBefore.class, "ScheduleBefore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScheduleBefore_TaskAfter(), this.getSolutionTask(), null, "TaskAfter", null, 1, 1, ScheduleBefore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moveChangeResourceEClass, MoveChangeResource.class, "MoveChangeResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMoveChangeResource_InsertionPoint(), this.getSolutionResource(), null, "InsertionPoint", null, 1, 1, MoveChangeResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleFirstEClass, ScheduleFirst.class, "ScheduleFirst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScheduleFirst_Resource(), this.getSolutionResource(), null, "Resource", null, 1, 1, ScheduleFirst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleLastEClass, ScheduleLast.class, "ScheduleLast", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScheduleLast_Resource(), this.getSolutionResource(), null, "Resource", null, 1, 1, ScheduleLast.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unscheduleEClass, Unschedule.class, "Unschedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

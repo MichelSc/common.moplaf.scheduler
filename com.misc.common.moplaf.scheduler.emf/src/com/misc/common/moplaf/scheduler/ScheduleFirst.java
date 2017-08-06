@@ -8,42 +8,11 @@ package com.misc.common.moplaf.scheduler;
  * A representation of the model object '<em><b>Schedule First</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.ScheduleFirst#getResource <em>Resource</em>}</li>
- * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduleFirst()
  * @model
  * @generated
  */
-public interface ScheduleFirst extends MoveChange {
-	/**
-	 * Returns the value of the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resource</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource</em>' reference.
-	 * @see #setResource(SolutionResource)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduleFirst_Resource()
-	 * @model required="true"
-	 * @generated
-	 */
-	SolutionResource getResource();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.ScheduleFirst#getResource <em>Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource</em>' reference.
-	 * @see #getResource()
-	 * @generated
-	 */
-	void setResource(SolutionResource value);
+public interface ScheduleFirst extends MoveChangeResource {
 
 } // ScheduleFirst

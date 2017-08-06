@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionTask;
@@ -10,6 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -17,6 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,11 +31,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveChangeImpl#getTaskToSchedule <em>Task To Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveChangeImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveChangeImpl#isValid <em>Valid</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveChangeImpl#getMove <em>Move</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MoveChangeImpl extends MinimalEObjectImpl.Container implements MoveChange {
+public abstract class MoveChangeImpl extends MinimalEObjectImpl.Container implements MoveChange {
 	/**
 	 * The cached value of the '{@link #getTaskToSchedule() <em>Task To Schedule</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -52,6 +57,16 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #isValid() <em>Valid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isValid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean VALID_EDEFAULT = false;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,12 +139,116 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public boolean isValid() {
+		return this.isValidFeedback()==null;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void change() {
+	public Move getMove() {
+		if (eContainerFeatureID() != SchedulerPackage.MOVE_CHANGE__MOVE) return null;
+		return (Move)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMove(Move newMove, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newMove, SchedulerPackage.MOVE_CHANGE__MOVE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMove(Move newMove) {
+		if (newMove != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.MOVE_CHANGE__MOVE && newMove != null)) {
+			if (EcoreUtil.isAncestor(this, newMove))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newMove != null)
+				msgs = ((InternalEObject)newMove).eInverseAdd(this, SchedulerPackage.MOVE__CHANGES, Move.class, msgs);
+			msgs = basicSetMove(newMove, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.MOVE_CHANGE__MOVE, newMove, newMove));
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	protected String isValidFeedback() {
+		if ( this.getTaskToSchedule()==null ) {
+			return "No task to schedule";
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean change() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetMove((Move)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				return basicSetMove(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				return eInternalContainer().eInverseRemove(this, SchedulerPackage.MOVE__CHANGES, Move.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -145,6 +264,10 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 				return basicGetTaskToSchedule();
 			case SchedulerPackage.MOVE_CHANGE__DESCRIPTION:
 				return getDescription();
+			case SchedulerPackage.MOVE_CHANGE__VALID:
+				return isValid();
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				return getMove();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,6 +283,9 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 			case SchedulerPackage.MOVE_CHANGE__TASK_TO_SCHEDULE:
 				setTaskToSchedule((SolutionTask)newValue);
 				return;
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				setMove((Move)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -174,6 +300,9 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 		switch (featureID) {
 			case SchedulerPackage.MOVE_CHANGE__TASK_TO_SCHEDULE:
 				setTaskToSchedule((SolutionTask)null);
+				return;
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				setMove((Move)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -191,6 +320,10 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 				return taskToSchedule != null;
 			case SchedulerPackage.MOVE_CHANGE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case SchedulerPackage.MOVE_CHANGE__VALID:
+				return isValid() != VALID_EDEFAULT;
+			case SchedulerPackage.MOVE_CHANGE__MOVE:
+				return getMove() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -204,8 +337,7 @@ public class MoveChangeImpl extends MinimalEObjectImpl.Container implements Move
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case SchedulerPackage.MOVE_CHANGE___CHANGE:
-				change();
-				return null;
+				return change();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

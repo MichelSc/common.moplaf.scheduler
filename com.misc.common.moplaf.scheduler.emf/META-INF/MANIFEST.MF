@@ -4,6 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: com.misc.common.moplaf.scheduler.emf;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
+Bundle-Activator: com.misc.common.moplaf.scheduler.Plugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
@@ -12,5 +13,6 @@ Export-Package: com.misc.common.moplaf.scheduler,
  com.misc.common.moplaf.scheduler.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- com.misc.common.moplaf.propagator2;visibility:=reexport
+ com.misc.common.moplaf.propagator2;visibility:=reexport,
+ com.misc.common.moplaf.emf
 Bundle-ActivationPolicy: lazy

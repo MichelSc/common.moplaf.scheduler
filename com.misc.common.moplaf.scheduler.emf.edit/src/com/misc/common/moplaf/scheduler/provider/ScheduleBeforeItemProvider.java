@@ -4,15 +4,11 @@ package com.misc.common.moplaf.scheduler.provider;
 
 
 import com.misc.common.moplaf.scheduler.ScheduleBefore;
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -21,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScheduleBeforeItemProvider extends MoveChangeItemProvider {
+public class ScheduleBeforeItemProvider extends MoveChangeTaskItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -43,31 +39,8 @@ public class ScheduleBeforeItemProvider extends MoveChangeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTaskAfterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Task After feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTaskAfterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ScheduleBefore_TaskAfter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ScheduleBefore_TaskAfter_feature", "_UI_ScheduleBefore_type"),
-				 SchedulerPackage.Literals.SCHEDULE_BEFORE__TASK_AFTER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

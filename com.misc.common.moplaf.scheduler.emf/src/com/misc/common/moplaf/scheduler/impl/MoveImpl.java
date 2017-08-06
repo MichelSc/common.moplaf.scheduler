@@ -6,6 +6,7 @@ import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.MoveExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -20,6 +21,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -33,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveImpl#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveImpl#getChanges <em>Changes</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveImpl#getSolution <em>Solution</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,7 +118,7 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 	 */
 	public EList<MoveChange> getChanges() {
 		if (changes == null) {
-			changes = new EObjectContainmentEList<MoveChange>(MoveChange.class, this, SchedulerPackage.MOVE__CHANGES);
+			changes = new EObjectContainmentWithInverseEList<MoveChange>(MoveChange.class, this, SchedulerPackage.MOVE__CHANGES, SchedulerPackage.MOVE_CHANGE__MOVE);
 		}
 		return changes;
 	}
@@ -145,6 +149,66 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Solution getSolution() {
+		if (eContainerFeatureID() != SchedulerPackage.MOVE__SOLUTION) return null;
+		return (Solution)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSolution(Solution newSolution, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newSolution, SchedulerPackage.MOVE__SOLUTION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSolution(Solution newSolution) {
+		if (newSolution != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.MOVE__SOLUTION && newSolution != null)) {
+			if (EcoreUtil.isAncestor(this, newSolution))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newSolution != null)
+				msgs = ((InternalEObject)newSolution).eInverseAdd(this, SchedulerPackage.SOLUTION__MOVES, Solution.class, msgs);
+			msgs = basicSetSolution(newSolution, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.MOVE__SOLUTION, newSolution, newSolution));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SchedulerPackage.MOVE__CHANGES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChanges()).basicAdd(otherEnd, msgs);
+			case SchedulerPackage.MOVE__SOLUTION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetSolution((Solution)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -152,8 +216,24 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.MOVE__CHANGES:
 				return ((InternalEList<?>)getChanges()).basicRemove(otherEnd, msgs);
+			case SchedulerPackage.MOVE__SOLUTION:
+				return basicSetSolution(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case SchedulerPackage.MOVE__SOLUTION:
+				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SOLUTION__MOVES, Solution.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -170,6 +250,8 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 				return getChanges();
 			case SchedulerPackage.MOVE__NAME:
 				return getName();
+			case SchedulerPackage.MOVE__SOLUTION:
+				return getSolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -194,6 +276,9 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 			case SchedulerPackage.MOVE__NAME:
 				setName((String)newValue);
 				return;
+			case SchedulerPackage.MOVE__SOLUTION:
+				setSolution((Solution)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -215,6 +300,9 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 			case SchedulerPackage.MOVE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case SchedulerPackage.MOVE__SOLUTION:
+				setSolution((Solution)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -233,6 +321,8 @@ public class MoveImpl extends MinimalEObjectImpl.Container implements Move {
 				return changes != null && !changes.isEmpty();
 			case SchedulerPackage.MOVE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.MOVE__SOLUTION:
+				return getSolution() != null;
 		}
 		return super.eIsSet(featureID);
 	}

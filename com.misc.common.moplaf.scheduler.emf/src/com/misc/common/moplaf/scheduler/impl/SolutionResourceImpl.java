@@ -8,8 +8,6 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.scheduler.Task;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

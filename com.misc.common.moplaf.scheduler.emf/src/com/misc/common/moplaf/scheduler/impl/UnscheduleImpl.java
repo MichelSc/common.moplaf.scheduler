@@ -34,4 +34,19 @@ public class UnscheduleImpl extends MoveChangeImpl implements Unschedule {
 		return SchedulerPackage.Literals.UNSCHEDULE;
 	}
 
+	/**
+	 * 
+	 */
+	@Override
+	public String getDescription() {
+		String is_valid_feedback = this.isValidFeedback();
+		if ( is_valid_feedback!=null ) {
+			return is_valid_feedback;
+		}
+		
+		String description = String.format("Unschedule %s", 
+				                           this.getTaskToSchedule().getTask().getName());
+		return description;
+	}
+
 } //UnscheduleImpl
