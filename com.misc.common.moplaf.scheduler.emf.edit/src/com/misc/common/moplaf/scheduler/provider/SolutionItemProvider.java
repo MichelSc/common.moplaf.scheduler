@@ -305,7 +305,7 @@ public class SolutionItemProvider
 		if ( commandClass == ResetCommand.class){
 			return new SolutionResetCommand((Solution) object); 
 		} else if ( commandClass == CloneCommand.class){
-			return new SolutionResetCommand((Solution) object); 
+			return new SolutionCloneCommand((Solution) object); 
 		} else if ( commandClass == AcceptCommand.class){
 			return new SolutionAcceptCommand((Solution) object); 
 		}
