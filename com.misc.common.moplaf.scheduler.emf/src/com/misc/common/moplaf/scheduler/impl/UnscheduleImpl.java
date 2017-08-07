@@ -47,7 +47,7 @@ public class UnscheduleImpl extends MoveChangeImpl implements Unschedule {
 		}
 		
 		String description = String.format("Unschedule %s", 
-				                           this.getTaskToSchedule().getTask().getName());
+				                           this.getTaskToSchedule().getName());
 		return description;
 	}
 

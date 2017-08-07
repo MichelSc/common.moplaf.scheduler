@@ -62,7 +62,6 @@ public class SolutionTaskItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTaskPropertyDescriptor(object);
 			addNextTaskPropertyDescriptor(object);
 			addPreviousTaskPropertyDescriptor(object);
 			addScheduledResourcePropertyDescriptor(object);
@@ -70,6 +69,8 @@ public class SolutionTaskItemProvider
 			addCandidateNextTaskPropertyDescriptor(object);
 			addCandidatePreviousTaskPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addTaskPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -251,6 +252,28 @@ public class SolutionTaskItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionTask_Name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_Name_feature", "_UI_SolutionTask_type"),
+				 SchedulerPackage.Literals.SOLUTION_TASK__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -299,7 +322,7 @@ public class SolutionTaskItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SolutionTask)object).getDescription();
+		String label = ((SolutionTask)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_SolutionTask_type") :
 			getString("_UI_SolutionTask_type") + " " + label;
@@ -319,6 +342,7 @@ public class SolutionTaskItemProvider
 
 		switch (notification.getFeatureID(SolutionTask.class)) {
 			case SchedulerPackage.SOLUTION_TASK__DESCRIPTION:
+			case SchedulerPackage.SOLUTION_TASK__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:

@@ -48,8 +48,8 @@ public class ScheduleBeforeImpl extends MoveChangeTaskImpl implements ScheduleBe
 		}
 		
 		String description = String.format("Schedule %s before %s", 
-				                           this.getTaskToSchedule().getTask().getName(),
-				                           this.getInsertionPoint().getTask().getName());
+				                           this.getTaskToSchedule().getName(),
+				                           this.getInsertionPoint().getName());
 		return description;
 	}
 	

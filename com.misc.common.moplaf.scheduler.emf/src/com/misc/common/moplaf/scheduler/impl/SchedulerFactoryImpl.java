@@ -57,8 +57,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case SchedulerPackage.SCHEDULER: return createScheduler();
-			case SchedulerPackage.RESOURCE: return createResource();
-			case SchedulerPackage.TASK: return createTask();
 			case SchedulerPackage.SOLUTION: return createSolution();
 			case SchedulerPackage.SOLUTION_RESOURCE: return createSolutionResource();
 			case SchedulerPackage.SOLUTION_TASK: return createSolutionTask();
@@ -95,26 +93,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public Scheduler createScheduler() {
 		SchedulerImpl scheduler = new SchedulerImpl();
 		return scheduler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Resource createResource() {
-		ResourceImpl resource = new ResourceImpl();
-		return resource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Task createTask() {
-		TaskImpl task = new TaskImpl();
-		return task;
 	}
 
 	/**

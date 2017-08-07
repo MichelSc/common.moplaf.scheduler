@@ -18,7 +18,6 @@ import com.misc.common.moplaf.scheduler.ResetResourceExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.ResetSolutionAllExpressionCandidateValues;
 import com.misc.common.moplaf.scheduler.ResetSolutionExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.ResetTaskExpressionCandidateValue;
-import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.ResourceExpressionPropagatorFunction;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
@@ -34,7 +33,6 @@ import com.misc.common.moplaf.scheduler.SolutionExpressionPropagatorFunction;
 import com.misc.common.moplaf.scheduler.SolutionPropagatorFunction;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 
 import com.misc.common.moplaf.scheduler.TaskExpressionPropagatorFunction;
@@ -61,20 +59,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	private EClass schedulerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -374,7 +358,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getScheduler_Resources() {
-		return (EReference)schedulerEClass.getEStructuralFeatures().get(1);
+		return (EReference)schedulerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -383,7 +367,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getScheduler_Tasks() {
-		return (EReference)schedulerEClass.getEStructuralFeatures().get(2);
+		return (EReference)schedulerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -392,7 +376,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getScheduler_Name() {
-		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -401,43 +385,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getScheduler_CurrentSolutionntr() {
-		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResource() {
-		return resourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResource_Name() {
-		return (EAttribute)resourceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTask() {
-		return taskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTask_Name() {
-		return (EAttribute)taskEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -562,7 +510,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSolution__ConstructTask__Task() {
+	public EOperation getSolution__ConstructTask__EObject() {
 		return solutionEClass.getEOperations().get(5);
 	}
 
@@ -571,7 +519,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSolution__ConstructResource__Resource() {
+	public EOperation getSolution__ConstructResource__EObject() {
 		return solutionEClass.getEOperations().get(6);
 	}
 
@@ -635,7 +583,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionResource_Resource() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(0);
+		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -644,7 +592,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionResource_ScheduledTasks() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(1);
+		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -653,7 +601,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionResource_CandidateScheduledTasks() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(2);
+		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -662,7 +610,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionResource_Expressions() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(3);
+		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -671,7 +619,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getSolutionResource_Description() {
-		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -680,7 +628,16 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionResource_Solution() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(5);
+		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSolutionResource_Name() {
+		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -698,7 +655,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_Task() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(0);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -707,7 +664,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_NextTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(1);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -716,7 +673,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_PreviousTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(2);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -725,7 +682,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_ScheduledResource() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(3);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -734,7 +691,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_CandidateScheduledResource() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(4);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -743,7 +700,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_CandidateNextTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(5);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -752,7 +709,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_CandidatePreviousTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(6);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -761,7 +718,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_Expressions() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(7);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -770,7 +727,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getSolutionTask_Description() {
-		return (EAttribute)solutionTaskEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)solutionTaskEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -779,7 +736,16 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getSolutionTask_Solution() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(9);
+		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSolutionTask_Name() {
+		return (EAttribute)solutionTaskEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1271,16 +1237,10 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		// Create classes and their features
 		schedulerEClass = createEClass(SCHEDULER);
 		createEReference(schedulerEClass, SCHEDULER__SOLUTIONS);
-		createEReference(schedulerEClass, SCHEDULER__RESOURCES);
-		createEReference(schedulerEClass, SCHEDULER__TASKS);
 		createEAttribute(schedulerEClass, SCHEDULER__NAME);
 		createEAttribute(schedulerEClass, SCHEDULER__CURRENT_SOLUTIONNTR);
-
-		resourceEClass = createEClass(RESOURCE);
-		createEAttribute(resourceEClass, RESOURCE__NAME);
-
-		taskEClass = createEClass(TASK);
-		createEAttribute(taskEClass, TASK__NAME);
+		createEReference(schedulerEClass, SCHEDULER__TASKS);
+		createEReference(schedulerEClass, SCHEDULER__RESOURCES);
 
 		solutionEClass = createEClass(SOLUTION);
 		createEReference(solutionEClass, SOLUTION__MOVES);
@@ -1295,19 +1255,19 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEOperation(solutionEClass, SOLUTION___RESET_CANDIDATE);
 		createEOperation(solutionEClass, SOLUTION___ACCEPT_CANDIDATE);
 		createEOperation(solutionEClass, SOLUTION___RESET);
-		createEOperation(solutionEClass, SOLUTION___CONSTRUCT_TASK__TASK);
-		createEOperation(solutionEClass, SOLUTION___CONSTRUCT_RESOURCE__RESOURCE);
+		createEOperation(solutionEClass, SOLUTION___CONSTRUCT_TASK__EOBJECT);
+		createEOperation(solutionEClass, SOLUTION___CONSTRUCT_RESOURCE__EOBJECT);
 
 		solutionResourceEClass = createEClass(SOLUTION_RESOURCE);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__RESOURCE);
 		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__SCHEDULED_TASKS);
 		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS);
 		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__EXPRESSIONS);
 		createEAttribute(solutionResourceEClass, SOLUTION_RESOURCE__DESCRIPTION);
 		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__SOLUTION);
+		createEAttribute(solutionResourceEClass, SOLUTION_RESOURCE__NAME);
+		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__RESOURCE);
 
 		solutionTaskEClass = createEClass(SOLUTION_TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__TASK);
 		createEReference(solutionTaskEClass, SOLUTION_TASK__NEXT_TASK);
 		createEReference(solutionTaskEClass, SOLUTION_TASK__PREVIOUS_TASK);
 		createEReference(solutionTaskEClass, SOLUTION_TASK__SCHEDULED_RESOURCE);
@@ -1317,6 +1277,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(solutionTaskEClass, SOLUTION_TASK__EXPRESSIONS);
 		createEAttribute(solutionTaskEClass, SOLUTION_TASK__DESCRIPTION);
 		createEReference(solutionTaskEClass, SOLUTION_TASK__SOLUTION);
+		createEAttribute(solutionTaskEClass, SOLUTION_TASK__NAME);
+		createEReference(solutionTaskEClass, SOLUTION_TASK__TASK);
 		createEOperation(solutionTaskEClass, SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT);
 		createEOperation(solutionTaskEClass, SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONTASK_SOLUTIONTASK);
 
@@ -1460,16 +1422,10 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		// Initialize classes, features, and operations; add parameters
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getScheduler_Solutions(), this.getSolution(), this.getSolution_Scheduler(), "Solutions", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScheduler_Resources(), this.getResource(), null, "Resources", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScheduler_Tasks(), this.getTask(), null, "Tasks", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScheduler_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScheduler_CurrentSolutionntr(), ecorePackage.getEInt(), "CurrentSolutionntr", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScheduler_Tasks(), ecorePackage.getEObject(), null, "Tasks", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScheduler_Resources(), ecorePackage.getEObject(), null, "Resources", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(solutionEClass, Solution.class, "Solution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSolution_Moves(), this.getMove(), this.getMove_Solution(), "Moves", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1491,22 +1447,22 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		initEOperation(getSolution__Reset(), null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSolution__ConstructTask__Task(), this.getSolutionTask(), "constructTask", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getTask(), "task", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSolution__ConstructTask__EObject(), this.getSolutionTask(), "constructTask", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEObject(), "task", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSolution__ConstructResource__Resource(), this.getSolutionResource(), "constructResource", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getResource(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSolution__ConstructResource__EObject(), this.getSolutionResource(), "constructResource", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEObject(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(solutionResourceEClass, SolutionResource.class, "SolutionResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionResource_Resource(), this.getResource(), null, "Resource", null, 1, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_ScheduledTasks(), this.getSolutionTask(), this.getSolutionTask_ScheduledResource(), "ScheduledTasks", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_CandidateScheduledTasks(), this.getSolutionTask(), this.getSolutionTask_CandidateScheduledResource(), "CandidateScheduledTasks", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_Expressions(), this.getResourceExpression(), this.getResourceExpression_Resource(), "Expressions", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionResource_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_Solution(), this.getSolution(), this.getSolution_Resources(), "Solution", null, 1, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSolutionResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolutionResource_Resource(), ecorePackage.getEObject(), null, "Resource", null, 1, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(solutionTaskEClass, SolutionTask.class, "SolutionTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionTask_Task(), this.getTask(), null, "Task", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_NextTask(), this.getSolutionTask(), this.getSolutionTask_PreviousTask(), "NextTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_PreviousTask(), this.getSolutionTask(), this.getSolutionTask_NextTask(), "PreviousTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_ScheduledResource(), this.getSolutionResource(), this.getSolutionResource_ScheduledTasks(), "ScheduledResource", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1516,6 +1472,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSolutionTask_Expressions(), this.getTaskExpression(), this.getTaskExpression_Task(), "Expressions", null, 0, -1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionTask_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_Solution(), this.getSolution(), this.getSolution_Tasks(), "Solution", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSolutionTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolutionTask_Task(), ecorePackage.getEObject(), null, "Task", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getSolutionTask__UnsetCandidatePreviousNext(), null, "unsetCandidatePreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
 

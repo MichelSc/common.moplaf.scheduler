@@ -243,7 +243,7 @@ public interface Solution extends EObject {
 	 * @model
 	 * @generated
 	 */
-	SolutionTask constructTask(Task task);
+	SolutionTask constructTask(EObject task);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -251,6 +251,6 @@ public interface Solution extends EObject {
 	 * @model
 	 * @generated
 	 */
-	SolutionResource constructResource(Resource resource);
+	SolutionResource constructResource(EObject resource);
 
 } // Solution

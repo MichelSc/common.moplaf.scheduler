@@ -76,14 +76,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createSchedulerAdapter();
 			}
 			@Override
-			public Adapter caseResource(Resource object) {
-				return createResourceAdapter();
-			}
-			@Override
-			public Adapter caseTask(Task object) {
-				return createTaskAdapter();
-			}
-			@Override
 			public Adapter caseSolution(Solution object) {
 				return createSolutionAdapter();
 			}
@@ -246,34 +238,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSchedulerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.Resource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.scheduler.Resource
-	 * @generated
-	 */
-	public Adapter createResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.Task <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.scheduler.Task
-	 * @generated
-	 */
-	public Adapter createTaskAdapter() {
 		return null;
 	}
 

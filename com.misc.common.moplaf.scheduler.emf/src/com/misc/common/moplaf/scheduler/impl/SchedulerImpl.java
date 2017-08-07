@@ -2,12 +2,9 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
-import com.misc.common.moplaf.scheduler.Task;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,13 +13,13 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,10 +31,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getSolutions <em>Solutions</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getCurrentSolutionntr <em>Current Solutionntr</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getResources <em>Resources</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,26 +49,6 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * @ordered
 	 */
 	protected EList<Solution> solutions;
-
-	/**
-	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResources()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Resource> resources;
-
-	/**
-	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTasks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Task> tasks;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -114,6 +91,26 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	protected int currentSolutionntr = CURRENT_SOLUTIONNTR_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> tasks;
+
+	/**
+	 * The cached value of the '{@link #getResources() <em>Resources</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResources()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> resources;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,9 +146,9 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Resource> getResources() {
+	public EList<EObject> getResources() {
 		if (resources == null) {
-			resources = new EObjectContainmentEList<Resource>(Resource.class, this, SchedulerPackage.SCHEDULER__RESOURCES);
+			resources = new EObjectResolvingEList<EObject>(EObject.class, this, SchedulerPackage.SCHEDULER__RESOURCES);
 		}
 		return resources;
 	}
@@ -161,9 +158,9 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Task> getTasks() {
+	public EList<EObject> getTasks() {
 		if (tasks == null) {
-			tasks = new EObjectContainmentEList<Task>(Task.class, this, SchedulerPackage.SCHEDULER__TASKS);
+			tasks = new EObjectResolvingEList<EObject>(EObject.class, this, SchedulerPackage.SCHEDULER__TASKS);
 		}
 		return tasks;
 	}
@@ -235,10 +232,6 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 		switch (featureID) {
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
 				return ((InternalEList<?>)getSolutions()).basicRemove(otherEnd, msgs);
-			case SchedulerPackage.SCHEDULER__RESOURCES:
-				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-			case SchedulerPackage.SCHEDULER__TASKS:
-				return ((InternalEList<?>)getTasks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -253,14 +246,14 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 		switch (featureID) {
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
 				return getSolutions();
-			case SchedulerPackage.SCHEDULER__RESOURCES:
-				return getResources();
-			case SchedulerPackage.SCHEDULER__TASKS:
-				return getTasks();
 			case SchedulerPackage.SCHEDULER__NAME:
 				return getName();
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
 				return getCurrentSolutionntr();
+			case SchedulerPackage.SCHEDULER__TASKS:
+				return getTasks();
+			case SchedulerPackage.SCHEDULER__RESOURCES:
+				return getResources();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -278,19 +271,19 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 				getSolutions().clear();
 				getSolutions().addAll((Collection<? extends Solution>)newValue);
 				return;
-			case SchedulerPackage.SCHEDULER__RESOURCES:
-				getResources().clear();
-				getResources().addAll((Collection<? extends Resource>)newValue);
-				return;
-			case SchedulerPackage.SCHEDULER__TASKS:
-				getTasks().clear();
-				getTasks().addAll((Collection<? extends Task>)newValue);
-				return;
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName((String)newValue);
 				return;
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
 				setCurrentSolutionntr((Integer)newValue);
+				return;
+			case SchedulerPackage.SCHEDULER__TASKS:
+				getTasks().clear();
+				getTasks().addAll((Collection<? extends EObject>)newValue);
+				return;
+			case SchedulerPackage.SCHEDULER__RESOURCES:
+				getResources().clear();
+				getResources().addAll((Collection<? extends EObject>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -307,17 +300,17 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
 				getSolutions().clear();
 				return;
-			case SchedulerPackage.SCHEDULER__RESOURCES:
-				getResources().clear();
-				return;
-			case SchedulerPackage.SCHEDULER__TASKS:
-				getTasks().clear();
-				return;
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
 				setCurrentSolutionntr(CURRENT_SOLUTIONNTR_EDEFAULT);
+				return;
+			case SchedulerPackage.SCHEDULER__TASKS:
+				getTasks().clear();
+				return;
+			case SchedulerPackage.SCHEDULER__RESOURCES:
+				getResources().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -333,14 +326,14 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 		switch (featureID) {
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
 				return solutions != null && !solutions.isEmpty();
-			case SchedulerPackage.SCHEDULER__RESOURCES:
-				return resources != null && !resources.isEmpty();
-			case SchedulerPackage.SCHEDULER__TASKS:
-				return tasks != null && !tasks.isEmpty();
 			case SchedulerPackage.SCHEDULER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
 				return currentSolutionntr != CURRENT_SOLUTIONNTR_EDEFAULT;
+			case SchedulerPackage.SCHEDULER__TASKS:
+				return tasks != null && !tasks.isEmpty();
+			case SchedulerPackage.SCHEDULER__RESOURCES:
+				return resources != null && !resources.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

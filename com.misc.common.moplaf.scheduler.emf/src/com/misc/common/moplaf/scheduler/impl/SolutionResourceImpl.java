@@ -2,7 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
@@ -16,6 +15,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -33,27 +33,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getResource <em>Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getCandidateScheduledTasks <em>Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getSolution <em>Solution</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getResource <em>Resource</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SolutionResourceImpl extends MinimalEObjectImpl.Container implements SolutionResource {
-	/**
-	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResource()
-	 * @generated
-	 * @ordered
-	 */
-	protected Resource resource;
-
 	/**
 	 * The cached value of the '{@link #getScheduledTasks() <em>Scheduled Tasks</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -95,6 +86,36 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResource()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject resource;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -118,10 +139,10 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Resource getResource() {
+	public EObject getResource() {
 		if (resource != null && resource.eIsProxy()) {
 			InternalEObject oldResource = (InternalEObject)resource;
-			resource = (Resource)eResolveProxy(oldResource);
+			resource = eResolveProxy(oldResource);
 			if (resource != oldResource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_RESOURCE__RESOURCE, oldResource, resource));
@@ -135,7 +156,7 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Resource basicGetResource() {
+	public EObject basicGetResource() {
 		return resource;
 	}
 
@@ -144,8 +165,8 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResource(Resource newResource) {
-		Resource oldResource = resource;
+	public void setResource(EObject newResource) {
+		EObject oldResource = resource;
 		resource = newResource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_RESOURCE__RESOURCE, oldResource, resource));
@@ -193,8 +214,8 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public String getDescription() {
 		Solution solution = this.getSolution();
-		Resource resource = this.getResource();
-		String description = String.format("sol %d, resource %s", solution.getSolutionNr(), resource.getName());
+		EObject resource = this.getResource();
+		String description = String.format("sol %d, resource %s", solution.getSolutionNr(), this.getName());
 		return description;
 	}
 
@@ -237,6 +258,27 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_RESOURCE__SOLUTION, newSolution, newSolution));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_RESOURCE__NAME, oldName, name));
 	}
 
 	/**
@@ -304,9 +346,6 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
-				if (resolve) return getResource();
-				return basicGetResource();
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
 				return getScheduledTasks();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
@@ -317,6 +356,11 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 				return getDescription();
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				return getSolution();
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				return getName();
+			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
+				if (resolve) return getResource();
+				return basicGetResource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -330,9 +374,6 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
-				setResource((Resource)newValue);
-				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
 				getScheduledTasks().clear();
 				getScheduledTasks().addAll((Collection<? extends SolutionTask>)newValue);
@@ -348,6 +389,12 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				setSolution((Solution)newValue);
 				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				setName((String)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
+				setResource((EObject)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -360,9 +407,6 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
-				setResource((Resource)null);
-				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
 				getScheduledTasks().clear();
 				return;
@@ -374,6 +418,12 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				setSolution((Solution)null);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
+				setResource((EObject)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -387,8 +437,6 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
-				return resource != null;
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
 				return scheduledTasks != null && !scheduledTasks.isEmpty();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
@@ -399,8 +447,28 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				return getSolution() != null;
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
+				return resource != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (Name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SolutionResourceImpl

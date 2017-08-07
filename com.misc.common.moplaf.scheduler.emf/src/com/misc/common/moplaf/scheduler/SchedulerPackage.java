@@ -79,31 +79,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__SOLUTIONS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULER__RESOURCES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULER__TASKS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__NAME = 3;
+	int SCHEDULER__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Current Solutionntr</b></em>' attribute.
@@ -112,7 +94,25 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__CURRENT_SOLUTIONNTR = 4;
+	int SCHEDULER__CURRENT_SOLUTIONNTR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__TASKS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Resources</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__RESOURCES = 4;
 
 	/**
 	 * The number of structural features of the '<em>Scheduler</em>' class.
@@ -133,80 +133,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl <em>Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.ResourceImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResource()
-	 * @generated
-	 */
-	int RESOURCE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.TaskImpl <em>Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.TaskImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTask()
-	 * @generated
-	 */
-	int TASK = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionImpl <em>Solution</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,7 +140,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolution()
 	 * @generated
 	 */
-	int SOLUTION = 3;
+	int SOLUTION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Moves</b></em>' containment reference list.
@@ -340,7 +266,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION___CONSTRUCT_TASK__TASK = 5;
+	int SOLUTION___CONSTRUCT_TASK__EOBJECT = 5;
 
 	/**
 	 * The operation id for the '<em>Construct Resource</em>' operation.
@@ -349,7 +275,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION___CONSTRUCT_RESOURCE__RESOURCE = 6;
+	int SOLUTION___CONSTRUCT_RESOURCE__EOBJECT = 6;
 
 	/**
 	 * The number of operations of the '<em>Solution</em>' class.
@@ -368,16 +294,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolutionResource()
 	 * @generated
 	 */
-	int SOLUTION_RESOURCE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__RESOURCE = 0;
+	int SOLUTION_RESOURCE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
@@ -386,7 +303,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__SCHEDULED_TASKS = 1;
+	int SOLUTION_RESOURCE__SCHEDULED_TASKS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Scheduled Tasks</b></em>' reference list.
@@ -395,7 +312,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS = 2;
+	int SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -404,7 +321,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__EXPRESSIONS = 3;
+	int SOLUTION_RESOURCE__EXPRESSIONS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -413,7 +330,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__DESCRIPTION = 4;
+	int SOLUTION_RESOURCE__DESCRIPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' container reference.
@@ -422,7 +339,25 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__SOLUTION = 5;
+	int SOLUTION_RESOURCE__SOLUTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__NAME = 5;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__RESOURCE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Solution Resource</em>' class.
@@ -431,7 +366,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE_FEATURE_COUNT = 6;
+	int SOLUTION_RESOURCE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Solution Resource</em>' class.
@@ -450,16 +385,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolutionTask()
 	 * @generated
 	 */
-	int SOLUTION_TASK = 5;
-
-	/**
-	 * The feature id for the '<em><b>Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_TASK__TASK = 0;
+	int SOLUTION_TASK = 3;
 
 	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
@@ -468,7 +394,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__NEXT_TASK = 1;
+	int SOLUTION_TASK__NEXT_TASK = 0;
 
 	/**
 	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
@@ -477,7 +403,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__PREVIOUS_TASK = 2;
+	int SOLUTION_TASK__PREVIOUS_TASK = 1;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
@@ -486,7 +412,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__SCHEDULED_RESOURCE = 3;
+	int SOLUTION_TASK__SCHEDULED_RESOURCE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Scheduled Resource</b></em>' reference.
@@ -495,7 +421,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE = 4;
+	int SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Next Task</b></em>' reference.
@@ -504,7 +430,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__CANDIDATE_NEXT_TASK = 5;
+	int SOLUTION_TASK__CANDIDATE_NEXT_TASK = 4;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Previous Task</b></em>' reference.
@@ -513,7 +439,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK = 6;
+	int SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK = 5;
 
 	/**
 	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -522,7 +448,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__EXPRESSIONS = 7;
+	int SOLUTION_TASK__EXPRESSIONS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -531,7 +457,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__DESCRIPTION = 8;
+	int SOLUTION_TASK__DESCRIPTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' container reference.
@@ -540,7 +466,25 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK__SOLUTION = 9;
+	int SOLUTION_TASK__SOLUTION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK__NAME = 9;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK__TASK = 10;
 
 	/**
 	 * The number of structural features of the '<em>Solution Task</em>' class.
@@ -549,7 +493,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK_FEATURE_COUNT = 10;
+	int SOLUTION_TASK_FEATURE_COUNT = 11;
 
 	/**
 	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
@@ -586,7 +530,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMove()
 	 * @generated
 	 */
-	int MOVE = 6;
+	int MOVE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -650,7 +594,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveExpression()
 	 * @generated
 	 */
-	int MOVE_EXPRESSION = 7;
+	int MOVE_EXPRESSION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -687,7 +631,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolutionExpression()
 	 * @generated
 	 */
-	int SOLUTION_EXPRESSION = 8;
+	int SOLUTION_EXPRESSION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' container reference.
@@ -733,7 +677,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolutionPropagatorFunction()
 	 * @generated
 	 */
-	int SOLUTION_PROPAGATOR_FUNCTION = 31;
+	int SOLUTION_PROPAGATOR_FUNCTION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1031,7 +975,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcSolutionAllExpressionCandidateValues()
 	 * @generated
 	 */
-	int CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES = 9;
+	int CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES = 7;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1329,7 +1273,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResetSolutionAllExpressionCandidateValues()
 	 * @generated
 	 */
-	int RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES = 10;
+	int RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES = 8;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1627,7 +1571,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getSolutionExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION = 11;
+	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1925,7 +1869,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResetSolutionExpressionCandidateValue()
 	 * @generated
 	 */
-	int RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 12;
+	int RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2223,7 +2167,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResourceExpression()
 	 * @generated
 	 */
-	int RESOURCE_EXPRESSION = 13;
+	int RESOURCE_EXPRESSION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' container reference.
@@ -2269,7 +2213,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResourceExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION = 28;
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2567,7 +2511,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcResourceExpressionCandidateValue()
 	 * @generated
 	 */
-	int CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE = 14;
+	int CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2865,7 +2809,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResetResourceExpressionCandidateValue()
 	 * @generated
 	 */
-	int RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE = 15;
+	int RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3163,7 +3107,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskExpression()
 	 * @generated
 	 */
-	int TASK_EXPRESSION = 16;
+	int TASK_EXPRESSION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -3263,7 +3207,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int TASK_EXPRESSION_PROPAGATOR_FUNCTION = 30;
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION = 28;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3561,7 +3505,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcTaskExpressionCandidateValue()
 	 * @generated
 	 */
-	int CALC_TASK_EXPRESSION_CANDIDATE_VALUE = 17;
+	int CALC_TASK_EXPRESSION_CANDIDATE_VALUE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3859,7 +3803,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResetTaskExpressionCandidateValue()
 	 * @generated
 	 */
-	int RESET_TASK_EXPRESSION_CANDIDATE_VALUE = 18;
+	int RESET_TASK_EXPRESSION_CANDIDATE_VALUE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4157,7 +4101,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskFloatExpression()
 	 * @generated
 	 */
-	int TASK_FLOAT_EXPRESSION = 19;
+	int TASK_FLOAT_EXPRESSION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -4275,7 +4219,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChange()
 	 * @generated
 	 */
-	int MOVE_CHANGE = 20;
+	int MOVE_CHANGE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4348,7 +4292,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChangeTask()
 	 * @generated
 	 */
-	int MOVE_CHANGE_TASK = 21;
+	int MOVE_CHANGE_TASK = 19;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4430,7 +4374,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleAfter()
 	 * @generated
 	 */
-	int SCHEDULE_AFTER = 22;
+	int SCHEDULE_AFTER = 20;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4512,7 +4456,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleBefore()
 	 * @generated
 	 */
-	int SCHEDULE_BEFORE = 23;
+	int SCHEDULE_BEFORE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4594,7 +4538,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveChangeResource()
 	 * @generated
 	 */
-	int MOVE_CHANGE_RESOURCE = 24;
+	int MOVE_CHANGE_RESOURCE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4676,7 +4620,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleFirst()
 	 * @generated
 	 */
-	int SCHEDULE_FIRST = 25;
+	int SCHEDULE_FIRST = 23;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4758,7 +4702,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleLast()
 	 * @generated
 	 */
-	int SCHEDULE_LAST = 26;
+	int SCHEDULE_LAST = 24;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4840,7 +4784,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getUnschedule()
 	 * @generated
 	 */
-	int UNSCHEDULE = 27;
+	int UNSCHEDULE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -4913,7 +4857,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcSolutionExpressionCandidateValue()
 	 * @generated
 	 */
-	int CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 29;
+	int CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -5211,7 +5155,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getCalcTaksExpressionCandidateValueCumulative()
 	 * @generated
 	 */
-	int CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE = 32;
+	int CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -5524,10 +5468,10 @@ public interface SchedulerPackage extends EPackage {
 	EReference getScheduler_Solutions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Resources</em>'.
+	 * @return the meta object for the reference list '<em>Resources</em>'.
 	 * @see com.misc.common.moplaf.scheduler.Scheduler#getResources()
 	 * @see #getScheduler()
 	 * @generated
@@ -5535,10 +5479,10 @@ public interface SchedulerPackage extends EPackage {
 	EReference getScheduler_Resources();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tasks</em>'.
+	 * @return the meta object for the reference list '<em>Tasks</em>'.
 	 * @see com.misc.common.moplaf.scheduler.Scheduler#getTasks()
 	 * @see #getScheduler()
 	 * @generated
@@ -5566,48 +5510,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getScheduler_CurrentSolutionntr();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Resource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Resource
-	 * @generated
-	 */
-	EClass getResource();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Resource#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Resource#getName()
-	 * @see #getResource()
-	 * @generated
-	 */
-	EAttribute getResource_Name();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Task <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Task
-	 * @generated
-	 */
-	EClass getTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Task#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Task#getName()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EAttribute getTask_Name();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Solution <em>Solution</em>}'.
@@ -5747,24 +5649,24 @@ public interface SchedulerPackage extends EPackage {
 	EOperation getSolution__Reset();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#constructTask(com.misc.common.moplaf.scheduler.Task) <em>Construct Task</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#constructTask(org.eclipse.emf.ecore.EObject) <em>Construct Task</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Construct Task</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Solution#constructTask(com.misc.common.moplaf.scheduler.Task)
+	 * @see com.misc.common.moplaf.scheduler.Solution#constructTask(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getSolution__ConstructTask__Task();
+	EOperation getSolution__ConstructTask__EObject();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#constructResource(com.misc.common.moplaf.scheduler.Resource) <em>Construct Resource</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#constructResource(org.eclipse.emf.ecore.EObject) <em>Construct Resource</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Construct Resource</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Solution#constructResource(com.misc.common.moplaf.scheduler.Resource)
+	 * @see com.misc.common.moplaf.scheduler.Solution#constructResource(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getSolution__ConstructResource__Resource();
+	EOperation getSolution__ConstructResource__EObject();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.SolutionResource <em>Solution Resource</em>}'.
@@ -5841,6 +5743,17 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSolutionResource_Solution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.SolutionResource#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getName()
+	 * @see #getSolutionResource()
+	 * @generated
+	 */
+	EAttribute getSolutionResource_Name();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.SolutionTask <em>Solution Task</em>}'.
@@ -5961,6 +5874,17 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSolutionTask_Solution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.SolutionTask#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getName()
+	 * @see #getSolutionTask()
+	 * @generated
+	 */
+	EAttribute getSolutionTask_Name();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.SolutionTask#unsetCandidatePreviousNext() <em>Unset Candidate Previous Next</em>}' operation.
@@ -6588,7 +6512,7 @@ public interface SchedulerPackage extends EPackage {
 		EReference SCHEDULER__SOLUTIONS = eINSTANCE.getScheduler_Solutions();
 
 		/**
-		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Resources</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6596,7 +6520,7 @@ public interface SchedulerPackage extends EPackage {
 		EReference SCHEDULER__RESOURCES = eINSTANCE.getScheduler_Resources();
 
 		/**
-		 * The meta object literal for the '<em><b>Tasks</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Tasks</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6618,42 +6542,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SCHEDULER__CURRENT_SOLUTIONNTR = eINSTANCE.getScheduler_CurrentSolutionntr();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl <em>Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.scheduler.impl.ResourceImpl
-		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResource()
-		 * @generated
-		 */
-		EClass RESOURCE = eINSTANCE.getResource();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE__NAME = eINSTANCE.getResource_Name();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.TaskImpl <em>Task</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.scheduler.impl.TaskImpl
-		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTask()
-		 * @generated
-		 */
-		EClass TASK = eINSTANCE.getTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TASK__NAME = eINSTANCE.getTask_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionImpl <em>Solution</em>}' class.
@@ -6767,7 +6655,7 @@ public interface SchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SOLUTION___CONSTRUCT_TASK__TASK = eINSTANCE.getSolution__ConstructTask__Task();
+		EOperation SOLUTION___CONSTRUCT_TASK__EOBJECT = eINSTANCE.getSolution__ConstructTask__EObject();
 
 		/**
 		 * The meta object literal for the '<em><b>Construct Resource</b></em>' operation.
@@ -6775,7 +6663,7 @@ public interface SchedulerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SOLUTION___CONSTRUCT_RESOURCE__RESOURCE = eINSTANCE.getSolution__ConstructResource__Resource();
+		EOperation SOLUTION___CONSTRUCT_RESOURCE__EOBJECT = eINSTANCE.getSolution__ConstructResource__EObject();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl <em>Solution Resource</em>}' class.
@@ -6834,6 +6722,14 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SOLUTION_RESOURCE__SOLUTION = eINSTANCE.getSolutionResource_Solution();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION_RESOURCE__NAME = eINSTANCE.getSolutionResource_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl <em>Solution Task</em>}' class.
@@ -6924,6 +6820,14 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SOLUTION_TASK__SOLUTION = eINSTANCE.getSolutionTask_Solution();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION_TASK__NAME = eINSTANCE.getSolutionTask_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Unset Candidate Previous Next</b></em>' operation.

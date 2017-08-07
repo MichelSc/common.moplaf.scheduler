@@ -50,8 +50,8 @@ public class ScheduleFirstImpl extends MoveChangeResourceImpl implements Schedul
 		}
 		
 		String description = String.format("Schedule %s first in %s", 
-				                           this.getTaskToSchedule().getTask().getName(),
-				                           this.getInsertionPoint().getResource().getName());
+				                           this.getTaskToSchedule().getName(),
+				                           this.getInsertionPoint().getName());
 		return description;
 	}
 

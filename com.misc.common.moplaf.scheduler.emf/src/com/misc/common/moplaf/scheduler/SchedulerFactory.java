@@ -31,24 +31,6 @@ public interface SchedulerFactory extends EFactory {
 	Scheduler createScheduler();
 
 	/**
-	 * Returns a new object of class '<em>Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource</em>'.
-	 * @generated
-	 */
-	Resource createResource();
-
-	/**
-	 * Returns a new object of class '<em>Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task</em>'.
-	 * @generated
-	 */
-	Task createTask();
-
-	/**
 	 * Returns a new object of class '<em>Solution</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

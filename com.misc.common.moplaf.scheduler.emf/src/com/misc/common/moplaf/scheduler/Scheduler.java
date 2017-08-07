@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getSolutions <em>Solutions</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionntr <em>Current Solutionntr</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler()
@@ -46,36 +46,36 @@ public interface Scheduler extends EObject {
 	EList<Solution> getSolutions();
 
 	/**
-	 * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Resource}.
+	 * Returns the value of the '<em><b>Resources</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resources</em>' containment reference list.
+	 * @return the value of the '<em>Resources</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Resources()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Resource> getResources();
+	EList<EObject> getResources();
 
 	/**
-	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Task}.
+	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tasks</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tasks</em>' containment reference list.
+	 * @return the value of the '<em>Tasks</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Tasks()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Task> getTasks();
+	EList<EObject> getTasks();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

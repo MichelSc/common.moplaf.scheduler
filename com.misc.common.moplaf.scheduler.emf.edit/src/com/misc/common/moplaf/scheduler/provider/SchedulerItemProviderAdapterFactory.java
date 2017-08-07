@@ -95,52 +95,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.Resource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResourceItemProvider resourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.Resource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResourceAdapter() {
-		if (resourceItemProvider == null) {
-			resourceItemProvider = new ResourceItemProvider(this);
-		}
-
-		return resourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.Task} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TaskItemProvider taskItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.Task}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTaskAdapter() {
-		if (taskItemProvider == null) {
-			taskItemProvider = new TaskItemProvider(this);
-		}
-
-		return taskItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.Solution} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -769,8 +723,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	 */
 	public void dispose() {
 		if (schedulerItemProvider != null) schedulerItemProvider.dispose();
-		if (resourceItemProvider != null) resourceItemProvider.dispose();
-		if (taskItemProvider != null) taskItemProvider.dispose();
 		if (solutionItemProvider != null) solutionItemProvider.dispose();
 		if (solutionResourceItemProvider != null) solutionResourceItemProvider.dispose();
 		if (solutionTaskItemProvider != null) solutionTaskItemProvider.dispose();

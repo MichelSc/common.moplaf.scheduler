@@ -48,8 +48,8 @@ public class ScheduleAfterImpl extends MoveChangeTaskImpl implements ScheduleAft
 		}
 		
 		String description = String.format("Schedule %s after %s", 
-				                           this.getTaskToSchedule().getTask().getName(),
-				                           this.getInsertionPoint().getTask().getName());
+				                           this.getTaskToSchedule().getName(),
+				                           this.getInsertionPoint().getName());
 		return description;
 	}
 

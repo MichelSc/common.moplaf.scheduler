@@ -6,7 +6,6 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 
 import java.lang.reflect.InvocationTargetException;
@@ -18,6 +17,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getPreviousTask <em>Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getScheduledResource <em>Scheduled Resource</em>}</li>
@@ -44,21 +43,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getSolution <em>Solution</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getTask <em>Task</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements SolutionTask {
-	/**
-	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected Task task;
-
 	/**
 	 * The cached value of the '{@link #getNextTask() <em>Next Task</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -140,6 +131,36 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject task;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -163,10 +184,10 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Task getTask() {
+	public EObject getTask() {
 		if (task != null && task.eIsProxy()) {
 			InternalEObject oldTask = (InternalEObject)task;
-			task = (Task)eResolveProxy(oldTask);
+			task = eResolveProxy(oldTask);
 			if (task != oldTask) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__TASK, oldTask, task));
@@ -180,7 +201,7 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Task basicGetTask() {
+	public EObject basicGetTask() {
 		return task;
 	}
 
@@ -189,8 +210,8 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTask(Task newTask) {
-		Task oldTask = task;
+	public void setTask(EObject newTask) {
+		EObject oldTask = task;
 		task = newTask;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__TASK, oldTask, task));
@@ -574,8 +595,8 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 */
 	public String getDescription() {
 		Solution solution = this.getSolution();
-		Task task = this.getTask();
-		String description = String.format("sol %d, task %s", solution.getSolutionNr(), task.getName());
+		EObject task = this.getTask();
+		String description = String.format("sol %d, task %s", solution.getSolutionNr(), this.getName());
 		return description;
 	}
 
@@ -618,6 +639,27 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SOLUTION, newSolution, newSolution));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__NAME, oldName, name));
 	}
 
 	/**
@@ -741,9 +783,6 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_TASK__TASK:
-				if (resolve) return getTask();
-				return basicGetTask();
 			case SchedulerPackage.SOLUTION_TASK__NEXT_TASK:
 				if (resolve) return getNextTask();
 				return basicGetNextTask();
@@ -768,6 +807,11 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return getDescription();
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				return getSolution();
+			case SchedulerPackage.SOLUTION_TASK__NAME:
+				return getName();
+			case SchedulerPackage.SOLUTION_TASK__TASK:
+				if (resolve) return getTask();
+				return basicGetTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -781,9 +825,6 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_TASK__TASK:
-				setTask((Task)newValue);
-				return;
 			case SchedulerPackage.SOLUTION_TASK__NEXT_TASK:
 				setNextTask((SolutionTask)newValue);
 				return;
@@ -809,6 +850,12 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				setSolution((Solution)newValue);
 				return;
+			case SchedulerPackage.SOLUTION_TASK__NAME:
+				setName((String)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_TASK__TASK:
+				setTask((EObject)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -821,9 +868,6 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_TASK__TASK:
-				setTask((Task)null);
-				return;
 			case SchedulerPackage.SOLUTION_TASK__NEXT_TASK:
 				setNextTask((SolutionTask)null);
 				return;
@@ -848,6 +892,12 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				setSolution((Solution)null);
 				return;
+			case SchedulerPackage.SOLUTION_TASK__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case SchedulerPackage.SOLUTION_TASK__TASK:
+				setTask((EObject)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -860,8 +910,6 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_TASK__TASK:
-				return task != null;
 			case SchedulerPackage.SOLUTION_TASK__NEXT_TASK:
 				return nextTask != null;
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
@@ -880,6 +928,10 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				return getSolution() != null;
+			case SchedulerPackage.SOLUTION_TASK__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.SOLUTION_TASK__TASK:
+				return task != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -900,6 +952,22 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (Name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SolutionTaskImpl

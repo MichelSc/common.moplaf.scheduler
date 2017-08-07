@@ -50,8 +50,8 @@ public class ScheduleLastImpl extends MoveChangeResourceImpl implements Schedule
 		}
 		
 		String description = String.format("Schedule %s last in %s", 
-				                           this.getTaskToSchedule().getTask().getName(),
-				                           this.getInsertionPoint().getResource().getName());
+				                           this.getTaskToSchedule().getName(),
+				                           this.getInsertionPoint().getName());
 		return description;
 	}
 	

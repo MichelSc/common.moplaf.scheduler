@@ -5,6 +5,7 @@ package com.misc.common.moplaf.scheduler.provider;
 
 
 
+import com.misc.common.moplaf.propagator2.PropagatorFactory;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
@@ -127,8 +128,8 @@ public class SchedulerItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__SOLUTIONS);
-			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__RESOURCES);
 			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__TASKS);
+			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__RESOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -189,8 +190,8 @@ public class SchedulerItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-			case SchedulerPackage.SCHEDULER__RESOURCES:
 			case SchedulerPackage.SCHEDULER__TASKS:
+			case SchedulerPackage.SCHEDULER__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -215,13 +216,297 @@ public class SchedulerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResource()));
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createScheduler()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createTask()));
+				 SchedulerFactory.eINSTANCE.createSolution()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createSolutionResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createSolutionTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createMove()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createSolutionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createCalcSolutionAllExpressionCandidateValues()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createResetSolutionAllExpressionCandidateValues()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createSolutionExpressionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createResetSolutionExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createResourceExpressionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createCalcResourceExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createResetResourceExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createTaskExpressionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createCalcTaskExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createResetTaskExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createScheduleLast()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createUnschedule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createCalcSolutionExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 SchedulerFactory.eINSTANCE.createCalcTaksExpressionCandidateValueCumulative()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 PropagatorFactory.eINSTANCE.createObjectWithPropagatorFunctions()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 PropagatorFactory.eINSTANCE.createPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 PropagatorFactory.eINSTANCE.createPropagatorFunctionBindings()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createScheduler()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createSolution()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createSolutionResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createSolutionTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createMove()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createSolutionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createCalcSolutionAllExpressionCandidateValues()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createResetSolutionAllExpressionCandidateValues()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createSolutionExpressionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createResetSolutionExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createResourceExpressionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createCalcResourceExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createResetResourceExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createTaskExpressionPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createCalcTaskExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createResetTaskExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createScheduleLast()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createUnschedule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createCalcSolutionExpressionCandidateValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 SchedulerFactory.eINSTANCE.createCalcTaksExpressionCandidateValueCumulative()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 PropagatorFactory.eINSTANCE.createObjectWithPropagatorFunctions()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 PropagatorFactory.eINSTANCE.createPropagatorFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 PropagatorFactory.eINSTANCE.createPropagatorFunctionBindings()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == SchedulerPackage.Literals.SCHEDULER__SOLUTIONS ||
+			childFeature == SchedulerPackage.Literals.SCHEDULER__TASKS ||
+			childFeature == SchedulerPackage.Literals.SCHEDULER__RESOURCES;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

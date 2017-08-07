@@ -15,12 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getResource <em>Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateScheduledTasks <em>Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getSolution <em>Solution</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getResource <em>Resource</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource()
@@ -37,12 +38,12 @@ public interface SolutionResource extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resource</em>' reference.
-	 * @see #setResource(Resource)
+	 * @see #setResource(EObject)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_Resource()
 	 * @model required="true"
 	 * @generated
 	 */
-	Resource getResource();
+	EObject getResource();
 
 	/**
 	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionResource#getResource <em>Resource</em>}' reference.
@@ -52,7 +53,7 @@ public interface SolutionResource extends EObject {
 	 * @see #getResource()
 	 * @generated
 	 */
-	void setResource(Resource value);
+	void setResource(EObject value);
 
 	/**
 	 * Returns the value of the '<em><b>Scheduled Tasks</b></em>' reference list.
@@ -150,5 +151,31 @@ public interface SolutionResource extends EObject {
 	 * @generated
 	 */
 	void setSolution(Solution value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionResource#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // SolutionResource

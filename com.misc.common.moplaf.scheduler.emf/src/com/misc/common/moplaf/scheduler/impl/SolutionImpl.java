@@ -5,7 +5,6 @@ package com.misc.common.moplaf.scheduler.impl;
 import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
-import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
@@ -14,7 +13,6 @@ import com.misc.common.moplaf.scheduler.SolutionExpression;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 
-import com.misc.common.moplaf.scheduler.Task;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -25,6 +23,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -355,12 +354,12 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 		this.getMoves().clear();
 		// construct everyting
 		Scheduler scheduler = this.getScheduler();
-		for ( Resource resource : scheduler.getResources()) {
+		for ( EObject resource : scheduler.getResources()) {
 			SolutionResource new_solution_resource = this.constructResource(resource);
 			new_solution_resource.setResource(resource);
 			this.getResources().add(new_solution_resource);
 		}
-		for ( Task task : scheduler.getTasks()) {
+		for ( EObject task : scheduler.getTasks()) {
 			SolutionTask new_solution_task = this.constructTask(task);
 			new_solution_task.setTask(task);
 			this.getTasks().add(new_solution_task);
@@ -370,17 +369,23 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public SolutionTask constructTask(Task task) {
-		return SchedulerFactory.eINSTANCE.createSolutionTask();
+	public SolutionTask constructTask(EObject task) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public SolutionResource constructResource(Resource resource) {
-		return SchedulerFactory.eINSTANCE.createSolutionResource();
+	public SolutionResource constructResource(EObject resource) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -590,10 +595,10 @@ public class SolutionImpl extends MinimalEObjectImpl.Container implements Soluti
 			case SchedulerPackage.SOLUTION___RESET:
 				reset();
 				return null;
-			case SchedulerPackage.SOLUTION___CONSTRUCT_TASK__TASK:
-				return constructTask((Task)arguments.get(0));
-			case SchedulerPackage.SOLUTION___CONSTRUCT_RESOURCE__RESOURCE:
-				return constructResource((Resource)arguments.get(0));
+			case SchedulerPackage.SOLUTION___CONSTRUCT_TASK__EOBJECT:
+				return constructTask((EObject)arguments.get(0));
+			case SchedulerPackage.SOLUTION___CONSTRUCT_RESOURCE__EOBJECT:
+				return constructResource((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
