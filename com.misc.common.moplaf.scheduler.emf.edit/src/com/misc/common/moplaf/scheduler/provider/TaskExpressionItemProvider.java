@@ -3,11 +3,7 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
-import com.misc.common.moplaf.propagator2.PropagatorPackage;
-
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
-
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 
@@ -158,71 +154,6 @@ public class TaskExpressionItemProvider extends ObjectWithPropagatorFunctionsIte
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createSolutionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createCalcSolutionAllExpressionCandidateValues()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createResetSolutionAllExpressionCandidateValues()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createSolutionExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createResetSolutionExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createResourceExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createCalcResourceExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createResetResourceExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createTaskExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createCalcTaskExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createResetTaskExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createCalcSolutionExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PropagatorPackage.Literals.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS,
-				 SchedulerFactory.eINSTANCE.createCalcTaksExpressionCandidateValueCumulative()));
 	}
 
 	/**

@@ -2,12 +2,11 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.scheduler.MoveExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class MoveExpressionImpl extends MinimalEObjectImpl.Container implements MoveExpression {
+public abstract class MoveExpressionImpl extends ObjectWithPropagatorFunctionsImpl implements MoveExpression {
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->

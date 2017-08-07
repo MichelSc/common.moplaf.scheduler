@@ -3,23 +3,12 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.propagator2.PropagatorPackage;
-
-import com.misc.common.moplaf.scheduler.CalcResourceExpressionCandidateValue;
-import com.misc.common.moplaf.scheduler.CalcSolutionAllExpressionCandidateValues;
-import com.misc.common.moplaf.scheduler.CalcSolutionExpressionCandidateValue;
-import com.misc.common.moplaf.scheduler.CalcTaksExpressionCandidateValueCumulative;
-import com.misc.common.moplaf.scheduler.CalcTaskExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.MoveChangeResource;
 import com.misc.common.moplaf.scheduler.MoveChangeTask;
 import com.misc.common.moplaf.scheduler.MoveExpression;
-import com.misc.common.moplaf.scheduler.ResetResourceExpressionCandidateValue;
-import com.misc.common.moplaf.scheduler.ResetSolutionAllExpressionCandidateValues;
-import com.misc.common.moplaf.scheduler.ResetSolutionExpressionCandidateValue;
-import com.misc.common.moplaf.scheduler.ResetTaskExpressionCandidateValue;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
-import com.misc.common.moplaf.scheduler.ResourceExpressionPropagatorFunction;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.ScheduleBefore;
 import com.misc.common.moplaf.scheduler.ScheduleFirst;
@@ -29,13 +18,9 @@ import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionExpression;
-import com.misc.common.moplaf.scheduler.SolutionExpressionPropagatorFunction;
-import com.misc.common.moplaf.scheduler.SolutionPropagatorFunction;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.TaskExpression;
-
-import com.misc.common.moplaf.scheduler.TaskExpressionPropagatorFunction;
 import com.misc.common.moplaf.scheduler.TaskFloatExpression;
 import com.misc.common.moplaf.scheduler.Unschedule;
 import org.eclipse.emf.ecore.EAttribute;
@@ -121,13 +106,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetTaskExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass taskFloatExpressionEClass = null;
 
 	/**
@@ -185,90 +163,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	private EClass unscheduleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceExpressionPropagatorFunctionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass calcTaskExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resetResourceExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass calcResourceExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass calcSolutionAllExpressionCandidateValuesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resetSolutionAllExpressionCandidateValuesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solutionExpressionPropagatorFunctionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resetSolutionExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass calcSolutionExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskExpressionPropagatorFunctionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solutionPropagatorFunctionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass calcTaksExpressionCandidateValueCumulativeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -897,15 +791,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetTaskExpressionCandidateValue() {
-		return resetTaskExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskFloatExpression() {
 		return taskFloatExpressionEClass;
 	}
@@ -1068,150 +953,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResourceExpressionPropagatorFunction() {
-		return resourceExpressionPropagatorFunctionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getResourceExpressionPropagatorFunction_ResourceExpression() {
-		return (EReference)resourceExpressionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCalcTaskExpressionCandidateValue() {
-		return calcTaskExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResetResourceExpressionCandidateValue() {
-		return resetResourceExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCalcResourceExpressionCandidateValue() {
-		return calcResourceExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCalcSolutionAllExpressionCandidateValues() {
-		return calcSolutionAllExpressionCandidateValuesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResetSolutionAllExpressionCandidateValues() {
-		return resetSolutionAllExpressionCandidateValuesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionExpressionPropagatorFunction() {
-		return solutionExpressionPropagatorFunctionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionExpressionPropagatorFunction_SolutionExpression() {
-		return (EReference)solutionExpressionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResetSolutionExpressionCandidateValue() {
-		return resetSolutionExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCalcSolutionExpressionCandidateValue() {
-		return calcSolutionExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTaskExpressionPropagatorFunction() {
-		return taskExpressionPropagatorFunctionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTaskExpressionPropagatorFunction_TaskExpression() {
-		return (EReference)taskExpressionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionPropagatorFunction() {
-		return solutionPropagatorFunctionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionPropagatorFunction_Solution() {
-		return (EReference)solutionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCalcTaksExpressionCandidateValueCumulative() {
-		return calcTaksExpressionCandidateValueCumulativeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SchedulerFactory getSchedulerFactory() {
 		return (SchedulerFactory)getEFactoryInstance();
 	}
@@ -1295,22 +1036,9 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(solutionExpressionEClass, SOLUTION_EXPRESSION__SOLUTION);
 		createEAttribute(solutionExpressionEClass, SOLUTION_EXPRESSION__DESCRIPTION);
 
-		calcSolutionAllExpressionCandidateValuesEClass = createEClass(CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES);
-
-		resetSolutionAllExpressionCandidateValuesEClass = createEClass(RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES);
-
-		solutionExpressionPropagatorFunctionEClass = createEClass(SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION);
-		createEReference(solutionExpressionPropagatorFunctionEClass, SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__SOLUTION_EXPRESSION);
-
-		resetSolutionExpressionCandidateValueEClass = createEClass(RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE);
-
 		resourceExpressionEClass = createEClass(RESOURCE_EXPRESSION);
 		createEReference(resourceExpressionEClass, RESOURCE_EXPRESSION__RESOURCE);
 		createEAttribute(resourceExpressionEClass, RESOURCE_EXPRESSION__DESCRIPTION);
-
-		calcResourceExpressionCandidateValueEClass = createEClass(CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE);
-
-		resetResourceExpressionCandidateValueEClass = createEClass(RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE);
 
 		taskExpressionEClass = createEClass(TASK_EXPRESSION);
 		createEReference(taskExpressionEClass, TASK_EXPRESSION__TASK);
@@ -1318,10 +1046,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEAttribute(taskExpressionEClass, TASK_EXPRESSION__ROLE);
 		createEOperation(taskExpressionEClass, TASK_EXPRESSION___RESET_VALUE_CANDIDATE);
 		createEOperation(taskExpressionEClass, TASK_EXPRESSION___REFRESH_VALUE_CANDIDATE);
-
-		calcTaskExpressionCandidateValueEClass = createEClass(CALC_TASK_EXPRESSION_CANDIDATE_VALUE);
-
-		resetTaskExpressionCandidateValueEClass = createEClass(RESET_TASK_EXPRESSION_CANDIDATE_VALUE);
 
 		taskFloatExpressionEClass = createEClass(TASK_FLOAT_EXPRESSION);
 		createEAttribute(taskFloatExpressionEClass, TASK_FLOAT_EXPRESSION__VALUE);
@@ -1349,19 +1073,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		scheduleLastEClass = createEClass(SCHEDULE_LAST);
 
 		unscheduleEClass = createEClass(UNSCHEDULE);
-
-		resourceExpressionPropagatorFunctionEClass = createEClass(RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION);
-		createEReference(resourceExpressionPropagatorFunctionEClass, RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__RESOURCE_EXPRESSION);
-
-		calcSolutionExpressionCandidateValueEClass = createEClass(CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE);
-
-		taskExpressionPropagatorFunctionEClass = createEClass(TASK_EXPRESSION_PROPAGATOR_FUNCTION);
-		createEReference(taskExpressionPropagatorFunctionEClass, TASK_EXPRESSION_PROPAGATOR_FUNCTION__TASK_EXPRESSION);
-
-		solutionPropagatorFunctionEClass = createEClass(SOLUTION_PROPAGATOR_FUNCTION);
-		createEReference(solutionPropagatorFunctionEClass, SOLUTION_PROPAGATOR_FUNCTION__SOLUTION);
-
-		calcTaksExpressionCandidateValueCumulativeEClass = createEClass(CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE);
 	}
 
 	/**
@@ -1395,16 +1106,11 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		calcSolutionAllExpressionCandidateValuesEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
-		resetSolutionAllExpressionCandidateValuesEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
-		solutionExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		resetSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
-		calcResourceExpressionCandidateValueEClass.getESuperTypes().add(this.getResourceExpressionPropagatorFunction());
-		resetResourceExpressionCandidateValueEClass.getESuperTypes().add(this.getResourceExpressionPropagatorFunction());
+		solutionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		moveExpressionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		solutionExpressionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		resourceExpressionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		taskExpressionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		calcTaskExpressionCandidateValueEClass.getESuperTypes().add(this.getTaskExpressionPropagatorFunction());
-		resetTaskExpressionCandidateValueEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		resetTaskExpressionCandidateValueEClass.getESuperTypes().add(this.getTaskExpressionPropagatorFunction());
 		taskFloatExpressionEClass.getESuperTypes().add(this.getTaskExpression());
 		moveChangeTaskEClass.getESuperTypes().add(this.getMoveChange());
 		scheduleAfterEClass.getESuperTypes().add(this.getMoveChangeTask());
@@ -1413,11 +1119,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		scheduleFirstEClass.getESuperTypes().add(this.getMoveChangeResource());
 		scheduleLastEClass.getESuperTypes().add(this.getMoveChangeResource());
 		unscheduleEClass.getESuperTypes().add(this.getMoveChange());
-		resourceExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		calcSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
-		taskExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		solutionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		calcTaksExpressionCandidateValueCumulativeEClass.getESuperTypes().add(this.getCalcTaskExpressionCandidateValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1494,22 +1195,9 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSolutionExpression_Solution(), this.getSolution(), this.getSolution_Expressions(), "Solution", null, 1, 1, SolutionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionExpression_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(calcSolutionAllExpressionCandidateValuesEClass, CalcSolutionAllExpressionCandidateValues.class, "CalcSolutionAllExpressionCandidateValues", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetSolutionAllExpressionCandidateValuesEClass, ResetSolutionAllExpressionCandidateValues.class, "ResetSolutionAllExpressionCandidateValues", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solutionExpressionPropagatorFunctionEClass, SolutionExpressionPropagatorFunction.class, "SolutionExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionExpressionPropagatorFunction_SolutionExpression(), this.getSolutionExpression(), null, "SolutionExpression", null, 1, 1, SolutionExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(resetSolutionExpressionCandidateValueEClass, ResetSolutionExpressionCandidateValue.class, "ResetSolutionExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(resourceExpressionEClass, ResourceExpression.class, "ResourceExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceExpression_Resource(), this.getSolutionResource(), this.getSolutionResource_Expressions(), "Resource", null, 1, 1, ResourceExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceExpression_Description(), ecorePackage.getEString(), "Description", null, 0, 1, ResourceExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(calcResourceExpressionCandidateValueEClass, CalcResourceExpressionCandidateValue.class, "CalcResourceExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetResourceExpressionCandidateValueEClass, ResetResourceExpressionCandidateValue.class, "ResetResourceExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(taskExpressionEClass, TaskExpression.class, "TaskExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskExpression_Task(), this.getSolutionTask(), this.getSolutionTask_Expressions(), "Task", null, 1, 1, TaskExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1519,10 +1207,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEOperation(getTaskExpression__ResetValueCandidate(), null, "resetValueCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getTaskExpression__RefreshValueCandidate(), null, "refreshValueCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(calcTaskExpressionCandidateValueEClass, CalcTaskExpressionCandidateValue.class, "CalcTaskExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetTaskExpressionCandidateValueEClass, ResetTaskExpressionCandidateValue.class, "ResetTaskExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(taskFloatExpressionEClass, TaskFloatExpression.class, "TaskFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTaskFloatExpression_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, TaskFloatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1551,19 +1235,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEClass(scheduleLastEClass, ScheduleLast.class, "ScheduleLast", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(unscheduleEClass, Unschedule.class, "Unschedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resourceExpressionPropagatorFunctionEClass, ResourceExpressionPropagatorFunction.class, "ResourceExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceExpressionPropagatorFunction_ResourceExpression(), this.getResourceExpression(), null, "ResourceExpression", null, 1, 1, ResourceExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(calcSolutionExpressionCandidateValueEClass, CalcSolutionExpressionCandidateValue.class, "CalcSolutionExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(taskExpressionPropagatorFunctionEClass, TaskExpressionPropagatorFunction.class, "TaskExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskExpressionPropagatorFunction_TaskExpression(), this.getTaskExpression(), null, "TaskExpression", null, 1, 1, TaskExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(solutionPropagatorFunctionEClass, SolutionPropagatorFunction.class, "SolutionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionPropagatorFunction_Solution(), this.getSolution(), null, "Solution", null, 1, 1, SolutionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(calcTaksExpressionCandidateValueCumulativeEClass, CalcTaksExpressionCandidateValueCumulative.class, "CalcTaksExpressionCandidateValueCumulative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

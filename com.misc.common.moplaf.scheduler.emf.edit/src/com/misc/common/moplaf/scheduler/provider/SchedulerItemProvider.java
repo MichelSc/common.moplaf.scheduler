@@ -242,61 +242,6 @@ public class SchedulerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createSolutionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createCalcSolutionAllExpressionCandidateValues()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createResetSolutionAllExpressionCandidateValues()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createSolutionExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createResetSolutionExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createResourceExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createCalcResourceExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createResetResourceExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createTaskExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createCalcTaskExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createResetTaskExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
 				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
 
 		newChildDescriptors.add
@@ -323,16 +268,6 @@ public class SchedulerItemProvider
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__TASKS,
 				 SchedulerFactory.eINSTANCE.createUnschedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createCalcSolutionExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createCalcTaksExpressionCandidateValueCumulative()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -377,61 +312,6 @@ public class SchedulerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createSolutionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createCalcSolutionAllExpressionCandidateValues()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResetSolutionAllExpressionCandidateValues()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createSolutionExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResetSolutionExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResourceExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createCalcResourceExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResetResourceExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createTaskExpressionPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createCalcTaskExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResetTaskExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
 				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
 
 		newChildDescriptors.add
@@ -458,16 +338,6 @@ public class SchedulerItemProvider
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
 				 SchedulerFactory.eINSTANCE.createUnschedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createCalcSolutionExpressionCandidateValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createCalcTaksExpressionCandidateValueCumulative()));
 
 		newChildDescriptors.add
 			(createChildParameter

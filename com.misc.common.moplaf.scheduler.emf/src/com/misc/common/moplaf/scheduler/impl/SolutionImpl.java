@@ -2,11 +2,11 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.Scheduler;
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionExpression;
@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -51,7 +50,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class SolutionImpl extends MinimalEObjectImpl.Container implements Solution {
+public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements Solution {
 	/**
 	 * The cached value of the '{@link #getMoves() <em>Moves</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

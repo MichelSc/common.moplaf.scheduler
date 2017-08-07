@@ -2,7 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler;
 
-import org.eclipse.emf.ecore.EObject;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface ResourceExpression extends EObject {
+public interface ResourceExpression extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Resource</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}'.

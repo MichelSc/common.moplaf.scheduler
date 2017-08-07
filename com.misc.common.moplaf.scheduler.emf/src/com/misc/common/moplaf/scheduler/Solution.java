@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler;
 
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -33,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Solution extends EObject {
+public interface Solution extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Moves</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Move}.

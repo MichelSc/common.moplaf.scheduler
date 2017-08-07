@@ -2,7 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler;
 
-import org.eclipse.emf.ecore.EObject;
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface MoveExpression extends EObject {
+public interface MoveExpression extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->

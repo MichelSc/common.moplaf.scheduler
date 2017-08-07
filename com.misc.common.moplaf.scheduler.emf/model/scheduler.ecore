@@ -12,7 +12,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Solution">
+  <eClassifiers xsi:type="ecore:EClass" name="Solution" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Update the candidate solution with the parameter Move.&#xA;"/>
     </eAnnotations>
@@ -105,38 +105,24 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
         eType="#//Solution" eOpposite="#//Solution/Moves"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MoveExpression" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="MoveExpression" abstract="true" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression" abstract="true"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
         eType="#//Solution" eOpposite="#//Solution/Expressions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionAllExpressionCandidateValues"
-      eSuperTypes="#//SolutionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetSolutionAllExpressionCandidateValues"
-      eSuperTypes="#//SolutionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpressionPropagatorFunction"
-      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SolutionExpression" lowerBound="1"
-        eType="#//SolutionExpression" changeable="false" volatile="true" transient="true"
-        derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetSolutionExpressionCandidateValue"
-      eSuperTypes="#//SolutionExpressionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpression" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpression" abstract="true"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
         eType="#//SolutionResource" eOpposite="#//SolutionResource/Expressions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcResourceExpressionCandidateValue"
-      eSuperTypes="#//ResourceExpressionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetResourceExpressionCandidateValue"
-      eSuperTypes="#//ResourceExpressionPropagatorFunction"/>
   <eClassifiers xsi:type="ecore:EClass" name="TaskExpression" abstract="true" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="An Expression for a Task in a Solution.&#xA;The Expression maintains 2 values: 1) the value of the expression for the Task in the Solution and 2) the candidate value, that is the value of the Expression in the Solution resulting from performing the candidate Move on this Solution."/>
@@ -150,8 +136,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskExpressionCandidateValue" eSuperTypes="#//TaskExpressionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings #//TaskExpressionPropagatorFunction"/>
   <eClassifiers xsi:type="ecore:EClass" name="TaskFloatExpression" eSuperTypes="#//TaskExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A TaskExpression, whose value Type is Float."/>
@@ -184,23 +168,4 @@
   <eClassifiers xsi:type="ecore:EClass" name="ScheduleFirst" eSuperTypes="#//MoveChangeResource"/>
   <eClassifiers xsi:type="ecore:EClass" name="ScheduleLast" eSuperTypes="#//MoveChangeResource"/>
   <eClassifiers xsi:type="ecore:EClass" name="Unschedule" eSuperTypes="#//MoveChange"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpressionPropagatorFunction"
-      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceExpression" lowerBound="1"
-        eType="#//ResourceExpression" changeable="false" volatile="true" transient="true"
-        derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionExpressionCandidateValue"
-      eSuperTypes="#//SolutionExpressionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskExpressionPropagatorFunction" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskExpression" lowerBound="1"
-        eType="#//TaskExpression" changeable="false" volatile="true" transient="true"
-        derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SolutionPropagatorFunction" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
-        eType="#//Solution" changeable="false" volatile="true" transient="true" derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalcTaksExpressionCandidateValueCumulative"
-      eSuperTypes="#//CalcTaskExpressionCandidateValue"/>
 </ecore:EPackage>
