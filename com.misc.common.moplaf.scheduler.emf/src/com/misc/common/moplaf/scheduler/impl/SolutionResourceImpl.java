@@ -214,7 +214,6 @@ public class SolutionResourceImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public String getDescription() {
 		Solution solution = this.getSolution();
-		EObject resource = this.getResource();
 		String description = String.format("sol %d, resource %s", solution.getSolutionNr(), this.getName());
 		return description;
 	}

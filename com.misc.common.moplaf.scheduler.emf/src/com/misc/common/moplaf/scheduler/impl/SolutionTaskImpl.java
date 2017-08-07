@@ -595,7 +595,6 @@ public class SolutionTaskImpl extends MinimalEObjectImpl.Container implements So
 	 */
 	public String getDescription() {
 		Solution solution = this.getSolution();
-		EObject task = this.getTask();
 		String description = String.format("sol %d, task %s", solution.getSolutionNr(), this.getName());
 		return description;
 	}
