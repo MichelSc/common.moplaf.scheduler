@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="schedulercalc" nsURI="http://www.misc.com/common/moplaf/scheduler/calc/model/0.1"
+    nsPrefix="schedc">
+  <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionAllExpressionCandidateValues"
+      eSuperTypes="#//SolutionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetSolutionAllExpressionCandidateValues"
+      eSuperTypes="#//SolutionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionExpressionPropagatorFunction"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SolutionExpression" lowerBound="1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//SolutionExpression"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetSolutionExpressionCandidateValue"
+      eSuperTypes="#//SolutionExpressionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcResourceExpressionCandidateValue"
+      eSuperTypes="#//ResourceExpressionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetResourceExpressionCandidateValue"
+      eSuperTypes="#//ResourceExpressionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaskExpressionCandidateValue" eSuperTypes="#//TaskExpressionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResetTaskExpressionCandidateValue" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings #//TaskExpressionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceExpressionPropagatorFunction"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceExpression" lowerBound="1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//ResourceExpression"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcSolutionExpressionCandidateValue"
+      eSuperTypes="#//SolutionExpressionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskExpressionPropagatorFunction" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TaskExpression" lowerBound="1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//TaskExpression"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionPropagatorFunction" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
+        eType="ecore:EClass ../../com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Solution"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalcTaksExpressionCandidateValueCumulative"
+      eSuperTypes="#//CalcTaskExpressionCandidateValue"/>
+</ecore:EPackage>
