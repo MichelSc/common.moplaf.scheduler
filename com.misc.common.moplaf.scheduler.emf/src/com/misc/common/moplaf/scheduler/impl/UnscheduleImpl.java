@@ -63,7 +63,7 @@ public class UnscheduleImpl extends MoveChangeImpl implements Unschedule {
 		}
 
 		// association scheduled tasks
-		scheduled_resource.getCandidateScheduledTasks().remove(task);
+//		scheduled_resource.getCandidateScheduledTasks().remove(task);
 
 		// association previous next
 		task.unsetCandidatePreviousNext();

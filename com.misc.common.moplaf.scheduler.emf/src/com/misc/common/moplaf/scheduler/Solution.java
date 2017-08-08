@@ -5,8 +5,6 @@ package com.misc.common.moplaf.scheduler;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Solution</b></em>'.
@@ -237,21 +235,5 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void reset();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	SolutionTask constructTask(EObject task);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	SolutionResource constructResource(EObject resource);
 
 } // Solution

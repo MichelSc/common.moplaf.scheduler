@@ -10,7 +10,7 @@ import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
-
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 

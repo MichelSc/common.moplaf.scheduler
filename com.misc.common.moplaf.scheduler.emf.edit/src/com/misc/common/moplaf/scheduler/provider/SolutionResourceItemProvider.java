@@ -3,9 +3,10 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
+import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionResource;
-
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,14 +18,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -34,13 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class SolutionResourceItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ObjectWithPropagatorFunctionsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,11 +51,13 @@ public class SolutionResourceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addResourcePropertyDescriptor(object);
 			addScheduledTasksPropertyDescriptor(object);
 			addCandidateScheduledTasksPropertyDescriptor(object);
+			addCandidateFirstTaskPropertyDescriptor(object);
+			addCandidateLastTaskPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addResourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -129,6 +120,50 @@ public class SolutionResourceItemProvider
 				 getString("_UI_SolutionResource_CandidateScheduledTasks_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_CandidateScheduledTasks_feature", "_UI_SolutionResource_type"),
 				 SchedulerPackage.Literals.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Candidate First Task feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCandidateFirstTaskPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionResource_CandidateFirstTask_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_CandidateFirstTask_feature", "_UI_SolutionResource_type"),
+				 SchedulerPackage.Literals.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Candidate Last Task feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCandidateLastTaskPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionResource_CandidateLastTask_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_CandidateLastTask_feature", "_UI_SolutionResource_type"),
+				 SchedulerPackage.Literals.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK,
 				 true,
 				 false,
 				 true,

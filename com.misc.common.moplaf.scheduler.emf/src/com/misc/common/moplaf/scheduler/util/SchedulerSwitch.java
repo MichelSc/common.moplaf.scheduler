@@ -83,12 +83,14 @@ public class SchedulerSwitch<T> extends Switch<T> {
 			case SchedulerPackage.SOLUTION_RESOURCE: {
 				SolutionResource solutionResource = (SolutionResource)theEObject;
 				T result = caseSolutionResource(solutionResource);
+				if (result == null) result = caseObjectWithPropagatorFunctions(solutionResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SchedulerPackage.SOLUTION_TASK: {
 				SolutionTask solutionTask = (SolutionTask)theEObject;
 				T result = caseSolutionTask(solutionTask);
+				if (result == null) result = caseObjectWithPropagatorFunctions(solutionTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

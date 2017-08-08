@@ -8,6 +8,7 @@ import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 

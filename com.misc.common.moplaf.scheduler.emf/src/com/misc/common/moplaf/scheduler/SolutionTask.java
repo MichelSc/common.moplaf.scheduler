@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler;
 
+import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -15,24 +16,26 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getPreviousTask <em>Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getScheduledResource <em>Scheduled Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateNextTask <em>Candidate Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidatePreviousTask <em>Candidate Previous Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getResourceAsCandidateFirstTask <em>Resource As Candidate First Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getResourceAsCandidateLastTask <em>Resource As Candidate Last Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getSolution <em>Solution</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getName <em>Name</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionTask#getTask <em>Task</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask()
  * @model
  * @generated
  */
-public interface SolutionTask extends EObject {
+public interface SolutionTask extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -173,7 +176,6 @@ public interface SolutionTask extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Candidate Next Task</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidatePreviousTask <em>Candidate Previous Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Candidate Next Task</em>' reference isn't clear,
@@ -183,8 +185,7 @@ public interface SolutionTask extends EObject {
 	 * @return the value of the '<em>Candidate Next Task</em>' reference.
 	 * @see #setCandidateNextTask(SolutionTask)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_CandidateNextTask()
-	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getCandidatePreviousTask
-	 * @model opposite="CandidatePreviousTask"
+	 * @model
 	 * @generated
 	 */
 	SolutionTask getCandidateNextTask();
@@ -201,7 +202,6 @@ public interface SolutionTask extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Candidate Previous Task</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateNextTask <em>Candidate Next Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Candidate Previous Task</em>' reference isn't clear,
@@ -211,8 +211,7 @@ public interface SolutionTask extends EObject {
 	 * @return the value of the '<em>Candidate Previous Task</em>' reference.
 	 * @see #setCandidatePreviousTask(SolutionTask)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_CandidatePreviousTask()
-	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getCandidateNextTask
-	 * @model opposite="CandidateNextTask"
+	 * @model
 	 * @generated
 	 */
 	SolutionTask getCandidatePreviousTask();
@@ -226,6 +225,62 @@ public interface SolutionTask extends EObject {
 	 * @generated
 	 */
 	void setCandidatePreviousTask(SolutionTask value);
+
+	/**
+	 * Returns the value of the '<em><b>Resource As Candidate First Task</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateFirstTask <em>Candidate First Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resource As Candidate First Task</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resource As Candidate First Task</em>' reference.
+	 * @see #setResourceAsCandidateFirstTask(SolutionResource)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_ResourceAsCandidateFirstTask()
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getCandidateFirstTask
+	 * @model opposite="CandidateFirstTask"
+	 * @generated
+	 */
+	SolutionResource getResourceAsCandidateFirstTask();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getResourceAsCandidateFirstTask <em>Resource As Candidate First Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Resource As Candidate First Task</em>' reference.
+	 * @see #getResourceAsCandidateFirstTask()
+	 * @generated
+	 */
+	void setResourceAsCandidateFirstTask(SolutionResource value);
+
+	/**
+	 * Returns the value of the '<em><b>Resource As Candidate Last Task</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateLastTask <em>Candidate Last Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resource As Candidate Last Task</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resource As Candidate Last Task</em>' reference.
+	 * @see #setResourceAsCandidateLastTask(SolutionResource)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_ResourceAsCandidateLastTask()
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getCandidateLastTask
+	 * @model opposite="CandidateLastTask"
+	 * @generated
+	 */
+	SolutionResource getResourceAsCandidateLastTask();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionTask#getResourceAsCandidateLastTask <em>Resource As Candidate Last Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Resource As Candidate Last Task</em>' reference.
+	 * @see #getResourceAsCandidateLastTask()
+	 * @generated
+	 */
+	void setResourceAsCandidateLastTask(SolutionResource value);
 
 	/**
 	 * Returns the value of the '<em><b>Expressions</b></em>' containment reference list.
@@ -328,6 +383,6 @@ public interface SolutionTask extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void setCandidatePreviousNext(SolutionTask previous, SolutionTask next);
+	void setCandidatePreviousNext(SolutionResource solution, SolutionTask previous, SolutionTask next);
 
 } // SolutionTask

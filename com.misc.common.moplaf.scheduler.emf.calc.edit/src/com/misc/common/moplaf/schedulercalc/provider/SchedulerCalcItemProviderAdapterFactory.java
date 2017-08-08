@@ -141,6 +141,29 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResourcePropagatorFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourcePropagatorFunctionItemProvider resourcePropagatorFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResourcePropagatorFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourcePropagatorFunctionAdapter() {
+		if (resourcePropagatorFunctionItemProvider == null) {
+			resourcePropagatorFunctionItemProvider = new ResourcePropagatorFunctionItemProvider(this);
+		}
+
+		return resourcePropagatorFunctionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetSolutionExpressionCandidateValue} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,6 +279,144 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResetTaskCandidateNextItemProvider resetTaskCandidateNextItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResetTaskCandidateNextAdapter() {
+		if (resetTaskCandidateNextItemProvider == null) {
+			resetTaskCandidateNextItemProvider = new ResetTaskCandidateNextItemProvider(this);
+		}
+
+		return resetTaskCandidateNextItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResetTaskCandidateScheduledResourceItemProvider resetTaskCandidateScheduledResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResetTaskCandidateScheduledResourceAdapter() {
+		if (resetTaskCandidateScheduledResourceItemProvider == null) {
+			resetTaskCandidateScheduledResourceItemProvider = new ResetTaskCandidateScheduledResourceItemProvider(this);
+		}
+
+		return resetTaskCandidateScheduledResourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResetResourceTasksCandidateNextItemProvider resetResourceTasksCandidateNextItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResetResourceTasksCandidateNextAdapter() {
+		if (resetResourceTasksCandidateNextItemProvider == null) {
+			resetResourceTasksCandidateNextItemProvider = new ResetResourceTasksCandidateNextItemProvider(this);
+		}
+
+		return resetResourceTasksCandidateNextItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResetResourceTasksCandidateScheduledResourceItemProvider resetResourceTasksCandidateScheduledResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResetResourceTasksCandidateScheduledResourceAdapter() {
+		if (resetResourceTasksCandidateScheduledResourceItemProvider == null) {
+			resetResourceTasksCandidateScheduledResourceItemProvider = new ResetResourceTasksCandidateScheduledResourceItemProvider(this);
+		}
+
+		return resetResourceTasksCandidateScheduledResourceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SetTaskCandidateScheduledResourceScopeItemProvider setTaskCandidateScheduledResourceScopeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSetTaskCandidateScheduledResourceScopeAdapter() {
+		if (setTaskCandidateScheduledResourceScopeItemProvider == null) {
+			setTaskCandidateScheduledResourceScopeItemProvider = new SetTaskCandidateScheduledResourceScopeItemProvider(this);
+		}
+
+		return setTaskCandidateScheduledResourceScopeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SetTaskCandidateScheduledResourceItemProvider setTaskCandidateScheduledResourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSetTaskCandidateScheduledResourceAdapter() {
+		if (setTaskCandidateScheduledResourceItemProvider == null) {
+			setTaskCandidateScheduledResourceItemProvider = new SetTaskCandidateScheduledResourceItemProvider(this);
+		}
+
+		return setTaskCandidateScheduledResourceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,6 +437,29 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 		}
 
 		return resourceExpressionPropagatorFunctionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.TaskPropagatorFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskPropagatorFunctionItemProvider taskPropagatorFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.TaskPropagatorFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskPropagatorFunctionAdapter() {
+		if (taskPropagatorFunctionItemProvider == null) {
+			taskPropagatorFunctionItemProvider = new TaskPropagatorFunctionItemProvider(this);
+		}
+
+		return taskPropagatorFunctionItemProvider;
 	}
 
 	/**
@@ -469,19 +653,27 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	 * @generated
 	 */
 	public void dispose() {
-		if (calcSolutionAllExpressionCandidateValuesItemProvider != null) calcSolutionAllExpressionCandidateValuesItemProvider.dispose();
-		if (resetSolutionAllExpressionCandidateValuesItemProvider != null) resetSolutionAllExpressionCandidateValuesItemProvider.dispose();
-		if (solutionExpressionPropagatorFunctionItemProvider != null) solutionExpressionPropagatorFunctionItemProvider.dispose();
-		if (resetSolutionExpressionCandidateValueItemProvider != null) resetSolutionExpressionCandidateValueItemProvider.dispose();
-		if (calcResourceExpressionCandidateValueItemProvider != null) calcResourceExpressionCandidateValueItemProvider.dispose();
-		if (resetResourceExpressionCandidateValueItemProvider != null) resetResourceExpressionCandidateValueItemProvider.dispose();
-		if (calcTaskExpressionCandidateValueItemProvider != null) calcTaskExpressionCandidateValueItemProvider.dispose();
-		if (resetTaskExpressionCandidateValueItemProvider != null) resetTaskExpressionCandidateValueItemProvider.dispose();
-		if (resourceExpressionPropagatorFunctionItemProvider != null) resourceExpressionPropagatorFunctionItemProvider.dispose();
-		if (calcSolutionExpressionCandidateValueItemProvider != null) calcSolutionExpressionCandidateValueItemProvider.dispose();
-		if (taskExpressionPropagatorFunctionItemProvider != null) taskExpressionPropagatorFunctionItemProvider.dispose();
 		if (solutionPropagatorFunctionItemProvider != null) solutionPropagatorFunctionItemProvider.dispose();
+		if (solutionExpressionPropagatorFunctionItemProvider != null) solutionExpressionPropagatorFunctionItemProvider.dispose();
+		if (resourcePropagatorFunctionItemProvider != null) resourcePropagatorFunctionItemProvider.dispose();
+		if (resourceExpressionPropagatorFunctionItemProvider != null) resourceExpressionPropagatorFunctionItemProvider.dispose();
+		if (taskPropagatorFunctionItemProvider != null) taskPropagatorFunctionItemProvider.dispose();
+		if (taskExpressionPropagatorFunctionItemProvider != null) taskExpressionPropagatorFunctionItemProvider.dispose();
+		if (calcSolutionAllExpressionCandidateValuesItemProvider != null) calcSolutionAllExpressionCandidateValuesItemProvider.dispose();
+		if (calcSolutionExpressionCandidateValueItemProvider != null) calcSolutionExpressionCandidateValueItemProvider.dispose();
+		if (calcResourceExpressionCandidateValueItemProvider != null) calcResourceExpressionCandidateValueItemProvider.dispose();
+		if (calcTaskExpressionCandidateValueItemProvider != null) calcTaskExpressionCandidateValueItemProvider.dispose();
 		if (calcTaksExpressionCandidateValueCumulativeItemProvider != null) calcTaksExpressionCandidateValueCumulativeItemProvider.dispose();
+		if (resetSolutionAllExpressionCandidateValuesItemProvider != null) resetSolutionAllExpressionCandidateValuesItemProvider.dispose();
+		if (resetSolutionExpressionCandidateValueItemProvider != null) resetSolutionExpressionCandidateValueItemProvider.dispose();
+		if (resetResourceExpressionCandidateValueItemProvider != null) resetResourceExpressionCandidateValueItemProvider.dispose();
+		if (resetTaskExpressionCandidateValueItemProvider != null) resetTaskExpressionCandidateValueItemProvider.dispose();
+		if (resetTaskCandidateNextItemProvider != null) resetTaskCandidateNextItemProvider.dispose();
+		if (resetTaskCandidateScheduledResourceItemProvider != null) resetTaskCandidateScheduledResourceItemProvider.dispose();
+		if (resetResourceTasksCandidateNextItemProvider != null) resetResourceTasksCandidateNextItemProvider.dispose();
+		if (resetResourceTasksCandidateScheduledResourceItemProvider != null) resetResourceTasksCandidateScheduledResourceItemProvider.dispose();
+		if (setTaskCandidateScheduledResourceScopeItemProvider != null) setTaskCandidateScheduledResourceScopeItemProvider.dispose();
+		if (setTaskCandidateScheduledResourceItemProvider != null) setTaskCandidateScheduledResourceItemProvider.dispose();
 	}
 
 }

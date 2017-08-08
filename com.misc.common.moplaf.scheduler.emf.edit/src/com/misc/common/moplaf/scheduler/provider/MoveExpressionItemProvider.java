@@ -6,7 +6,7 @@ package com.misc.common.moplaf.scheduler.provider;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.common.moplaf.scheduler.MoveExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 

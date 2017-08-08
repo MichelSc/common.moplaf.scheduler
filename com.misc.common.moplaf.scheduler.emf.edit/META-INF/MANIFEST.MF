@@ -4,11 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: com.misc.common.moplaf.scheduler.emf.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: com.misc.common.moplaf.scheduler.provider.SchedulerEditPlugin$Implementation
+Bundle-Activator: com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: com.misc.common.moplaf.scheduler.provider
+Export-Package: com.misc.common.moplaf.scheduler.provider,
+ com.misc.common.moplaf.schedulercalc.provider
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.common.moplaf.scheduler.emf;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,

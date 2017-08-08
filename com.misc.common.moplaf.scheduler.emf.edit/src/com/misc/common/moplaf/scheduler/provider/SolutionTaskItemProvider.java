@@ -3,9 +3,10 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
+import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionTask;
-
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,14 +18,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -34,13 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class SolutionTaskItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ObjectWithPropagatorFunctionsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,15 +51,17 @@ public class SolutionTaskItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTaskPropertyDescriptor(object);
 			addNextTaskPropertyDescriptor(object);
 			addPreviousTaskPropertyDescriptor(object);
 			addScheduledResourcePropertyDescriptor(object);
-			addCandidateScheduledResourcePropertyDescriptor(object);
 			addCandidateNextTaskPropertyDescriptor(object);
 			addCandidatePreviousTaskPropertyDescriptor(object);
+			addResourceAsCandidateFirstTaskPropertyDescriptor(object);
+			addResourceAsCandidateLastTaskPropertyDescriptor(object);
+			addCandidateScheduledResourcePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addTaskPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -221,6 +212,50 @@ public class SolutionTaskItemProvider
 				 getString("_UI_SolutionTask_CandidatePreviousTask_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_CandidatePreviousTask_feature", "_UI_SolutionTask_type"),
 				 SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resource As Candidate First Task feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResourceAsCandidateFirstTaskPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionTask_ResourceAsCandidateFirstTask_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_ResourceAsCandidateFirstTask_feature", "_UI_SolutionTask_type"),
+				 SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resource As Candidate Last Task feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResourceAsCandidateLastTaskPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionTask_ResourceAsCandidateLastTask_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_ResourceAsCandidateLastTask_feature", "_UI_SolutionTask_type"),
+				 SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK,
 				 true,
 				 false,
 				 true,

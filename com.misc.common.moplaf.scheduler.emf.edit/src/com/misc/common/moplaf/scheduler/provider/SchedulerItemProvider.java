@@ -5,11 +5,10 @@ package com.misc.common.moplaf.scheduler.provider;
 
 
 
-import com.misc.common.moplaf.propagator2.PropagatorFactory;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-
+import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 
@@ -67,6 +66,8 @@ public class SchedulerItemProvider
 
 			addNamePropertyDescriptor(object);
 			addCurrentSolutionntrPropertyDescriptor(object);
+			addTasksPropertyDescriptor(object);
+			addResourcesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -116,6 +117,50 @@ public class SchedulerItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Tasks feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTasksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Scheduler_Tasks_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Scheduler_Tasks_feature", "_UI_Scheduler_type"),
+				 SchedulerPackage.Literals.SCHEDULER__TASKS,
+				 true,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resources feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResourcesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Scheduler_Resources_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Scheduler_Resources_feature", "_UI_Scheduler_type"),
+				 SchedulerPackage.Literals.SCHEDULER__RESOURCES,
+				 true,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -128,8 +173,6 @@ public class SchedulerItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__SOLUTIONS);
-			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__TASKS);
-			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__RESOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -187,11 +230,11 @@ public class SchedulerItemProvider
 		switch (notification.getFeatureID(Scheduler.class)) {
 			case SchedulerPackage.SCHEDULER__NAME:
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
+			case SchedulerPackage.SCHEDULER__TASKS:
+			case SchedulerPackage.SCHEDULER__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-			case SchedulerPackage.SCHEDULER__TASKS:
-			case SchedulerPackage.SCHEDULER__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -213,170 +256,6 @@ public class SchedulerItemProvider
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__SOLUTIONS,
 				 SchedulerFactory.eINSTANCE.createSolution()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createScheduler()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createSolution()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createSolutionResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createSolutionTask()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createMove()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createScheduleLast()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 SchedulerFactory.eINSTANCE.createUnschedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 PropagatorFactory.eINSTANCE.createObjectWithPropagatorFunctions()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 PropagatorFactory.eINSTANCE.createPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 PropagatorFactory.eINSTANCE.createPropagatorFunctionBindings()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createScheduler()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createSolution()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createSolutionResource()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createSolutionTask()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createMove()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createTaskFloatExpression()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createScheduleLast()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createUnschedule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 PropagatorFactory.eINSTANCE.createObjectWithPropagatorFunctions()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 PropagatorFactory.eINSTANCE.createPropagatorFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 PropagatorFactory.eINSTANCE.createPropagatorFunctionBindings()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == SchedulerPackage.Literals.SCHEDULER__SOLUTIONS ||
-			childFeature == SchedulerPackage.Literals.SCHEDULER__TASKS ||
-			childFeature == SchedulerPackage.Literals.SCHEDULER__RESOURCES;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

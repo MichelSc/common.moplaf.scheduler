@@ -3,8 +3,12 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.Scheduler;
+import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
+import com.misc.common.moplaf.scheduler.SolutionResource;
+import com.misc.common.moplaf.scheduler.SolutionTask;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -151,6 +155,24 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 			resources = new EObjectResolvingEList<EObject>(EObject.class, this, SchedulerPackage.SCHEDULER__RESOURCES);
 		}
 		return resources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public SolutionTask constructTask(EObject task) {
+		SolutionTask new_task = SchedulerFactory.eINSTANCE.createSolutionTask();
+		return new_task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public SolutionResource constructResource(EObject resource) {
+		SolutionResource new_resource = SchedulerFactory.eINSTANCE.createSolutionResource();
+		return new_resource;
 	}
 
 	/**
@@ -336,6 +358,22 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 				return resources != null && !resources.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case SchedulerPackage.SCHEDULER___CONSTRUCT_TASK__EOBJECT:
+				return constructTask((EObject)arguments.get(0));
+			case SchedulerPackage.SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT:
+				return constructResource((EObject)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -2,8 +2,6 @@
  */
 package com.misc.common.moplaf.schedulercalc;
 
-import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Reset Task Expression Candidate Value</b></em>'.
@@ -14,5 +12,5 @@ import com.misc.common.moplaf.propagator2.PropagatorFunctionBindings;
  * @model
  * @generated
  */
-public interface ResetTaskExpressionCandidateValue extends PropagatorFunctionBindings, TaskExpressionPropagatorFunction {
+public interface ResetTaskExpressionCandidateValue extends TaskExpressionPropagatorFunction {
 } // ResetTaskExpressionCandidateValue

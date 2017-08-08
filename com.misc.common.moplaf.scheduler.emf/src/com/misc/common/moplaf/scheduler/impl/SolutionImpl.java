@@ -2,6 +2,8 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+
+import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.Move;
@@ -12,6 +14,8 @@ import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionExpression;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope;
+import com.misc.common.moplaf.schedulercalc.util.SetCandidateScheduledResourcePropagatorFunctionManager;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -307,6 +311,8 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 		// restore the candidate move to the solution
 		this.resetCandidate();
 		// execute the candidate move
+		SetTaskCandidateScheduledResourceScope scope = this.getPropagatorFunction(SetTaskCandidateScheduledResourceScope.class);
+		scope.reset();
 		if ( move != null) {
 			for ( MoveChange change : move.getChanges()) {
 				if ( !change.isValid()) {
@@ -320,6 +326,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 				}
 			}
 		}
+		scope.refresh();
 		// set the candidate move
 		this.setCandidateMove(move);
 	}
@@ -347,6 +354,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	 * <!-- end-user-doc -->
 	 */
 	public void reset() {
+		Util.adapt(this, SetCandidateScheduledResourcePropagatorFunctionManager.class, true );
 		// clear everything
 		this.getTasks().clear();
 		this.getResources().clear();
@@ -354,37 +362,15 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 		// construct everyting
 		Scheduler scheduler = this.getScheduler();
 		for ( EObject resource : scheduler.getResources()) {
-			SolutionResource new_solution_resource = this.constructResource(resource);
+			SolutionResource new_solution_resource = scheduler.constructResource(resource);
 			new_solution_resource.setResource(resource);
 			this.getResources().add(new_solution_resource);
 		}
 		for ( EObject task : scheduler.getTasks()) {
-			SolutionTask new_solution_task = this.constructTask(task);
+			SolutionTask new_solution_task = scheduler.constructTask(task);
 			new_solution_task.setTask(task);
 			this.getTasks().add(new_solution_task);
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolutionTask constructTask(EObject task) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolutionResource constructResource(EObject resource) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -594,10 +580,6 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 			case SchedulerPackage.SOLUTION___RESET:
 				reset();
 				return null;
-			case SchedulerPackage.SOLUTION___CONSTRUCT_TASK__EOBJECT:
-				return constructTask((EObject)arguments.get(0));
-			case SchedulerPackage.SOLUTION___CONSTRUCT_RESOURCE__EOBJECT:
-				return constructResource((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

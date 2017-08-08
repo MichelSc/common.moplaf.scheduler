@@ -10,7 +10,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.misc.common.moplaf.scheduler,
  com.misc.common.moplaf.scheduler.impl,
- com.misc.common.moplaf.scheduler.util
+ com.misc.common.moplaf.scheduler.util,
+ com.misc.common.moplaf.schedulercalc,
+ com.misc.common.moplaf.schedulercalc.impl,
+ com.misc.common.moplaf.schedulercalc.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  com.misc.common.moplaf.propagator2;visibility:=reexport,
