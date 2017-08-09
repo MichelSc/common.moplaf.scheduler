@@ -106,7 +106,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 
@@ -128,7 +128,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 
@@ -150,7 +150,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 
@@ -172,7 +172,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 
@@ -194,7 +194,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 
@@ -216,7 +216,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 
@@ -238,7 +238,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 
@@ -260,7 +260,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 
@@ -282,7 +282,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -304,7 +304,7 @@ public class SolutionTaskItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 

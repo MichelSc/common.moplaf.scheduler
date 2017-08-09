@@ -48,16 +48,18 @@
       ecorePackage="scheduler.ecore#/">
     <genClasses ecoreClass="scheduler.ecore#//Scheduler">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Solutions"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/CurrentSolutionntr"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Tasks"/>
-      <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Resources"/>
+      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/Name"/>
+      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/CurrentSolutionntr"/>
+      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Tasks"/>
+      <genFeatures createChild="false" propertyCategory="10 Scheduler" propertyDescription=""
+          ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Resources"/>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/constructTask">
         <genParameters ecoreParameter="scheduler.ecore#//Scheduler/constructTask/task"/>
       </genOperations>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/constructResource">
         <genParameters ecoreParameter="scheduler.ecore#//Scheduler/constructResource/resource"/>
       </genOperations>
+      <genOperations ecoreOperation="scheduler.ecore#//Scheduler/enable"/>
     </genClasses>
     <genClasses ecoreClass="scheduler.ecore#//Solution">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Moves"/>
@@ -65,7 +67,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Resources"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/CandidateMove"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Expressions"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//Solution/SolutionNr"/>
+      <genFeatures property="None" createChild="false" propertyCategory="10 Scheduler"
+          ecoreFeature="ecore:EAttribute scheduler.ecore#//Solution/SolutionNr"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Scheduler"/>
       <genOperations ecoreOperation="scheduler.ecore#//Solution/clone"/>
       <genOperations ecoreOperation="scheduler.ecore#//Solution/setCandidate">
@@ -77,31 +80,45 @@
     </genClasses>
     <genClasses ecoreClass="scheduler.ecore#//SolutionResource">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/Resource"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/ScheduledTasks"/>
-      <genFeatures children="true" createChild="false" propertySortChoices="true"
-          ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/CandidateScheduledTasks"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/CandidateFirstTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/CandidateLastTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="30 Solution"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/ScheduledTasks"/>
+      <genFeatures children="true" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/CandidateScheduledTasks"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/CandidateFirstTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/CandidateLastTask"/>
       <genFeatures property="None" children="true" createChild="false" propertyCategory=""
           ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/Expressions"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionResource/Description"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="10 Scheduler"
+          ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionResource/Description"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionResource/Solution"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionResource/Name"/>
+      <genFeatures property="None" createChild="false" propertyCategory="10 Scheduler"
+          ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionResource/Name"/>
     </genClasses>
     <genClasses ecoreClass="scheduler.ecore#//SolutionTask">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/Task"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/NextTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/PreviousTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/ScheduledResource"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/CandidateNextTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/CandidatePreviousTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/ResourceAsCandidateFirstTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/ResourceAsCandidateLastTask"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/CandidateScheduledResource"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="30 Solution"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/NextTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="30 Solution"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/PreviousTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="30 Solution"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/ScheduledResource"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/CandidateNextTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/CandidatePreviousTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/ResourceAsCandidateFirstTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/ResourceAsCandidateLastTask"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Candidate"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/CandidateScheduledResource"/>
       <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/Expressions"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionTask/Description"/>
+      <genFeatures property="Readonly" createChild="false" propertyCategory="10 Scheduler"
+          ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionTask/Description"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//SolutionTask/Solution"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionTask/Name"/>
+      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//SolutionTask/Name"/>
       <genOperations ecoreOperation="scheduler.ecore#//SolutionTask/unsetCandidatePreviousNext"/>
       <genOperations ecoreOperation="scheduler.ecore#//SolutionTask/setCandidatePreviousNext">
         <genParameters ecoreParameter="scheduler.ecore#//SolutionTask/setCandidatePreviousNext/solution"/>
