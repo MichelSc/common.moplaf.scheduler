@@ -2,12 +2,15 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.schedulercalc.util.SetCandidateScheduledResourcePropagatorFunctionManager;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -173,6 +176,14 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	public SolutionResource constructResource(EObject resource) {
 		SolutionResource new_resource = SchedulerFactory.eINSTANCE.createSolutionResource();
 		return new_resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void enable() {
+		Util.adapt(this, SetCandidateScheduledResourcePropagatorFunctionManager.class, true ); // true = create
 	}
 
 	/**
@@ -372,6 +383,9 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 				return constructTask((EObject)arguments.get(0));
 			case SchedulerPackage.SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT:
 				return constructResource((EObject)arguments.get(0));
+			case SchedulerPackage.SCHEDULER___ENABLE:
+				enable();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

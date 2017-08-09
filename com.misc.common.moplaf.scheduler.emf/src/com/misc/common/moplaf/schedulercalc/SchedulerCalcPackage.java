@@ -176,6 +176,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int SOLUTION_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -481,6 +490,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Solution Expression</b></em>' reference.
@@ -790,6 +808,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int RESOURCE_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1095,6 +1122,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Resource Expression</b></em>' reference.
@@ -1404,6 +1440,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int TASK_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1709,6 +1754,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Task Expression</b></em>' reference.
@@ -2018,6 +2072,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES__DESCRIPTION = SOLUTION_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES__TOUCHED_PARENT = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2323,6 +2386,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Solution Expression</b></em>' reference.
@@ -2632,6 +2704,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Resource Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2937,6 +3018,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALC_TASK_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION = TASK_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT = TASK_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Task Expression</b></em>' reference.
@@ -3246,6 +3336,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE__DESCRIPTION = CALC_TASK_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE__TOUCHED_PARENT = CALC_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Task Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3551,6 +3650,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES__DESCRIPTION = SOLUTION_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES__TOUCHED_PARENT = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
@@ -3860,6 +3968,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Solution Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4165,6 +4282,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Resource Expression</b></em>' reference.
@@ -4474,6 +4600,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int RESET_TASK_EXPRESSION_CANDIDATE_VALUE__DESCRIPTION = TASK_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_TASK_EXPRESSION_CANDIDATE_VALUE__TOUCHED_PARENT = TASK_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Task Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4779,6 +4914,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_TASK_CANDIDATE_NEXT__DESCRIPTION = TASK_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_TASK_CANDIDATE_NEXT__TOUCHED_PARENT = TASK_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -5088,6 +5232,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int RESET_TASK_CANDIDATE_SCHEDULED_RESOURCE__DESCRIPTION = TASK_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TOUCHED_PARENT = TASK_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5393,6 +5546,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_RESOURCE_TASKS_CANDIDATE_NEXT__DESCRIPTION = RESOURCE_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_RESOURCE_TASKS_CANDIDATE_NEXT__TOUCHED_PARENT = RESOURCE_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -5702,6 +5864,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int RESET_RESOURCE_TASKS_CANDIDATE_SCHEDULED_RESOURCE__DESCRIPTION = RESOURCE_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_RESOURCE_TASKS_CANDIDATE_SCHEDULED_RESOURCE__TOUCHED_PARENT = RESOURCE_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6009,6 +6180,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__DESCRIPTION = SOLUTION_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__TOUCHED_PARENT = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6314,6 +6494,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__DESCRIPTION = TASK_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TOUCHED_PARENT = TASK_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.

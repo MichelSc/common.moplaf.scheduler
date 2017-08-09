@@ -5,6 +5,7 @@ package com.misc.common.moplaf.scheduler.provider;
 
 
 
+import com.misc.common.moplaf.emf.edit.command.EnableCommand;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
@@ -12,12 +13,15 @@ import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -269,4 +273,27 @@ public class SchedulerItemProvider
 		return SchedulerEditPlugin.INSTANCE;
 	}
 
+	public  class SchedulerEnableCommand extends EnableCommand{
+		private Scheduler scheduler;
+
+		public SchedulerEnableCommand(Scheduler scheduler) {
+			this.scheduler = scheduler;
+		}
+
+		@Override
+		public void execute() {
+			this.scheduler.enable();
+		}
+	};
+		
+	@Override
+	public Command createCommand(Object object, EditingDomain domain,
+			Class<? extends Command> commandClass,
+			CommandParameter commandParameter) {
+		if ( commandClass == EnableCommand.class){
+			return new SchedulerEnableCommand((Scheduler) object); 
+		} 
+
+		return super.createCommand(object, domain, commandClass, commandParameter);
+	} //method createCommand
 }

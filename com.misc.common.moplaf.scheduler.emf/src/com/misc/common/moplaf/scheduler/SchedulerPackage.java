@@ -142,13 +142,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = 1;
 
 	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___ENABLE = 2;
+
+	/**
 	 * The number of operations of the '<em>Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER_OPERATION_COUNT = 2;
+	int SCHEDULER_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionImpl <em>Solution</em>}' class.
@@ -1822,6 +1831,16 @@ public interface SchedulerPackage extends EPackage {
 	EOperation getScheduler__ConstructResource__EObject();
 
 	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#enable() <em>Enable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Enable</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#enable()
+	 * @generated
+	 */
+	EOperation getScheduler__Enable();
+
+	/**
 	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2727,6 +2746,14 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = eINSTANCE.getScheduler__ConstructResource__EObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Enable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SCHEDULER___ENABLE = eINSTANCE.getScheduler__Enable();
 
 		/**
 		 * The meta object literal for the '<em><b>Tasks</b></em>' reference list feature.

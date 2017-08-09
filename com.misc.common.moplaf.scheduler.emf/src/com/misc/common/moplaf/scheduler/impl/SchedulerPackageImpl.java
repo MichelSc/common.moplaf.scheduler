@@ -285,6 +285,15 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getScheduler__Enable() {
+		return schedulerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getScheduler_Tasks() {
 		return (EReference)schedulerEClass.getEStructuralFeatures().get(3);
 	}
@@ -1027,6 +1036,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(schedulerEClass, SCHEDULER__RESOURCES);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_TASK__EOBJECT);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT);
+		createEOperation(schedulerEClass, SCHEDULER___ENABLE);
 
 		solutionEClass = createEClass(SOLUTION);
 		createEReference(solutionEClass, SOLUTION__MOVES);
@@ -1182,6 +1192,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		op = initEOperation(getScheduler__ConstructResource__EObject(), this.getSolutionResource(), "constructResource", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEObject(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getScheduler__Enable(), null, "enable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(solutionEClass, Solution.class, "Solution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSolution_Moves(), this.getMove(), this.getMove_Solution(), "Moves", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

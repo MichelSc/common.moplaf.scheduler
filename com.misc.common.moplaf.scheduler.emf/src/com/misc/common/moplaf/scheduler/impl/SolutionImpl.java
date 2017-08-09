@@ -2,8 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-
-import com.misc.common.moplaf.common.util.Util;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.Move;
@@ -15,7 +13,6 @@ import com.misc.common.moplaf.scheduler.SolutionExpression;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope;
-import com.misc.common.moplaf.schedulercalc.util.SetCandidateScheduledResourcePropagatorFunctionManager;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -354,7 +351,6 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	 * <!-- end-user-doc -->
 	 */
 	public void reset() {
-		Util.adapt(this, SetCandidateScheduledResourcePropagatorFunctionManager.class, true );
 		// clear everything
 		this.getTasks().clear();
 		this.getResources().clear();

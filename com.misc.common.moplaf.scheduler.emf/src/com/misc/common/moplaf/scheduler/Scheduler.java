@@ -78,6 +78,14 @@ public interface Scheduler extends EObject {
 	SolutionResource constructResource(EObject resource);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enable();
+
+	/**
 	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
 	 * <!-- begin-user-doc -->
