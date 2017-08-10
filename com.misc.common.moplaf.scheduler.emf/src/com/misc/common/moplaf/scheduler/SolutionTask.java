@@ -385,4 +385,12 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 	 */
 	void setCandidatePreviousNext(SolutionResource solution, SolutionTask previous, SolutionTask next);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void constructExpressions();
+
 } // SolutionTask

@@ -237,4 +237,12 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	 */
 	void setName(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void constructExpressions();
+
 } // SolutionResource

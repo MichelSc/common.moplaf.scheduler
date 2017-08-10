@@ -89,26 +89,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createMoveAdapter();
 			}
 			@Override
-			public Adapter caseMoveExpression(MoveExpression object) {
-				return createMoveExpressionAdapter();
-			}
-			@Override
-			public Adapter caseSolutionExpression(SolutionExpression object) {
-				return createSolutionExpressionAdapter();
-			}
-			@Override
-			public Adapter caseResourceExpression(ResourceExpression object) {
-				return createResourceExpressionAdapter();
-			}
-			@Override
-			public Adapter caseTaskExpression(TaskExpression object) {
-				return createTaskExpressionAdapter();
-			}
-			@Override
-			public Adapter caseTaskFloatExpression(TaskFloatExpression object) {
-				return createTaskFloatExpressionAdapter();
-			}
-			@Override
 			public Adapter caseMoveChange(MoveChange object) {
 				return createMoveChangeAdapter();
 			}
@@ -139,6 +119,74 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUnschedule(Unschedule object) {
 				return createUnscheduleAdapter();
+			}
+			@Override
+			public Adapter caseOwnerExpression(OwnerExpression object) {
+				return createOwnerExpressionAdapter();
+			}
+			@Override
+			public Adapter caseMoveExpression(MoveExpression object) {
+				return createMoveExpressionAdapter();
+			}
+			@Override
+			public Adapter caseSolutionExpression(SolutionExpression object) {
+				return createSolutionExpressionAdapter();
+			}
+			@Override
+			public Adapter caseResourceExpression(ResourceExpression object) {
+				return createResourceExpressionAdapter();
+			}
+			@Override
+			public Adapter caseTaskExpression(TaskExpression object) {
+				return createTaskExpressionAdapter();
+			}
+			@Override
+			public Adapter caseValueExpression(ValueExpression object) {
+				return createValueExpressionAdapter();
+			}
+			@Override
+			public Adapter caseFloatExpression(FloatExpression object) {
+				return createFloatExpressionAdapter();
+			}
+			@Override
+			public Adapter caseIntExpression(IntExpression object) {
+				return createIntExpressionAdapter();
+			}
+			@Override
+			public Adapter caseDateExpression(DateExpression object) {
+				return createDateExpressionAdapter();
+			}
+			@Override
+			public Adapter caseCandidateValueExpression(CandidateValueExpression object) {
+				return createCandidateValueExpressionAdapter();
+			}
+			@Override
+			public Adapter caseCandidateFloatExpression(CandidateFloatExpression object) {
+				return createCandidateFloatExpressionAdapter();
+			}
+			@Override
+			public Adapter caseCandidateDateExpression(CandidateDateExpression object) {
+				return createCandidateDateExpressionAdapter();
+			}
+			@Override
+			public Adapter caseCandidateIntExpression(CandidateIntExpression object) {
+				return createCandidateIntExpressionAdapter();
+			}
+			@Override
+			public Adapter caseTaskCandidateFloatExpression(TaskCandidateFloatExpression object) {
+				return createTaskCandidateFloatExpressionAdapter();
+			}
+			@Override
+			public Adapter caseTaskCandidateDateExpression(TaskCandidateDateExpression object) {
+				return createTaskCandidateDateExpressionAdapter();
+			}
+			@Override
+			public Adapter caseResourceCandidateFloatExpression(ResourceCandidateFloatExpression object) {
+				return createResourceCandidateFloatExpressionAdapter();
+			}
+			@Override
+			public Adapter caseResourceCandidateDateExpression(ResourceCandidateDateExpression object) {
+				return createResourceCandidateDateExpressionAdapter();
 			}
 			@Override
 			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
@@ -291,16 +339,170 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.TaskFloatExpression <em>Task Float Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ValueExpression <em>Value Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.scheduler.TaskFloatExpression
+	 * @see com.misc.common.moplaf.scheduler.ValueExpression
 	 * @generated
 	 */
-	public Adapter createTaskFloatExpressionAdapter() {
+	public Adapter createValueExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.FloatExpression <em>Float Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.FloatExpression
+	 * @generated
+	 */
+	public Adapter createFloatExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.IntExpression <em>Int Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.IntExpression
+	 * @generated
+	 */
+	public Adapter createIntExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.DateExpression <em>Date Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.DateExpression
+	 * @generated
+	 */
+	public Adapter createDateExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.CandidateValueExpression <em>Candidate Value Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.CandidateValueExpression
+	 * @generated
+	 */
+	public Adapter createCandidateValueExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.CandidateFloatExpression <em>Candidate Float Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.CandidateFloatExpression
+	 * @generated
+	 */
+	public Adapter createCandidateFloatExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.CandidateDateExpression <em>Candidate Date Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.CandidateDateExpression
+	 * @generated
+	 */
+	public Adapter createCandidateDateExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.CandidateIntExpression <em>Candidate Int Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.CandidateIntExpression
+	 * @generated
+	 */
+	public Adapter createCandidateIntExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression <em>Task Candidate Float Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression
+	 * @generated
+	 */
+	public Adapter createTaskCandidateFloatExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.TaskCandidateDateExpression <em>Task Candidate Date Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.TaskCandidateDateExpression
+	 * @generated
+	 */
+	public Adapter createTaskCandidateDateExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression <em>Resource Candidate Float Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression
+	 * @generated
+	 */
+	public Adapter createResourceCandidateFloatExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ResourceCandidateDateExpression <em>Resource Candidate Date Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.ResourceCandidateDateExpression
+	 * @generated
+	 */
+	public Adapter createResourceCandidateDateExpressionAdapter() {
 		return null;
 	}
 
@@ -413,6 +615,20 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUnscheduleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.OwnerExpression <em>Owner Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.OwnerExpression
+	 * @generated
+	 */
+	public Adapter createOwnerExpressionAdapter() {
 		return null;
 	}
 

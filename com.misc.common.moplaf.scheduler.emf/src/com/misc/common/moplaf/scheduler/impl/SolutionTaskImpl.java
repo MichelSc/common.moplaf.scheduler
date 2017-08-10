@@ -819,6 +819,14 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void constructExpressions() {
+		// default does nothing
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -1097,6 +1105,9 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 				return null;
 			case SchedulerPackage.SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONRESOURCE_SOLUTIONTASK_SOLUTIONTASK:
 				setCandidatePreviousNext((SolutionResource)arguments.get(0), (SolutionTask)arguments.get(1), (SolutionTask)arguments.get(2));
+				return null;
+			case SchedulerPackage.SOLUTION_TASK___CONSTRUCT_EXPRESSIONS:
+				constructExpressions();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

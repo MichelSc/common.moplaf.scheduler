@@ -2,8 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler;
 
-import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Task Expression</b></em>'.
@@ -19,15 +17,13 @@ import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.TaskExpression#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.TaskExpression#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTaskExpression()
  * @model abstract="true"
  * @generated
  */
-public interface TaskExpression extends ObjectWithPropagatorFunctions {
+public interface TaskExpression extends OwnerExpression {
 	/**
 	 * Returns the value of the '<em><b>Task</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}'.
@@ -55,51 +51,5 @@ public interface TaskExpression extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setTask(SolutionTask value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTaskExpression_Description()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Returns the value of the '<em><b>Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Role</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Role</em>' attribute.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTaskExpression_Role()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 * @generated
-	 */
-	String getRole();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void resetValueCandidate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void refreshValueCandidate();
 
 } // TaskExpression

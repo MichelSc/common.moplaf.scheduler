@@ -61,12 +61,21 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			case SchedulerPackage.SOLUTION_RESOURCE: return createSolutionResource();
 			case SchedulerPackage.SOLUTION_TASK: return createSolutionTask();
 			case SchedulerPackage.MOVE: return createMove();
-			case SchedulerPackage.TASK_FLOAT_EXPRESSION: return createTaskFloatExpression();
 			case SchedulerPackage.SCHEDULE_AFTER: return createScheduleAfter();
 			case SchedulerPackage.SCHEDULE_BEFORE: return createScheduleBefore();
 			case SchedulerPackage.SCHEDULE_FIRST: return createScheduleFirst();
 			case SchedulerPackage.SCHEDULE_LAST: return createScheduleLast();
 			case SchedulerPackage.UNSCHEDULE: return createUnschedule();
+			case SchedulerPackage.FLOAT_EXPRESSION: return createFloatExpression();
+			case SchedulerPackage.INT_EXPRESSION: return createIntExpression();
+			case SchedulerPackage.DATE_EXPRESSION: return createDateExpression();
+			case SchedulerPackage.CANDIDATE_FLOAT_EXPRESSION: return createCandidateFloatExpression();
+			case SchedulerPackage.CANDIDATE_DATE_EXPRESSION: return createCandidateDateExpression();
+			case SchedulerPackage.CANDIDATE_INT_EXPRESSION: return createCandidateIntExpression();
+			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: return createTaskCandidateFloatExpression();
+			case SchedulerPackage.TASK_CANDIDATE_DATE_EXPRESSION: return createTaskCandidateDateExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: return createResourceCandidateFloatExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION: return createResourceCandidateDateExpression();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -127,16 +136,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskFloatExpression createTaskFloatExpression() {
-		TaskFloatExpressionImpl taskFloatExpression = new TaskFloatExpressionImpl();
-		return taskFloatExpression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ScheduleAfter createScheduleAfter() {
 		ScheduleAfterImpl scheduleAfter = new ScheduleAfterImpl();
 		return scheduleAfter;
@@ -180,6 +179,106 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public Unschedule createUnschedule() {
 		UnscheduleImpl unschedule = new UnscheduleImpl();
 		return unschedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FloatExpression createFloatExpression() {
+		FloatExpressionImpl floatExpression = new FloatExpressionImpl();
+		return floatExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntExpression createIntExpression() {
+		IntExpressionImpl intExpression = new IntExpressionImpl();
+		return intExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DateExpression createDateExpression() {
+		DateExpressionImpl dateExpression = new DateExpressionImpl();
+		return dateExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CandidateFloatExpression createCandidateFloatExpression() {
+		CandidateFloatExpressionImpl candidateFloatExpression = new CandidateFloatExpressionImpl();
+		return candidateFloatExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CandidateDateExpression createCandidateDateExpression() {
+		CandidateDateExpressionImpl candidateDateExpression = new CandidateDateExpressionImpl();
+		return candidateDateExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CandidateIntExpression createCandidateIntExpression() {
+		CandidateIntExpressionImpl candidateIntExpression = new CandidateIntExpressionImpl();
+		return candidateIntExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskCandidateFloatExpression createTaskCandidateFloatExpression() {
+		TaskCandidateFloatExpressionImpl taskCandidateFloatExpression = new TaskCandidateFloatExpressionImpl();
+		return taskCandidateFloatExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskCandidateDateExpression createTaskCandidateDateExpression() {
+		TaskCandidateDateExpressionImpl taskCandidateDateExpression = new TaskCandidateDateExpressionImpl();
+		return taskCandidateDateExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidateFloatExpression createResourceCandidateFloatExpression() {
+		ResourceCandidateFloatExpressionImpl resourceCandidateFloatExpression = new ResourceCandidateFloatExpressionImpl();
+		return resourceCandidateFloatExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidateDateExpression createResourceCandidateDateExpression() {
+		ResourceCandidateDateExpressionImpl resourceCandidateDateExpression = new ResourceCandidateDateExpressionImpl();
+		return resourceCandidateDateExpression;
 	}
 
 	/**

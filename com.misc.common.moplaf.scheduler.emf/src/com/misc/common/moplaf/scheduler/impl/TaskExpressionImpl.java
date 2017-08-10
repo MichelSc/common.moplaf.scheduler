@@ -2,16 +2,11 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.TaskExpression;
-
-import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -27,33 +22,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskExpressionImpl#getTask <em>Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskExpressionImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskExpressionImpl#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TaskExpressionImpl extends ObjectWithPropagatorFunctionsImpl implements TaskExpression {
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getRole() <em>Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ROLE_EDEFAULT = null;
-
+public abstract class TaskExpressionImpl extends OwnerExpressionImpl implements TaskExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,50 +92,6 @@ public abstract class TaskExpressionImpl extends ObjectWithPropagatorFunctionsIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		// TODO: implement this method to return the 'Description' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRole() {
-		// TODO: implement this method to return the 'Role' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void resetValueCandidate() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void refreshValueCandidate() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -212,10 +141,6 @@ public abstract class TaskExpressionImpl extends ObjectWithPropagatorFunctionsIm
 		switch (featureID) {
 			case SchedulerPackage.TASK_EXPRESSION__TASK:
 				return getTask();
-			case SchedulerPackage.TASK_EXPRESSION__DESCRIPTION:
-				return getDescription();
-			case SchedulerPackage.TASK_EXPRESSION__ROLE:
-				return getRole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,30 +185,8 @@ public abstract class TaskExpressionImpl extends ObjectWithPropagatorFunctionsIm
 		switch (featureID) {
 			case SchedulerPackage.TASK_EXPRESSION__TASK:
 				return getTask() != null;
-			case SchedulerPackage.TASK_EXPRESSION__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
-			case SchedulerPackage.TASK_EXPRESSION__ROLE:
-				return ROLE_EDEFAULT == null ? getRole() != null : !ROLE_EDEFAULT.equals(getRole());
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case SchedulerPackage.TASK_EXPRESSION___RESET_VALUE_CANDIDATE:
-				resetValueCandidate();
-				return null;
-			case SchedulerPackage.TASK_EXPRESSION___REFRESH_VALUE_CANDIDATE:
-				refreshValueCandidate();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //TaskExpressionImpl

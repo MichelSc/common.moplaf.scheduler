@@ -2,7 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
@@ -24,22 +23,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceExpressionImpl#getResource <em>Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceExpressionImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ResourceExpressionImpl extends ObjectWithPropagatorFunctionsImpl implements ResourceExpression {
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
+public abstract class ResourceExpressionImpl extends OwnerExpressionImpl implements ResourceExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -105,17 +93,6 @@ public abstract class ResourceExpressionImpl extends ObjectWithPropagatorFunctio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		// TODO: implement this method to return the 'Description' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -165,8 +142,6 @@ public abstract class ResourceExpressionImpl extends ObjectWithPropagatorFunctio
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_EXPRESSION__RESOURCE:
 				return getResource();
-			case SchedulerPackage.RESOURCE_EXPRESSION__DESCRIPTION:
-				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,8 +186,6 @@ public abstract class ResourceExpressionImpl extends ObjectWithPropagatorFunctio
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_EXPRESSION__RESOURCE:
 				return getResource() != null;
-			case SchedulerPackage.RESOURCE_EXPRESSION__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}

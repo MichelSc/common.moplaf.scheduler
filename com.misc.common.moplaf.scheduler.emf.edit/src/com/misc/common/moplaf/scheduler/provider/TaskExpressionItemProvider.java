@@ -3,22 +3,13 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
-import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.TaskExpression;
-import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.common.moplaf.scheduler.TaskExpression} object.
@@ -26,7 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TaskExpressionItemProvider extends ObjectWithPropagatorFunctionsItemProvider {
+public class TaskExpressionItemProvider extends OwnerExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -48,54 +39,8 @@ public class TaskExpressionItemProvider extends ObjectWithPropagatorFunctionsIte
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
-			addRolePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_TaskExpression_Description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TaskExpression_Description_feature", "_UI_TaskExpression_type"),
-				 SchedulerPackage.Literals.TASK_EXPRESSION__DESCRIPTION,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Role feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRolePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_TaskExpression_Role_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TaskExpression_Role_feature", "_UI_TaskExpression_type"),
-				 SchedulerPackage.Literals.TASK_EXPRESSION__ROLE,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -117,7 +62,7 @@ public class TaskExpressionItemProvider extends ObjectWithPropagatorFunctionsIte
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((TaskExpression)object).getDescription();
+		String label = ((TaskExpression)object).getOwner();
 		return label == null || label.length() == 0 ?
 			getString("_UI_TaskExpression_type") :
 			getString("_UI_TaskExpression_type") + " " + label;
@@ -134,13 +79,6 @@ public class TaskExpressionItemProvider extends ObjectWithPropagatorFunctionsIte
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(TaskExpression.class)) {
-			case SchedulerPackage.TASK_EXPRESSION__DESCRIPTION:
-			case SchedulerPackage.TASK_EXPRESSION__ROLE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -154,17 +92,6 @@ public class TaskExpressionItemProvider extends ObjectWithPropagatorFunctionsIte
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return SchedulerEditPlugin.INSTANCE;
 	}
 
 }

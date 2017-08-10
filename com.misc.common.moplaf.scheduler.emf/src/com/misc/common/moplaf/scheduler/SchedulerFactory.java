@@ -67,15 +67,6 @@ public interface SchedulerFactory extends EFactory {
 	Move createMove();
 
 	/**
-	 * Returns a new object of class '<em>Task Float Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Float Expression</em>'.
-	 * @generated
-	 */
-	TaskFloatExpression createTaskFloatExpression();
-
-	/**
 	 * Returns a new object of class '<em>Schedule After</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,6 +110,96 @@ public interface SchedulerFactory extends EFactory {
 	 * @generated
 	 */
 	Unschedule createUnschedule();
+
+	/**
+	 * Returns a new object of class '<em>Float Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Float Expression</em>'.
+	 * @generated
+	 */
+	FloatExpression createFloatExpression();
+
+	/**
+	 * Returns a new object of class '<em>Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Int Expression</em>'.
+	 * @generated
+	 */
+	IntExpression createIntExpression();
+
+	/**
+	 * Returns a new object of class '<em>Date Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date Expression</em>'.
+	 * @generated
+	 */
+	DateExpression createDateExpression();
+
+	/**
+	 * Returns a new object of class '<em>Candidate Float Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Candidate Float Expression</em>'.
+	 * @generated
+	 */
+	CandidateFloatExpression createCandidateFloatExpression();
+
+	/**
+	 * Returns a new object of class '<em>Candidate Date Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Candidate Date Expression</em>'.
+	 * @generated
+	 */
+	CandidateDateExpression createCandidateDateExpression();
+
+	/**
+	 * Returns a new object of class '<em>Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Candidate Int Expression</em>'.
+	 * @generated
+	 */
+	CandidateIntExpression createCandidateIntExpression();
+
+	/**
+	 * Returns a new object of class '<em>Task Candidate Float Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Candidate Float Expression</em>'.
+	 * @generated
+	 */
+	TaskCandidateFloatExpression createTaskCandidateFloatExpression();
+
+	/**
+	 * Returns a new object of class '<em>Task Candidate Date Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Candidate Date Expression</em>'.
+	 * @generated
+	 */
+	TaskCandidateDateExpression createTaskCandidateDateExpression();
+
+	/**
+	 * Returns a new object of class '<em>Resource Candidate Float Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Candidate Float Expression</em>'.
+	 * @generated
+	 */
+	ResourceCandidateFloatExpression createResourceCandidateFloatExpression();
+
+	/**
+	 * Returns a new object of class '<em>Resource Candidate Date Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Candidate Date Expression</em>'.
+	 * @generated
+	 */
+	ResourceCandidateDateExpression createResourceCandidateDateExpression();
 
 	/**
 	 * Returns the package supported by this factory.

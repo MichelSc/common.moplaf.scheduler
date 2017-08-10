@@ -355,18 +355,29 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 		this.getTasks().clear();
 		this.getResources().clear();
 		this.getMoves().clear();
+		this.setCandidateMove(null);
 		// construct everyting
 		Scheduler scheduler = this.getScheduler();
 		for ( EObject resource : scheduler.getResources()) {
 			SolutionResource new_solution_resource = scheduler.constructResource(resource);
 			new_solution_resource.setResource(resource);
 			this.getResources().add(new_solution_resource);
+			new_solution_resource.constructExpressions();
 		}
 		for ( EObject task : scheduler.getTasks()) {
 			SolutionTask new_solution_task = scheduler.constructTask(task);
 			new_solution_task.setTask(task);
 			this.getTasks().add(new_solution_task);
+			new_solution_task.constructExpressions();
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void constructExpressions() {
+		// solution does nothing
 	}
 
 	/**
@@ -575,6 +586,9 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 				return null;
 			case SchedulerPackage.SOLUTION___RESET:
 				reset();
+				return null;
+			case SchedulerPackage.SOLUTION___CONSTRUCT_EXPRESSIONS:
+				constructExpressions();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

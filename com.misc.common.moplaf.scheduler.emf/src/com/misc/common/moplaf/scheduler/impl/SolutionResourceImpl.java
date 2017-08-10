@@ -8,6 +8,7 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -425,6 +426,14 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void constructExpressions() {
+		// default does nothing
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -628,6 +637,21 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case SchedulerPackage.SOLUTION_RESOURCE___CONSTRUCT_EXPRESSIONS:
+				constructExpressions();
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

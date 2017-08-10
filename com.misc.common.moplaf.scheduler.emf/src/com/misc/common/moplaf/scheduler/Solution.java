@@ -236,4 +236,12 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	 */
 	void reset();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void constructExpressions();
+
 } // Solution

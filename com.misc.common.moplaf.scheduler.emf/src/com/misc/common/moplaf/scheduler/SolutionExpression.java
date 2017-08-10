@@ -2,8 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler;
 
-import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Solution Expression</b></em>'.
@@ -14,14 +12,13 @@ import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionExpression#getSolution <em>Solution</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionExpression#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionExpression()
  * @model abstract="true"
  * @generated
  */
-public interface SolutionExpression extends ObjectWithPropagatorFunctions {
+public interface SolutionExpression extends OwnerExpression {
 	/**
 	 * Returns the value of the '<em><b>Solution</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Solution#getExpressions <em>Expressions</em>}'.
@@ -49,20 +46,5 @@ public interface SolutionExpression extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setSolution(Solution value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionExpression_Description()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 * @generated
-	 */
-	String getDescription();
 
 } // SolutionExpression
