@@ -76,6 +76,11 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			case SchedulerPackage.TASK_CANDIDATE_DATE_EXPRESSION: return createTaskCandidateDateExpression();
 			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: return createResourceCandidateFloatExpression();
 			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION: return createResourceCandidateDateExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: return createResourceCandidateIntExpression();
+			case SchedulerPackage.TASK_CANDIDATE_INT_EXPRESSION: return createTaskCandidateIntExpression();
+			case SchedulerPackage.SOLUTION_CANDIDATE_DATE_EXPRESSION: return createSolutionCandidateDateExpression();
+			case SchedulerPackage.SOLUTION_CANDIDATE_FLOAT_EXPRESSION: return createSolutionCandidateFloatExpression();
+			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION: return createSolutionCandidateIntExpression();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -279,6 +284,56 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public ResourceCandidateDateExpression createResourceCandidateDateExpression() {
 		ResourceCandidateDateExpressionImpl resourceCandidateDateExpression = new ResourceCandidateDateExpressionImpl();
 		return resourceCandidateDateExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResourceCandidateIntExpression createResourceCandidateIntExpression() {
+		ResourceCandidateIntExpressionImpl resourceCandidateIntExpression = new ResourceCandidateIntExpressionImpl();
+		return resourceCandidateIntExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskCandidateIntExpression createTaskCandidateIntExpression() {
+		TaskCandidateIntExpressionImpl taskCandidateIntExpression = new TaskCandidateIntExpressionImpl();
+		return taskCandidateIntExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolutionCandidateDateExpression createSolutionCandidateDateExpression() {
+		SolutionCandidateDateExpressionImpl solutionCandidateDateExpression = new SolutionCandidateDateExpressionImpl();
+		return solutionCandidateDateExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolutionCandidateFloatExpression createSolutionCandidateFloatExpression() {
+		SolutionCandidateFloatExpressionImpl solutionCandidateFloatExpression = new SolutionCandidateFloatExpressionImpl();
+		return solutionCandidateFloatExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolutionCandidateIntExpression createSolutionCandidateIntExpression() {
+		SolutionCandidateIntExpressionImpl solutionCandidateIntExpression = new SolutionCandidateIntExpressionImpl();
+		return solutionCandidateIntExpression;
 	}
 
 	/**

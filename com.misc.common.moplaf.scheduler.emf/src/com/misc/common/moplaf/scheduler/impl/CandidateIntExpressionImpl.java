@@ -246,4 +246,13 @@ public class CandidateIntExpressionImpl extends CandidateValueExpressionImpl imp
 		return result.toString();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	@Override
+	public String getCandidateValueAsString() {
+		String value = String.format("%d", this.getCandidateValue());
+		return value;
+	}
 } //CandidateIntExpressionImpl

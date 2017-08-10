@@ -189,6 +189,26 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createResourceCandidateDateExpressionAdapter();
 			}
 			@Override
+			public Adapter caseResourceCandidateIntExpression(ResourceCandidateIntExpression object) {
+				return createResourceCandidateIntExpressionAdapter();
+			}
+			@Override
+			public Adapter caseTaskCandidateIntExpression(TaskCandidateIntExpression object) {
+				return createTaskCandidateIntExpressionAdapter();
+			}
+			@Override
+			public Adapter caseSolutionCandidateDateExpression(SolutionCandidateDateExpression object) {
+				return createSolutionCandidateDateExpressionAdapter();
+			}
+			@Override
+			public Adapter caseSolutionCandidateFloatExpression(SolutionCandidateFloatExpression object) {
+				return createSolutionCandidateFloatExpressionAdapter();
+			}
+			@Override
+			public Adapter caseSolutionCandidateIntExpression(SolutionCandidateIntExpression object) {
+				return createSolutionCandidateIntExpressionAdapter();
+			}
+			@Override
 			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
 				return createObjectWithPropagatorFunctionsAdapter();
 			}
@@ -503,6 +523,76 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResourceCandidateDateExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression <em>Resource Candidate Int Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression
+	 * @generated
+	 */
+	public Adapter createResourceCandidateIntExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.TaskCandidateIntExpression <em>Task Candidate Int Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.TaskCandidateIntExpression
+	 * @generated
+	 */
+	public Adapter createTaskCandidateIntExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.SolutionCandidateDateExpression <em>Solution Candidate Date Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.SolutionCandidateDateExpression
+	 * @generated
+	 */
+	public Adapter createSolutionCandidateDateExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.SolutionCandidateFloatExpression <em>Solution Candidate Float Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.SolutionCandidateFloatExpression
+	 * @generated
+	 */
+	public Adapter createSolutionCandidateFloatExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression <em>Solution Candidate Int Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression
+	 * @generated
+	 */
+	public Adapter createSolutionCandidateIntExpressionAdapter() {
 		return null;
 	}
 

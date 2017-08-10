@@ -203,5 +203,10 @@
     <genClasses ecoreClass="scheduler.ecore#//TaskCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//TaskCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//SolutionCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//SolutionCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//SolutionCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
   </genPackages>
 </genmodel:GenModel>

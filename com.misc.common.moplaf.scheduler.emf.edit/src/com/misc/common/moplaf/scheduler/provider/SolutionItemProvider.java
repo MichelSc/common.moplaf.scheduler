@@ -193,6 +193,21 @@ public class SolutionItemProvider
 			(createChildParameter
 				(SchedulerPackage.Literals.SOLUTION__RESOURCES,
 				 SchedulerFactory.eINSTANCE.createSolutionResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createSolutionCandidateDateExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createSolutionCandidateFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createSolutionCandidateIntExpression()));
 	}
 
 	/**

@@ -318,6 +318,71 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: {
+				ResourceCandidateIntExpression resourceCandidateIntExpression = (ResourceCandidateIntExpression)theEObject;
+				T result = caseResourceCandidateIntExpression(resourceCandidateIntExpression);
+				if (result == null) result = caseCandidateIntExpression(resourceCandidateIntExpression);
+				if (result == null) result = caseResourceExpression(resourceCandidateIntExpression);
+				if (result == null) result = caseCandidateValueExpression(resourceCandidateIntExpression);
+				if (result == null) result = caseIntExpression(resourceCandidateIntExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(resourceCandidateIntExpression);
+				if (result == null) result = caseValueExpression(resourceCandidateIntExpression);
+				if (result == null) result = caseOwnerExpression(resourceCandidateIntExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerPackage.TASK_CANDIDATE_INT_EXPRESSION: {
+				TaskCandidateIntExpression taskCandidateIntExpression = (TaskCandidateIntExpression)theEObject;
+				T result = caseTaskCandidateIntExpression(taskCandidateIntExpression);
+				if (result == null) result = caseCandidateIntExpression(taskCandidateIntExpression);
+				if (result == null) result = caseTaskExpression(taskCandidateIntExpression);
+				if (result == null) result = caseCandidateValueExpression(taskCandidateIntExpression);
+				if (result == null) result = caseIntExpression(taskCandidateIntExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(taskCandidateIntExpression);
+				if (result == null) result = caseValueExpression(taskCandidateIntExpression);
+				if (result == null) result = caseOwnerExpression(taskCandidateIntExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerPackage.SOLUTION_CANDIDATE_DATE_EXPRESSION: {
+				SolutionCandidateDateExpression solutionCandidateDateExpression = (SolutionCandidateDateExpression)theEObject;
+				T result = caseSolutionCandidateDateExpression(solutionCandidateDateExpression);
+				if (result == null) result = caseCandidateDateExpression(solutionCandidateDateExpression);
+				if (result == null) result = caseSolutionExpression(solutionCandidateDateExpression);
+				if (result == null) result = caseCandidateValueExpression(solutionCandidateDateExpression);
+				if (result == null) result = caseDateExpression(solutionCandidateDateExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(solutionCandidateDateExpression);
+				if (result == null) result = caseValueExpression(solutionCandidateDateExpression);
+				if (result == null) result = caseOwnerExpression(solutionCandidateDateExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerPackage.SOLUTION_CANDIDATE_FLOAT_EXPRESSION: {
+				SolutionCandidateFloatExpression solutionCandidateFloatExpression = (SolutionCandidateFloatExpression)theEObject;
+				T result = caseSolutionCandidateFloatExpression(solutionCandidateFloatExpression);
+				if (result == null) result = caseCandidateFloatExpression(solutionCandidateFloatExpression);
+				if (result == null) result = caseSolutionExpression(solutionCandidateFloatExpression);
+				if (result == null) result = caseCandidateValueExpression(solutionCandidateFloatExpression);
+				if (result == null) result = caseFloatExpression(solutionCandidateFloatExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(solutionCandidateFloatExpression);
+				if (result == null) result = caseValueExpression(solutionCandidateFloatExpression);
+				if (result == null) result = caseOwnerExpression(solutionCandidateFloatExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION: {
+				SolutionCandidateIntExpression solutionCandidateIntExpression = (SolutionCandidateIntExpression)theEObject;
+				T result = caseSolutionCandidateIntExpression(solutionCandidateIntExpression);
+				if (result == null) result = caseCandidateIntExpression(solutionCandidateIntExpression);
+				if (result == null) result = caseSolutionExpression(solutionCandidateIntExpression);
+				if (result == null) result = caseCandidateValueExpression(solutionCandidateIntExpression);
+				if (result == null) result = caseIntExpression(solutionCandidateIntExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(solutionCandidateIntExpression);
+				if (result == null) result = caseValueExpression(solutionCandidateIntExpression);
+				if (result == null) result = caseOwnerExpression(solutionCandidateIntExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -634,6 +699,81 @@ public class SchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResourceCandidateDateExpression(ResourceCandidateDateExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Candidate Int Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResourceCandidateIntExpression(ResourceCandidateIntExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task Candidate Int Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskCandidateIntExpression(TaskCandidateIntExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solution Candidate Date Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solution Candidate Date Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolutionCandidateDateExpression(SolutionCandidateDateExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solution Candidate Float Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solution Candidate Float Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolutionCandidateFloatExpression(SolutionCandidateFloatExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Solution Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Solution Candidate Int Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSolutionCandidateIntExpression(SolutionCandidateIntExpression object) {
 		return null;
 	}
 

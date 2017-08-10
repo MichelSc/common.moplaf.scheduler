@@ -18,6 +18,7 @@ import com.misc.common.moplaf.scheduler.MoveExpression;
 import com.misc.common.moplaf.scheduler.OwnerExpression;
 import com.misc.common.moplaf.scheduler.ResourceCandidateDateExpression;
 import com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression;
+import com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.ScheduleBefore;
@@ -27,11 +28,15 @@ import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
+import com.misc.common.moplaf.scheduler.SolutionCandidateDateExpression;
+import com.misc.common.moplaf.scheduler.SolutionCandidateFloatExpression;
+import com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression;
 import com.misc.common.moplaf.scheduler.SolutionExpression;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.TaskCandidateDateExpression;
 import com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression;
+import com.misc.common.moplaf.scheduler.TaskCandidateIntExpression;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 import com.misc.common.moplaf.scheduler.Unschedule;
 import com.misc.common.moplaf.scheduler.ValueExpression;
@@ -198,6 +203,41 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	private EClass resourceCandidateDateExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass resourceCandidateIntExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskCandidateIntExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solutionCandidateDateExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solutionCandidateFloatExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solutionCandidateIntExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1101,6 +1141,51 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getResourceCandidateIntExpression() {
+		return resourceCandidateIntExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaskCandidateIntExpression() {
+		return taskCandidateIntExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSolutionCandidateDateExpression() {
+		return solutionCandidateDateExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSolutionCandidateFloatExpression() {
+		return solutionCandidateFloatExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSolutionCandidateIntExpression() {
+		return solutionCandidateIntExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMoveChange() {
 		return moveChangeEClass;
 	}
@@ -1428,6 +1513,16 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		resourceCandidateFloatExpressionEClass = createEClass(RESOURCE_CANDIDATE_FLOAT_EXPRESSION);
 
 		resourceCandidateDateExpressionEClass = createEClass(RESOURCE_CANDIDATE_DATE_EXPRESSION);
+
+		resourceCandidateIntExpressionEClass = createEClass(RESOURCE_CANDIDATE_INT_EXPRESSION);
+
+		taskCandidateIntExpressionEClass = createEClass(TASK_CANDIDATE_INT_EXPRESSION);
+
+		solutionCandidateDateExpressionEClass = createEClass(SOLUTION_CANDIDATE_DATE_EXPRESSION);
+
+		solutionCandidateFloatExpressionEClass = createEClass(SOLUTION_CANDIDATE_FLOAT_EXPRESSION);
+
+		solutionCandidateIntExpressionEClass = createEClass(SOLUTION_CANDIDATE_INT_EXPRESSION);
 	}
 
 	/**
@@ -1495,6 +1590,16 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getResourceExpression());
 		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
 		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getResourceExpression());
+		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
+		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getResourceExpression());
+		taskCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
+		taskCandidateIntExpressionEClass.getESuperTypes().add(this.getTaskExpression());
+		solutionCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
+		solutionCandidateDateExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
+		solutionCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
+		solutionCandidateFloatExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
+		solutionCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
+		solutionCandidateIntExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1654,6 +1759,16 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEClass(resourceCandidateFloatExpressionEClass, ResourceCandidateFloatExpression.class, "ResourceCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(resourceCandidateDateExpressionEClass, ResourceCandidateDateExpression.class, "ResourceCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(resourceCandidateIntExpressionEClass, ResourceCandidateIntExpression.class, "ResourceCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(taskCandidateIntExpressionEClass, TaskCandidateIntExpression.class, "TaskCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(solutionCandidateDateExpressionEClass, SolutionCandidateDateExpression.class, "SolutionCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(solutionCandidateFloatExpressionEClass, SolutionCandidateFloatExpression.class, "SolutionCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(solutionCandidateIntExpressionEClass, SolutionCandidateIntExpression.class, "SolutionCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

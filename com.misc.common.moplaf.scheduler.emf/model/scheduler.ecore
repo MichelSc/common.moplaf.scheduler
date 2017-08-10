@@ -216,4 +216,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="TaskCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//TaskExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//ResourceExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//TaskExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//SolutionExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//SolutionExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SolutionCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//SolutionExpression"/>
 </ecore:EPackage>

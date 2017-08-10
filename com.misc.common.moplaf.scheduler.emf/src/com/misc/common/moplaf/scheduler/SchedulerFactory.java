@@ -202,6 +202,51 @@ public interface SchedulerFactory extends EFactory {
 	ResourceCandidateDateExpression createResourceCandidateDateExpression();
 
 	/**
+	 * Returns a new object of class '<em>Resource Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Candidate Int Expression</em>'.
+	 * @generated
+	 */
+	ResourceCandidateIntExpression createResourceCandidateIntExpression();
+
+	/**
+	 * Returns a new object of class '<em>Task Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Candidate Int Expression</em>'.
+	 * @generated
+	 */
+	TaskCandidateIntExpression createTaskCandidateIntExpression();
+
+	/**
+	 * Returns a new object of class '<em>Solution Candidate Date Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solution Candidate Date Expression</em>'.
+	 * @generated
+	 */
+	SolutionCandidateDateExpression createSolutionCandidateDateExpression();
+
+	/**
+	 * Returns a new object of class '<em>Solution Candidate Float Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solution Candidate Float Expression</em>'.
+	 * @generated
+	 */
+	SolutionCandidateFloatExpression createSolutionCandidateFloatExpression();
+
+	/**
+	 * Returns a new object of class '<em>Solution Candidate Int Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Solution Candidate Int Expression</em>'.
+	 * @generated
+	 */
+	SolutionCandidateIntExpression createSolutionCandidateIntExpression();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

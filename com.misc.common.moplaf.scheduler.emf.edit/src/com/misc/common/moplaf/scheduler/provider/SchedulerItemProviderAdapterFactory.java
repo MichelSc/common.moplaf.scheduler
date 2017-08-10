@@ -486,6 +486,98 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.TaskCandidateIntExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskCandidateIntExpressionItemProvider taskCandidateIntExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.TaskCandidateIntExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskCandidateIntExpressionAdapter() {
+		if (taskCandidateIntExpressionItemProvider == null) {
+			taskCandidateIntExpressionItemProvider = new TaskCandidateIntExpressionItemProvider(this);
+		}
+
+		return taskCandidateIntExpressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.SolutionCandidateDateExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SolutionCandidateDateExpressionItemProvider solutionCandidateDateExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.SolutionCandidateDateExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSolutionCandidateDateExpressionAdapter() {
+		if (solutionCandidateDateExpressionItemProvider == null) {
+			solutionCandidateDateExpressionItemProvider = new SolutionCandidateDateExpressionItemProvider(this);
+		}
+
+		return solutionCandidateDateExpressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.SolutionCandidateFloatExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SolutionCandidateFloatExpressionItemProvider solutionCandidateFloatExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.SolutionCandidateFloatExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSolutionCandidateFloatExpressionAdapter() {
+		if (solutionCandidateFloatExpressionItemProvider == null) {
+			solutionCandidateFloatExpressionItemProvider = new SolutionCandidateFloatExpressionItemProvider(this);
+		}
+
+		return solutionCandidateFloatExpressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SolutionCandidateIntExpressionItemProvider solutionCandidateIntExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSolutionCandidateIntExpressionAdapter() {
+		if (solutionCandidateIntExpressionItemProvider == null) {
+			solutionCandidateIntExpressionItemProvider = new SolutionCandidateIntExpressionItemProvider(this);
+		}
+
+		return solutionCandidateIntExpressionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -529,6 +621,29 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 		}
 
 		return resourceCandidateDateExpressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceCandidateIntExpressionItemProvider resourceCandidateIntExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceCandidateIntExpressionAdapter() {
+		if (resourceCandidateIntExpressionItemProvider == null) {
+			resourceCandidateIntExpressionItemProvider = new ResourceCandidateIntExpressionItemProvider(this);
+		}
+
+		return resourceCandidateIntExpressionItemProvider;
 	}
 
 	/**
@@ -650,6 +765,11 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 		if (taskCandidateDateExpressionItemProvider != null) taskCandidateDateExpressionItemProvider.dispose();
 		if (resourceCandidateFloatExpressionItemProvider != null) resourceCandidateFloatExpressionItemProvider.dispose();
 		if (resourceCandidateDateExpressionItemProvider != null) resourceCandidateDateExpressionItemProvider.dispose();
+		if (resourceCandidateIntExpressionItemProvider != null) resourceCandidateIntExpressionItemProvider.dispose();
+		if (taskCandidateIntExpressionItemProvider != null) taskCandidateIntExpressionItemProvider.dispose();
+		if (solutionCandidateDateExpressionItemProvider != null) solutionCandidateDateExpressionItemProvider.dispose();
+		if (solutionCandidateFloatExpressionItemProvider != null) solutionCandidateFloatExpressionItemProvider.dispose();
+		if (solutionCandidateIntExpressionItemProvider != null) solutionCandidateIntExpressionItemProvider.dispose();
 	}
 
 }
