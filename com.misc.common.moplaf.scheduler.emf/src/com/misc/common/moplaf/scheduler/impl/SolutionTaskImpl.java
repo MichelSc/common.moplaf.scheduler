@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -143,7 +143,7 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	protected SolutionResource candidateScheduledResource;
 
 	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' containment reference list.
+	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpressions()
@@ -682,7 +682,7 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	 */
 	public EList<TaskExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectContainmentWithInverseEList<TaskExpression>(TaskExpression.class, this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SchedulerPackage.TASK_EXPRESSION__TASK);
+			expressions = new EObjectWithInverseResolvingEList<TaskExpression>(TaskExpression.class, this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SchedulerPackage.TASK_EXPRESSION__TASK);
 		}
 		return expressions;
 	}

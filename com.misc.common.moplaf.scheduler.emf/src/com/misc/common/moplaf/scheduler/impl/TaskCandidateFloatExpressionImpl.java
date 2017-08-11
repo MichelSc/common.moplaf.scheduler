@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Task Candidate Float Expression</b></em>'.
@@ -31,6 +29,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionImpl implements TaskCandidateFloatExpression {
+	/**
+	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected SolutionTask task;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,8 +64,24 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	 * @generated
 	 */
 	public SolutionTask getTask() {
-		if (eContainerFeatureID() != SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK) return null;
-		return (SolutionTask)eInternalContainer();
+		if (task != null && task.eIsProxy()) {
+			InternalEObject oldTask = (InternalEObject)task;
+			task = (SolutionTask)eResolveProxy(oldTask);
+			if (task != oldTask) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK, oldTask, task));
+			}
+		}
+		return task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolutionTask basicGetTask() {
+		return task;
 	}
 
 	/**
@@ -66,7 +90,12 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	 * @generated
 	 */
 	public NotificationChain basicSetTask(SolutionTask newTask, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newTask, SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK, msgs);
+		SolutionTask oldTask = task;
+		task = newTask;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK, oldTask, newTask);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -76,12 +105,10 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	 * @generated
 	 */
 	public void setTask(SolutionTask newTask) {
-		if (newTask != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK && newTask != null)) {
-			if (EcoreUtil.isAncestor(this, newTask))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newTask != task) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (task != null)
+				msgs = ((InternalEObject)task).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
 			if (newTask != null)
 				msgs = ((InternalEObject)newTask).eInverseAdd(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
 			msgs = basicSetTask(newTask, msgs);
@@ -100,8 +127,8 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (task != null)
+					msgs = ((InternalEObject)task).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
 				return basicSetTask((SolutionTask)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -127,24 +154,11 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK:
-				return getTask();
+				if (resolve) return getTask();
+				return basicGetTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,7 +202,7 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION__TASK:
-				return getTask() != null;
+				return task != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Resource Candidate Float Expression</b></em>'.
@@ -31,6 +29,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressionImpl implements ResourceCandidateFloatExpression {
+	/**
+	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResource()
+	 * @generated
+	 * @ordered
+	 */
+	protected SolutionResource resource;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,8 +64,24 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	 * @generated
 	 */
 	public SolutionResource getResource() {
-		if (eContainerFeatureID() != SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE) return null;
-		return (SolutionResource)eInternalContainer();
+		if (resource != null && resource.eIsProxy()) {
+			InternalEObject oldResource = (InternalEObject)resource;
+			resource = (SolutionResource)eResolveProxy(oldResource);
+			if (resource != oldResource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE, oldResource, resource));
+			}
+		}
+		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SolutionResource basicGetResource() {
+		return resource;
 	}
 
 	/**
@@ -66,7 +90,12 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	 * @generated
 	 */
 	public NotificationChain basicSetResource(SolutionResource newResource, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newResource, SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE, msgs);
+		SolutionResource oldResource = resource;
+		resource = newResource;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE, oldResource, newResource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -76,12 +105,10 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	 * @generated
 	 */
 	public void setResource(SolutionResource newResource) {
-		if (newResource != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE && newResource != null)) {
-			if (EcoreUtil.isAncestor(this, newResource))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newResource != resource) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (resource != null)
+				msgs = ((InternalEObject)resource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SolutionResource.class, msgs);
 			if (newResource != null)
 				msgs = ((InternalEObject)newResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SolutionResource.class, msgs);
 			msgs = basicSetResource(newResource, msgs);
@@ -100,8 +127,8 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (resource != null)
+					msgs = ((InternalEObject)resource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SolutionResource.class, msgs);
 				return basicSetResource((SolutionResource)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -127,24 +154,11 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SolutionResource.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE:
-				return getResource();
+				if (resolve) return getResource();
+				return basicGetResource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,7 +202,7 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION__RESOURCE:
-				return getResource() != null;
+				return resource != null;
 		}
 		return super.eIsSet(featureID);
 	}

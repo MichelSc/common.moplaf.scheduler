@@ -215,7 +215,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION__CANDIDATE_MOVE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -396,7 +396,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_RESOURCE__CANDIDATE_LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -577,7 +577,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1665,7 +1665,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' container reference.
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1719,7 +1719,7 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' container reference.
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1773,7 +1773,7 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' container reference.
+	 * The feature id for the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2592,7 +2592,7 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' container reference.
+	 * The feature id for the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2727,7 +2727,7 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' container reference.
+	 * The feature id for the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2862,7 +2862,7 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' container reference.
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2997,7 +2997,7 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' container reference.
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3142,7 +3142,7 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' container reference.
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3287,7 +3287,7 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' container reference.
+	 * The feature id for the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3432,7 +3432,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' container reference.
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3577,7 +3577,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' container reference.
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3722,7 +3722,7 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Solution</b></em>' container reference.
+	 * The feature id for the '<em><b>Solution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3943,10 +3943,10 @@ public interface SchedulerPackage extends EPackage {
 	EReference getSolution_CandidateMove();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Solution#getExpressions <em>Expressions</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Solution#getExpressions <em>Expressions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Expressions</em>'.
+	 * @return the meta object for the reference list '<em>Expressions</em>'.
 	 * @see com.misc.common.moplaf.scheduler.Solution#getExpressions()
 	 * @see #getSolution()
 	 * @generated
@@ -4101,10 +4101,10 @@ public interface SchedulerPackage extends EPackage {
 	EReference getSolutionResource_CandidateLastTask();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Expressions</em>'.
+	 * @return the meta object for the reference list '<em>Expressions</em>'.
 	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getExpressions()
 	 * @see #getSolutionResource()
 	 * @generated
@@ -4264,10 +4264,10 @@ public interface SchedulerPackage extends EPackage {
 	EReference getSolutionTask_ResourceAsCandidateLastTask();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}'.
+	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Expressions</em>'.
+	 * @return the meta object for the reference list '<em>Expressions</em>'.
 	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getExpressions()
 	 * @see #getSolutionTask()
 	 * @generated
@@ -4412,10 +4412,10 @@ public interface SchedulerPackage extends EPackage {
 	EClass getSolutionExpression();
 
 	/**
-	 * Returns the meta object for the container reference '{@link com.misc.common.moplaf.scheduler.SolutionExpression#getSolution <em>Solution</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.SolutionExpression#getSolution <em>Solution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Solution</em>'.
+	 * @return the meta object for the reference '<em>Solution</em>'.
 	 * @see com.misc.common.moplaf.scheduler.SolutionExpression#getSolution()
 	 * @see #getSolutionExpression()
 	 * @generated
@@ -4433,10 +4433,10 @@ public interface SchedulerPackage extends EPackage {
 	EClass getResourceExpression();
 
 	/**
-	 * Returns the meta object for the container reference '{@link com.misc.common.moplaf.scheduler.ResourceExpression#getResource <em>Resource</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.ResourceExpression#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Resource</em>'.
+	 * @return the meta object for the reference '<em>Resource</em>'.
 	 * @see com.misc.common.moplaf.scheduler.ResourceExpression#getResource()
 	 * @see #getResourceExpression()
 	 * @generated
@@ -4454,10 +4454,10 @@ public interface SchedulerPackage extends EPackage {
 	EClass getTaskExpression();
 
 	/**
-	 * Returns the meta object for the container reference '{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Task</em>'.
+	 * @return the meta object for the reference '<em>Task</em>'.
 	 * @see com.misc.common.moplaf.scheduler.TaskExpression#getTask()
 	 * @see #getTaskExpression()
 	 * @generated
@@ -5080,7 +5080,7 @@ public interface SchedulerPackage extends EPackage {
 		EReference SOLUTION__CANDIDATE_MOVE = eINSTANCE.getSolution_CandidateMove();
 
 		/**
-		 * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Expressions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5202,7 +5202,7 @@ public interface SchedulerPackage extends EPackage {
 		EReference SOLUTION_RESOURCE__CANDIDATE_LAST_TASK = eINSTANCE.getSolutionResource_CandidateLastTask();
 
 		/**
-		 * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Expressions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5324,7 +5324,7 @@ public interface SchedulerPackage extends EPackage {
 		EReference SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK = eINSTANCE.getSolutionTask_ResourceAsCandidateLastTask();
 
 		/**
-		 * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Expressions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5442,7 +5442,7 @@ public interface SchedulerPackage extends EPackage {
 		EClass SOLUTION_EXPRESSION = eINSTANCE.getSolutionExpression();
 
 		/**
-		 * The meta object literal for the '<em><b>Solution</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Solution</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5460,7 +5460,7 @@ public interface SchedulerPackage extends EPackage {
 		EClass RESOURCE_EXPRESSION = eINSTANCE.getResourceExpression();
 
 		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5478,7 +5478,7 @@ public interface SchedulerPackage extends EPackage {
 		EClass TASK_EXPRESSION = eINSTANCE.getTaskExpression();
 
 		/**
-		 * The meta object literal for the '<em><b>Task</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

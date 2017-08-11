@@ -51,7 +51,7 @@
         eType="#//SolutionResource" containment="true" eOpposite="#//SolutionResource/Solution"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateMove" eType="#//Move"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//SolutionExpression" containment="true" eOpposite="#//SolutionExpression/Solution"/>
+        eType="#//SolutionExpression" eOpposite="#//SolutionExpression/Solution"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="SolutionNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scheduler" eType="#//Scheduler"
         eOpposite="#//Scheduler/Solutions"/>
@@ -69,7 +69,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateLastTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/ResourceAsCandidateLastTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//ResourceExpression" containment="true" eOpposite="#//ResourceExpression/Resource"/>
+        eType="#//ResourceExpression" eOpposite="#//ResourceExpression/Resource"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
@@ -101,7 +101,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledResource"
         eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateScheduledTasks"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//TaskExpression" containment="true" eOpposite="#//TaskExpression/Task"/>
+        eType="#//TaskExpression" eOpposite="#//TaskExpression/Task"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"

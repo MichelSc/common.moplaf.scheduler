@@ -151,7 +151,7 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	void setCandidateLastTask(SolutionTask value);
 
 	/**
-	 * Returns the value of the '<em><b>Expressions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Expressions</b></em>' reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.ResourceExpression}.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.ResourceExpression#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
@@ -160,10 +160,10 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expressions</em>' containment reference list.
+	 * @return the value of the '<em>Expressions</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_Expressions()
 	 * @see com.misc.common.moplaf.scheduler.ResourceExpression#getResource
-	 * @model opposite="Resource" containment="true"
+	 * @model opposite="Resource"
 	 * @generated
 	 */
 	EList<ResourceExpression> getExpressions();

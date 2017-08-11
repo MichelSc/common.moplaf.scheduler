@@ -114,7 +114,7 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	void setCandidateMove(Move value);
 
 	/**
-	 * Returns the value of the '<em><b>Expressions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Expressions</b></em>' reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.SolutionExpression}.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionExpression#getSolution <em>Solution</em>}'.
 	 * <!-- begin-user-doc -->
@@ -123,10 +123,10 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expressions</em>' containment reference list.
+	 * @return the value of the '<em>Expressions</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_Expressions()
 	 * @see com.misc.common.moplaf.scheduler.SolutionExpression#getSolution
-	 * @model opposite="Solution" containment="true"
+	 * @model opposite="Solution"
 	 * @generated
 	 */
 	EList<SolutionExpression> getExpressions();

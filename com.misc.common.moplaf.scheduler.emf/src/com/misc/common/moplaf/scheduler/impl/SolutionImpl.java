@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -93,7 +94,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	protected Move candidateMove;
 
 	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' containment reference list.
+	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpressions()
@@ -222,7 +223,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	 */
 	public EList<SolutionExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectContainmentWithInverseEList<SolutionExpression>(SolutionExpression.class, this, SchedulerPackage.SOLUTION__EXPRESSIONS, SchedulerPackage.SOLUTION_EXPRESSION__SOLUTION);
+			expressions = new EObjectWithInverseResolvingEList<SolutionExpression>(SolutionExpression.class, this, SchedulerPackage.SOLUTION__EXPRESSIONS, SchedulerPackage.SOLUTION_EXPRESSION__SOLUTION);
 		}
 		return expressions;
 	}

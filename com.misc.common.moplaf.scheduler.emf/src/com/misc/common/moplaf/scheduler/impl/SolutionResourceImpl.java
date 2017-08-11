@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -99,7 +98,7 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	protected SolutionTask candidateLastTask;
 
 	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' containment reference list.
+	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpressions()
@@ -346,7 +345,7 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 */
 	public EList<ResourceExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectContainmentWithInverseEList<ResourceExpression>(ResourceExpression.class, this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SchedulerPackage.RESOURCE_EXPRESSION__RESOURCE);
+			expressions = new EObjectWithInverseResolvingEList<ResourceExpression>(ResourceExpression.class, this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SchedulerPackage.RESOURCE_EXPRESSION__RESOURCE);
 		}
 		return expressions;
 	}
