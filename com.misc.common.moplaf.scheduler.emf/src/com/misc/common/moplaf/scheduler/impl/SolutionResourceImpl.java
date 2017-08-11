@@ -3,7 +3,7 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
-import com.misc.common.moplaf.scheduler.ResourceExpression;
+import com.misc.common.moplaf.scheduler.CandidateValueExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -105,7 +106,7 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResourceExpression> expressions;
+	protected EList<CandidateValueExpression> expressions;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -343,9 +344,9 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ResourceExpression> getExpressions() {
+	public EList<CandidateValueExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectWithInverseResolvingEList<ResourceExpression>(ResourceExpression.class, this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SchedulerPackage.RESOURCE_EXPRESSION__RESOURCE);
+			expressions = new EObjectResolvingEList<CandidateValueExpression>(CandidateValueExpression.class, this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS);
 		}
 		return expressions;
 	}
@@ -451,8 +452,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				if (candidateLastTask != null)
 					msgs = ((InternalEObject)candidateLastTask).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK, SolutionTask.class, msgs);
 				return basicSetCandidateLastTask((SolutionTask)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExpressions()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -477,8 +476,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return basicSetCandidateFirstTask(null, msgs);
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK:
 				return basicSetCandidateLastTask(null, msgs);
-			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
-				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				return basicSetSolution(null, msgs);
 		}
@@ -560,7 +557,7 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
 				getExpressions().clear();
-				getExpressions().addAll((Collection<? extends ResourceExpression>)newValue);
+				getExpressions().addAll((Collection<? extends CandidateValueExpression>)newValue);
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				setSolution((Solution)newValue);

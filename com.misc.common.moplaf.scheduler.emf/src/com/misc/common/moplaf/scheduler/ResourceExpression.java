@@ -21,7 +21,6 @@ package com.misc.common.moplaf.scheduler;
 public interface ResourceExpression extends OwnerExpression {
 	/**
 	 * Returns the value of the '<em><b>Resource</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resource</em>' container reference isn't clear,
@@ -31,8 +30,7 @@ public interface ResourceExpression extends OwnerExpression {
 	 * @return the value of the '<em>Resource</em>' reference.
 	 * @see #setResource(SolutionResource)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResourceExpression_Resource()
-	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getExpressions
-	 * @model opposite="Expressions" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	SolutionResource getResource();

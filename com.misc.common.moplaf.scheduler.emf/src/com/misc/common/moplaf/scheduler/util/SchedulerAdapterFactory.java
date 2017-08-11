@@ -173,28 +173,28 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createCandidateIntExpressionAdapter();
 			}
 			@Override
-			public Adapter caseTaskCandidateFloatExpression(TaskCandidateFloatExpression object) {
-				return createTaskCandidateFloatExpressionAdapter();
-			}
-			@Override
 			public Adapter caseTaskCandidateDateExpression(TaskCandidateDateExpression object) {
 				return createTaskCandidateDateExpressionAdapter();
 			}
 			@Override
-			public Adapter caseResourceCandidateFloatExpression(ResourceCandidateFloatExpression object) {
-				return createResourceCandidateFloatExpressionAdapter();
+			public Adapter caseTaskCandidateFloatExpression(TaskCandidateFloatExpression object) {
+				return createTaskCandidateFloatExpressionAdapter();
+			}
+			@Override
+			public Adapter caseTaskCandidateIntExpression(TaskCandidateIntExpression object) {
+				return createTaskCandidateIntExpressionAdapter();
 			}
 			@Override
 			public Adapter caseResourceCandidateDateExpression(ResourceCandidateDateExpression object) {
 				return createResourceCandidateDateExpressionAdapter();
 			}
 			@Override
-			public Adapter caseResourceCandidateIntExpression(ResourceCandidateIntExpression object) {
-				return createResourceCandidateIntExpressionAdapter();
+			public Adapter caseResourceCandidateFloatExpression(ResourceCandidateFloatExpression object) {
+				return createResourceCandidateFloatExpressionAdapter();
 			}
 			@Override
-			public Adapter caseTaskCandidateIntExpression(TaskCandidateIntExpression object) {
-				return createTaskCandidateIntExpressionAdapter();
+			public Adapter caseResourceCandidateIntExpression(ResourceCandidateIntExpression object) {
+				return createResourceCandidateIntExpressionAdapter();
 			}
 			@Override
 			public Adapter caseSolutionCandidateDateExpression(SolutionCandidateDateExpression object) {

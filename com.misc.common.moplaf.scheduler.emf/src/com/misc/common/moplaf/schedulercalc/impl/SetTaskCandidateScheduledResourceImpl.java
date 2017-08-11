@@ -69,7 +69,6 @@ public class SetTaskCandidateScheduledResourceImpl extends TaskPropagatorFunctio
 		Solution solution = task.getSolution();
 		SetTaskCandidateScheduledResourceScope parent = solution.getPropagatorFunction(SetTaskCandidateScheduledResourceScope.class);
 		return parent;
-		
 	}
 
 	/**

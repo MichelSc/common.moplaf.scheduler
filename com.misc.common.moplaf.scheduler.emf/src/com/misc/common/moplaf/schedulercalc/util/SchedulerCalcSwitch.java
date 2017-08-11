@@ -117,124 +117,6 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchedulerCalcPackage.CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES: {
-				CalcSolutionAllExpressionCandidateValues calcSolutionAllExpressionCandidateValues = (CalcSolutionAllExpressionCandidateValues)theEObject;
-				T result = caseCalcSolutionAllExpressionCandidateValues(calcSolutionAllExpressionCandidateValues);
-				if (result == null) result = caseSolutionPropagatorFunction(calcSolutionAllExpressionCandidateValues);
-				if (result == null) result = casePropagatorFunctionBindings(calcSolutionAllExpressionCandidateValues);
-				if (result == null) result = casePropagatorFunction(calcSolutionAllExpressionCandidateValues);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE: {
-				CalcSolutionExpressionCandidateValue calcSolutionExpressionCandidateValue = (CalcSolutionExpressionCandidateValue)theEObject;
-				T result = caseCalcSolutionExpressionCandidateValue(calcSolutionExpressionCandidateValue);
-				if (result == null) result = caseSolutionExpressionPropagatorFunction(calcSolutionExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunctionBindings(calcSolutionExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunction(calcSolutionExpressionCandidateValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE: {
-				CalcResourceExpressionCandidateValue calcResourceExpressionCandidateValue = (CalcResourceExpressionCandidateValue)theEObject;
-				T result = caseCalcResourceExpressionCandidateValue(calcResourceExpressionCandidateValue);
-				if (result == null) result = caseResourceExpressionPropagatorFunction(calcResourceExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunctionBindings(calcResourceExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunction(calcResourceExpressionCandidateValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.CALC_TASK_EXPRESSION_CANDIDATE_VALUE: {
-				CalcTaskExpressionCandidateValue calcTaskExpressionCandidateValue = (CalcTaskExpressionCandidateValue)theEObject;
-				T result = caseCalcTaskExpressionCandidateValue(calcTaskExpressionCandidateValue);
-				if (result == null) result = caseTaskExpressionPropagatorFunction(calcTaskExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunctionBindings(calcTaskExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunction(calcTaskExpressionCandidateValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE: {
-				CalcTaksExpressionCandidateValueCumulative calcTaksExpressionCandidateValueCumulative = (CalcTaksExpressionCandidateValueCumulative)theEObject;
-				T result = caseCalcTaksExpressionCandidateValueCumulative(calcTaksExpressionCandidateValueCumulative);
-				if (result == null) result = caseCalcTaskExpressionCandidateValue(calcTaksExpressionCandidateValueCumulative);
-				if (result == null) result = caseTaskExpressionPropagatorFunction(calcTaksExpressionCandidateValueCumulative);
-				if (result == null) result = casePropagatorFunctionBindings(calcTaksExpressionCandidateValueCumulative);
-				if (result == null) result = casePropagatorFunction(calcTaksExpressionCandidateValueCumulative);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES: {
-				ResetSolutionAllExpressionCandidateValues resetSolutionAllExpressionCandidateValues = (ResetSolutionAllExpressionCandidateValues)theEObject;
-				T result = caseResetSolutionAllExpressionCandidateValues(resetSolutionAllExpressionCandidateValues);
-				if (result == null) result = caseSolutionPropagatorFunction(resetSolutionAllExpressionCandidateValues);
-				if (result == null) result = casePropagatorFunctionBindings(resetSolutionAllExpressionCandidateValues);
-				if (result == null) result = casePropagatorFunction(resetSolutionAllExpressionCandidateValues);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE: {
-				ResetSolutionExpressionCandidateValue resetSolutionExpressionCandidateValue = (ResetSolutionExpressionCandidateValue)theEObject;
-				T result = caseResetSolutionExpressionCandidateValue(resetSolutionExpressionCandidateValue);
-				if (result == null) result = caseSolutionExpressionPropagatorFunction(resetSolutionExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunctionBindings(resetSolutionExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunction(resetSolutionExpressionCandidateValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE: {
-				ResetResourceExpressionCandidateValue resetResourceExpressionCandidateValue = (ResetResourceExpressionCandidateValue)theEObject;
-				T result = caseResetResourceExpressionCandidateValue(resetResourceExpressionCandidateValue);
-				if (result == null) result = caseResourceExpressionPropagatorFunction(resetResourceExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunctionBindings(resetResourceExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunction(resetResourceExpressionCandidateValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE: {
-				ResetTaskExpressionCandidateValue resetTaskExpressionCandidateValue = (ResetTaskExpressionCandidateValue)theEObject;
-				T result = caseResetTaskExpressionCandidateValue(resetTaskExpressionCandidateValue);
-				if (result == null) result = caseTaskExpressionPropagatorFunction(resetTaskExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunctionBindings(resetTaskExpressionCandidateValue);
-				if (result == null) result = casePropagatorFunction(resetTaskExpressionCandidateValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_TASK_CANDIDATE_NEXT: {
-				ResetTaskCandidateNext resetTaskCandidateNext = (ResetTaskCandidateNext)theEObject;
-				T result = caseResetTaskCandidateNext(resetTaskCandidateNext);
-				if (result == null) result = caseTaskPropagatorFunction(resetTaskCandidateNext);
-				if (result == null) result = casePropagatorFunctionBindings(resetTaskCandidateNext);
-				if (result == null) result = casePropagatorFunction(resetTaskCandidateNext);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_TASK_CANDIDATE_SCHEDULED_RESOURCE: {
-				ResetTaskCandidateScheduledResource resetTaskCandidateScheduledResource = (ResetTaskCandidateScheduledResource)theEObject;
-				T result = caseResetTaskCandidateScheduledResource(resetTaskCandidateScheduledResource);
-				if (result == null) result = caseTaskPropagatorFunction(resetTaskCandidateScheduledResource);
-				if (result == null) result = casePropagatorFunctionBindings(resetTaskCandidateScheduledResource);
-				if (result == null) result = casePropagatorFunction(resetTaskCandidateScheduledResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_RESOURCE_TASKS_CANDIDATE_NEXT: {
-				ResetResourceTasksCandidateNext resetResourceTasksCandidateNext = (ResetResourceTasksCandidateNext)theEObject;
-				T result = caseResetResourceTasksCandidateNext(resetResourceTasksCandidateNext);
-				if (result == null) result = caseResourcePropagatorFunction(resetResourceTasksCandidateNext);
-				if (result == null) result = casePropagatorFunctionBindings(resetResourceTasksCandidateNext);
-				if (result == null) result = casePropagatorFunction(resetResourceTasksCandidateNext);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerCalcPackage.RESET_RESOURCE_TASKS_CANDIDATE_SCHEDULED_RESOURCE: {
-				ResetResourceTasksCandidateScheduledResource resetResourceTasksCandidateScheduledResource = (ResetResourceTasksCandidateScheduledResource)theEObject;
-				T result = caseResetResourceTasksCandidateScheduledResource(resetResourceTasksCandidateScheduledResource);
-				if (result == null) result = caseResourcePropagatorFunction(resetResourceTasksCandidateScheduledResource);
-				if (result == null) result = casePropagatorFunctionBindings(resetResourceTasksCandidateScheduledResource);
-				if (result == null) result = casePropagatorFunction(resetResourceTasksCandidateScheduledResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE: {
 				SetTaskCandidateScheduledResourceScope setTaskCandidateScheduledResourceScope = (SetTaskCandidateScheduledResourceScope)theEObject;
 				T result = caseSetTaskCandidateScheduledResourceScope(setTaskCandidateScheduledResourceScope);
@@ -250,6 +132,42 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTaskPropagatorFunction(setTaskCandidateScheduledResource);
 				if (result == null) result = casePropagatorFunctionBindings(setTaskCandidateScheduledResource);
 				if (result == null) result = casePropagatorFunction(setTaskCandidateScheduledResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerCalcPackage.SET_EXPRESSION_CANDIDATE_VALUE_SCOPE: {
+				SetExpressionCandidateValueScope setExpressionCandidateValueScope = (SetExpressionCandidateValueScope)theEObject;
+				T result = caseSetExpressionCandidateValueScope(setExpressionCandidateValueScope);
+				if (result == null) result = caseSolutionPropagatorFunction(setExpressionCandidateValueScope);
+				if (result == null) result = casePropagatorFunctionBindings(setExpressionCandidateValueScope);
+				if (result == null) result = casePropagatorFunction(setExpressionCandidateValueScope);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE: {
+				SetTaskExpressionCandidateValue setTaskExpressionCandidateValue = (SetTaskExpressionCandidateValue)theEObject;
+				T result = caseSetTaskExpressionCandidateValue(setTaskExpressionCandidateValue);
+				if (result == null) result = caseTaskExpressionPropagatorFunction(setTaskExpressionCandidateValue);
+				if (result == null) result = casePropagatorFunctionBindings(setTaskExpressionCandidateValue);
+				if (result == null) result = casePropagatorFunction(setTaskExpressionCandidateValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerCalcPackage.SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE: {
+				SetSolutionExpressionCandidateValue setSolutionExpressionCandidateValue = (SetSolutionExpressionCandidateValue)theEObject;
+				T result = caseSetSolutionExpressionCandidateValue(setSolutionExpressionCandidateValue);
+				if (result == null) result = caseSolutionExpressionPropagatorFunction(setSolutionExpressionCandidateValue);
+				if (result == null) result = casePropagatorFunctionBindings(setSolutionExpressionCandidateValue);
+				if (result == null) result = casePropagatorFunction(setSolutionExpressionCandidateValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerCalcPackage.SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE: {
+				SetResourceExpressionCandidateValue setResourceExpressionCandidateValue = (SetResourceExpressionCandidateValue)theEObject;
+				T result = caseSetResourceExpressionCandidateValue(setResourceExpressionCandidateValue);
+				if (result == null) result = caseResourceExpressionPropagatorFunction(setResourceExpressionCandidateValue);
+				if (result == null) result = casePropagatorFunctionBindings(setResourceExpressionCandidateValue);
+				if (result == null) result = casePropagatorFunction(setResourceExpressionCandidateValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -348,201 +266,6 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calc Solution All Expression Candidate Values</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calc Solution All Expression Candidate Values</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalcSolutionAllExpressionCandidateValues(CalcSolutionAllExpressionCandidateValues object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calc Solution Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calc Solution Expression Candidate Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalcSolutionExpressionCandidateValue(CalcSolutionExpressionCandidateValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calc Resource Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calc Resource Expression Candidate Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalcResourceExpressionCandidateValue(CalcResourceExpressionCandidateValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calc Task Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calc Task Expression Candidate Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalcTaskExpressionCandidateValue(CalcTaskExpressionCandidateValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Calc Taks Expression Candidate Value Cumulative</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Calc Taks Expression Candidate Value Cumulative</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCalcTaksExpressionCandidateValueCumulative(CalcTaksExpressionCandidateValueCumulative object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Solution All Expression Candidate Values</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Solution All Expression Candidate Values</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetSolutionAllExpressionCandidateValues(ResetSolutionAllExpressionCandidateValues object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Solution Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Solution Expression Candidate Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetSolutionExpressionCandidateValue(ResetSolutionExpressionCandidateValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Resource Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Resource Expression Candidate Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetResourceExpressionCandidateValue(ResetResourceExpressionCandidateValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Task Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Task Expression Candidate Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetTaskExpressionCandidateValue(ResetTaskExpressionCandidateValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Task Candidate Next</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Task Candidate Next</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetTaskCandidateNext(ResetTaskCandidateNext object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Task Candidate Scheduled Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Task Candidate Scheduled Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetTaskCandidateScheduledResource(ResetTaskCandidateScheduledResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Resource Tasks Candidate Next</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Resource Tasks Candidate Next</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetResourceTasksCandidateNext(ResetResourceTasksCandidateNext object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reset Resource Tasks Candidate Scheduled Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reset Resource Tasks Candidate Scheduled Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResetResourceTasksCandidateScheduledResource(ResetResourceTasksCandidateScheduledResource object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Set Task Candidate Scheduled Resource Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -569,6 +292,66 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSetTaskCandidateScheduledResource(SetTaskCandidateScheduledResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Expression Candidate Value Scope</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Expression Candidate Value Scope</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetExpressionCandidateValueScope(SetExpressionCandidateValueScope object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Task Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Task Expression Candidate Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetTaskExpressionCandidateValue(SetTaskExpressionCandidateValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Solution Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Solution Expression Candidate Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetSolutionExpressionCandidateValue(SetSolutionExpressionCandidateValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Resource Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Resource Expression Candidate Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetResourceExpressionCandidateValue(SetResourceExpressionCandidateValue object) {
 		return null;
 	}
 

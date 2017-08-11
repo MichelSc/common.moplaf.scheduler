@@ -62,44 +62,15 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 			case SchedulerCalcPackage.RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION: return createResourceExpressionPropagatorFunction();
 			case SchedulerCalcPackage.TASK_PROPAGATOR_FUNCTION: return createTaskPropagatorFunction();
 			case SchedulerCalcPackage.TASK_EXPRESSION_PROPAGATOR_FUNCTION: return createTaskExpressionPropagatorFunction();
-			case SchedulerCalcPackage.CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES: return createCalcSolutionAllExpressionCandidateValues();
-			case SchedulerCalcPackage.CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE: return createCalcSolutionExpressionCandidateValue();
-			case SchedulerCalcPackage.CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE: return createCalcResourceExpressionCandidateValue();
-			case SchedulerCalcPackage.CALC_TASK_EXPRESSION_CANDIDATE_VALUE: return createCalcTaskExpressionCandidateValue();
-			case SchedulerCalcPackage.CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE: return createCalcTaksExpressionCandidateValueCumulative();
-			case SchedulerCalcPackage.RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES: return createResetSolutionAllExpressionCandidateValues();
-			case SchedulerCalcPackage.RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE: return createResetSolutionExpressionCandidateValue();
-			case SchedulerCalcPackage.RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE: return createResetResourceExpressionCandidateValue();
-			case SchedulerCalcPackage.RESET_TASK_EXPRESSION_CANDIDATE_VALUE: return createResetTaskExpressionCandidateValue();
-			case SchedulerCalcPackage.RESET_TASK_CANDIDATE_NEXT: return createResetTaskCandidateNext();
-			case SchedulerCalcPackage.RESET_TASK_CANDIDATE_SCHEDULED_RESOURCE: return createResetTaskCandidateScheduledResource();
-			case SchedulerCalcPackage.RESET_RESOURCE_TASKS_CANDIDATE_NEXT: return createResetResourceTasksCandidateNext();
-			case SchedulerCalcPackage.RESET_RESOURCE_TASKS_CANDIDATE_SCHEDULED_RESOURCE: return createResetResourceTasksCandidateScheduledResource();
 			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE: return createSetTaskCandidateScheduledResourceScope();
 			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE: return createSetTaskCandidateScheduledResource();
+			case SchedulerCalcPackage.SET_EXPRESSION_CANDIDATE_VALUE_SCOPE: return createSetExpressionCandidateValueScope();
+			case SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE: return createSetTaskExpressionCandidateValue();
+			case SchedulerCalcPackage.SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE: return createSetSolutionExpressionCandidateValue();
+			case SchedulerCalcPackage.SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE: return createSetResourceExpressionCandidateValue();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcSolutionAllExpressionCandidateValues createCalcSolutionAllExpressionCandidateValues() {
-		CalcSolutionAllExpressionCandidateValuesImpl calcSolutionAllExpressionCandidateValues = new CalcSolutionAllExpressionCandidateValuesImpl();
-		return calcSolutionAllExpressionCandidateValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetSolutionAllExpressionCandidateValues createResetSolutionAllExpressionCandidateValues() {
-		ResetSolutionAllExpressionCandidateValuesImpl resetSolutionAllExpressionCandidateValues = new ResetSolutionAllExpressionCandidateValuesImpl();
-		return resetSolutionAllExpressionCandidateValues;
 	}
 
 	/**
@@ -127,96 +98,6 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResetSolutionExpressionCandidateValue createResetSolutionExpressionCandidateValue() {
-		ResetSolutionExpressionCandidateValueImpl resetSolutionExpressionCandidateValue = new ResetSolutionExpressionCandidateValueImpl();
-		return resetSolutionExpressionCandidateValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcResourceExpressionCandidateValue createCalcResourceExpressionCandidateValue() {
-		CalcResourceExpressionCandidateValueImpl calcResourceExpressionCandidateValue = new CalcResourceExpressionCandidateValueImpl();
-		return calcResourceExpressionCandidateValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetResourceExpressionCandidateValue createResetResourceExpressionCandidateValue() {
-		ResetResourceExpressionCandidateValueImpl resetResourceExpressionCandidateValue = new ResetResourceExpressionCandidateValueImpl();
-		return resetResourceExpressionCandidateValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaskExpressionCandidateValue createCalcTaskExpressionCandidateValue() {
-		CalcTaskExpressionCandidateValueImpl calcTaskExpressionCandidateValue = new CalcTaskExpressionCandidateValueImpl();
-		return calcTaskExpressionCandidateValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetTaskExpressionCandidateValue createResetTaskExpressionCandidateValue() {
-		ResetTaskExpressionCandidateValueImpl resetTaskExpressionCandidateValue = new ResetTaskExpressionCandidateValueImpl();
-		return resetTaskExpressionCandidateValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetTaskCandidateNext createResetTaskCandidateNext() {
-		ResetTaskCandidateNextImpl resetTaskCandidateNext = new ResetTaskCandidateNextImpl();
-		return resetTaskCandidateNext;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetTaskCandidateScheduledResource createResetTaskCandidateScheduledResource() {
-		ResetTaskCandidateScheduledResourceImpl resetTaskCandidateScheduledResource = new ResetTaskCandidateScheduledResourceImpl();
-		return resetTaskCandidateScheduledResource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetResourceTasksCandidateNext createResetResourceTasksCandidateNext() {
-		ResetResourceTasksCandidateNextImpl resetResourceTasksCandidateNext = new ResetResourceTasksCandidateNextImpl();
-		return resetResourceTasksCandidateNext;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ResetResourceTasksCandidateScheduledResource createResetResourceTasksCandidateScheduledResource() {
-		ResetResourceTasksCandidateScheduledResourceImpl resetResourceTasksCandidateScheduledResource = new ResetResourceTasksCandidateScheduledResourceImpl();
-		return resetResourceTasksCandidateScheduledResource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SetTaskCandidateScheduledResourceScope createSetTaskCandidateScheduledResourceScope() {
 		SetTaskCandidateScheduledResourceScopeImpl setTaskCandidateScheduledResourceScope = new SetTaskCandidateScheduledResourceScopeImpl();
 		return setTaskCandidateScheduledResourceScope;
@@ -230,6 +111,46 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	public SetTaskCandidateScheduledResource createSetTaskCandidateScheduledResource() {
 		SetTaskCandidateScheduledResourceImpl setTaskCandidateScheduledResource = new SetTaskCandidateScheduledResourceImpl();
 		return setTaskCandidateScheduledResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetExpressionCandidateValueScope createSetExpressionCandidateValueScope() {
+		SetExpressionCandidateValueScopeImpl setExpressionCandidateValueScope = new SetExpressionCandidateValueScopeImpl();
+		return setExpressionCandidateValueScope;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetTaskExpressionCandidateValue createSetTaskExpressionCandidateValue() {
+		SetTaskExpressionCandidateValueImpl setTaskExpressionCandidateValue = new SetTaskExpressionCandidateValueImpl();
+		return setTaskExpressionCandidateValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetSolutionExpressionCandidateValue createSetSolutionExpressionCandidateValue() {
+		SetSolutionExpressionCandidateValueImpl setSolutionExpressionCandidateValue = new SetSolutionExpressionCandidateValueImpl();
+		return setSolutionExpressionCandidateValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetResourceExpressionCandidateValue createSetResourceExpressionCandidateValue() {
+		SetResourceExpressionCandidateValueImpl setResourceExpressionCandidateValue = new SetResourceExpressionCandidateValueImpl();
+		return setResourceExpressionCandidateValue;
 	}
 
 	/**
@@ -257,16 +178,6 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CalcSolutionExpressionCandidateValue createCalcSolutionExpressionCandidateValue() {
-		CalcSolutionExpressionCandidateValueImpl calcSolutionExpressionCandidateValue = new CalcSolutionExpressionCandidateValueImpl();
-		return calcSolutionExpressionCandidateValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TaskExpressionPropagatorFunction createTaskExpressionPropagatorFunction() {
 		TaskExpressionPropagatorFunctionImpl taskExpressionPropagatorFunction = new TaskExpressionPropagatorFunctionImpl();
 		return taskExpressionPropagatorFunction;
@@ -280,16 +191,6 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	public SolutionPropagatorFunction createSolutionPropagatorFunction() {
 		SolutionPropagatorFunctionImpl solutionPropagatorFunction = new SolutionPropagatorFunctionImpl();
 		return solutionPropagatorFunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CalcTaksExpressionCandidateValueCumulative createCalcTaksExpressionCandidateValueCumulative() {
-		CalcTaksExpressionCandidateValueCumulativeImpl calcTaksExpressionCandidateValueCumulative = new CalcTaksExpressionCandidateValueCumulativeImpl();
-		return calcTaksExpressionCandidateValueCumulative;
 	}
 
 	/**

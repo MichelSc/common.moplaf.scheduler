@@ -1506,17 +1506,17 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		candidateIntExpressionEClass = createEClass(CANDIDATE_INT_EXPRESSION);
 		createEAttribute(candidateIntExpressionEClass, CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE);
 
-		taskCandidateFloatExpressionEClass = createEClass(TASK_CANDIDATE_FLOAT_EXPRESSION);
-
 		taskCandidateDateExpressionEClass = createEClass(TASK_CANDIDATE_DATE_EXPRESSION);
 
-		resourceCandidateFloatExpressionEClass = createEClass(RESOURCE_CANDIDATE_FLOAT_EXPRESSION);
+		taskCandidateFloatExpressionEClass = createEClass(TASK_CANDIDATE_FLOAT_EXPRESSION);
+
+		taskCandidateIntExpressionEClass = createEClass(TASK_CANDIDATE_INT_EXPRESSION);
 
 		resourceCandidateDateExpressionEClass = createEClass(RESOURCE_CANDIDATE_DATE_EXPRESSION);
 
-		resourceCandidateIntExpressionEClass = createEClass(RESOURCE_CANDIDATE_INT_EXPRESSION);
+		resourceCandidateFloatExpressionEClass = createEClass(RESOURCE_CANDIDATE_FLOAT_EXPRESSION);
 
-		taskCandidateIntExpressionEClass = createEClass(TASK_CANDIDATE_INT_EXPRESSION);
+		resourceCandidateIntExpressionEClass = createEClass(RESOURCE_CANDIDATE_INT_EXPRESSION);
 
 		solutionCandidateDateExpressionEClass = createEClass(SOLUTION_CANDIDATE_DATE_EXPRESSION);
 
@@ -1582,18 +1582,18 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		candidateDateExpressionEClass.getESuperTypes().add(this.getDateExpression());
 		candidateIntExpressionEClass.getESuperTypes().add(this.getCandidateValueExpression());
 		candidateIntExpressionEClass.getESuperTypes().add(this.getIntExpression());
-		taskCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
-		taskCandidateFloatExpressionEClass.getESuperTypes().add(this.getTaskExpression());
 		taskCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
 		taskCandidateDateExpressionEClass.getESuperTypes().add(this.getTaskExpression());
-		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
-		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getResourceExpression());
-		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
-		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getResourceExpression());
-		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
-		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getResourceExpression());
+		taskCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
+		taskCandidateFloatExpressionEClass.getESuperTypes().add(this.getTaskExpression());
 		taskCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
 		taskCandidateIntExpressionEClass.getESuperTypes().add(this.getTaskExpression());
+		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
+		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getResourceExpression());
+		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
+		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getResourceExpression());
+		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
+		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getResourceExpression());
 		solutionCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
 		solutionCandidateDateExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
 		solutionCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
@@ -1622,7 +1622,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSolution_Tasks(), this.getSolutionTask(), this.getSolutionTask_Solution(), "Tasks", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolution_Resources(), this.getSolutionResource(), this.getSolutionResource_Solution(), "Resources", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolution_CandidateMove(), this.getMove(), null, "CandidateMove", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_Expressions(), this.getSolutionExpression(), this.getSolutionExpression_Solution(), "Expressions", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolution_Expressions(), this.getCandidateValueExpression(), null, "Expressions", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolution_SolutionNr(), ecorePackage.getEInt(), "SolutionNr", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolution_Scheduler(), this.getScheduler(), this.getScheduler_Solutions(), "Scheduler", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1645,7 +1645,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSolutionResource_CandidateScheduledTasks(), this.getSolutionTask(), this.getSolutionTask_CandidateScheduledResource(), "CandidateScheduledTasks", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_CandidateFirstTask(), this.getSolutionTask(), this.getSolutionTask_ResourceAsCandidateFirstTask(), "CandidateFirstTask", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_CandidateLastTask(), this.getSolutionTask(), this.getSolutionTask_ResourceAsCandidateLastTask(), "CandidateLastTask", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_Expressions(), this.getResourceExpression(), this.getResourceExpression_Resource(), "Expressions", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolutionResource_Expressions(), this.getCandidateValueExpression(), null, "Expressions", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionResource_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionResource_Solution(), this.getSolution(), this.getSolution_Resources(), "Solution", null, 1, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1662,7 +1662,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSolutionTask_ResourceAsCandidateFirstTask(), this.getSolutionResource(), this.getSolutionResource_CandidateFirstTask(), "ResourceAsCandidateFirstTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_ResourceAsCandidateLastTask(), this.getSolutionResource(), this.getSolutionResource_CandidateLastTask(), "ResourceAsCandidateLastTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_CandidateScheduledResource(), this.getSolutionResource(), this.getSolutionResource_CandidateScheduledTasks(), "CandidateScheduledResource", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_Expressions(), this.getTaskExpression(), this.getTaskExpression_Task(), "Expressions", null, 0, -1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolutionTask_Expressions(), this.getCandidateValueExpression(), null, "Expressions", null, 0, -1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionTask_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSolutionTask_Solution(), this.getSolution(), this.getSolution_Tasks(), "Solution", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSolutionTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1714,13 +1714,13 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEClass(moveExpressionEClass, MoveExpression.class, "MoveExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(solutionExpressionEClass, SolutionExpression.class, "SolutionExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionExpression_Solution(), this.getSolution(), this.getSolution_Expressions(), "Solution", null, 1, 1, SolutionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSolutionExpression_Solution(), this.getSolution(), null, "Solution", null, 1, 1, SolutionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceExpressionEClass, ResourceExpression.class, "ResourceExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceExpression_Resource(), this.getSolutionResource(), this.getSolutionResource_Expressions(), "Resource", null, 1, 1, ResourceExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceExpression_Resource(), this.getSolutionResource(), null, "Resource", null, 1, 1, ResourceExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskExpressionEClass, TaskExpression.class, "TaskExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskExpression_Task(), this.getSolutionTask(), this.getSolutionTask_Expressions(), "Task", null, 1, 1, TaskExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskExpression_Task(), this.getSolutionTask(), null, "Task", null, 0, 1, TaskExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(valueExpressionEClass, ValueExpression.class, "ValueExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1752,17 +1752,17 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEClass(candidateIntExpressionEClass, CandidateIntExpression.class, "CandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCandidateIntExpression_CandidateValue(), ecorePackage.getEInt(), "CandidateValue", "0", 0, 1, CandidateIntExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(taskCandidateFloatExpressionEClass, TaskCandidateFloatExpression.class, "TaskCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(taskCandidateDateExpressionEClass, TaskCandidateDateExpression.class, "TaskCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(resourceCandidateFloatExpressionEClass, ResourceCandidateFloatExpression.class, "ResourceCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(taskCandidateFloatExpressionEClass, TaskCandidateFloatExpression.class, "TaskCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(taskCandidateIntExpressionEClass, TaskCandidateIntExpression.class, "TaskCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(resourceCandidateDateExpressionEClass, ResourceCandidateDateExpression.class, "ResourceCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(resourceCandidateIntExpressionEClass, ResourceCandidateIntExpression.class, "ResourceCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(resourceCandidateFloatExpressionEClass, ResourceCandidateFloatExpression.class, "ResourceCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(taskCandidateIntExpressionEClass, TaskCandidateIntExpression.class, "TaskCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(resourceCandidateIntExpressionEClass, ResourceCandidateIntExpression.class, "ResourceCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(solutionCandidateDateExpressionEClass, SolutionCandidateDateExpression.class, "SolutionCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

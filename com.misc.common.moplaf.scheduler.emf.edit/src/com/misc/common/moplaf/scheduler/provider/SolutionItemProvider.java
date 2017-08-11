@@ -28,6 +28,7 @@ import org.eclipse.emf.edit.command.DragAndDropCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -60,6 +61,7 @@ public class SolutionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCandidateMovePropertyDescriptor(object);
+			addSolutionNrPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,6 +85,28 @@ public class SolutionItemProvider
 				 true,
 				 null,
 				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Solution Nr feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSolutionNrPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_SolutionNr_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_SolutionNr_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__SOLUTION_NR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -193,6 +217,51 @@ public class SolutionItemProvider
 			(createChildParameter
 				(SchedulerPackage.Literals.SOLUTION__RESOURCES,
 				 SchedulerFactory.eINSTANCE.createSolutionResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createCandidateFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createCandidateDateExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createCandidateIntExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createTaskCandidateDateExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createTaskCandidateFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createTaskCandidateIntExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createResourceCandidateDateExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createResourceCandidateFloatExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SchedulerPackage.Literals.SOLUTION__EXPRESSIONS,
+				 SchedulerFactory.eINSTANCE.createResourceCandidateIntExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

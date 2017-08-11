@@ -3,7 +3,8 @@
 package com.misc.common.moplaf.schedulercalc.provider;
 
 
-import com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext;
+import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
+import com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,22 +12,23 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext} object.
+ * This is the item provider adapter for a {@link com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResetTaskCandidateNextItemProvider extends TaskPropagatorFunctionItemProvider {
+public class SetSolutionExpressionCandidateValueItemProvider extends SolutionExpressionPropagatorFunctionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResetTaskCandidateNextItemProvider(AdapterFactory adapterFactory) {
+	public SetSolutionExpressionCandidateValueItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -41,19 +43,42 @@ public class ResetTaskCandidateNextItemProvider extends TaskPropagatorFunctionIt
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addConcreteParentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns ResetTaskCandidateNext.gif.
+	 * This adds a property descriptor for the Concrete Parent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConcreteParentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SetSolutionExpressionCandidateValue_ConcreteParent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SetSolutionExpressionCandidateValue_ConcreteParent_feature", "_UI_SetSolutionExpressionCandidateValue_type"),
+				 SchedulerCalcPackage.Literals.SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns SetSolutionExpressionCandidateValue.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ResetTaskCandidateNext"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SetSolutionExpressionCandidateValue"));
 	}
 
 	/**
@@ -64,8 +89,8 @@ public class ResetTaskCandidateNextItemProvider extends TaskPropagatorFunctionIt
 	 */
 	@Override
 	public String getText(Object object) {
-		ResetTaskCandidateNext resetTaskCandidateNext = (ResetTaskCandidateNext)object;
-		return getString("_UI_ResetTaskCandidateNext_type") + " " + resetTaskCandidateNext.isTouched();
+		SetSolutionExpressionCandidateValue setSolutionExpressionCandidateValue = (SetSolutionExpressionCandidateValue)object;
+		return getString("_UI_SetSolutionExpressionCandidateValue_type") + " " + setSolutionExpressionCandidateValue.isTouched();
 	}
 	
 

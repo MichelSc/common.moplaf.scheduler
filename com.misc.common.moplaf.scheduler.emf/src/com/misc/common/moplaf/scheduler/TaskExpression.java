@@ -26,7 +26,6 @@ package com.misc.common.moplaf.scheduler;
 public interface TaskExpression extends OwnerExpression {
 	/**
 	 * Returns the value of the '<em><b>Task</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Task</em>' container reference isn't clear,
@@ -36,8 +35,7 @@ public interface TaskExpression extends OwnerExpression {
 	 * @return the value of the '<em>Task</em>' reference.
 	 * @see #setTask(SolutionTask)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTaskExpression_Task()
-	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getExpressions
-	 * @model opposite="Expressions" required="true"
+	 * @model
 	 * @generated
 	 */
 	SolutionTask getTask();

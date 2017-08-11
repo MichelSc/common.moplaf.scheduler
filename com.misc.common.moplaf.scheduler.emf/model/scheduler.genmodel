@@ -26,22 +26,19 @@
     <genClasses ecoreClass="SchedulerCalc.ecore#//TaskExpressionPropagatorFunction">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference SchedulerCalc.ecore#//TaskExpressionPropagatorFunction/TaskExpression"/>
     </genClasses>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//CalcSolutionAllExpressionCandidateValues"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//CalcSolutionExpressionCandidateValue"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//CalcResourceExpressionCandidateValue"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//CalcTaskExpressionCandidateValue"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//CalcTaksExpressionCandidateValueCumulative"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetSolutionAllExpressionCandidateValues"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetSolutionExpressionCandidateValue"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetResourceExpressionCandidateValue"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetTaskExpressionCandidateValue"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetTaskCandidateNext"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetTaskCandidateScheduledResource"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetResourceTasksCandidateNext"/>
-    <genClasses ecoreClass="SchedulerCalc.ecore#//ResetResourceTasksCandidateScheduledResource"/>
     <genClasses ecoreClass="SchedulerCalc.ecore#//SetTaskCandidateScheduledResourceScope"/>
     <genClasses ecoreClass="SchedulerCalc.ecore#//SetTaskCandidateScheduledResource">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference SchedulerCalc.ecore#//SetTaskCandidateScheduledResource/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="SchedulerCalc.ecore#//SetExpressionCandidateValueScope"/>
+    <genClasses ecoreClass="SchedulerCalc.ecore#//SetTaskExpressionCandidateValue">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference SchedulerCalc.ecore#//SetTaskExpressionCandidateValue/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="SchedulerCalc.ecore#//SetSolutionExpressionCandidateValue">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference SchedulerCalc.ecore#//SetSolutionExpressionCandidateValue/ConcreteParent"/>
+    </genClasses>
+    <genClasses ecoreClass="SchedulerCalc.ecore#//SetResourceExpressionCandidateValue">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference SchedulerCalc.ecore#//SetResourceExpressionCandidateValue/ConcreteParent"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Scheduler" basePackage="com.misc.common.moplaf" disposableProviderFactory="true"
@@ -67,8 +64,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Resources"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/CandidateMove"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Expressions"/>
-      <genFeatures property="None" createChild="false" propertyCategory="10 Scheduler"
-          ecoreFeature="ecore:EAttribute scheduler.ecore#//Solution/SolutionNr"/>
+      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Solution/SolutionNr"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Solution/Scheduler"/>
       <genOperations ecoreOperation="scheduler.ecore#//Solution/clone"/>
       <genOperations ecoreOperation="scheduler.ecore#//Solution/setCandidate">
@@ -199,12 +195,12 @@
     <genClasses ecoreClass="scheduler.ecore#//CandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//CandidateIntExpression/CandidateValue"/>
     </genClasses>
-    <genClasses ecoreClass="scheduler.ecore#//TaskCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//TaskCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
-    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
-    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
-    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//TaskCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//TaskCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
+    <genClasses ecoreClass="scheduler.ecore#//ResourceCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//SolutionCandidateDateExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//SolutionCandidateFloatExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>
     <genClasses ecoreClass="scheduler.ecore#//SolutionCandidateIntExpression" labelFeature="#//scheduler/OwnerExpression/Description"/>

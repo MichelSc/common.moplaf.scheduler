@@ -867,7 +867,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskCandidateFloatExpression()
 	 * @generated
 	 */
-	int TASK_CANDIDATE_FLOAT_EXPRESSION = 26;
+	int TASK_CANDIDATE_FLOAT_EXPRESSION = 27;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.TaskCandidateDateExpressionImpl <em>Task Candidate Date Expression</em>}' class.
@@ -877,7 +877,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskCandidateDateExpression()
 	 * @generated
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION = 27;
+	int TASK_CANDIDATE_DATE_EXPRESSION = 26;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceCandidateFloatExpressionImpl <em>Resource Candidate Float Expression</em>}' class.
@@ -887,7 +887,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResourceCandidateFloatExpression()
 	 * @generated
 	 */
-	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION = 28;
+	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION = 30;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceCandidateDateExpressionImpl <em>Resource Candidate Date Expression</em>}' class.
@@ -2535,6 +2535,141 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__OWNER = CANDIDATE_DATE_EXPRESSION__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__ROLE = CANDIDATE_DATE_EXPRESSION__ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__VALUE = CANDIDATE_DATE_EXPRESSION__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__TASK = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Task Candidate Date Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION = CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION;
+
+	/**
+	 * The operation id for the '<em>Refresh Value Candidate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE = CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___SET_VALUE = CANDIDATE_DATE_EXPRESSION___SET_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Task Candidate Date Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT = CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TASK_CANDIDATE_FLOAT_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_FLOAT_EXPRESSION__PROPAGATOR_FUNCTIONS;
 
 	/**
@@ -2664,13 +2799,33 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_FLOAT_EXPRESSION_OPERATION_COUNT = CANDIDATE_FLOAT_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceCandidateIntExpressionImpl <em>Resource Candidate Int Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.scheduler.impl.ResourceCandidateIntExpressionImpl
+	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResourceCandidateIntExpression()
+	 * @generated
+	 */
+	int RESOURCE_CANDIDATE_INT_EXPRESSION = 31;
+
+	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.TaskCandidateIntExpressionImpl <em>Task Candidate Int Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.scheduler.impl.TaskCandidateIntExpressionImpl
+	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskCandidateIntExpression()
+	 * @generated
+	 */
+	int TASK_CANDIDATE_INT_EXPRESSION = 28;
+
+	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS;
+	int TASK_CANDIDATE_INT_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_INT_EXPRESSION__PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owner</b></em>' attribute.
@@ -2679,7 +2834,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__OWNER = CANDIDATE_DATE_EXPRESSION__OWNER;
+	int TASK_CANDIDATE_INT_EXPRESSION__OWNER = CANDIDATE_INT_EXPRESSION__OWNER;
 
 	/**
 	 * The feature id for the '<em><b>Role</b></em>' attribute.
@@ -2688,7 +2843,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__ROLE = CANDIDATE_DATE_EXPRESSION__ROLE;
+	int TASK_CANDIDATE_INT_EXPRESSION__ROLE = CANDIDATE_INT_EXPRESSION__ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2697,7 +2852,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
+	int TASK_CANDIDATE_INT_EXPRESSION__DESCRIPTION = CANDIDATE_INT_EXPRESSION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -2706,7 +2861,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING;
+	int TASK_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE_AS_STRING = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE_AS_STRING;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2715,7 +2870,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__VALUE = CANDIDATE_DATE_EXPRESSION__VALUE;
+	int TASK_CANDIDATE_INT_EXPRESSION__VALUE = CANDIDATE_INT_EXPRESSION__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value</b></em>' attribute.
@@ -2724,7 +2879,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
+	int TASK_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -2733,16 +2888,16 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION__TASK = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 0;
+	int TASK_CANDIDATE_INT_EXPRESSION__TASK = CANDIDATE_INT_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Task Candidate Date Expression</em>' class.
+	 * The number of structural features of the '<em>Task Candidate Int Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 1;
+	int TASK_CANDIDATE_INT_EXPRESSION_FEATURE_COUNT = CANDIDATE_INT_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -2751,7 +2906,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+	int TASK_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
 
 	/**
 	 * The operation id for the '<em>Get Propagator Function</em>' operation.
@@ -2760,7 +2915,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+	int TASK_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2769,7 +2924,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION = CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION;
+	int TASK_CANDIDATE_INT_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION = CANDIDATE_INT_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION;
 
 	/**
 	 * The operation id for the '<em>Refresh Value Candidate</em>' operation.
@@ -2778,7 +2933,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE = CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE;
+	int TASK_CANDIDATE_INT_EXPRESSION___REFRESH_VALUE_CANDIDATE = CANDIDATE_INT_EXPRESSION___REFRESH_VALUE_CANDIDATE;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2787,16 +2942,151 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION___SET_VALUE = CANDIDATE_DATE_EXPRESSION___SET_VALUE;
+	int TASK_CANDIDATE_INT_EXPRESSION___SET_VALUE = CANDIDATE_INT_EXPRESSION___SET_VALUE;
 
 	/**
-	 * The number of operations of the '<em>Task Candidate Date Expression</em>' class.
+	 * The number of operations of the '<em>Task Candidate Int Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT = CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT + 0;
+	int TASK_CANDIDATE_INT_EXPRESSION_OPERATION_COUNT = CANDIDATE_INT_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__OWNER = CANDIDATE_DATE_EXPRESSION__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__ROLE = CANDIDATE_DATE_EXPRESSION__ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__VALUE = CANDIDATE_DATE_EXPRESSION__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Resource Candidate Date Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
+
+	/**
+	 * The operation id for the '<em>Get Propagator Function</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION = CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION;
+
+	/**
+	 * The operation id for the '<em>Refresh Value Candidate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE = CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___SET_VALUE = CANDIDATE_DATE_EXPRESSION___SET_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Resource Candidate Date Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT = CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
@@ -2940,151 +3230,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_DATE_EXPRESSION__PROPAGATOR_FUNCTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owner</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__OWNER = CANDIDATE_DATE_EXPRESSION__OWNER;
-
-	/**
-	 * The feature id for the '<em><b>Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__ROLE = CANDIDATE_DATE_EXPRESSION__ROLE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE_AS_STRING;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__VALUE = CANDIDATE_DATE_EXPRESSION__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Resource Candidate Date Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT = CANDIDATE_DATE_EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
-
-	/**
-	 * The operation id for the '<em>Get Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION = CANDIDATE_DATE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION;
-
-	/**
-	 * The operation id for the '<em>Refresh Value Candidate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE = CANDIDATE_DATE_EXPRESSION___REFRESH_VALUE_CANDIDATE;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION___SET_VALUE = CANDIDATE_DATE_EXPRESSION___SET_VALUE;
-
-	/**
-	 * The number of operations of the '<em>Resource Candidate Date Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT = CANDIDATE_DATE_EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceCandidateIntExpressionImpl <em>Resource Candidate Int Expression</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.ResourceCandidateIntExpressionImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getResourceCandidateIntExpression()
-	 * @generated
-	 */
-	int RESOURCE_CANDIDATE_INT_EXPRESSION = 30;
-
-	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int RESOURCE_CANDIDATE_INT_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_INT_EXPRESSION__PROPAGATOR_FUNCTIONS;
 
 	/**
@@ -3212,151 +3357,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_CANDIDATE_INT_EXPRESSION_OPERATION_COUNT = CANDIDATE_INT_EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.TaskCandidateIntExpressionImpl <em>Task Candidate Int Expression</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.TaskCandidateIntExpressionImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getTaskCandidateIntExpression()
-	 * @generated
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION = 31;
-
-	/**
-	 * The feature id for the '<em><b>Propagator Functions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__PROPAGATOR_FUNCTIONS = CANDIDATE_INT_EXPRESSION__PROPAGATOR_FUNCTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owner</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__OWNER = CANDIDATE_INT_EXPRESSION__OWNER;
-
-	/**
-	 * The feature id for the '<em><b>Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__ROLE = CANDIDATE_INT_EXPRESSION__ROLE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__DESCRIPTION = CANDIDATE_INT_EXPRESSION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE_AS_STRING = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE_AS_STRING;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__VALUE = CANDIDATE_INT_EXPRESSION__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE = CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION__TASK = CANDIDATE_INT_EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Task Candidate Int Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION_FEATURE_COUNT = CANDIDATE_INT_EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Add Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTION__PROPAGATORFUNCTION;
-
-	/**
-	 * The operation id for the '<em>Get Propagator Function</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION = CANDIDATE_INT_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION;
-
-	/**
-	 * The operation id for the '<em>Refresh Value Candidate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION___REFRESH_VALUE_CANDIDATE = CANDIDATE_INT_EXPRESSION___REFRESH_VALUE_CANDIDATE;
-
-	/**
-	 * The operation id for the '<em>Set Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION___SET_VALUE = CANDIDATE_INT_EXPRESSION___SET_VALUE;
-
-	/**
-	 * The number of operations of the '<em>Task Candidate Int Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_CANDIDATE_INT_EXPRESSION_OPERATION_COUNT = CANDIDATE_INT_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionCandidateDateExpressionImpl <em>Solution Candidate Date Expression</em>}' class.

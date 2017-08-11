@@ -2,25 +2,25 @@
  */
 package com.misc.common.moplaf.schedulercalc.impl;
 
-import com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
+import com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Reset Resource Tasks Candidate Next</b></em>'.
+ * An implementation of the model object '<em><b>Set Expression Candidate Value Scope</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ResetResourceTasksCandidateNextImpl extends ResourcePropagatorFunctionImpl implements ResetResourceTasksCandidateNext {
+public class SetExpressionCandidateValueScopeImpl extends SolutionPropagatorFunctionImpl implements SetExpressionCandidateValueScope {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResetResourceTasksCandidateNextImpl() {
+	protected SetExpressionCandidateValueScopeImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ResetResourceTasksCandidateNextImpl extends ResourcePropagatorFunct
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SchedulerCalcPackage.Literals.RESET_RESOURCE_TASKS_CANDIDATE_NEXT;
+		return SchedulerCalcPackage.Literals.SET_EXPRESSION_CANDIDATE_VALUE_SCOPE;
 	}
 
-} //ResetResourceTasksCandidateNextImpl
+} //SetExpressionCandidateValueScopeImpl

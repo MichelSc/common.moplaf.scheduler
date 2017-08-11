@@ -76,123 +76,6 @@ public interface SchedulerCalcFactory extends EFactory {
 	TaskExpressionPropagatorFunction createTaskExpressionPropagatorFunction();
 
 	/**
-	 * Returns a new object of class '<em>Calc Solution All Expression Candidate Values</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calc Solution All Expression Candidate Values</em>'.
-	 * @generated
-	 */
-	CalcSolutionAllExpressionCandidateValues createCalcSolutionAllExpressionCandidateValues();
-
-	/**
-	 * Returns a new object of class '<em>Calc Solution Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calc Solution Expression Candidate Value</em>'.
-	 * @generated
-	 */
-	CalcSolutionExpressionCandidateValue createCalcSolutionExpressionCandidateValue();
-
-	/**
-	 * Returns a new object of class '<em>Calc Resource Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calc Resource Expression Candidate Value</em>'.
-	 * @generated
-	 */
-	CalcResourceExpressionCandidateValue createCalcResourceExpressionCandidateValue();
-
-	/**
-	 * Returns a new object of class '<em>Calc Task Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calc Task Expression Candidate Value</em>'.
-	 * @generated
-	 */
-	CalcTaskExpressionCandidateValue createCalcTaskExpressionCandidateValue();
-
-	/**
-	 * Returns a new object of class '<em>Calc Taks Expression Candidate Value Cumulative</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Calc Taks Expression Candidate Value Cumulative</em>'.
-	 * @generated
-	 */
-	CalcTaksExpressionCandidateValueCumulative createCalcTaksExpressionCandidateValueCumulative();
-
-	/**
-	 * Returns a new object of class '<em>Reset Solution All Expression Candidate Values</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Solution All Expression Candidate Values</em>'.
-	 * @generated
-	 */
-	ResetSolutionAllExpressionCandidateValues createResetSolutionAllExpressionCandidateValues();
-
-	/**
-	 * Returns a new object of class '<em>Reset Solution Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Solution Expression Candidate Value</em>'.
-	 * @generated
-	 */
-	ResetSolutionExpressionCandidateValue createResetSolutionExpressionCandidateValue();
-
-	/**
-	 * Returns a new object of class '<em>Reset Resource Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Resource Expression Candidate Value</em>'.
-	 * @generated
-	 */
-	ResetResourceExpressionCandidateValue createResetResourceExpressionCandidateValue();
-
-	/**
-	 * Returns a new object of class '<em>Reset Task Expression Candidate Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Task Expression Candidate Value</em>'.
-	 * @generated
-	 */
-	ResetTaskExpressionCandidateValue createResetTaskExpressionCandidateValue();
-
-	/**
-	 * Returns a new object of class '<em>Reset Task Candidate Next</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Task Candidate Next</em>'.
-	 * @generated
-	 */
-	ResetTaskCandidateNext createResetTaskCandidateNext();
-
-	/**
-	 * Returns a new object of class '<em>Reset Task Candidate Scheduled Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Task Candidate Scheduled Resource</em>'.
-	 * @generated
-	 */
-	ResetTaskCandidateScheduledResource createResetTaskCandidateScheduledResource();
-
-	/**
-	 * Returns a new object of class '<em>Reset Resource Tasks Candidate Next</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Resource Tasks Candidate Next</em>'.
-	 * @generated
-	 */
-	ResetResourceTasksCandidateNext createResetResourceTasksCandidateNext();
-
-	/**
-	 * Returns a new object of class '<em>Reset Resource Tasks Candidate Scheduled Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset Resource Tasks Candidate Scheduled Resource</em>'.
-	 * @generated
-	 */
-	ResetResourceTasksCandidateScheduledResource createResetResourceTasksCandidateScheduledResource();
-
-	/**
 	 * Returns a new object of class '<em>Set Task Candidate Scheduled Resource Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,6 +92,42 @@ public interface SchedulerCalcFactory extends EFactory {
 	 * @generated
 	 */
 	SetTaskCandidateScheduledResource createSetTaskCandidateScheduledResource();
+
+	/**
+	 * Returns a new object of class '<em>Set Expression Candidate Value Scope</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Expression Candidate Value Scope</em>'.
+	 * @generated
+	 */
+	SetExpressionCandidateValueScope createSetExpressionCandidateValueScope();
+
+	/**
+	 * Returns a new object of class '<em>Set Task Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Task Expression Candidate Value</em>'.
+	 * @generated
+	 */
+	SetTaskExpressionCandidateValue createSetTaskExpressionCandidateValue();
+
+	/**
+	 * Returns a new object of class '<em>Set Solution Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Solution Expression Candidate Value</em>'.
+	 * @generated
+	 */
+	SetSolutionExpressionCandidateValue createSetSolutionExpressionCandidateValue();
+
+	/**
+	 * Returns a new object of class '<em>Set Resource Expression Candidate Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Resource Expression Candidate Value</em>'.
+	 * @generated
+	 */
+	SetResourceExpressionCandidateValue createSetResourceExpressionCandidateValue();
 
 	/**
 	 * Returns the package supported by this factory.

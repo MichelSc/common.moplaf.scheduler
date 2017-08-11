@@ -19,18 +19,21 @@ public class Util {
 	static public SolutionCandidateDateExpression addDateExpression(Solution solution, String role) {
 		SolutionCandidateDateExpression expression = SchedulerFactory.eINSTANCE.createSolutionCandidateDateExpression();
 		expression.setRole(role);
+		expression.setSolution(solution);
 		solution.getExpressions().add(expression);
 		return expression;
 	}
 	static public SolutionCandidateFloatExpression addFloatExpression(Solution solution, String role) {
 		SolutionCandidateFloatExpression expression = SchedulerFactory.eINSTANCE.createSolutionCandidateFloatExpression();
 		expression.setRole(role);
+		expression.setSolution(solution);
 		solution.getExpressions().add(expression);
 		return expression;
 	}
 	static public SolutionCandidateIntExpression addInteExpression(Solution solution, String role) {
 		SolutionCandidateIntExpression expression = SchedulerFactory.eINSTANCE.createSolutionCandidateIntExpression();
 		expression.setRole(role);
+		expression.setSolution(solution);
 		solution.getExpressions().add(expression);
 		return expression;
 	}
@@ -39,18 +42,21 @@ public class Util {
 	static public ResourceCandidateDateExpression addDateExpression(SolutionResource resource, String role) {
 		ResourceCandidateDateExpression expression = SchedulerFactory.eINSTANCE.createResourceCandidateDateExpression();
 		expression.setRole(role);
+		expression.setResource(resource);
 		resource.getExpressions().add(expression);
 		return expression;
 	}
 	static public ResourceCandidateFloatExpression addFloatExpression(SolutionResource resource, String role) {
 		ResourceCandidateFloatExpression expression = SchedulerFactory.eINSTANCE.createResourceCandidateFloatExpression();
 		expression.setRole(role);
+		expression.setResource(resource);
 		resource.getExpressions().add(expression);
 		return expression;
 	}
 	static public ResourceCandidateIntExpression addInteExpression(SolutionResource resource, String role) {
 		ResourceCandidateIntExpression expression = SchedulerFactory.eINSTANCE.createResourceCandidateIntExpression();
 		expression.setRole(role);
+		expression.setResource(resource);
 		resource.getExpressions().add(expression);
 		return expression;
 	}
@@ -59,18 +65,21 @@ public class Util {
 	static public TaskCandidateDateExpression addDateExpression(SolutionTask task, String role) {
 		TaskCandidateDateExpression expression = SchedulerFactory.eINSTANCE.createTaskCandidateDateExpression();
 		expression.setRole(role);
+		expression.setTask(task);
 		task.getExpressions().add(expression);
 		return expression;
 	}
 	static public TaskCandidateFloatExpression addFloatExpression(SolutionTask task, String role) {
 		TaskCandidateFloatExpression expression = SchedulerFactory.eINSTANCE.createTaskCandidateFloatExpression();
 		expression.setRole(role);
+		expression.setTask(task);
 		task.getExpressions().add(expression);
 		return expression;
 	}
 	static public TaskCandidateIntExpression addInteExpression(SolutionTask task, String role) {
 		TaskCandidateIntExpression expression = SchedulerFactory.eINSTANCE.createTaskCandidateIntExpression();
 		expression.setRole(role);
+		expression.setTask(task);
 		task.getExpressions().add(expression);
 		return expression;
 	}

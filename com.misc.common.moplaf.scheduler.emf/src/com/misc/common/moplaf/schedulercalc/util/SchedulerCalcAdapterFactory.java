@@ -95,64 +95,28 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 				return createTaskExpressionPropagatorFunctionAdapter();
 			}
 			@Override
-			public Adapter caseCalcSolutionAllExpressionCandidateValues(CalcSolutionAllExpressionCandidateValues object) {
-				return createCalcSolutionAllExpressionCandidateValuesAdapter();
-			}
-			@Override
-			public Adapter caseCalcSolutionExpressionCandidateValue(CalcSolutionExpressionCandidateValue object) {
-				return createCalcSolutionExpressionCandidateValueAdapter();
-			}
-			@Override
-			public Adapter caseCalcResourceExpressionCandidateValue(CalcResourceExpressionCandidateValue object) {
-				return createCalcResourceExpressionCandidateValueAdapter();
-			}
-			@Override
-			public Adapter caseCalcTaskExpressionCandidateValue(CalcTaskExpressionCandidateValue object) {
-				return createCalcTaskExpressionCandidateValueAdapter();
-			}
-			@Override
-			public Adapter caseCalcTaksExpressionCandidateValueCumulative(CalcTaksExpressionCandidateValueCumulative object) {
-				return createCalcTaksExpressionCandidateValueCumulativeAdapter();
-			}
-			@Override
-			public Adapter caseResetSolutionAllExpressionCandidateValues(ResetSolutionAllExpressionCandidateValues object) {
-				return createResetSolutionAllExpressionCandidateValuesAdapter();
-			}
-			@Override
-			public Adapter caseResetSolutionExpressionCandidateValue(ResetSolutionExpressionCandidateValue object) {
-				return createResetSolutionExpressionCandidateValueAdapter();
-			}
-			@Override
-			public Adapter caseResetResourceExpressionCandidateValue(ResetResourceExpressionCandidateValue object) {
-				return createResetResourceExpressionCandidateValueAdapter();
-			}
-			@Override
-			public Adapter caseResetTaskExpressionCandidateValue(ResetTaskExpressionCandidateValue object) {
-				return createResetTaskExpressionCandidateValueAdapter();
-			}
-			@Override
-			public Adapter caseResetTaskCandidateNext(ResetTaskCandidateNext object) {
-				return createResetTaskCandidateNextAdapter();
-			}
-			@Override
-			public Adapter caseResetTaskCandidateScheduledResource(ResetTaskCandidateScheduledResource object) {
-				return createResetTaskCandidateScheduledResourceAdapter();
-			}
-			@Override
-			public Adapter caseResetResourceTasksCandidateNext(ResetResourceTasksCandidateNext object) {
-				return createResetResourceTasksCandidateNextAdapter();
-			}
-			@Override
-			public Adapter caseResetResourceTasksCandidateScheduledResource(ResetResourceTasksCandidateScheduledResource object) {
-				return createResetResourceTasksCandidateScheduledResourceAdapter();
-			}
-			@Override
 			public Adapter caseSetTaskCandidateScheduledResourceScope(SetTaskCandidateScheduledResourceScope object) {
 				return createSetTaskCandidateScheduledResourceScopeAdapter();
 			}
 			@Override
 			public Adapter caseSetTaskCandidateScheduledResource(SetTaskCandidateScheduledResource object) {
 				return createSetTaskCandidateScheduledResourceAdapter();
+			}
+			@Override
+			public Adapter caseSetExpressionCandidateValueScope(SetExpressionCandidateValueScope object) {
+				return createSetExpressionCandidateValueScopeAdapter();
+			}
+			@Override
+			public Adapter caseSetTaskExpressionCandidateValue(SetTaskExpressionCandidateValue object) {
+				return createSetTaskExpressionCandidateValueAdapter();
+			}
+			@Override
+			public Adapter caseSetSolutionExpressionCandidateValue(SetSolutionExpressionCandidateValue object) {
+				return createSetSolutionExpressionCandidateValueAdapter();
+			}
+			@Override
+			public Adapter caseSetResourceExpressionCandidateValue(SetResourceExpressionCandidateValue object) {
+				return createSetResourceExpressionCandidateValueAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
@@ -267,188 +231,6 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.CalcSolutionAllExpressionCandidateValues <em>Calc Solution All Expression Candidate Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.CalcSolutionAllExpressionCandidateValues
-	 * @generated
-	 */
-	public Adapter createCalcSolutionAllExpressionCandidateValuesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.CalcSolutionExpressionCandidateValue <em>Calc Solution Expression Candidate Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.CalcSolutionExpressionCandidateValue
-	 * @generated
-	 */
-	public Adapter createCalcSolutionExpressionCandidateValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.CalcResourceExpressionCandidateValue <em>Calc Resource Expression Candidate Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.CalcResourceExpressionCandidateValue
-	 * @generated
-	 */
-	public Adapter createCalcResourceExpressionCandidateValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.CalcTaskExpressionCandidateValue <em>Calc Task Expression Candidate Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.CalcTaskExpressionCandidateValue
-	 * @generated
-	 */
-	public Adapter createCalcTaskExpressionCandidateValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.CalcTaksExpressionCandidateValueCumulative <em>Calc Taks Expression Candidate Value Cumulative</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.CalcTaksExpressionCandidateValueCumulative
-	 * @generated
-	 */
-	public Adapter createCalcTaksExpressionCandidateValueCumulativeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetSolutionAllExpressionCandidateValues <em>Reset Solution All Expression Candidate Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetSolutionAllExpressionCandidateValues
-	 * @generated
-	 */
-	public Adapter createResetSolutionAllExpressionCandidateValuesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetSolutionExpressionCandidateValue <em>Reset Solution Expression Candidate Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetSolutionExpressionCandidateValue
-	 * @generated
-	 */
-	public Adapter createResetSolutionExpressionCandidateValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetResourceExpressionCandidateValue <em>Reset Resource Expression Candidate Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetResourceExpressionCandidateValue
-	 * @generated
-	 */
-	public Adapter createResetResourceExpressionCandidateValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetTaskExpressionCandidateValue <em>Reset Task Expression Candidate Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetTaskExpressionCandidateValue
-	 * @generated
-	 */
-	public Adapter createResetTaskExpressionCandidateValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext <em>Reset Task Candidate Next</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext
-	 * @generated
-	 */
-	public Adapter createResetTaskCandidateNextAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource <em>Reset Task Candidate Scheduled Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource
-	 * @generated
-	 */
-	public Adapter createResetTaskCandidateScheduledResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext <em>Reset Resource Tasks Candidate Next</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext
-	 * @generated
-	 */
-	public Adapter createResetResourceTasksCandidateNextAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource <em>Reset Resource Tasks Candidate Scheduled Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource
-	 * @generated
-	 */
-	public Adapter createResetResourceTasksCandidateScheduledResourceAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope <em>Set Task Candidate Scheduled Resource Scope</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -473,6 +255,62 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSetTaskCandidateScheduledResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope <em>Set Expression Candidate Value Scope</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope
+	 * @generated
+	 */
+	public Adapter createSetExpressionCandidateValueScopeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue <em>Set Task Expression Candidate Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue
+	 * @generated
+	 */
+	public Adapter createSetTaskExpressionCandidateValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue <em>Set Solution Expression Candidate Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue
+	 * @generated
+	 */
+	public Adapter createSetSolutionExpressionCandidateValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetResourceExpressionCandidateValue <em>Set Resource Expression Candidate Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetResourceExpressionCandidateValue
+	 * @generated
+	 */
+	public Adapter createSetResourceExpressionCandidateValueAdapter() {
 		return null;
 	}
 

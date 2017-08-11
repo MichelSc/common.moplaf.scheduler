@@ -8,8 +8,6 @@ import com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression;
 import com.misc.common.moplaf.scheduler.SolutionExpression;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -89,63 +87,11 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSolution(Solution newSolution, NotificationChain msgs) {
+	public void setSolution(Solution newSolution) {
 		Solution oldSolution = solution;
 		solution = newSolution;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, oldSolution, newSolution);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSolution(Solution newSolution) {
-		if (newSolution != solution) {
-			NotificationChain msgs = null;
-			if (solution != null)
-				msgs = ((InternalEObject)solution).eInverseRemove(this, SchedulerPackage.SOLUTION__EXPRESSIONS, Solution.class, msgs);
-			if (newSolution != null)
-				msgs = ((InternalEObject)newSolution).eInverseAdd(this, SchedulerPackage.SOLUTION__EXPRESSIONS, Solution.class, msgs);
-			msgs = basicSetSolution(newSolution, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, newSolution, newSolution));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				if (solution != null)
-					msgs = ((InternalEObject)solution).eInverseRemove(this, SchedulerPackage.SOLUTION__EXPRESSIONS, Solution.class, msgs);
-				return basicSetSolution((Solution)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				return basicSetSolution(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, oldSolution, solution));
 	}
 
 	/**

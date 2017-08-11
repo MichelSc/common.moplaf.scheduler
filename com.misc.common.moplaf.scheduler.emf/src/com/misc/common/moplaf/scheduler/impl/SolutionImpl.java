@@ -3,13 +3,13 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
+import com.misc.common.moplaf.scheduler.CandidateValueExpression;
 import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.Move;
 import com.misc.common.moplaf.scheduler.MoveChange;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
-import com.misc.common.moplaf.scheduler.SolutionExpression;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope;
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -101,7 +101,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SolutionExpression> expressions;
+	protected EList<CandidateValueExpression> expressions;
 
 	/**
 	 * The default value of the '{@link #getSolutionNr() <em>Solution Nr</em>}' attribute.
@@ -221,9 +221,9 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SolutionExpression> getExpressions() {
+	public EList<CandidateValueExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectWithInverseResolvingEList<SolutionExpression>(SolutionExpression.class, this, SchedulerPackage.SOLUTION__EXPRESSIONS, SchedulerPackage.SOLUTION_EXPRESSION__SOLUTION);
+			expressions = new EObjectResolvingEList<CandidateValueExpression>(CandidateValueExpression.class, this, SchedulerPackage.SOLUTION__EXPRESSIONS);
 		}
 		return expressions;
 	}
@@ -396,8 +396,6 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTasks()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION__RESOURCES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResources()).basicAdd(otherEnd, msgs);
-			case SchedulerPackage.SOLUTION__EXPRESSIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExpressions()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION__SCHEDULER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -420,8 +418,6 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 				return ((InternalEList<?>)getTasks()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION__RESOURCES:
 				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-			case SchedulerPackage.SOLUTION__EXPRESSIONS:
-				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION__SCHEDULER:
 				return basicSetScheduler(null, msgs);
 		}
@@ -495,7 +491,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 				return;
 			case SchedulerPackage.SOLUTION__EXPRESSIONS:
 				getExpressions().clear();
-				getExpressions().addAll((Collection<? extends SolutionExpression>)newValue);
+				getExpressions().addAll((Collection<? extends CandidateValueExpression>)newValue);
 				return;
 			case SchedulerPackage.SOLUTION__SOLUTION_NR:
 				setSolutionNr((Integer)newValue);

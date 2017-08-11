@@ -3,7 +3,7 @@
 package com.misc.common.moplaf.schedulercalc.provider;
 
 
-import com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource;
+import com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,19 +14,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource} object.
+ * This is the item provider adapter for a {@link com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResetTaskCandidateScheduledResourceItemProvider extends TaskPropagatorFunctionItemProvider {
+public class SetExpressionCandidateValueScopeItemProvider extends SolutionPropagatorFunctionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResetTaskCandidateScheduledResourceItemProvider(AdapterFactory adapterFactory) {
+	public SetExpressionCandidateValueScopeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +46,14 @@ public class ResetTaskCandidateScheduledResourceItemProvider extends TaskPropaga
 	}
 
 	/**
-	 * This returns ResetTaskCandidateScheduledResource.gif.
+	 * This returns SetExpressionCandidateValueScope.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ResetTaskCandidateScheduledResource"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SetExpressionCandidateValueScope"));
 	}
 
 	/**
@@ -64,8 +64,8 @@ public class ResetTaskCandidateScheduledResourceItemProvider extends TaskPropaga
 	 */
 	@Override
 	public String getText(Object object) {
-		ResetTaskCandidateScheduledResource resetTaskCandidateScheduledResource = (ResetTaskCandidateScheduledResource)object;
-		return getString("_UI_ResetTaskCandidateScheduledResource_type") + " " + resetTaskCandidateScheduledResource.isTouched();
+		SetExpressionCandidateValueScope setExpressionCandidateValueScope = (SetExpressionCandidateValueScope)object;
+		return getString("_UI_SetExpressionCandidateValueScope_type") + " " + setExpressionCandidateValueScope.isTouched();
 	}
 	
 

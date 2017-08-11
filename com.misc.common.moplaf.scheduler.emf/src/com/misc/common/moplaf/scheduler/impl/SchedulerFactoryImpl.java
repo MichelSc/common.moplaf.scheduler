@@ -72,12 +72,12 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			case SchedulerPackage.CANDIDATE_FLOAT_EXPRESSION: return createCandidateFloatExpression();
 			case SchedulerPackage.CANDIDATE_DATE_EXPRESSION: return createCandidateDateExpression();
 			case SchedulerPackage.CANDIDATE_INT_EXPRESSION: return createCandidateIntExpression();
-			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: return createTaskCandidateFloatExpression();
 			case SchedulerPackage.TASK_CANDIDATE_DATE_EXPRESSION: return createTaskCandidateDateExpression();
-			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: return createResourceCandidateFloatExpression();
-			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION: return createResourceCandidateDateExpression();
-			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: return createResourceCandidateIntExpression();
+			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: return createTaskCandidateFloatExpression();
 			case SchedulerPackage.TASK_CANDIDATE_INT_EXPRESSION: return createTaskCandidateIntExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION: return createResourceCandidateDateExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: return createResourceCandidateFloatExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: return createResourceCandidateIntExpression();
 			case SchedulerPackage.SOLUTION_CANDIDATE_DATE_EXPRESSION: return createSolutionCandidateDateExpression();
 			case SchedulerPackage.SOLUTION_CANDIDATE_FLOAT_EXPRESSION: return createSolutionCandidateFloatExpression();
 			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION: return createSolutionCandidateIntExpression();

@@ -284,8 +284,7 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 
 	/**
 	 * Returns the value of the '<em><b>Expressions</b></em>' reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.TaskExpression}.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}'.
+	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.CandidateValueExpression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Expressions</em>' containment reference list isn't clear,
@@ -294,11 +293,10 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expressions</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_Expressions()
-	 * @see com.misc.common.moplaf.scheduler.TaskExpression#getTask
-	 * @model opposite="Task"
+	 * @model
 	 * @generated
 	 */
-	EList<TaskExpression> getExpressions();
+	EList<CandidateValueExpression> getExpressions();
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

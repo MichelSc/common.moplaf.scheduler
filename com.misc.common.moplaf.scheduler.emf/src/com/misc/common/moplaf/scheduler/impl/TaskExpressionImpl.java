@@ -6,7 +6,6 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.TaskExpression;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -86,63 +85,11 @@ public abstract class TaskExpressionImpl extends OwnerExpressionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTask(SolutionTask newTask, NotificationChain msgs) {
+	public void setTask(SolutionTask newTask) {
 		SolutionTask oldTask = task;
 		task = newTask;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK_EXPRESSION__TASK, oldTask, newTask);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTask(SolutionTask newTask) {
-		if (newTask != task) {
-			NotificationChain msgs = null;
-			if (task != null)
-				msgs = ((InternalEObject)task).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
-			if (newTask != null)
-				msgs = ((InternalEObject)newTask).eInverseAdd(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
-			msgs = basicSetTask(newTask, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK_EXPRESSION__TASK, newTask, newTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.TASK_EXPRESSION__TASK:
-				if (task != null)
-					msgs = ((InternalEObject)task).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SolutionTask.class, msgs);
-				return basicSetTask((SolutionTask)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.TASK_EXPRESSION__TASK:
-				return basicSetTask(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK_EXPRESSION__TASK, oldTask, task));
 	}
 
 	/**
