@@ -308,11 +308,13 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 	 * <!-- end-user-doc -->
 	 */
 	public void setCandidate(Move move) {
-		// restore the candidate move to the solution
+		SetTaskCandidateScheduledResourceScope scopeResource = this.getPropagatorFunction(SetTaskCandidateScheduledResourceScope.class);
+		SetExpressionCandidateValueScope scopeExpressions = this.getPropagatorFunction(SetExpressionCandidateValueScope.class);
+		// restore the candidate move to the solution: everything is up to date
 		this.resetCandidate();
-		// execute the candidate move
-		SetTaskCandidateScheduledResourceScope scope = this.getPropagatorFunction(SetTaskCandidateScheduledResourceScope.class);
-		scope.reset();
+		scopeResource.reset();
+		scopeExpressions.reset();
+		// execute the move
 		if ( move != null) {
 			for ( MoveChange change : move.getChanges()) {
 				if ( !change.isValid()) {
@@ -326,9 +328,11 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 				}
 			}
 		}
-		scope.refresh();
-		// set the candidate move
 		this.setCandidateMove(move);
+		// refresh the scheduled resource
+		scopeResource.refresh();
+		// refresh the expressions
+		scopeExpressions.refresh();
 	}
 
 	/**
