@@ -33,5 +33,11 @@ public class SetExpressionCandidateValueScopeImpl extends SolutionPropagatorFunc
 	protected EClass eStaticClass() {
 		return SchedulerCalcPackage.Literals.SET_EXPRESSION_CANDIDATE_VALUE_SCOPE;
 	}
+	
+	@Override
+	public String getFactoryID() {
+		return SetExpressionCandidateValueScope.scopeIDCalcCandidateValue;
+	}
+
 
 } //SetExpressionCandidateValueScopeImpl

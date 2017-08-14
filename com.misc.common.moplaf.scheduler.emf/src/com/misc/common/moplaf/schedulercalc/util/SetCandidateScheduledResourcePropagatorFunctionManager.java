@@ -33,7 +33,8 @@ public class SetCandidateScheduledResourcePropagatorFunctionManager extends Prop
 		 }
 	}
 	
-	static PropagatorFunctionsFactory propagatorFunctionFactory = PropagatorFunctionsFactory.constructPropagatorFunctionsFactory(SetTaskCandidateScheduledResourceScope.factoryID);
+	static PropagatorFunctionsFactory propagatorFunctionFactory = PropagatorFunctionsFactory.constructPropagatorFunctionsFactory
+			(SetTaskCandidateScheduledResourceScope.scopeIDCalcCandidateScheduledResource);
 	
 	static PropagatorFunctionsConstructors solutionPropagatorFunctionsConstructors =  
 			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(SchedulerPackage.Literals.SOLUTION)

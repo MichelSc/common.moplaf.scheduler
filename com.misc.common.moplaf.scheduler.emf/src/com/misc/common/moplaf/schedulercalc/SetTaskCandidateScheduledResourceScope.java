@@ -14,4 +14,6 @@ package com.misc.common.moplaf.schedulercalc;
  * @generated
  */
 public interface SetTaskCandidateScheduledResourceScope extends SolutionPropagatorFunction {
+
+	static public String scopeIDCalcCandidateScheduledResource = "com.misc.common.moplaf.scheduler.calc.candidatescheduledresource";
 } // SetTaskCandidateScheduledResourceScope

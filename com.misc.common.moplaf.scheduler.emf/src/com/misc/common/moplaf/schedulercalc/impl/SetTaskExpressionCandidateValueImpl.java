@@ -102,5 +102,10 @@ public class SetTaskExpressionCandidateValueImpl extends TaskExpressionPropagato
 		return this.getConcreteParent();
 	}
 
+	@Override
+	public String getFactoryID() {
+		return SetExpressionCandidateValueScope.scopeIDCalcCandidateValue;
+	}
+
 
 } //SetTaskExpressionCandidateValueImpl

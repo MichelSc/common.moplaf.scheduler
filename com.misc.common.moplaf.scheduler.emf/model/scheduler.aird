@@ -6676,6 +6676,7 @@
         <customFeatures>routingStyle</customFeatures>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xiewkn6bEee9lL-N1Re4_A" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_xiewk36bEee9lL-N1Re4_A" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -6690,6 +6691,7 @@
         <customFeatures>routingStyle</customFeatures>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xifXon6bEee9lL-N1Re4_A" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_xifXo36bEee9lL-N1Re4_A" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>

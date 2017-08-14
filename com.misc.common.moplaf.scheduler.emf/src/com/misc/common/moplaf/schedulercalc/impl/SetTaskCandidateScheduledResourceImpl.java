@@ -102,7 +102,7 @@ public class SetTaskCandidateScheduledResourceImpl extends TaskPropagatorFunctio
 
 	@Override
 	public String getFactoryID() {
-		return SetTaskCandidateScheduledResourceScope.factoryID;
+		return SetTaskCandidateScheduledResourceScope.scopeIDCalcCandidateScheduledResource;
 	}
 
 	@Override

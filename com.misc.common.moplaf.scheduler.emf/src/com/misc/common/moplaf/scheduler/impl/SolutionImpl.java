@@ -12,6 +12,8 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.schedulercalc.SchedulerCalcFactory;
+import com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope;
 import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope;
 
 import java.lang.reflect.InvocationTargetException;
@@ -606,5 +608,15 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 		result.append(')');
 		return result.toString();
 	}
+
+	@Override
+	public void addPropagatorFunctions(String factoryID) {
+		super.addPropagatorFunctions(factoryID);
+		if ( factoryID==SetExpressionCandidateValueScope.scopeIDCalcCandidateValue) {
+			this.addPropagatorFunction(SchedulerCalcFactory.eINSTANCE.createSetExpressionCandidateValueScope());
+		}
+	}
+	
+	
 
 } //SolutionImpl

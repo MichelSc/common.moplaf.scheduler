@@ -14,4 +14,7 @@ package com.misc.common.moplaf.schedulercalc;
  * @generated
  */
 public interface SetExpressionCandidateValueScope extends SolutionPropagatorFunction {
+
+
+	static public String scopeIDCalcCandidateValue = "com.misc.common.moplaf.scheduler.calc.candidatevalue";
 } // SetExpressionCandidateValueScope
