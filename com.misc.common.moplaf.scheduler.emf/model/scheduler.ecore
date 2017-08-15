@@ -23,18 +23,25 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Update the candidate solution with the parameter Move.&#xA;"/>
     </eAnnotations>
-    <eOperations name="clone" eType="#//Solution"/>
+    <eOperations name="clone" eType="#//Solution">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Create a new solution in the reset state (no candidate move, candidate values are reset to the solution values)"/>
+      </eAnnotations>
+    </eOperations>
     <eOperations name="setCandidate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Set the candidate move. The candidate expression values are updated as a function of the new candidate move."/>
+      </eAnnotations>
       <eParameters name="move" eType="#//Move"/>
     </eOperations>
     <eOperations name="resetCandidate">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Reset the candidate solution to this Solution&#xA;"/>
+        <details key="documentation" value="Reset the candidate solution to this Solution. The candidate expression values are aligned to the solution expression values.&#xA;"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="acceptCandidate">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Change this Solution into the candidate Solution"/>
+        <details key="documentation" value="Change this Solution into the candidate Solution. The solutions expression values are updated with the candidate expression values."/>
       </eAnnotations>
     </eOperations>
     <eOperations name="reset">
