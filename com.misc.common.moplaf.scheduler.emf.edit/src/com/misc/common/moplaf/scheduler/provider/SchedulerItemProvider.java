@@ -69,7 +69,7 @@ public class SchedulerItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addCurrentSolutionntrPropertyDescriptor(object);
+			addCurrentSolutionNrPropertyDescriptor(object);
 			addTasksPropertyDescriptor(object);
 			addResourcesPropertyDescriptor(object);
 		}
@@ -99,24 +99,24 @@ public class SchedulerItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Current Solutionntr feature.
+	 * This adds a property descriptor for the Current Solution Nr feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCurrentSolutionntrPropertyDescriptor(Object object) {
+	protected void addCurrentSolutionNrPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Scheduler_CurrentSolutionntr_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scheduler_CurrentSolutionntr_feature", "_UI_Scheduler_type"),
-				 SchedulerPackage.Literals.SCHEDULER__CURRENT_SOLUTIONNTR,
+				 getString("_UI_Scheduler_CurrentSolutionNr_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Scheduler_CurrentSolutionNr_feature", "_UI_Scheduler_type"),
+				 SchedulerPackage.Literals.SCHEDULER__CURRENT_SOLUTION_NR,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 getString("_UI__10SchedulerPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -233,7 +233,7 @@ public class SchedulerItemProvider
 
 		switch (notification.getFeatureID(Scheduler.class)) {
 			case SchedulerPackage.SCHEDULER__NAME:
-			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
+			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
 			case SchedulerPackage.SCHEDULER__TASKS:
 			case SchedulerPackage.SCHEDULER__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

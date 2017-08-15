@@ -186,6 +186,9 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Create a new solution in the reset state (no candidate move, candidate values are reset to the solution values)
+	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
@@ -194,6 +197,9 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Set the candidate move. The candidate expression values are updated as a function of the new candidate move.
+	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
@@ -203,7 +209,7 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Reset the candidate solution to this Solution
+	 * Reset the candidate solution to this Solution. The candidate expression values are aligned to the solution expression values.
 	 * 
 	 * <!-- end-model-doc -->
 	 * @model
@@ -215,7 +221,7 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Change this Solution into the candidate Solution
+	 * Change this Solution into the candidate Solution. The solutions expression values are updated with the candidate expression values.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

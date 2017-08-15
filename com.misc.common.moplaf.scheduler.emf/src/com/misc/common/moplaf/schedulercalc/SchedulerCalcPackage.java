@@ -263,7 +263,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -272,7 +272,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -281,7 +281,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -291,6 +291,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -579,7 +588,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -588,7 +597,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -597,7 +606,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -607,6 +616,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -895,7 +913,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -904,7 +922,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -913,7 +931,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -923,6 +941,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1211,7 +1238,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1220,7 +1247,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1229,7 +1256,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1239,6 +1266,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1527,7 +1563,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int TASK_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1536,7 +1572,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int TASK_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1545,7 +1581,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int TASK_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1555,6 +1591,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -1843,7 +1888,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS;
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -1852,7 +1897,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS;
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -1861,7 +1906,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS;
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -1871,6 +1916,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2159,7 +2213,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_ANTECEDENTS = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_ANTECEDENTS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2168,7 +2222,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_THIS = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2177,7 +2231,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_CHILDREN_AND_THIS = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2187,6 +2241,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH = SOLUTION_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2484,7 +2547,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_ANTECEDENTS = TASK_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_ANTECEDENTS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2493,7 +2556,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_THIS = TASK_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_THIS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2502,7 +2565,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_CHILDREN_AND_THIS = TASK_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2512,6 +2575,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH = TASK_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2801,7 +2873,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH_ANTECEDENTS = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH_ANTECEDENTS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2810,7 +2882,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH_THIS = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2819,7 +2891,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH_CHILDREN_AND_THIS = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2829,6 +2901,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH = SOLUTION_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE___REFRESH__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -3126,7 +3207,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS__REFRESHER = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -3135,7 +3216,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS__REFRESHER = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -3144,7 +3225,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS__REFRESHER = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -3154,6 +3235,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_TASK_EXPRESSION_CANDIDATE_VALUE___REFRESH__REFRESHER = TASK_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -3451,7 +3541,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS__REFRESHER = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -3460,7 +3550,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS__REFRESHER = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -3469,7 +3559,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -3479,6 +3569,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE___REFRESH__REFRESHER = SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -3776,7 +3875,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS;
+	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH_ANTECEDENTS__REFRESHER = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -3785,7 +3884,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS;
+	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH_THIS__REFRESHER = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -3794,7 +3893,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS;
+	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH_CHILDREN_AND_THIS__REFRESHER = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -3804,6 +3903,15 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @ordered
 	 */
 	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE___REFRESH__REFRESHER = RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.

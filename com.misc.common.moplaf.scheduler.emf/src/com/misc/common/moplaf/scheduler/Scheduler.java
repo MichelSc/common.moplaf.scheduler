@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getSolutions <em>Solutions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getName <em>Name</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionntr <em>Current Solutionntr</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionNr <em>Current Solution Nr</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}</li>
  * </ul>
@@ -128,29 +128,29 @@ public interface Scheduler extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Current Solutionntr</b></em>' attribute.
+	 * Returns the value of the '<em><b>Current Solution Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Current Solutionntr</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Current Solution Nr</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Solutionntr</em>' attribute.
-	 * @see #setCurrentSolutionntr(int)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_CurrentSolutionntr()
+	 * @return the value of the '<em>Current Solution Nr</em>' attribute.
+	 * @see #setCurrentSolutionNr(int)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_CurrentSolutionNr()
 	 * @model
 	 * @generated
 	 */
-	int getCurrentSolutionntr();
+	int getCurrentSolutionNr();
 
 	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionntr <em>Current Solutionntr</em>}' attribute.
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionNr <em>Current Solution Nr</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Solutionntr</em>' attribute.
-	 * @see #getCurrentSolutionntr()
+	 * @param value the new value of the '<em>Current Solution Nr</em>' attribute.
+	 * @see #getCurrentSolutionNr()
 	 * @generated
 	 */
-	void setCurrentSolutionntr(int value);
+	void setCurrentSolutionNr(int value);
 
 } // Scheduler

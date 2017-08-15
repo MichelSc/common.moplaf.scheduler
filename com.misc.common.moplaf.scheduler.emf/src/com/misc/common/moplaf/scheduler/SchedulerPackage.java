@@ -88,13 +88,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Current Solutionntr</b></em>' attribute.
+	 * The feature id for the '<em><b>Current Solution Nr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__CURRENT_SOLUTIONNTR = 2;
+	int SCHEDULER__CURRENT_SOLUTION_NR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -267,6 +267,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -459,6 +468,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Construct Expressions</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -638,6 +656,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
@@ -2115,6 +2142,15 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2239,6 +2275,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2367,6 +2412,15 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2491,6 +2545,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2628,6 +2691,15 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2761,6 +2833,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2918,6 +2999,15 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3051,6 +3141,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -3188,6 +3287,15 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3321,6 +3429,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -3468,6 +3585,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3611,6 +3737,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -3758,6 +3893,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3878,15 +4022,15 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getScheduler_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionntr <em>Current Solutionntr</em>}'.
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionNr <em>Current Solution Nr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Current Solutionntr</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionntr()
+	 * @return the meta object for the attribute '<em>Current Solution Nr</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionNr()
 	 * @see #getScheduler()
 	 * @generated
 	 */
-	EAttribute getScheduler_CurrentSolutionntr();
+	EAttribute getScheduler_CurrentSolutionNr();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Solution <em>Solution</em>}'.
@@ -5030,12 +5174,12 @@ public interface SchedulerPackage extends EPackage {
 		EAttribute SCHEDULER__NAME = eINSTANCE.getScheduler_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Current Solutionntr</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Current Solution Nr</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SCHEDULER__CURRENT_SOLUTIONNTR = eINSTANCE.getScheduler_CurrentSolutionntr();
+		EAttribute SCHEDULER__CURRENT_SOLUTION_NR = eINSTANCE.getScheduler_CurrentSolutionNr();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.SolutionImpl <em>Solution</em>}' class.

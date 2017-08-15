@@ -20,6 +20,14 @@ Rework association Resource ScheduledTask
    - Expression.CandidateValue
    - Task.ResourceAsFirst, AsLast
    
+   Value depends on candidate
+     so listen on candidate changes
+     refresh value ok
+     inbound binding is candidate
+     outbound binding is value
+     logic is: value = candidate (if candidate modified, value touched)
+     reverse logic: candidate = value: reset logic (if candidate modified, value touched)
+   
  Implement refresher 
    Candidate = Value
    Value = candidate

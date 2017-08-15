@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getSolutions <em>Solutions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getName <em>Name</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getCurrentSolutionntr <em>Current Solutionntr</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getCurrentSolutionNr <em>Current Solution Nr</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getResources <em>Resources</em>}</li>
  * </ul>
@@ -78,24 +78,24 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCurrentSolutionntr() <em>Current Solutionntr</em>}' attribute.
+	 * The default value of the '{@link #getCurrentSolutionNr() <em>Current Solution Nr</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCurrentSolutionntr()
+	 * @see #getCurrentSolutionNr()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CURRENT_SOLUTIONNTR_EDEFAULT = 0;
+	protected static final int CURRENT_SOLUTION_NR_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCurrentSolutionntr() <em>Current Solutionntr</em>}' attribute.
+	 * The cached value of the '{@link #getCurrentSolutionNr() <em>Current Solution Nr</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCurrentSolutionntr()
+	 * @see #getCurrentSolutionNr()
 	 * @generated
 	 * @ordered
 	 */
-	protected int currentSolutionntr = CURRENT_SOLUTIONNTR_EDEFAULT;
+	protected int currentSolutionNr = CURRENT_SOLUTION_NR_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' reference list.
@@ -224,8 +224,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCurrentSolutionntr() {
-		return currentSolutionntr;
+	public int getCurrentSolutionNr() {
+		return currentSolutionNr;
 	}
 
 	/**
@@ -233,11 +233,11 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentSolutionntr(int newCurrentSolutionntr) {
-		int oldCurrentSolutionntr = currentSolutionntr;
-		currentSolutionntr = newCurrentSolutionntr;
+	public void setCurrentSolutionNr(int newCurrentSolutionNr) {
+		int oldCurrentSolutionNr = currentSolutionNr;
+		currentSolutionNr = newCurrentSolutionNr;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR, oldCurrentSolutionntr, currentSolutionntr));
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR, oldCurrentSolutionNr, currentSolutionNr));
 	}
 
 	/**
@@ -281,8 +281,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 				return getSolutions();
 			case SchedulerPackage.SCHEDULER__NAME:
 				return getName();
-			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
-				return getCurrentSolutionntr();
+			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
+				return getCurrentSolutionNr();
 			case SchedulerPackage.SCHEDULER__TASKS:
 				return getTasks();
 			case SchedulerPackage.SCHEDULER__RESOURCES:
@@ -307,8 +307,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName((String)newValue);
 				return;
-			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
-				setCurrentSolutionntr((Integer)newValue);
+			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
+				setCurrentSolutionNr((Integer)newValue);
 				return;
 			case SchedulerPackage.SCHEDULER__TASKS:
 				getTasks().clear();
@@ -336,8 +336,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
-				setCurrentSolutionntr(CURRENT_SOLUTIONNTR_EDEFAULT);
+			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
+				setCurrentSolutionNr(CURRENT_SOLUTION_NR_EDEFAULT);
 				return;
 			case SchedulerPackage.SCHEDULER__TASKS:
 				getTasks().clear();
@@ -361,8 +361,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 				return solutions != null && !solutions.isEmpty();
 			case SchedulerPackage.SCHEDULER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTIONNTR:
-				return currentSolutionntr != CURRENT_SOLUTIONNTR_EDEFAULT;
+			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
+				return currentSolutionNr != CURRENT_SOLUTION_NR_EDEFAULT;
 			case SchedulerPackage.SCHEDULER__TASKS:
 				return tasks != null && !tasks.isEmpty();
 			case SchedulerPackage.SCHEDULER__RESOURCES:
@@ -402,8 +402,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", CurrentSolutionntr: ");
-		result.append(currentSolutionntr);
+		result.append(", CurrentSolutionNr: ");
+		result.append(currentSolutionNr);
 		result.append(')');
 		return result.toString();
 	}
