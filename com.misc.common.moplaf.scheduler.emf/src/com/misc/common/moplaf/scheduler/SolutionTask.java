@@ -120,7 +120,6 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 
 	/**
 	 * Returns the value of the '<em><b>Scheduled Resource</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getScheduledTasks <em>Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scheduled Resource</em>' reference isn't clear,
@@ -130,8 +129,7 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 	 * @return the value of the '<em>Scheduled Resource</em>' reference.
 	 * @see #setScheduledResource(SolutionResource)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_ScheduledResource()
-	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getScheduledTasks
-	 * @model opposite="ScheduledTasks"
+	 * @model
 	 * @generated
 	 */
 	SolutionResource getScheduledResource();
@@ -148,7 +146,6 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 
 	/**
 	 * Returns the value of the '<em><b>Candidate Scheduled Resource</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateScheduledTasks <em>Candidate Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Candidate Scheduled Resource</em>' reference isn't clear,
@@ -158,8 +155,7 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 	 * @return the value of the '<em>Candidate Scheduled Resource</em>' reference.
 	 * @see #setCandidateScheduledResource(SolutionResource)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionTask_CandidateScheduledResource()
-	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getCandidateScheduledTasks
-	 * @model opposite="CandidateScheduledTasks"
+	 * @model
 	 * @generated
 	 */
 	SolutionResource getCandidateScheduledResource();
@@ -390,5 +386,13 @@ public interface SolutionTask extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void constructExpressions();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void scheduleCandidateResource(SolutionResource resource);
 
 } // SolutionTask

@@ -183,7 +183,6 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 */
 	public void enable() {
-		Util.adapt(this, SetCandidateScheduledResourcePropagatorFunctionManager.class, true ); // true = create
 	}
 
 	/**

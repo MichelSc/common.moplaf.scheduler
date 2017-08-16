@@ -441,13 +441,31 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_RESOURCE__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Solution Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
+	int SOLUTION_RESOURCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -694,13 +712,22 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_TASK___CONSTRUCT_EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Schedule Candidate Resource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
+
+	/**
 	 * The number of operations of the '<em>Solution Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
+	int SOLUTION_TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.MoveImpl <em>Move</em>}' class.
@@ -4289,6 +4316,28 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getSolutionResource_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Scheduled Tasks</em>'.
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getNrScheduledTasks()
+	 * @see #getSolutionResource()
+	 * @generated
+	 */
+	EAttribute getSolutionResource_NrScheduledTasks();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Candidate Scheduled Tasks</em>'.
+	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getNrCandidateScheduledTasks()
+	 * @see #getSolutionResource()
+	 * @generated
+	 */
+	EAttribute getSolutionResource_NrCandidateScheduledTasks();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.SolutionResource#constructExpressions() <em>Construct Expressions</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4480,6 +4529,16 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSolutionTask__ConstructExpressions();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.SolutionTask#scheduleCandidateResource(com.misc.common.moplaf.scheduler.SolutionResource) <em>Schedule Candidate Resource</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Schedule Candidate Resource</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.SolutionTask#scheduleCandidateResource(com.misc.common.moplaf.scheduler.SolutionResource)
+	 * @generated
+	 */
+	EOperation getSolutionTask__ScheduleCandidateResource__SolutionResource();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Move <em>Move</em>}'.
@@ -5378,6 +5437,22 @@ public interface SchedulerPackage extends EPackage {
 		EAttribute SOLUTION_RESOURCE__NAME = eINSTANCE.getSolutionResource_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Nr Scheduled Tasks</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION_RESOURCE__NR_SCHEDULED_TASKS = eINSTANCE.getSolutionResource_NrScheduledTasks();
+
+		/**
+		 * The meta object literal for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = eINSTANCE.getSolutionResource_NrCandidateScheduledTasks();
+
+		/**
 		 * The meta object literal for the '<em><b>Construct Expressions</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5522,6 +5597,14 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SOLUTION_TASK___CONSTRUCT_EXPRESSIONS = eINSTANCE.getSolutionTask__ConstructExpressions();
+
+		/**
+		 * The meta object literal for the '<em><b>Schedule Candidate Resource</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE = eINSTANCE.getSolutionTask__ScheduleCandidateResource__SolutionResource();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveImpl <em>Move</em>}' class.

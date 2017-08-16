@@ -57,6 +57,8 @@ public class SolutionResourceItemProvider
 			addCandidateFirstTaskPropertyDescriptor(object);
 			addCandidateLastTaskPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addNrScheduledTasksPropertyDescriptor(object);
+			addNrCandidateScheduledTasksPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -194,6 +196,50 @@ public class SolutionResourceItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Nr Scheduled Tasks feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNrScheduledTasksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionResource_NrScheduledTasks_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_NrScheduledTasks_feature", "_UI_SolutionResource_type"),
+				 SchedulerPackage.Literals.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nr Candidate Scheduled Tasks feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNrCandidateScheduledTasksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionResource_NrCandidateScheduledTasks_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_NrCandidateScheduledTasks_feature", "_UI_SolutionResource_type"),
+				 SchedulerPackage.Literals.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -264,6 +310,8 @@ public class SolutionResourceItemProvider
 		switch (notification.getFeatureID(SolutionResource.class)) {
 			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:

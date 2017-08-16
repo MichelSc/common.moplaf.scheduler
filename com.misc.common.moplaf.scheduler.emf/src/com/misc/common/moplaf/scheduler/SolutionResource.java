@@ -25,6 +25,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getSolution <em>Solution</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource()
@@ -61,7 +63,6 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Scheduled Tasks</b></em>' reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.SolutionTask}.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getScheduledResource <em>Scheduled Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scheduled Tasks</em>' reference list isn't clear,
@@ -70,8 +71,7 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scheduled Tasks</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_ScheduledTasks()
-	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getScheduledResource
-	 * @model opposite="ScheduledResource"
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	EList<SolutionTask> getScheduledTasks();
@@ -79,7 +79,6 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	/**
 	 * Returns the value of the '<em><b>Candidate Scheduled Tasks</b></em>' reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.SolutionTask}.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Candidate Scheduled Tasks</em>' reference list isn't clear,
@@ -88,8 +87,7 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Candidate Scheduled Tasks</em>' reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_CandidateScheduledTasks()
-	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getCandidateScheduledResource
-	 * @model opposite="CandidateScheduledResource"
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	EList<SolutionTask> getCandidateScheduledTasks();
@@ -234,6 +232,58 @@ public interface SolutionResource extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Scheduled Tasks</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Scheduled Tasks</em>' attribute.
+	 * @see #setNrScheduledTasks(int)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_NrScheduledTasks()
+	 * @model
+	 * @generated
+	 */
+	int getNrScheduledTasks();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Scheduled Tasks</em>' attribute.
+	 * @see #getNrScheduledTasks()
+	 * @generated
+	 */
+	void setNrScheduledTasks(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Candidate Scheduled Tasks</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
+	 * @see #setNrCandidateScheduledTasks(int)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource_NrCandidateScheduledTasks()
+	 * @model
+	 * @generated
+	 */
+	int getNrCandidateScheduledTasks();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
+	 * @see #getNrCandidateScheduledTasks()
+	 * @generated
+	 */
+	void setNrCandidateScheduledTasks(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

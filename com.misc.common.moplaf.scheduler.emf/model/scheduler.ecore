@@ -68,9 +68,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledTasks" upperBound="-1"
-        eType="#//SolutionTask" eOpposite="#//SolutionTask/ScheduledResource"/>
+        eType="#//SolutionTask" changeable="false" volatile="true" transient="true"
+        derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledTasks"
-        upperBound="-1" eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateScheduledResource"/>
+        upperBound="-1" eType="#//SolutionTask" changeable="false" volatile="true"
+        transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateFirstTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/ResourceAsCandidateFirstTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateLastTask" eType="#//SolutionTask"
@@ -82,6 +84,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
         eType="#//Solution" eOpposite="#//Solution/Resources"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrScheduledTasks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrCandidateScheduledTasks"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionTask" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="unsetCandidatePreviousNext"/>
@@ -91,13 +96,15 @@
       <eParameters name="next" eType="#//SolutionTask"/>
     </eOperations>
     <eOperations name="constructExpressions"/>
+    <eOperations name="scheduleCandidateResource">
+      <eParameters name="resource" eType="#//SolutionResource"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="NextTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/PreviousTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/NextTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//SolutionResource"
-        eOpposite="#//SolutionResource/ScheduledTasks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//SolutionResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateNextTask" eType="#//SolutionTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidatePreviousTask"
         eType="#//SolutionTask"/>
@@ -106,7 +113,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceAsCandidateLastTask"
         eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateLastTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledResource"
-        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateScheduledTasks"/>
+        eType="#//SolutionResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
         eType="#//CandidateValueExpression"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

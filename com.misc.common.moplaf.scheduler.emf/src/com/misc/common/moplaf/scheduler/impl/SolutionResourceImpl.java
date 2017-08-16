@@ -21,10 +21,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getSolution <em>Solution</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,26 +58,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @ordered
 	 */
 	protected EObject resource;
-
-	/**
-	 * The cached value of the '{@link #getScheduledTasks() <em>Scheduled Tasks</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScheduledTasks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolutionTask> scheduledTasks;
-
-	/**
-	 * The cached value of the '{@link #getCandidateScheduledTasks() <em>Candidate Scheduled Tasks</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCandidateScheduledTasks()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SolutionTask> candidateScheduledTasks;
 
 	/**
 	 * The cached value of the '{@link #getCandidateFirstTask() <em>Candidate First Task</em>}' reference.
@@ -139,6 +120,46 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_SCHEDULED_TASKS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nrScheduledTasks = NR_SCHEDULED_TASKS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNrCandidateScheduledTasks() <em>Nr Candidate Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrCandidateScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNrCandidateScheduledTasks() <em>Nr Candidate Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrCandidateScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nrCandidateScheduledTasks = NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -198,25 +219,32 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public EList<SolutionTask> getScheduledTasks() {
-		if (scheduledTasks == null) {
-			scheduledTasks = new EObjectWithInverseResolvingEList<SolutionTask>(SolutionTask.class, this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE);
-		}
-		return scheduledTasks;
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		EList<SolutionTask> tasks = new EObjectEList<SolutionTask>(SolutionResource.class, 
+													               this, 
+													               SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS);
+		return tasks;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public EList<SolutionTask> getCandidateScheduledTasks() {
-		if (candidateScheduledTasks == null) {
-			candidateScheduledTasks = new EObjectWithInverseResolvingEList<SolutionTask>(SolutionTask.class, this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE);
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		EList<SolutionTask> tasks = new EObjectEList<SolutionTask>(SolutionResource.class, 
+													               this, 
+													               SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS);
+		SolutionTask task = this.getCandidateFirstTask();
+		while ( task!=null) {
+			tasks.add(task);
+			task = task.getCandidateNextTask();
 		}
-		return candidateScheduledTasks;
+		return tasks;
 	}
 
 	/**
@@ -426,10 +454,53 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNrScheduledTasks() {
+		return nrScheduledTasks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNrScheduledTasks(int newNrScheduledTasks) {
+		int oldNrScheduledTasks = nrScheduledTasks;
+		nrScheduledTasks = newNrScheduledTasks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS, oldNrScheduledTasks, nrScheduledTasks));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNrCandidateScheduledTasks() {
+		return nrCandidateScheduledTasks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNrCandidateScheduledTasks(int newNrCandidateScheduledTasks) {
+		int oldNrCandidateScheduledTasks = nrCandidateScheduledTasks;
+		nrCandidateScheduledTasks = newNrCandidateScheduledTasks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS, oldNrCandidateScheduledTasks, nrCandidateScheduledTasks));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 */
 	public void constructExpressions() {
 		// default does nothing
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -440,10 +511,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScheduledTasks()).basicAdd(otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCandidateScheduledTasks()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
 				if (candidateFirstTask != null)
 					msgs = ((InternalEObject)candidateFirstTask).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK, SolutionTask.class, msgs);
@@ -468,10 +535,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
-				return ((InternalEList<?>)getScheduledTasks()).basicRemove(otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
-				return ((InternalEList<?>)getCandidateScheduledTasks()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
 				return basicSetCandidateFirstTask(null, msgs);
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK:
@@ -525,6 +588,10 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return getSolution();
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
 				return getName();
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				return getNrScheduledTasks();
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				return getNrCandidateScheduledTasks();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -540,14 +607,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 		switch (featureID) {
 			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
 				setResource((EObject)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
-				getScheduledTasks().clear();
-				getScheduledTasks().addAll((Collection<? extends SolutionTask>)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
-				getCandidateScheduledTasks().clear();
-				getCandidateScheduledTasks().addAll((Collection<? extends SolutionTask>)newValue);
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
 				setCandidateFirstTask((SolutionTask)newValue);
@@ -565,6 +624,12 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
 				setName((String)newValue);
 				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				setNrScheduledTasks((Integer)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				setNrCandidateScheduledTasks((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -579,12 +644,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 		switch (featureID) {
 			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
 				setResource((EObject)null);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
-				getScheduledTasks().clear();
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
-				getCandidateScheduledTasks().clear();
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
 				setCandidateFirstTask((SolutionTask)null);
@@ -601,6 +660,12 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				setNrScheduledTasks(NR_SCHEDULED_TASKS_EDEFAULT);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				setNrCandidateScheduledTasks(NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -616,9 +681,9 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
 				return resource != null;
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
-				return scheduledTasks != null && !scheduledTasks.isEmpty();
+				return !getScheduledTasks().isEmpty();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
-				return candidateScheduledTasks != null && !candidateScheduledTasks.isEmpty();
+				return !getCandidateScheduledTasks().isEmpty();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
 				return candidateFirstTask != null;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK:
@@ -631,6 +696,10 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return getSolution() != null;
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				return nrScheduledTasks != NR_SCHEDULED_TASKS_EDEFAULT;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				return nrCandidateScheduledTasks != NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -662,6 +731,10 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
+		result.append(", NrScheduledTasks: ");
+		result.append(nrScheduledTasks);
+		result.append(", NrCandidateScheduledTasks: ");
+		result.append(nrCandidateScheduledTasks);
 		result.append(')');
 		return result.toString();
 	}
