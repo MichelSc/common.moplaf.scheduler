@@ -14,8 +14,6 @@ import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcFactory;
 import com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope;
-import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope;
-
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -313,7 +311,9 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 		// restore the candidate move to the solution: everything is up to date
 		this.resetCandidate();
 //		scopeResource.reset();
-		scopeExpressions.reset();
+		if ( scopeExpressions!=null) {
+			scopeExpressions.reset();
+		}
 		// execute the move
 		if ( move != null) {
 			for ( MoveChange change : move.getChanges()) {
@@ -332,7 +332,9 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 		// refresh the scheduled resource
 		//scopeResource.refresh();
 		// refresh the expressions
-		scopeExpressions.refresh();
+		if ( scopeExpressions!=null) {
+			scopeExpressions.refresh();
+		}
 	}
 
 	/**

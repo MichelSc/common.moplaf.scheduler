@@ -53,6 +53,8 @@ public class SolutionResourceItemProvider
 
 			addResourcePropertyDescriptor(object);
 			addScheduledTasksPropertyDescriptor(object);
+			addFirstTaskPropertyDescriptor(object);
+			addLastTaskPropertyDescriptor(object);
 			addCandidateScheduledTasksPropertyDescriptor(object);
 			addCandidateFirstTaskPropertyDescriptor(object);
 			addCandidateLastTaskPropertyDescriptor(object);
@@ -213,7 +215,7 @@ public class SolutionResourceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 
@@ -235,7 +237,51 @@ public class SolutionResourceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI__20CandidatePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the First Task feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFirstTaskPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionResource_FirstTask_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_FirstTask_feature", "_UI_SolutionResource_type"),
+				 SchedulerPackage.Literals.SOLUTION_RESOURCE__FIRST_TASK,
+				 true,
+				 false,
+				 true,
 				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Last Task feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLastTaskPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SolutionResource_LastTask_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionResource_LastTask_feature", "_UI_SolutionResource_type"),
+				 SchedulerPackage.Literals.SOLUTION_RESOURCE__LAST_TASK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 

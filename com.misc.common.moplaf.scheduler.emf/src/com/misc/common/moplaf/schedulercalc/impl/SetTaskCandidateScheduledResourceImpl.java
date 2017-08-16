@@ -110,44 +110,45 @@ public class SetTaskCandidateScheduledResourceImpl extends TaskPropagatorFunctio
 		return this.getConcreteParent();
 	}
 
-	private static Bindings previousTaskBindings = Bindings.constructBindings()
-			.addInboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE)
-			;
-
-	private static Bindings thisTaskBindings = Bindings.constructBindings()
-			.addInboundBinding (SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK)		
-			.addInboundBinding (SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK, previousTaskBindings)		
-			.addOutboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE)
-			;
+//	private static Bindings previousTaskBindings = Bindings.constructBindings()
+//			.addInboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE)
+//			;
+//
+//	private static Bindings thisTaskBindings = Bindings.constructBindings()
+//			.addInboundBinding (SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK)		
+//			.addInboundBinding (SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK, previousTaskBindings)		
+//			.addOutboundBinding(SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE)
+//			;
 		
-	@Override
-	public Bindings doGetBindings() {
-		return thisTaskBindings;
-	}
+//	@Override
+//	public Bindings doGetBindings() {
+//		return thisTaskBindings;
+//	}
 
 
 	@Override
 	public void doRefresh() {
-		SolutionTask task = this.getTask();
-		// unset
-		SolutionResource resource_asis = task.getCandidateScheduledResource();
-		if ( resource_asis!=null) {
-			resource_asis.getCandidateScheduledTasks().remove(task);
-		}
-		// set
-		SolutionResource resource_asfirst_tobe = task.getResourceAsCandidateFirstTask();
-		if ( resource_asfirst_tobe!=null) {
-			resource_asfirst_tobe.getCandidateScheduledTasks().add(0, task); // add as first
-		} else {
-			SolutionTask previous = task.getCandidatePreviousTask();
-			if ( previous!=null) {
-				SolutionResource resource_tobe = previous.getCandidateScheduledResource();
-				EList<SolutionTask> scheduled_tasks = resource_tobe.getCandidateScheduledTasks();
-				int insertion_point = scheduled_tasks.indexOf(previous);
-				resource_tobe.getCandidateScheduledTasks().add(insertion_point+1, task);
-			} else {
-				// task not scheduled, no scheduled resource
-			}
-		}
+		assert false; // no longer used
+//		SolutionTask task = this.getTask();
+//		// unset
+//		SolutionResource resource_asis = task.getCandidateScheduledResource();
+//		if ( resource_asis!=null) {
+//			resource_asis.getCandidateScheduledTasks().remove(task);
+//		}
+//		// set
+//		SolutionResource resource_asfirst_tobe = task.getResourceAsCandidateFirstTask();
+//		if ( resource_asfirst_tobe!=null) {
+//			resource_asfirst_tobe.getCandidateScheduledTasks().add(0, task); // add as first
+//		} else {
+//			SolutionTask previous = task.getCandidatePreviousTask();
+//			if ( previous!=null) {
+//				SolutionResource resource_tobe = previous.getCandidateScheduledResource();
+//				EList<SolutionTask> scheduled_tasks = resource_tobe.getCandidateScheduledTasks();
+//				int insertion_point = scheduled_tasks.indexOf(previous);
+//				resource_tobe.getCandidateScheduledTasks().add(insertion_point+1, task);
+//			} else {
+//				// task not scheduled, no scheduled resource
+//			}
+//		}
 	}
 } //SetTaskCandidateScheduledResourceImpl
