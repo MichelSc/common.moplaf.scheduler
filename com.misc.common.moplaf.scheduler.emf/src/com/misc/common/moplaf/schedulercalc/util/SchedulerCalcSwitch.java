@@ -117,21 +117,21 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE: {
-				SetTaskCandidateScheduledResourceScope setTaskCandidateScheduledResourceScope = (SetTaskCandidateScheduledResourceScope)theEObject;
-				T result = caseSetTaskCandidateScheduledResourceScope(setTaskCandidateScheduledResourceScope);
-				if (result == null) result = caseSolutionPropagatorFunction(setTaskCandidateScheduledResourceScope);
-				if (result == null) result = casePropagatorFunctionBindings(setTaskCandidateScheduledResourceScope);
-				if (result == null) result = casePropagatorFunction(setTaskCandidateScheduledResourceScope);
+			case SchedulerCalcPackage.SET_SCHEDULE_SCOPE: {
+				SetScheduleScope setScheduleScope = (SetScheduleScope)theEObject;
+				T result = caseSetScheduleScope(setScheduleScope);
+				if (result == null) result = caseSolutionPropagatorFunction(setScheduleScope);
+				if (result == null) result = casePropagatorFunctionBindings(setScheduleScope);
+				if (result == null) result = casePropagatorFunction(setScheduleScope);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE: {
-				SetTaskCandidateScheduledResource setTaskCandidateScheduledResource = (SetTaskCandidateScheduledResource)theEObject;
-				T result = caseSetTaskCandidateScheduledResource(setTaskCandidateScheduledResource);
-				if (result == null) result = caseTaskPropagatorFunction(setTaskCandidateScheduledResource);
-				if (result == null) result = casePropagatorFunctionBindings(setTaskCandidateScheduledResource);
-				if (result == null) result = casePropagatorFunction(setTaskCandidateScheduledResource);
+			case SchedulerCalcPackage.SET_TASK_SCHEDULE: {
+				SetTaskSchedule setTaskSchedule = (SetTaskSchedule)theEObject;
+				T result = caseSetTaskSchedule(setTaskSchedule);
+				if (result == null) result = caseTaskPropagatorFunction(setTaskSchedule);
+				if (result == null) result = casePropagatorFunctionBindings(setTaskSchedule);
+				if (result == null) result = casePropagatorFunction(setTaskSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -168,6 +168,15 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = caseResourceExpressionPropagatorFunction(setResourceExpressionCandidateValue);
 				if (result == null) result = casePropagatorFunctionBindings(setResourceExpressionCandidateValue);
 				if (result == null) result = casePropagatorFunction(setResourceExpressionCandidateValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerCalcPackage.SET_RESOURCE_SCHEDULE: {
+				SetResourceSchedule setResourceSchedule = (SetResourceSchedule)theEObject;
+				T result = caseSetResourceSchedule(setResourceSchedule);
+				if (result == null) result = caseResourcePropagatorFunction(setResourceSchedule);
+				if (result == null) result = casePropagatorFunctionBindings(setResourceSchedule);
+				if (result == null) result = casePropagatorFunction(setResourceSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -266,32 +275,32 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Set Task Candidate Scheduled Resource Scope</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Set Schedule Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Set Task Candidate Scheduled Resource Scope</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Set Schedule Scope</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSetTaskCandidateScheduledResourceScope(SetTaskCandidateScheduledResourceScope object) {
+	public T caseSetScheduleScope(SetScheduleScope object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Set Task Candidate Scheduled Resource</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Set Task Schedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Set Task Candidate Scheduled Resource</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Set Task Schedule</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSetTaskCandidateScheduledResource(SetTaskCandidateScheduledResource object) {
+	public T caseSetTaskSchedule(SetTaskSchedule object) {
 		return null;
 	}
 
@@ -352,6 +361,21 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSetResourceExpressionCandidateValue(SetResourceExpressionCandidateValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Resource Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Resource Schedule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetResourceSchedule(SetResourceSchedule object) {
 		return null;
 	}
 

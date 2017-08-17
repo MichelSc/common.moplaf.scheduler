@@ -6,6 +6,7 @@ import com.misc.common.moplaf.propagator2.PropagatorPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -179,13 +180,49 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION__PROPAGATOR_FUNCTIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Pending Candidate Move</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION__PENDING_CANDIDATE_MOVE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Set Candidate Move Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION__SET_CANDIDATE_MOVE_ENABLED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Reset Candidate Move Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION__RESET_CANDIDATE_MOVE_ENABLED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Accept Candidate Move Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION__ACCEPT_CANDIDATE_MOVE_ENABLED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Moves</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__MOVES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
+	int SOLUTION__MOVES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -194,7 +231,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
+	int SOLUTION__TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
@@ -203,7 +240,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__RESOURCES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
+	int SOLUTION__RESOURCES = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Move</b></em>' reference.
@@ -212,7 +249,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__CANDIDATE_MOVE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
+	int SOLUTION__CANDIDATE_MOVE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
@@ -221,7 +258,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
+	int SOLUTION__EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Solution Nr</b></em>' attribute.
@@ -230,7 +267,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__SOLUTION_NR = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
+	int SOLUTION__SOLUTION_NR = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Scheduler</b></em>' container reference.
@@ -239,7 +276,25 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION__SCHEDULER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+	int SOLUTION__SCHEDULER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION__NR_CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Solution</em>' class.
@@ -248,7 +303,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
+	int SOLUTION_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -278,49 +333,13 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Clone</em>' operation.
+	 * The operation id for the '<em>Initialize</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION___CLONE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Set Candidate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION___SET_CANDIDATE__MOVE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Reset Candidate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION___RESET_CANDIDATE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Accept Candidate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION___ACCEPT_CANDIDATE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Reset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION___RESET = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 4;
+	int SOLUTION___INITIALIZE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Construct Expressions</em>' operation.
@@ -329,7 +348,43 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION___CONSTRUCT_EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 5;
+	int SOLUTION___CONSTRUCT_EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Clone</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION___CLONE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Set Candidate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION___SET_CANDIDATE__MOVE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Reset Candidate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION___RESET_CANDIDATE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Accept Candidate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION___ACCEPT_CANDIDATE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Solution</em>' class.
@@ -360,76 +415,22 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_RESOURCE__PROPAGATOR_FUNCTIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Scheduled Tasks</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Candidate First Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Candidate Last Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__CANDIDATE_LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOLUTION_RESOURCE__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
-
-	/**
 	 * The feature id for the '<em><b>Solution</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__SOLUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
+	int SOLUTION_RESOURCE__SOLUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -438,16 +439,16 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
+	int SOLUTION_RESOURCE__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
+	int SOLUTION_RESOURCE__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
@@ -456,7 +457,16 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 10;
+	int SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>First Task</b></em>' reference.
@@ -465,7 +475,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 11;
+	int SOLUTION_RESOURCE__FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Last Task</b></em>' reference.
@@ -474,7 +484,52 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOLUTION_RESOURCE__LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
+	int SOLUTION_RESOURCE__LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Scheduled Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Candidate First Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Last Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__CANDIDATE_LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Expressions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE__EXPRESSIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Solution Resource</em>' class.
@@ -3965,6 +4020,16 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_INT_EXPRESSION_OPERATION_COUNT = CANDIDATE_INT_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '<em>Enabled Feedback</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.common.EnabledFeedback
+	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getEnabledFeedback()
+	 * @generated
+	 */
+	int ENABLED_FEEDBACK = 35;
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Scheduler <em>Scheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4147,6 +4212,82 @@ public interface SchedulerPackage extends EPackage {
 	EReference getSolution_Scheduler();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Solution#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Candidate Scheduled Tasks</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Solution#getNrCandidateScheduledTasks()
+	 * @see #getSolution()
+	 * @generated
+	 */
+	EAttribute getSolution_NrCandidateScheduledTasks();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Solution#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Scheduled Tasks</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Solution#getNrScheduledTasks()
+	 * @see #getSolution()
+	 * @generated
+	 */
+	EAttribute getSolution_NrScheduledTasks();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Solution#isPendingCandidateMove <em>Pending Candidate Move</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pending Candidate Move</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Solution#isPendingCandidateMove()
+	 * @see #getSolution()
+	 * @generated
+	 */
+	EAttribute getSolution_PendingCandidateMove();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Solution#getSetCandidateMoveEnabled <em>Set Candidate Move Enabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Set Candidate Move Enabled</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Solution#getSetCandidateMoveEnabled()
+	 * @see #getSolution()
+	 * @generated
+	 */
+	EAttribute getSolution_SetCandidateMoveEnabled();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Solution#getResetCandidateMoveEnabled <em>Reset Candidate Move Enabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reset Candidate Move Enabled</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Solution#getResetCandidateMoveEnabled()
+	 * @see #getSolution()
+	 * @generated
+	 */
+	EAttribute getSolution_ResetCandidateMoveEnabled();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Solution#getAcceptCandidateMoveEnabled <em>Accept Candidate Move Enabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Accept Candidate Move Enabled</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Solution#getAcceptCandidateMoveEnabled()
+	 * @see #getSolution()
+	 * @generated
+	 */
+	EAttribute getSolution_AcceptCandidateMoveEnabled();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#initialize() <em>Initialize</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Initialize</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Solution#initialize()
+	 * @generated
+	 */
+	EOperation getSolution__Initialize();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#clone() <em>Clone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4185,16 +4326,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSolution__AcceptCandidate();
-
-	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#reset() <em>Reset</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Reset</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Solution#reset()
-	 * @generated
-	 */
-	EOperation getSolution__Reset();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Solution#constructExpressions() <em>Construct Expressions</em>}' operation.
@@ -4945,6 +5076,17 @@ public interface SchedulerPackage extends EPackage {
 	EClass getSolutionCandidateIntExpression();
 
 	/**
+	 * Returns the meta object for data type '{@link com.misc.common.moplaf.common.EnabledFeedback <em>Enabled Feedback</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Enabled Feedback</em>'.
+	 * @see com.misc.common.moplaf.common.EnabledFeedback
+	 * @model instanceClass="com.misc.common.moplaf.common.EnabledFeedback"
+	 * @generated
+	 */
+	EDataType getEnabledFeedback();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.MoveChange <em>Move Change</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5307,6 +5449,62 @@ public interface SchedulerPackage extends EPackage {
 		EReference SOLUTION__SCHEDULER = eINSTANCE.getSolution_Scheduler();
 
 		/**
+		 * The meta object literal for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION__NR_CANDIDATE_SCHEDULED_TASKS = eINSTANCE.getSolution_NrCandidateScheduledTasks();
+
+		/**
+		 * The meta object literal for the '<em><b>Nr Scheduled Tasks</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION__NR_SCHEDULED_TASKS = eINSTANCE.getSolution_NrScheduledTasks();
+
+		/**
+		 * The meta object literal for the '<em><b>Pending Candidate Move</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION__PENDING_CANDIDATE_MOVE = eINSTANCE.getSolution_PendingCandidateMove();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Candidate Move Enabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION__SET_CANDIDATE_MOVE_ENABLED = eINSTANCE.getSolution_SetCandidateMoveEnabled();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Candidate Move Enabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION__RESET_CANDIDATE_MOVE_ENABLED = eINSTANCE.getSolution_ResetCandidateMoveEnabled();
+
+		/**
+		 * The meta object literal for the '<em><b>Accept Candidate Move Enabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOLUTION__ACCEPT_CANDIDATE_MOVE_ENABLED = eINSTANCE.getSolution_AcceptCandidateMoveEnabled();
+
+		/**
+		 * The meta object literal for the '<em><b>Initialize</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SOLUTION___INITIALIZE = eINSTANCE.getSolution__Initialize();
+
+		/**
 		 * The meta object literal for the '<em><b>Clone</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5337,14 +5535,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SOLUTION___ACCEPT_CANDIDATE = eINSTANCE.getSolution__AcceptCandidate();
-
-		/**
-		 * The meta object literal for the '<em><b>Reset</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SOLUTION___RESET = eINSTANCE.getSolution__Reset();
 
 		/**
 		 * The meta object literal for the '<em><b>Construct Expressions</b></em>' operation.
@@ -5961,6 +6151,16 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SOLUTION_CANDIDATE_INT_EXPRESSION = eINSTANCE.getSolutionCandidateIntExpression();
+
+		/**
+		 * The meta object literal for the '<em>Enabled Feedback</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.common.EnabledFeedback
+		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getEnabledFeedback()
+		 * @generated
+		 */
+		EDataType ENABLED_FEEDBACK = eINSTANCE.getEnabledFeedback();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveChangeImpl <em>Move Change</em>}' class.

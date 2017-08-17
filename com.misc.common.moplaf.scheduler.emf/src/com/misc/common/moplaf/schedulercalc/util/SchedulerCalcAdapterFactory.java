@@ -95,12 +95,12 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 				return createTaskExpressionPropagatorFunctionAdapter();
 			}
 			@Override
-			public Adapter caseSetTaskCandidateScheduledResourceScope(SetTaskCandidateScheduledResourceScope object) {
-				return createSetTaskCandidateScheduledResourceScopeAdapter();
+			public Adapter caseSetScheduleScope(SetScheduleScope object) {
+				return createSetScheduleScopeAdapter();
 			}
 			@Override
-			public Adapter caseSetTaskCandidateScheduledResource(SetTaskCandidateScheduledResource object) {
-				return createSetTaskCandidateScheduledResourceAdapter();
+			public Adapter caseSetTaskSchedule(SetTaskSchedule object) {
+				return createSetTaskScheduleAdapter();
 			}
 			@Override
 			public Adapter caseSetExpressionCandidateValueScope(SetExpressionCandidateValueScope object) {
@@ -117,6 +117,10 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSetResourceExpressionCandidateValue(SetResourceExpressionCandidateValue object) {
 				return createSetResourceExpressionCandidateValueAdapter();
+			}
+			@Override
+			public Adapter caseSetResourceSchedule(SetResourceSchedule object) {
+				return createSetResourceScheduleAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
@@ -231,30 +235,30 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope <em>Set Task Candidate Scheduled Resource Scope</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetScheduleScope <em>Set Schedule Scope</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope
+	 * @see com.misc.common.moplaf.schedulercalc.SetScheduleScope
 	 * @generated
 	 */
-	public Adapter createSetTaskCandidateScheduledResourceScopeAdapter() {
+	public Adapter createSetScheduleScopeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource <em>Set Task Candidate Scheduled Resource</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetTaskSchedule <em>Set Task Schedule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource
+	 * @see com.misc.common.moplaf.schedulercalc.SetTaskSchedule
 	 * @generated
 	 */
-	public Adapter createSetTaskCandidateScheduledResourceAdapter() {
+	public Adapter createSetTaskScheduleAdapter() {
 		return null;
 	}
 
@@ -311,6 +315,20 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSetResourceExpressionCandidateValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetResourceSchedule <em>Set Resource Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetResourceSchedule
+	 * @generated
+	 */
+	public Adapter createSetResourceScheduleAdapter() {
 		return null;
 	}
 

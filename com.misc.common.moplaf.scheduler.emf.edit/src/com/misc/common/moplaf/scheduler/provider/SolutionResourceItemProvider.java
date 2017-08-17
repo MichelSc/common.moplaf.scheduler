@@ -52,15 +52,15 @@ public class SolutionResourceItemProvider
 			super.getPropertyDescriptors(object);
 
 			addResourcePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
+			addNrCandidateScheduledTasksPropertyDescriptor(object);
 			addScheduledTasksPropertyDescriptor(object);
 			addFirstTaskPropertyDescriptor(object);
 			addLastTaskPropertyDescriptor(object);
+			addNrScheduledTasksPropertyDescriptor(object);
 			addCandidateScheduledTasksPropertyDescriptor(object);
 			addCandidateFirstTaskPropertyDescriptor(object);
 			addCandidateLastTaskPropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
-			addNrScheduledTasksPropertyDescriptor(object);
-			addNrCandidateScheduledTasksPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -354,10 +354,10 @@ public class SolutionResourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SolutionResource.class)) {
-			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
 			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:

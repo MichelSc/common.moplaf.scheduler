@@ -2008,14 +2008,14 @@ public interface SchedulerCalcPackage extends EPackage {
 	int TASK_EXPRESSION_PROPAGATOR_FUNCTION_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceScopeImpl <em>Set Task Candidate Scheduled Resource Scope</em>}' class.
+	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetScheduleScopeImpl <em>Set Schedule Scope</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceScopeImpl
-	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskCandidateScheduledResourceScope()
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SetScheduleScopeImpl
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetScheduleScope()
 	 * @generated
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE = 6;
+	int SET_SCHEDULE_SCOPE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2024,7 +2024,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__PARENT = SOLUTION_PROPAGATOR_FUNCTION__PARENT;
+	int SET_SCHEDULE_SCOPE__PARENT = SOLUTION_PROPAGATOR_FUNCTION__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
@@ -2033,7 +2033,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__ANTECEDENTS = SOLUTION_PROPAGATOR_FUNCTION__ANTECEDENTS;
+	int SET_SCHEDULE_SCOPE__ANTECEDENTS = SOLUTION_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
@@ -2042,7 +2042,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__ANTECEDENTS_SIBLING = SOLUTION_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+	int SET_SCHEDULE_SCOPE__ANTECEDENTS_SIBLING = SOLUTION_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -2051,7 +2051,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__TOUCHED = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED;
+	int SET_SCHEDULE_SCOPE__TOUCHED = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED;
 
 	/**
 	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
@@ -2060,7 +2060,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__TOUCHED_CHILDREN = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+	int SET_SCHEDULE_SCOPE__TOUCHED_CHILDREN = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
@@ -2069,7 +2069,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__TOUCHERS = SOLUTION_PROPAGATOR_FUNCTION__TOUCHERS;
+	int SET_SCHEDULE_SCOPE__TOUCHERS = SOLUTION_PROPAGATOR_FUNCTION__TOUCHERS;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -2078,7 +2078,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__ENABLED = SOLUTION_PROPAGATOR_FUNCTION__ENABLED;
+	int SET_SCHEDULE_SCOPE__ENABLED = SOLUTION_PROPAGATOR_FUNCTION__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
@@ -2087,7 +2087,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = SOLUTION_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+	int SET_SCHEDULE_SCOPE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = SOLUTION_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2096,7 +2096,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__TYPE = SOLUTION_PROPAGATOR_FUNCTION__TYPE;
+	int SET_SCHEDULE_SCOPE__TYPE = SOLUTION_PROPAGATOR_FUNCTION__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -2105,7 +2105,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__OBJECT = SOLUTION_PROPAGATOR_FUNCTION__OBJECT;
+	int SET_SCHEDULE_SCOPE__OBJECT = SOLUTION_PROPAGATOR_FUNCTION__OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -2114,7 +2114,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__INSTANCE = SOLUTION_PROPAGATOR_FUNCTION__INSTANCE;
+	int SET_SCHEDULE_SCOPE__INSTANCE = SOLUTION_PROPAGATOR_FUNCTION__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2123,7 +2123,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__DESCRIPTION = SOLUTION_PROPAGATOR_FUNCTION__DESCRIPTION;
+	int SET_SCHEDULE_SCOPE__DESCRIPTION = SOLUTION_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
@@ -2132,7 +2132,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__TOUCHED_PARENT = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+	int SET_SCHEDULE_SCOPE__TOUCHED_PARENT = SOLUTION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
@@ -2141,16 +2141,16 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE__SOLUTION = SOLUTION_PROPAGATOR_FUNCTION__SOLUTION;
+	int SET_SCHEDULE_SCOPE__SOLUTION = SOLUTION_PROPAGATOR_FUNCTION__SOLUTION;
 
 	/**
-	 * The number of structural features of the '<em>Set Task Candidate Scheduled Resource Scope</em>' class.
+	 * The number of structural features of the '<em>Set Schedule Scope</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE_FEATURE_COUNT = SOLUTION_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+	int SET_SCHEDULE_SCOPE_FEATURE_COUNT = SOLUTION_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -2159,7 +2159,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___INIT = SOLUTION_PROPAGATOR_FUNCTION___INIT;
+	int SET_SCHEDULE_SCOPE___INIT = SOLUTION_PROPAGATOR_FUNCTION___INIT;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -2168,7 +2168,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___ENABLE = SOLUTION_PROPAGATOR_FUNCTION___ENABLE;
+	int SET_SCHEDULE_SCOPE___ENABLE = SOLUTION_PROPAGATOR_FUNCTION___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -2177,7 +2177,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DISABLE = SOLUTION_PROPAGATOR_FUNCTION___DISABLE;
+	int SET_SCHEDULE_SCOPE___DISABLE = SOLUTION_PROPAGATOR_FUNCTION___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -2186,7 +2186,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___RESET = SOLUTION_PROPAGATOR_FUNCTION___RESET;
+	int SET_SCHEDULE_SCOPE___RESET = SOLUTION_PROPAGATOR_FUNCTION___RESET;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -2195,7 +2195,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___TOUCH__EOBJECT = SOLUTION_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+	int SET_SCHEDULE_SCOPE___TOUCH__EOBJECT = SOLUTION_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -2204,7 +2204,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___UNTOUCH = SOLUTION_PROPAGATOR_FUNCTION___UNTOUCH;
+	int SET_SCHEDULE_SCOPE___UNTOUCH = SOLUTION_PROPAGATOR_FUNCTION___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -2213,7 +2213,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_ANTECEDENTS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
+	int SET_SCHEDULE_SCOPE___REFRESH_ANTECEDENTS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2222,7 +2222,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
+	int SET_SCHEDULE_SCOPE___REFRESH_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2231,7 +2231,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+	int SET_SCHEDULE_SCOPE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2240,7 +2240,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH = SOLUTION_PROPAGATOR_FUNCTION___REFRESH;
+	int SET_SCHEDULE_SCOPE___REFRESH = SOLUTION_PROPAGATOR_FUNCTION___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2249,7 +2249,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___REFRESH__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
+	int SET_SCHEDULE_SCOPE___REFRESH__REFRESHER = SOLUTION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2258,7 +2258,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DO_GET_ANTECEDENTS = SOLUTION_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
+	int SET_SCHEDULE_SCOPE___DO_GET_ANTECEDENTS = SOLUTION_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -2267,7 +2267,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DO_GET_PARENT = SOLUTION_PROPAGATOR_FUNCTION___DO_GET_PARENT;
+	int SET_SCHEDULE_SCOPE___DO_GET_PARENT = SOLUTION_PROPAGATOR_FUNCTION___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2276,7 +2276,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DO_REFRESH = SOLUTION_PROPAGATOR_FUNCTION___DO_REFRESH;
+	int SET_SCHEDULE_SCOPE___DO_REFRESH = SOLUTION_PROPAGATOR_FUNCTION___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2285,7 +2285,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DO_REFRESH__EOBJECT = SOLUTION_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+	int SET_SCHEDULE_SCOPE___DO_REFRESH__EOBJECT = SOLUTION_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -2294,7 +2294,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___GET_SCOPE = SOLUTION_PROPAGATOR_FUNCTION___GET_SCOPE;
+	int SET_SCHEDULE_SCOPE___GET_SCOPE = SOLUTION_PROPAGATOR_FUNCTION___GET_SCOPE;
 
 	/**
 	 * The operation id for the '<em>Get Factory ID</em>' operation.
@@ -2303,7 +2303,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___GET_FACTORY_ID = SOLUTION_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
+	int SET_SCHEDULE_SCOPE___GET_FACTORY_ID = SOLUTION_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -2312,7 +2312,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DO_GET_BINDINGS = SOLUTION_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+	int SET_SCHEDULE_SCOPE___DO_GET_BINDINGS = SOLUTION_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
@@ -2321,26 +2321,26 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = SOLUTION_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+	int SET_SCHEDULE_SCOPE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = SOLUTION_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
-	 * The number of operations of the '<em>Set Task Candidate Scheduled Resource Scope</em>' class.
+	 * The number of operations of the '<em>Set Schedule Scope</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE_OPERATION_COUNT = SOLUTION_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
+	int SET_SCHEDULE_SCOPE_OPERATION_COUNT = SOLUTION_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceImpl <em>Set Task Candidate Scheduled Resource</em>}' class.
+	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetTaskScheduleImpl <em>Set Task Schedule</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceImpl
-	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskCandidateScheduledResource()
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SetTaskScheduleImpl
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskSchedule()
 	 * @generated
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE = 7;
+	int SET_TASK_SCHEDULE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2349,7 +2349,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__PARENT = TASK_PROPAGATOR_FUNCTION__PARENT;
+	int SET_TASK_SCHEDULE__PARENT = TASK_PROPAGATOR_FUNCTION__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
@@ -2358,7 +2358,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__ANTECEDENTS = TASK_PROPAGATOR_FUNCTION__ANTECEDENTS;
+	int SET_TASK_SCHEDULE__ANTECEDENTS = TASK_PROPAGATOR_FUNCTION__ANTECEDENTS;
 
 	/**
 	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
@@ -2367,7 +2367,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__ANTECEDENTS_SIBLING = TASK_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+	int SET_TASK_SCHEDULE__ANTECEDENTS_SIBLING = TASK_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
 
 	/**
 	 * The feature id for the '<em><b>Touched</b></em>' attribute.
@@ -2376,7 +2376,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TOUCHED = TASK_PROPAGATOR_FUNCTION__TOUCHED;
+	int SET_TASK_SCHEDULE__TOUCHED = TASK_PROPAGATOR_FUNCTION__TOUCHED;
 
 	/**
 	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
@@ -2385,7 +2385,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TOUCHED_CHILDREN = TASK_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+	int SET_TASK_SCHEDULE__TOUCHED_CHILDREN = TASK_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
@@ -2394,7 +2394,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TOUCHERS = TASK_PROPAGATOR_FUNCTION__TOUCHERS;
+	int SET_TASK_SCHEDULE__TOUCHERS = TASK_PROPAGATOR_FUNCTION__TOUCHERS;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -2403,7 +2403,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__ENABLED = TASK_PROPAGATOR_FUNCTION__ENABLED;
+	int SET_TASK_SCHEDULE__ENABLED = TASK_PROPAGATOR_FUNCTION__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
@@ -2412,7 +2412,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TASK_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+	int SET_TASK_SCHEDULE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = TASK_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2421,7 +2421,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TYPE = TASK_PROPAGATOR_FUNCTION__TYPE;
+	int SET_TASK_SCHEDULE__TYPE = TASK_PROPAGATOR_FUNCTION__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -2430,7 +2430,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__OBJECT = TASK_PROPAGATOR_FUNCTION__OBJECT;
+	int SET_TASK_SCHEDULE__OBJECT = TASK_PROPAGATOR_FUNCTION__OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -2439,7 +2439,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__INSTANCE = TASK_PROPAGATOR_FUNCTION__INSTANCE;
+	int SET_TASK_SCHEDULE__INSTANCE = TASK_PROPAGATOR_FUNCTION__INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2448,7 +2448,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__DESCRIPTION = TASK_PROPAGATOR_FUNCTION__DESCRIPTION;
+	int SET_TASK_SCHEDULE__DESCRIPTION = TASK_PROPAGATOR_FUNCTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
@@ -2457,7 +2457,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TOUCHED_PARENT = TASK_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+	int SET_TASK_SCHEDULE__TOUCHED_PARENT = TASK_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -2466,7 +2466,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__TASK = TASK_PROPAGATOR_FUNCTION__TASK;
+	int SET_TASK_SCHEDULE__TASK = TASK_PROPAGATOR_FUNCTION__TASK;
 
 	/**
 	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
@@ -2475,16 +2475,16 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__CONCRETE_PARENT = TASK_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+	int SET_TASK_SCHEDULE__CONCRETE_PARENT = TASK_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Set Task Candidate Scheduled Resource</em>' class.
+	 * The number of structural features of the '<em>Set Task Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_FEATURE_COUNT = TASK_PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+	int SET_TASK_SCHEDULE_FEATURE_COUNT = TASK_PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -2493,7 +2493,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___INIT = TASK_PROPAGATOR_FUNCTION___INIT;
+	int SET_TASK_SCHEDULE___INIT = TASK_PROPAGATOR_FUNCTION___INIT;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -2502,7 +2502,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___ENABLE = TASK_PROPAGATOR_FUNCTION___ENABLE;
+	int SET_TASK_SCHEDULE___ENABLE = TASK_PROPAGATOR_FUNCTION___ENABLE;
 
 	/**
 	 * The operation id for the '<em>Disable</em>' operation.
@@ -2511,7 +2511,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DISABLE = TASK_PROPAGATOR_FUNCTION___DISABLE;
+	int SET_TASK_SCHEDULE___DISABLE = TASK_PROPAGATOR_FUNCTION___DISABLE;
 
 	/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -2520,7 +2520,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___RESET = TASK_PROPAGATOR_FUNCTION___RESET;
+	int SET_TASK_SCHEDULE___RESET = TASK_PROPAGATOR_FUNCTION___RESET;
 
 	/**
 	 * The operation id for the '<em>Touch</em>' operation.
@@ -2529,7 +2529,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___TOUCH__EOBJECT = TASK_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+	int SET_TASK_SCHEDULE___TOUCH__EOBJECT = TASK_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Untouch</em>' operation.
@@ -2538,7 +2538,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___UNTOUCH = TASK_PROPAGATOR_FUNCTION___UNTOUCH;
+	int SET_TASK_SCHEDULE___UNTOUCH = TASK_PROPAGATOR_FUNCTION___UNTOUCH;
 
 	/**
 	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
@@ -2547,7 +2547,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_ANTECEDENTS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
+	int SET_TASK_SCHEDULE___REFRESH_ANTECEDENTS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh This</em>' operation.
@@ -2556,7 +2556,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_THIS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
+	int SET_TASK_SCHEDULE___REFRESH_THIS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh Children And This</em>' operation.
@@ -2565,7 +2565,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH_CHILDREN_AND_THIS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+	int SET_TASK_SCHEDULE___REFRESH_CHILDREN_AND_THIS__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2574,7 +2574,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH = TASK_PROPAGATOR_FUNCTION___REFRESH;
+	int SET_TASK_SCHEDULE___REFRESH = TASK_PROPAGATOR_FUNCTION___REFRESH;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -2583,7 +2583,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___REFRESH__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
+	int SET_TASK_SCHEDULE___REFRESH__REFRESHER = TASK_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
 
 	/**
 	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
@@ -2592,7 +2592,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DO_GET_ANTECEDENTS = TASK_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
+	int SET_TASK_SCHEDULE___DO_GET_ANTECEDENTS = TASK_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
 
 	/**
 	 * The operation id for the '<em>Do Get Parent</em>' operation.
@@ -2601,7 +2601,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DO_GET_PARENT = TASK_PROPAGATOR_FUNCTION___DO_GET_PARENT;
+	int SET_TASK_SCHEDULE___DO_GET_PARENT = TASK_PROPAGATOR_FUNCTION___DO_GET_PARENT;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2610,7 +2610,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DO_REFRESH = TASK_PROPAGATOR_FUNCTION___DO_REFRESH;
+	int SET_TASK_SCHEDULE___DO_REFRESH = TASK_PROPAGATOR_FUNCTION___DO_REFRESH;
 
 	/**
 	 * The operation id for the '<em>Do Refresh</em>' operation.
@@ -2619,7 +2619,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DO_REFRESH__EOBJECT = TASK_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+	int SET_TASK_SCHEDULE___DO_REFRESH__EOBJECT = TASK_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
 
 	/**
 	 * The operation id for the '<em>Get Scope</em>' operation.
@@ -2628,7 +2628,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___GET_SCOPE = TASK_PROPAGATOR_FUNCTION___GET_SCOPE;
+	int SET_TASK_SCHEDULE___GET_SCOPE = TASK_PROPAGATOR_FUNCTION___GET_SCOPE;
 
 	/**
 	 * The operation id for the '<em>Get Factory ID</em>' operation.
@@ -2637,7 +2637,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___GET_FACTORY_ID = TASK_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
+	int SET_TASK_SCHEDULE___GET_FACTORY_ID = TASK_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
 
 	/**
 	 * The operation id for the '<em>Do Get Bindings</em>' operation.
@@ -2646,7 +2646,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DO_GET_BINDINGS = TASK_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+	int SET_TASK_SCHEDULE___DO_GET_BINDINGS = TASK_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
 
 	/**
 	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
@@ -2655,17 +2655,16 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TASK_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+	int SET_TASK_SCHEDULE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = TASK_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
 
 	/**
-	 * The number of operations of the '<em>Set Task Candidate Scheduled Resource</em>' class.
+	 * The number of operations of the '<em>Set Task Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_OPERATION_COUNT = TASK_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
-
+	int SET_TASK_SCHEDULE_OPERATION_COUNT = TASK_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetExpressionCandidateValueScopeImpl <em>Set Expression Candidate Value Scope</em>}' class.
@@ -3996,6 +3995,341 @@ public interface SchedulerCalcPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetResourceScheduleImpl <em>Set Resource Schedule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SetResourceScheduleImpl
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetResourceSchedule()
+	 * @generated
+	 */
+	int SET_RESOURCE_SCHEDULE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__PARENT = RESOURCE_PROPAGATOR_FUNCTION__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__ANTECEDENTS = RESOURCE_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__ANTECEDENTS_SIBLING = RESOURCE_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__TOUCHED = RESOURCE_PROPAGATOR_FUNCTION__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__TOUCHED_CHILDREN = RESOURCE_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__TOUCHERS = RESOURCE_PROPAGATOR_FUNCTION__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__ENABLED = RESOURCE_PROPAGATOR_FUNCTION__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = RESOURCE_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__TYPE = RESOURCE_PROPAGATOR_FUNCTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__OBJECT = RESOURCE_PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__INSTANCE = RESOURCE_PROPAGATOR_FUNCTION__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__DESCRIPTION = RESOURCE_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__TOUCHED_PARENT = RESOURCE_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__RESOURCE = RESOURCE_PROPAGATOR_FUNCTION__RESOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE__CONCRETE_PARENT = RESOURCE_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Set Resource Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE_FEATURE_COUNT = RESOURCE_PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___INIT = RESOURCE_PROPAGATOR_FUNCTION___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___ENABLE = RESOURCE_PROPAGATOR_FUNCTION___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DISABLE = RESOURCE_PROPAGATOR_FUNCTION___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___RESET = RESOURCE_PROPAGATOR_FUNCTION___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___TOUCH__EOBJECT = RESOURCE_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___UNTOUCH = RESOURCE_PROPAGATOR_FUNCTION___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___REFRESH_ANTECEDENTS__REFRESHER = RESOURCE_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___REFRESH_THIS__REFRESHER = RESOURCE_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___REFRESH_CHILDREN_AND_THIS__REFRESHER = RESOURCE_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___REFRESH = RESOURCE_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___REFRESH__REFRESHER = RESOURCE_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DO_GET_ANTECEDENTS = RESOURCE_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DO_GET_PARENT = RESOURCE_PROPAGATOR_FUNCTION___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DO_REFRESH = RESOURCE_PROPAGATOR_FUNCTION___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DO_REFRESH__EOBJECT = RESOURCE_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___GET_SCOPE = RESOURCE_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___GET_FACTORY_ID = RESOURCE_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DO_GET_BINDINGS = RESOURCE_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = RESOURCE_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Set Resource Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_RESOURCE_SCHEDULE_OPERATION_COUNT = RESOURCE_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SolutionPropagatorFunction <em>Solution Propagator Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4122,35 +4456,35 @@ public interface SchedulerCalcPackage extends EPackage {
 	EReference getTaskExpressionPropagatorFunction_TaskExpression();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope <em>Set Task Candidate Scheduled Resource Scope</em>}'.
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetScheduleScope <em>Set Schedule Scope</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Set Task Candidate Scheduled Resource Scope</em>'.
-	 * @see com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope
+	 * @return the meta object for class '<em>Set Schedule Scope</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetScheduleScope
 	 * @generated
 	 */
-	EClass getSetTaskCandidateScheduledResourceScope();
+	EClass getSetScheduleScope();
 
 	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource <em>Set Task Candidate Scheduled Resource</em>}'.
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetTaskSchedule <em>Set Task Schedule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Set Task Candidate Scheduled Resource</em>'.
-	 * @see com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource
+	 * @return the meta object for class '<em>Set Task Schedule</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetTaskSchedule
 	 * @generated
 	 */
-	EClass getSetTaskCandidateScheduledResource();
+	EClass getSetTaskSchedule();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource#getConcreteParent <em>Concrete Parent</em>}'.
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.schedulercalc.SetTaskSchedule#getConcreteParent <em>Concrete Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
-	 * @see com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource#getConcreteParent()
-	 * @see #getSetTaskCandidateScheduledResource()
+	 * @see com.misc.common.moplaf.schedulercalc.SetTaskSchedule#getConcreteParent()
+	 * @see #getSetTaskSchedule()
 	 * @generated
 	 */
-	EReference getSetTaskCandidateScheduledResource_ConcreteParent();
+	EReference getSetTaskSchedule_ConcreteParent();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope <em>Set Expression Candidate Value Scope</em>}'.
@@ -4224,6 +4558,27 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSetResourceExpressionCandidateValue_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetResourceSchedule <em>Set Resource Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Set Resource Schedule</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetResourceSchedule
+	 * @generated
+	 */
+	EClass getSetResourceSchedule();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.schedulercalc.SetResourceSchedule#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetResourceSchedule#getConcreteParent()
+	 * @see #getSetResourceSchedule()
+	 * @generated
+	 */
+	EReference getSetResourceSchedule_ConcreteParent();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4357,24 +4712,24 @@ public interface SchedulerCalcPackage extends EPackage {
 		EReference TASK_EXPRESSION_PROPAGATOR_FUNCTION__TASK_EXPRESSION = eINSTANCE.getTaskExpressionPropagatorFunction_TaskExpression();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceScopeImpl <em>Set Task Candidate Scheduled Resource Scope</em>}' class.
+		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetScheduleScopeImpl <em>Set Schedule Scope</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceScopeImpl
-		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskCandidateScheduledResourceScope()
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SetScheduleScopeImpl
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetScheduleScope()
 		 * @generated
 		 */
-		EClass SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE = eINSTANCE.getSetTaskCandidateScheduledResourceScope();
+		EClass SET_SCHEDULE_SCOPE = eINSTANCE.getSetScheduleScope();
 
 		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceImpl <em>Set Task Candidate Scheduled Resource</em>}' class.
+		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetTaskScheduleImpl <em>Set Task Schedule</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.schedulercalc.impl.SetTaskCandidateScheduledResourceImpl
-		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskCandidateScheduledResource()
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SetTaskScheduleImpl
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskSchedule()
 		 * @generated
 		 */
-		EClass SET_TASK_CANDIDATE_SCHEDULED_RESOURCE = eINSTANCE.getSetTaskCandidateScheduledResource();
+		EClass SET_TASK_SCHEDULE = eINSTANCE.getSetTaskSchedule();
 
 		/**
 		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
@@ -4382,7 +4737,7 @@ public interface SchedulerCalcPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__CONCRETE_PARENT = eINSTANCE.getSetTaskCandidateScheduledResource_ConcreteParent();
+		EReference SET_TASK_SCHEDULE__CONCRETE_PARENT = eINSTANCE.getSetTaskSchedule_ConcreteParent();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetExpressionCandidateValueScopeImpl <em>Set Expression Candidate Value Scope</em>}' class.
@@ -4447,6 +4802,24 @@ public interface SchedulerCalcPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT = eINSTANCE.getSetResourceExpressionCandidateValue_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetResourceScheduleImpl <em>Set Resource Schedule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SetResourceScheduleImpl
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetResourceSchedule()
+		 * @generated
+		 */
+		EClass SET_RESOURCE_SCHEDULE = eINSTANCE.getSetResourceSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SET_RESOURCE_SCHEDULE__CONCRETE_PARENT = eINSTANCE.getSetResourceSchedule_ConcreteParent();
 
 	}
 

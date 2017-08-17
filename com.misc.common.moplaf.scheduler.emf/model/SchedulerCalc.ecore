@@ -33,12 +33,11 @@
         eType="ecore:EClass scheduler.ecore#//TaskExpression" changeable="false" volatile="true"
         transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SetTaskCandidateScheduledResourceScope"
-      eSuperTypes="#//SolutionPropagatorFunction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SetTaskCandidateScheduledResource" eSuperTypes="#//TaskPropagatorFunction">
+  <eClassifiers xsi:type="ecore:EClass" name="SetScheduleScope" eSuperTypes="#//SolutionPropagatorFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetTaskSchedule" eSuperTypes="#//TaskPropagatorFunction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
-        eType="#//SetTaskCandidateScheduledResourceScope" changeable="false" volatile="true"
-        transient="true" derived="true"/>
+        eType="#//SetScheduleScope" changeable="false" volatile="true" transient="true"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetExpressionCandidateValueScope" eSuperTypes="#//SolutionPropagatorFunction"/>
   <eClassifiers xsi:type="ecore:EClass" name="SetTaskExpressionCandidateValue" eSuperTypes="#//TaskExpressionPropagatorFunction">
@@ -57,5 +56,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
         eType="#//SetExpressionCandidateValueScope" changeable="false" volatile="true"
         transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetResourceSchedule" eSuperTypes="#//ResourcePropagatorFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//SetScheduleScope" changeable="false" volatile="true" transient="true"
+        derived="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -75,17 +75,6 @@ public class ResourceExpressionPropagatorFunctionItemProvider extends Propagator
 	}
 
 	/**
-	 * This returns ResourceExpressionPropagatorFunction.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ResourceExpressionPropagatorFunction"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class ResourceExpressionPropagatorFunctionItemProvider extends Propagator
 	 */
 	@Override
 	public String getText(Object object) {
-		ResourceExpressionPropagatorFunction resourceExpressionPropagatorFunction = (ResourceExpressionPropagatorFunction)object;
-		return getString("_UI_ResourceExpressionPropagatorFunction_type") + " " + resourceExpressionPropagatorFunction.isTouched();
+		String label = ((ResourceExpressionPropagatorFunction)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ResourceExpressionPropagatorFunction_type") :
+			getString("_UI_ResourceExpressionPropagatorFunction_type") + " " + label;
 	}
 	
 

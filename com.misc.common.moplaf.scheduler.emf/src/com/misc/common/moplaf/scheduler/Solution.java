@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler;
 
+import com.misc.common.moplaf.common.EnabledFeedback;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import org.eclipse.emf.common.util.EList;
 
@@ -19,6 +20,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Solution#isPendingCandidateMove <em>Pending Candidate Move</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getSetCandidateMoveEnabled <em>Set Candidate Move Enabled</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getResetCandidateMoveEnabled <em>Reset Candidate Move Enabled</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getAcceptCandidateMoveEnabled <em>Accept Candidate Move Enabled</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getMoves <em>Moves</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getResources <em>Resources</em>}</li>
@@ -26,6 +31,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getSolutionNr <em>Solution Nr</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getScheduler <em>Scheduler</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Solution#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution()
@@ -184,6 +191,141 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	void setScheduler(Scheduler value);
 
 	/**
+	 * Returns the value of the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Candidate Scheduled Tasks</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
+	 * @see #setNrCandidateScheduledTasks(int)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_NrCandidateScheduledTasks()
+	 * @model
+	 * @generated
+	 */
+	int getNrCandidateScheduledTasks();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Solution#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
+	 * @see #getNrCandidateScheduledTasks()
+	 * @generated
+	 */
+	void setNrCandidateScheduledTasks(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Scheduled Tasks</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Scheduled Tasks</em>' attribute.
+	 * @see #setNrScheduledTasks(int)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_NrScheduledTasks()
+	 * @model
+	 * @generated
+	 */
+	int getNrScheduledTasks();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Solution#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Scheduled Tasks</em>' attribute.
+	 * @see #getNrScheduledTasks()
+	 * @generated
+	 */
+	void setNrScheduledTasks(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Pending Candidate Move</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pending Candidate Move</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pending Candidate Move</em>' attribute.
+	 * @see #setPendingCandidateMove(boolean)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_PendingCandidateMove()
+	 * @model
+	 * @generated
+	 */
+	boolean isPendingCandidateMove();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Solution#isPendingCandidateMove <em>Pending Candidate Move</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pending Candidate Move</em>' attribute.
+	 * @see #isPendingCandidateMove()
+	 * @generated
+	 */
+	void setPendingCandidateMove(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Set Candidate Move Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Set Candidate Move Enabled</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Set Candidate Move Enabled</em>' attribute.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_SetCandidateMoveEnabled()
+	 * @model dataType="com.misc.common.moplaf.scheduler.EnabledFeedback" transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	EnabledFeedback getSetCandidateMoveEnabled();
+
+	/**
+	 * Returns the value of the '<em><b>Reset Candidate Move Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Reset Candidate Move Enabled</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Candidate Move Enabled</em>' attribute.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_ResetCandidateMoveEnabled()
+	 * @model dataType="com.misc.common.moplaf.scheduler.EnabledFeedback" transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	EnabledFeedback getResetCandidateMoveEnabled();
+
+	/**
+	 * Returns the value of the '<em><b>Accept Candidate Move Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Accept Candidate Move Enabled</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accept Candidate Move Enabled</em>' attribute.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolution_AcceptCandidateMoveEnabled()
+	 * @model dataType="com.misc.common.moplaf.scheduler.EnabledFeedback" transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	EnabledFeedback getAcceptCandidateMoveEnabled();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Initialiaze the solution to the zero solution (no Task is scheduled)
+	 * 
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initialize();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -227,18 +369,6 @@ public interface Solution extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void acceptCandidate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Initialiaze the solution to the zero solution (no Task is scheduled)
-	 * 
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	void reset();
 
 	/**
 	 * <!-- begin-user-doc -->

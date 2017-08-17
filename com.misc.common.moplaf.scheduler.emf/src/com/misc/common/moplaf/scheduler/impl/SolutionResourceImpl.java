@@ -33,19 +33,19 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getSolution <em>Solution</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getResource <em>Resource</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getScheduledTasks <em>Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getFirstTask <em>First Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getLastTask <em>Last Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getCandidateScheduledTasks <em>Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getCandidateFirstTask <em>Candidate First Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getCandidateLastTask <em>Candidate Last Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getExpressions <em>Expressions</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getSolution <em>Solution</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getName <em>Name</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getFirstTask <em>First Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionResourceImpl#getLastTask <em>Last Task</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,46 +60,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @ordered
 	 */
 	protected EObject resource;
-
-	/**
-	 * The cached value of the '{@link #getCandidateFirstTask() <em>Candidate First Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCandidateFirstTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected SolutionTask candidateFirstTask;
-
-	/**
-	 * The cached value of the '{@link #getCandidateLastTask() <em>Candidate Last Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCandidateLastTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected SolutionTask candidateLastTask;
-
-	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpressions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CandidateValueExpression> expressions;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -122,24 +82,14 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNrScheduledTasks()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NR_SCHEDULED_TASKS_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNrScheduledTasks()
-	 * @generated
-	 * @ordered
-	 */
-	protected int nrScheduledTasks = NR_SCHEDULED_TASKS_EDEFAULT;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getNrCandidateScheduledTasks() <em>Nr Candidate Scheduled Tasks</em>}' attribute.
@@ -180,6 +130,56 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	 * @ordered
 	 */
 	protected SolutionTask lastTask;
+
+	/**
+	 * The default value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_SCHEDULED_TASKS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nrScheduledTasks = NR_SCHEDULED_TASKS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCandidateFirstTask() <em>Candidate First Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCandidateFirstTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected SolutionTask candidateFirstTask;
+
+	/**
+	 * The cached value of the '{@link #getCandidateLastTask() <em>Candidate Last Task</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCandidateLastTask()
+	 * @generated
+	 * @ordered
+	 */
+	protected SolutionTask candidateLastTask;
+
+	/**
+	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpressions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CandidateValueExpression> expressions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -614,11 +614,27 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
+				return getSolution();
 			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
 				if (resolve) return getResource();
 				return basicGetResource();
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				return getName();
+			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
+				return getDescription();
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				return getNrCandidateScheduledTasks();
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
 				return getScheduledTasks();
+			case SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK:
+				if (resolve) return getFirstTask();
+				return basicGetFirstTask();
+			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
+				if (resolve) return getLastTask();
+				return basicGetLastTask();
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				return getNrScheduledTasks();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
 				return getCandidateScheduledTasks();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
@@ -629,22 +645,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return basicGetCandidateLastTask();
 			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
 				return getExpressions();
-			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
-				return getDescription();
-			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
-				return getSolution();
-			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
-				return getName();
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
-				return getNrScheduledTasks();
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
-				return getNrCandidateScheduledTasks();
-			case SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK:
-				if (resolve) return getFirstTask();
-				return basicGetFirstTask();
-			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
-				if (resolve) return getLastTask();
-				return basicGetLastTask();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -658,8 +658,26 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
+				setSolution((Solution)newValue);
+				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
 				setResource((EObject)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				setName((String)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				setNrCandidateScheduledTasks((Integer)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK:
+				setFirstTask((SolutionTask)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
+				setLastTask((SolutionTask)newValue);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				setNrScheduledTasks((Integer)newValue);
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
 				setCandidateFirstTask((SolutionTask)newValue);
@@ -670,24 +688,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
 				getExpressions().clear();
 				getExpressions().addAll((Collection<? extends CandidateValueExpression>)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
-				setSolution((Solution)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
-				setName((String)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
-				setNrScheduledTasks((Integer)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
-				setNrCandidateScheduledTasks((Integer)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK:
-				setFirstTask((SolutionTask)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
-				setLastTask((SolutionTask)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -701,26 +701,14 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
-				setResource((EObject)null);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
-				setCandidateFirstTask((SolutionTask)null);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK:
-				setCandidateLastTask((SolutionTask)null);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
-				getExpressions().clear();
-				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
 				setSolution((Solution)null);
 				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
+				setResource((EObject)null);
+				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
 				setName(NAME_EDEFAULT);
-				return;
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
-				setNrScheduledTasks(NR_SCHEDULED_TASKS_EDEFAULT);
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
 				setNrCandidateScheduledTasks(NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT);
@@ -730,6 +718,18 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return;
 			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
 				setLastTask((SolutionTask)null);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				setNrScheduledTasks(NR_SCHEDULED_TASKS_EDEFAULT);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
+				setCandidateFirstTask((SolutionTask)null);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK:
+				setCandidateLastTask((SolutionTask)null);
+				return;
+			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
+				getExpressions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -743,10 +743,24 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
+				return getSolution() != null;
 			case SchedulerPackage.SOLUTION_RESOURCE__RESOURCE:
 				return resource != null;
+			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+				return nrCandidateScheduledTasks != NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT;
 			case SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS:
 				return !getScheduledTasks().isEmpty();
+			case SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK:
+				return firstTask != null;
+			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
+				return lastTask != null;
+			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
+				return nrScheduledTasks != NR_SCHEDULED_TASKS_EDEFAULT;
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS:
 				return !getCandidateScheduledTasks().isEmpty();
 			case SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK:
@@ -755,20 +769,6 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 				return candidateLastTask != null;
 			case SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS:
 				return expressions != null && !expressions.isEmpty();
-			case SchedulerPackage.SOLUTION_RESOURCE__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
-			case SchedulerPackage.SOLUTION_RESOURCE__SOLUTION:
-				return getSolution() != null;
-			case SchedulerPackage.SOLUTION_RESOURCE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_SCHEDULED_TASKS:
-				return nrScheduledTasks != NR_SCHEDULED_TASKS_EDEFAULT;
-			case SchedulerPackage.SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
-				return nrCandidateScheduledTasks != NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT;
-			case SchedulerPackage.SOLUTION_RESOURCE__FIRST_TASK:
-				return firstTask != null;
-			case SchedulerPackage.SOLUTION_RESOURCE__LAST_TASK:
-				return lastTask != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -800,10 +800,10 @@ public class SolutionResourceImpl extends ObjectWithPropagatorFunctionsImpl impl
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", NrScheduledTasks: ");
-		result.append(nrScheduledTasks);
 		result.append(", NrCandidateScheduledTasks: ");
 		result.append(nrCandidateScheduledTasks);
+		result.append(", NrScheduledTasks: ");
+		result.append(nrScheduledTasks);
 		result.append(')');
 		return result.toString();
 	}

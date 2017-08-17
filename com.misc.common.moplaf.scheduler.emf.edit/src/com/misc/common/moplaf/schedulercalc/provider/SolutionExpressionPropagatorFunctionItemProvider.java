@@ -75,17 +75,6 @@ public class SolutionExpressionPropagatorFunctionItemProvider extends Propagator
 	}
 
 	/**
-	 * This returns SolutionExpressionPropagatorFunction.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SolutionExpressionPropagatorFunction"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class SolutionExpressionPropagatorFunctionItemProvider extends Propagator
 	 */
 	@Override
 	public String getText(Object object) {
-		SolutionExpressionPropagatorFunction solutionExpressionPropagatorFunction = (SolutionExpressionPropagatorFunction)object;
-		return getString("_UI_SolutionExpressionPropagatorFunction_type") + " " + solutionExpressionPropagatorFunction.isTouched();
+		String label = ((SolutionExpressionPropagatorFunction)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SolutionExpressionPropagatorFunction_type") :
+			getString("_UI_SolutionExpressionPropagatorFunction_type") + " " + label;
 	}
 	
 

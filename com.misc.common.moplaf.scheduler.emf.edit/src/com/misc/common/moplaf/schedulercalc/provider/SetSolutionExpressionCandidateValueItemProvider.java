@@ -71,17 +71,6 @@ public class SetSolutionExpressionCandidateValueItemProvider extends SolutionExp
 	}
 
 	/**
-	 * This returns SetSolutionExpressionCandidateValue.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SetSolutionExpressionCandidateValue"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,8 +78,10 @@ public class SetSolutionExpressionCandidateValueItemProvider extends SolutionExp
 	 */
 	@Override
 	public String getText(Object object) {
-		SetSolutionExpressionCandidateValue setSolutionExpressionCandidateValue = (SetSolutionExpressionCandidateValue)object;
-		return getString("_UI_SetSolutionExpressionCandidateValue_type") + " " + setSolutionExpressionCandidateValue.isTouched();
+		String label = ((SetSolutionExpressionCandidateValue)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SetSolutionExpressionCandidateValue_type") :
+			getString("_UI_SetSolutionExpressionCandidateValue_type") + " " + label;
 	}
 	
 

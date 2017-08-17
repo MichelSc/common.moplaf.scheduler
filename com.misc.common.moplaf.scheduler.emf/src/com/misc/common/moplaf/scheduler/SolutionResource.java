@@ -16,19 +16,19 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getSolution <em>Solution</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getResource <em>Resource</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getScheduledTasks <em>Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getFirstTask <em>First Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getLastTask <em>Last Task</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateScheduledTasks <em>Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateFirstTask <em>Candidate First Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getCandidateLastTask <em>Candidate Last Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getSolution <em>Solution</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getName <em>Name</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getFirstTask <em>First Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.SolutionResource#getLastTask <em>Last Task</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSolutionResource()

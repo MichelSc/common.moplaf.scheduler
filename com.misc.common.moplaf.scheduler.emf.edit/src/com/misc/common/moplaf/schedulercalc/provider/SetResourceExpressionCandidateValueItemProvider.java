@@ -71,17 +71,6 @@ public class SetResourceExpressionCandidateValueItemProvider extends ResourceExp
 	}
 
 	/**
-	 * This returns SetResourceExpressionCandidateValue.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SetResourceExpressionCandidateValue"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,8 +78,10 @@ public class SetResourceExpressionCandidateValueItemProvider extends ResourceExp
 	 */
 	@Override
 	public String getText(Object object) {
-		SetResourceExpressionCandidateValue setResourceExpressionCandidateValue = (SetResourceExpressionCandidateValue)object;
-		return getString("_UI_SetResourceExpressionCandidateValue_type") + " " + setResourceExpressionCandidateValue.isTouched();
+		String label = ((SetResourceExpressionCandidateValue)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SetResourceExpressionCandidateValue_type") :
+			getString("_UI_SetResourceExpressionCandidateValue_type") + " " + label;
 	}
 	
 

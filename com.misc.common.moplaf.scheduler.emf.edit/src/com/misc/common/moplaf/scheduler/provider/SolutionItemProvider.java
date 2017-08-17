@@ -4,6 +4,7 @@ package com.misc.common.moplaf.scheduler.provider;
 
 import com.misc.common.moplaf.emf.edit.command.AcceptCommand;
 import com.misc.common.moplaf.emf.edit.command.CloneCommand;
+import com.misc.common.moplaf.emf.edit.command.InitializeCommand;
 import com.misc.common.moplaf.emf.edit.command.ResetCommand;
 import com.misc.common.moplaf.propagator2.provider.ObjectWithPropagatorFunctionsItemProvider;
 import com.misc.common.moplaf.scheduler.Move;
@@ -60,8 +61,14 @@ public class SolutionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPendingCandidateMovePropertyDescriptor(object);
+			addSetCandidateMoveEnabledPropertyDescriptor(object);
+			addResetCandidateMoveEnabledPropertyDescriptor(object);
+			addAcceptCandidateMoveEnabledPropertyDescriptor(object);
 			addCandidateMovePropertyDescriptor(object);
 			addSolutionNrPropertyDescriptor(object);
+			addNrCandidateScheduledTasksPropertyDescriptor(object);
+			addNrScheduledTasksPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,7 +91,7 @@ public class SolutionItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 
@@ -107,6 +114,138 @@ public class SolutionItemProvider
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 getString("_UI__10SchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nr Candidate Scheduled Tasks feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNrCandidateScheduledTasksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_NrCandidateScheduledTasks_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_NrCandidateScheduledTasks_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__NR_CANDIDATE_SCHEDULED_TASKS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI__20CandidatePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nr Scheduled Tasks feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNrScheduledTasksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_NrScheduledTasks_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_NrScheduledTasks_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__NR_SCHEDULED_TASKS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 getString("_UI__30SolutionPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Pending Candidate Move feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPendingCandidateMovePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_pendingCandidateMove_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_pendingCandidateMove_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__PENDING_CANDIDATE_MOVE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI__20CandidatePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Set Candidate Move Enabled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSetCandidateMoveEnabledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_setCandidateMoveEnabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_setCandidateMoveEnabled_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__SET_CANDIDATE_MOVE_ENABLED,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI__00EnabledActionsPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reset Candidate Move Enabled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResetCandidateMoveEnabledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_resetCandidateMoveEnabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_resetCandidateMoveEnabled_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__RESET_CANDIDATE_MOVE_ENABLED,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI__00EnabledActionsPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accept Candidate Move Enabled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAcceptCandidateMoveEnabledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Solution_acceptCandidateMoveEnabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Solution_acceptCandidateMoveEnabled_feature", "_UI_Solution_type"),
+				 SchedulerPackage.Literals.SOLUTION__ACCEPT_CANDIDATE_MOVE_ENABLED,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI__00EnabledActionsPropertyCategory"),
 				 null));
 	}
 
@@ -163,7 +302,7 @@ public class SolutionItemProvider
 	@Override
 	public String getText(Object object) {
 		Solution solution = (Solution)object;
-		return getString("_UI_Solution_type") + " " + solution.getSolutionNr();
+		return getString("_UI_Solution_type") + " " + solution.isPendingCandidateMove();
 	}
 	
 
@@ -179,7 +318,13 @@ public class SolutionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Solution.class)) {
+			case SchedulerPackage.SOLUTION__PENDING_CANDIDATE_MOVE:
+			case SchedulerPackage.SOLUTION__SET_CANDIDATE_MOVE_ENABLED:
+			case SchedulerPackage.SOLUTION__RESET_CANDIDATE_MOVE_ENABLED:
+			case SchedulerPackage.SOLUTION__ACCEPT_CANDIDATE_MOVE_ENABLED:
 			case SchedulerPackage.SOLUTION__SOLUTION_NR:
+			case SchedulerPackage.SOLUTION__NR_CANDIDATE_SCHEDULED_TASKS:
+			case SchedulerPackage.SOLUTION__NR_SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.SOLUTION__MOVES:
@@ -295,19 +440,19 @@ public class SolutionItemProvider
 	 * @author michel
 	 *
 	 */
-	public class SolutionResetCommand extends ResetCommand{
+	public class SolutionInitializeCommand extends InitializeCommand{
 		private Solution solution;
 		
-		public SolutionResetCommand(Solution aSolution)	{
+		public SolutionInitializeCommand(Solution aSolution)	{
 			super();
 			this.solution = aSolution;
 		}
 
 		@Override
 		public void execute() {
-			this.solution.reset();
+			this.solution.initialize();;
 		}
-	} // class SolutionResetCommand
+	} // class SolutionIntializeCommand
 
 	/**
 	 * 
@@ -333,12 +478,43 @@ public class SolutionItemProvider
 	 * @author michel
 	 *
 	 */
+	public class SolutionResetCommand extends ResetCommand{
+		private Solution solution;
+		
+		public SolutionResetCommand(Solution aSolution)	{
+			super();
+			this.solution = aSolution;
+		}
+
+		@Override
+		protected boolean prepare(){
+			isExecutable = solution.getResetCandidateMoveEnabled().isEnabled();
+			return isExecutable;
+		}
+
+		@Override
+		public void execute() {
+			this.solution.resetCandidate();
+		}
+	} // class SolutionResetCommand
+
+	/**
+	 * 
+	 * @author michel
+	 *
+	 */
 	public class SolutionAcceptCommand extends AcceptCommand{
 		private Solution solution;
 		
 		public SolutionAcceptCommand(Solution aSolution)	{
 			super();
 			this.solution = aSolution;
+		}
+
+		@Override
+		protected boolean prepare(){
+			isExecutable = solution.getAcceptCandidateMoveEnabled().isEnabled();
+			return isExecutable;
 		}
 
 		@Override
@@ -351,10 +527,12 @@ public class SolutionItemProvider
 	public Command createCommand(Object object, EditingDomain domain,
 			Class<? extends Command> commandClass,
 			CommandParameter commandParameter) {
-		if ( commandClass == ResetCommand.class){
-			return new SolutionResetCommand((Solution) object); 
+		if ( commandClass == InitializeCommand.class){
+			return new SolutionInitializeCommand((Solution) object); 
 		} else if ( commandClass == CloneCommand.class){
 			return new SolutionCloneCommand((Solution) object); 
+		} else if ( commandClass == ResetCommand.class){
+			return new SolutionResetCommand((Solution) object); 
 		} else if ( commandClass == AcceptCommand.class){
 			return new SolutionAcceptCommand((Solution) object); 
 		}
@@ -363,7 +541,7 @@ public class SolutionItemProvider
 	} //method createCommand
 
 	/**
-	 * Implements Command constructGoal
+	 * Implements Command drop on Solution
 	 */
 	public abstract class SolutionCommand extends AbstractCommand {
 
@@ -411,9 +589,10 @@ public class SolutionItemProvider
 		Solution solution = (Solution)owner;
 		if ( droppedObject instanceof Move){
   	   		Move droppedMove= (Move) droppedObject;
-		   	return new SolutionSetCandidateMove(solution, droppedMove);
+			if ( solution.getSetCandidateMoveEnabled().isEnabled() ) {
+				return new SolutionSetCandidateMove(solution, droppedMove);
+			}
 		} 
-		//return super.createDropCommand(owner, droppedObject);
 		return null;
 	}
 	
@@ -442,7 +621,7 @@ public class SolutionItemProvider
 			}
 	    	this.dragCommand = null;
 			this.dropCommand = compound;
-	    	return true;
+	    	return compound.getCommandList().size()>0;
 	    } // prepare
 	};
 	

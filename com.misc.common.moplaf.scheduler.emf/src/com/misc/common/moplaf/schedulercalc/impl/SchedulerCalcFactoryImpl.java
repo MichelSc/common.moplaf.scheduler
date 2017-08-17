@@ -62,12 +62,13 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 			case SchedulerCalcPackage.RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION: return createResourceExpressionPropagatorFunction();
 			case SchedulerCalcPackage.TASK_PROPAGATOR_FUNCTION: return createTaskPropagatorFunction();
 			case SchedulerCalcPackage.TASK_EXPRESSION_PROPAGATOR_FUNCTION: return createTaskExpressionPropagatorFunction();
-			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE: return createSetTaskCandidateScheduledResourceScope();
-			case SchedulerCalcPackage.SET_TASK_CANDIDATE_SCHEDULED_RESOURCE: return createSetTaskCandidateScheduledResource();
+			case SchedulerCalcPackage.SET_SCHEDULE_SCOPE: return createSetScheduleScope();
+			case SchedulerCalcPackage.SET_TASK_SCHEDULE: return createSetTaskSchedule();
 			case SchedulerCalcPackage.SET_EXPRESSION_CANDIDATE_VALUE_SCOPE: return createSetExpressionCandidateValueScope();
 			case SchedulerCalcPackage.SET_TASK_EXPRESSION_CANDIDATE_VALUE: return createSetTaskExpressionCandidateValue();
 			case SchedulerCalcPackage.SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE: return createSetSolutionExpressionCandidateValue();
 			case SchedulerCalcPackage.SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE: return createSetResourceExpressionCandidateValue();
+			case SchedulerCalcPackage.SET_RESOURCE_SCHEDULE: return createSetResourceSchedule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -91,26 +92,6 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	public ResourcePropagatorFunction createResourcePropagatorFunction() {
 		ResourcePropagatorFunctionImpl resourcePropagatorFunction = new ResourcePropagatorFunctionImpl();
 		return resourcePropagatorFunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SetTaskCandidateScheduledResourceScope createSetTaskCandidateScheduledResourceScope() {
-		SetTaskCandidateScheduledResourceScopeImpl setTaskCandidateScheduledResourceScope = new SetTaskCandidateScheduledResourceScopeImpl();
-		return setTaskCandidateScheduledResourceScope;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SetTaskCandidateScheduledResource createSetTaskCandidateScheduledResource() {
-		SetTaskCandidateScheduledResourceImpl setTaskCandidateScheduledResource = new SetTaskCandidateScheduledResourceImpl();
-		return setTaskCandidateScheduledResource;
 	}
 
 	/**
@@ -158,6 +139,16 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SetResourceSchedule createSetResourceSchedule() {
+		SetResourceScheduleImpl setResourceSchedule = new SetResourceScheduleImpl();
+		return setResourceSchedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ResourceExpressionPropagatorFunction createResourceExpressionPropagatorFunction() {
 		ResourceExpressionPropagatorFunctionImpl resourceExpressionPropagatorFunction = new ResourceExpressionPropagatorFunctionImpl();
 		return resourceExpressionPropagatorFunction;
@@ -181,6 +172,26 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	public TaskExpressionPropagatorFunction createTaskExpressionPropagatorFunction() {
 		TaskExpressionPropagatorFunctionImpl taskExpressionPropagatorFunction = new TaskExpressionPropagatorFunctionImpl();
 		return taskExpressionPropagatorFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetScheduleScope createSetScheduleScope() {
+		SetScheduleScopeImpl setScheduleScope = new SetScheduleScopeImpl();
+		return setScheduleScope;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetTaskSchedule createSetTaskSchedule() {
+		SetTaskScheduleImpl setTaskSchedule = new SetTaskScheduleImpl();
+		return setTaskSchedule;
 	}
 
 	/**

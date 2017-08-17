@@ -2,9 +2,9 @@
  */
 package com.misc.common.moplaf.schedulercalc.impl;
 
+
 import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
 import com.misc.common.moplaf.scheduler.Plugin;
-import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.schedulercalc.ResourcePropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
@@ -62,10 +62,10 @@ public class ResourcePropagatorFunctionImpl extends PropagatorFunctionBindingsIm
 	 */
 	public SolutionResource basicGetResource() {
 		EObject container = this.eContainer;
-		if ( container instanceof Solution){
+		if ( container instanceof SolutionResource){
 			return (SolutionResource) container;
 		}
-		String logMessage = String.format("The owner of the SolutionResourcePropagatorFunction %s must be a SolutionResource and not %s",
+		String logMessage = String.format("The owner of the ResourcePropagatorFunction %s must be a SolutionResource and not %s",
                 this.getClass().getName(),
                 container == null ? "null" : container.getClass().getName());
 		Plugin.INSTANCE.logError(logMessage);

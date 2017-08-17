@@ -71,17 +71,6 @@ public class SetTaskExpressionCandidateValueItemProvider extends TaskExpressionP
 	}
 
 	/**
-	 * This returns SetTaskExpressionCandidateValue.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SetTaskExpressionCandidateValue"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,8 +78,10 @@ public class SetTaskExpressionCandidateValueItemProvider extends TaskExpressionP
 	 */
 	@Override
 	public String getText(Object object) {
-		SetTaskExpressionCandidateValue setTaskExpressionCandidateValue = (SetTaskExpressionCandidateValue)object;
-		return getString("_UI_SetTaskExpressionCandidateValue_type") + " " + setTaskExpressionCandidateValue.isTouched();
+		String label = ((SetTaskExpressionCandidateValue)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SetTaskExpressionCandidateValue_type") :
+			getString("_UI_SetTaskExpressionCandidateValue_type") + " " + label;
 	}
 	
 

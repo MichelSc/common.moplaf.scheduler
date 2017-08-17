@@ -76,22 +76,22 @@ public interface SchedulerCalcFactory extends EFactory {
 	TaskExpressionPropagatorFunction createTaskExpressionPropagatorFunction();
 
 	/**
-	 * Returns a new object of class '<em>Set Task Candidate Scheduled Resource Scope</em>'.
+	 * Returns a new object of class '<em>Set Schedule Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Set Task Candidate Scheduled Resource Scope</em>'.
+	 * @return a new object of class '<em>Set Schedule Scope</em>'.
 	 * @generated
 	 */
-	SetTaskCandidateScheduledResourceScope createSetTaskCandidateScheduledResourceScope();
+	SetScheduleScope createSetScheduleScope();
 
 	/**
-	 * Returns a new object of class '<em>Set Task Candidate Scheduled Resource</em>'.
+	 * Returns a new object of class '<em>Set Task Schedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Set Task Candidate Scheduled Resource</em>'.
+	 * @return a new object of class '<em>Set Task Schedule</em>'.
 	 * @generated
 	 */
-	SetTaskCandidateScheduledResource createSetTaskCandidateScheduledResource();
+	SetTaskSchedule createSetTaskSchedule();
 
 	/**
 	 * Returns a new object of class '<em>Set Expression Candidate Value Scope</em>'.
@@ -128,6 +128,15 @@ public interface SchedulerCalcFactory extends EFactory {
 	 * @generated
 	 */
 	SetResourceExpressionCandidateValue createSetResourceExpressionCandidateValue();
+
+	/**
+	 * Returns a new object of class '<em>Set Resource Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Resource Schedule</em>'.
+	 * @generated
+	 */
+	SetResourceSchedule createSetResourceSchedule();
 
 	/**
 	 * Returns the package supported by this factory.
