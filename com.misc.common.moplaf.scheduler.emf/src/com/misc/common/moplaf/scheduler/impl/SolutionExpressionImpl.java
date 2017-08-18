@@ -84,6 +84,14 @@ public abstract class SolutionExpressionImpl extends OwnerExpressionImpl impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getSolution();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSolution(Solution newSolution) {

@@ -1033,6 +1033,331 @@ public interface SchedulerCalcPackage extends EPackage {
 	int RESOURCE_PROPAGATOR_FUNCTION_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.CandidateExpressionPropagatorFunctionImpl <em>Candidate Expression Propagator Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.schedulercalc.impl.CandidateExpressionPropagatorFunctionImpl
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getCandidateExpressionPropagatorFunction()
+	 * @generated
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHERS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__ENABLED = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TYPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__OBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__INSTANCE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value Expression</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__CANDIDATE_VALUE_EXPRESSION = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Candidate Expression Propagator Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION_FEATURE_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___INIT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___ENABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DISABLE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___RESET = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___TOUCH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___UNTOUCH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_GET_PARENT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_REFRESH = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___GET_SCOPE = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___GET_FACTORY_ID = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_GET_BINDINGS = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Candidate Expression Propagator Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION_OPERATION_COUNT = PropagatorPackage.PROPAGATOR_FUNCTION_BINDINGS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.ResourceExpressionPropagatorFunctionImpl <em>Resource Expression Propagator Function</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1040,7 +1365,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getResourceExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION = 3;
+	int RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1365,7 +1690,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getTaskPropagatorFunction()
 	 * @generated
 	 */
-	int TASK_PROPAGATOR_FUNCTION = 4;
+	int TASK_PROPAGATOR_FUNCTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1690,7 +2015,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getTaskExpressionPropagatorFunction()
 	 * @generated
 	 */
-	int TASK_EXPRESSION_PROPAGATOR_FUNCTION = 5;
+	int TASK_EXPRESSION_PROPAGATOR_FUNCTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2015,7 +2340,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetScheduleScope()
 	 * @generated
 	 */
-	int SET_SCHEDULE_SCOPE = 6;
+	int SET_SCHEDULE_SCOPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2340,7 +2665,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskSchedule()
 	 * @generated
 	 */
-	int SET_TASK_SCHEDULE = 7;
+	int SET_TASK_SCHEDULE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2674,7 +2999,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetExpressionCandidateValueScope()
 	 * @generated
 	 */
-	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE = 8;
+	int SET_EXPRESSION_CANDIDATE_VALUE_SCOPE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2999,7 +3324,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetTaskExpressionCandidateValue()
 	 * @generated
 	 */
-	int SET_TASK_EXPRESSION_CANDIDATE_VALUE = 9;
+	int SET_TASK_EXPRESSION_CANDIDATE_VALUE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3333,7 +3658,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetSolutionExpressionCandidateValue()
 	 * @generated
 	 */
-	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 10;
+	int SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -3667,7 +3992,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetResourceExpressionCandidateValue()
 	 * @generated
 	 */
-	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE = 11;
+	int SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4002,7 +4327,7 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetResourceSchedule()
 	 * @generated
 	 */
-	int SET_RESOURCE_SCHEDULE = 12;
+	int SET_RESOURCE_SCHEDULE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -4330,6 +4655,676 @@ public interface SchedulerCalcPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetExpressionScheduleImpl <em>Set Expression Schedule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SetExpressionScheduleImpl
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetExpressionSchedule()
+	 * @generated
+	 */
+	int SET_EXPRESSION_SCHEDULE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__PARENT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__ANTECEDENTS = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__ANTECEDENTS_SIBLING = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__TOUCHED = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__TOUCHED_CHILDREN = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__TOUCHERS = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__ENABLED = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__TYPE = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__OBJECT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__INSTANCE = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__DESCRIPTION = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__TOUCHED_PARENT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value Expression</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__CANDIDATE_VALUE_EXPRESSION = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__CANDIDATE_VALUE_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE__CONCRETE_PARENT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Set Expression Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE_FEATURE_COUNT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___INIT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___ENABLE = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DISABLE = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___RESET = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___TOUCH__EOBJECT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___UNTOUCH = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___REFRESH_ANTECEDENTS__REFRESHER = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___REFRESH_THIS__REFRESHER = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___REFRESH_CHILDREN_AND_THIS__REFRESHER = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___REFRESH = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___REFRESH__REFRESHER = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DO_GET_ANTECEDENTS = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DO_GET_PARENT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DO_REFRESH = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DO_REFRESH__EOBJECT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___GET_SCOPE = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___GET_FACTORY_ID = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DO_GET_BINDINGS = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Set Expression Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_EXPRESSION_SCHEDULE_OPERATION_COUNT = CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetFloatExpressionScheduleImpl <em>Set Float Expression Schedule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SetFloatExpressionScheduleImpl
+	 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetFloatExpressionSchedule()
+	 * @generated
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__PARENT = SET_EXPRESSION_SCHEDULE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__ANTECEDENTS = SET_EXPRESSION_SCHEDULE__ANTECEDENTS;
+
+	/**
+	 * The feature id for the '<em><b>Antecedents Sibling</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__ANTECEDENTS_SIBLING = SET_EXPRESSION_SCHEDULE__ANTECEDENTS_SIBLING;
+
+	/**
+	 * The feature id for the '<em><b>Touched</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__TOUCHED = SET_EXPRESSION_SCHEDULE__TOUCHED;
+
+	/**
+	 * The feature id for the '<em><b>Touched Children</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__TOUCHED_CHILDREN = SET_EXPRESSION_SCHEDULE__TOUCHED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Touchers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__TOUCHERS = SET_EXPRESSION_SCHEDULE__TOUCHERS;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__ENABLED = SET_EXPRESSION_SCHEDULE__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Object With Propagator Functions</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__OBJECT_WITH_PROPAGATOR_FUNCTIONS = SET_EXPRESSION_SCHEDULE__OBJECT_WITH_PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__TYPE = SET_EXPRESSION_SCHEDULE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Object</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__OBJECT = SET_EXPRESSION_SCHEDULE__OBJECT;
+
+	/**
+	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__INSTANCE = SET_EXPRESSION_SCHEDULE__INSTANCE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__DESCRIPTION = SET_EXPRESSION_SCHEDULE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Touched Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__TOUCHED_PARENT = SET_EXPRESSION_SCHEDULE__TOUCHED_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Candidate Value Expression</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__CANDIDATE_VALUE_EXPRESSION = SET_EXPRESSION_SCHEDULE__CANDIDATE_VALUE_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Concrete Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE__CONCRETE_PARENT = SET_EXPRESSION_SCHEDULE__CONCRETE_PARENT;
+
+	/**
+	 * The number of structural features of the '<em>Set Float Expression Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE_FEATURE_COUNT = SET_EXPRESSION_SCHEDULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___INIT = SET_EXPRESSION_SCHEDULE___INIT;
+
+	/**
+	 * The operation id for the '<em>Enable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___ENABLE = SET_EXPRESSION_SCHEDULE___ENABLE;
+
+	/**
+	 * The operation id for the '<em>Disable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DISABLE = SET_EXPRESSION_SCHEDULE___DISABLE;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___RESET = SET_EXPRESSION_SCHEDULE___RESET;
+
+	/**
+	 * The operation id for the '<em>Touch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___TOUCH__EOBJECT = SET_EXPRESSION_SCHEDULE___TOUCH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Untouch</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___UNTOUCH = SET_EXPRESSION_SCHEDULE___UNTOUCH;
+
+	/**
+	 * The operation id for the '<em>Refresh Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___REFRESH_ANTECEDENTS__REFRESHER = SET_EXPRESSION_SCHEDULE___REFRESH_ANTECEDENTS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___REFRESH_THIS__REFRESHER = SET_EXPRESSION_SCHEDULE___REFRESH_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh Children And This</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___REFRESH_CHILDREN_AND_THIS__REFRESHER = SET_EXPRESSION_SCHEDULE___REFRESH_CHILDREN_AND_THIS__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___REFRESH = SET_EXPRESSION_SCHEDULE___REFRESH;
+
+	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___REFRESH__REFRESHER = SET_EXPRESSION_SCHEDULE___REFRESH__REFRESHER;
+
+	/**
+	 * The operation id for the '<em>Do Get Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DO_GET_ANTECEDENTS = SET_EXPRESSION_SCHEDULE___DO_GET_ANTECEDENTS;
+
+	/**
+	 * The operation id for the '<em>Do Get Parent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DO_GET_PARENT = SET_EXPRESSION_SCHEDULE___DO_GET_PARENT;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DO_REFRESH = SET_EXPRESSION_SCHEDULE___DO_REFRESH;
+
+	/**
+	 * The operation id for the '<em>Do Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DO_REFRESH__EOBJECT = SET_EXPRESSION_SCHEDULE___DO_REFRESH__EOBJECT;
+
+	/**
+	 * The operation id for the '<em>Get Scope</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___GET_SCOPE = SET_EXPRESSION_SCHEDULE___GET_SCOPE;
+
+	/**
+	 * The operation id for the '<em>Get Factory ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___GET_FACTORY_ID = SET_EXPRESSION_SCHEDULE___GET_FACTORY_ID;
+
+	/**
+	 * The operation id for the '<em>Do Get Bindings</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DO_GET_BINDINGS = SET_EXPRESSION_SCHEDULE___DO_GET_BINDINGS;
+
+	/**
+	 * The operation id for the '<em>Do Collect Explicit Antecedents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST = SET_EXPRESSION_SCHEDULE___DO_COLLECT_EXPLICIT_ANTECEDENTS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Set Float Expression Schedule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_FLOAT_EXPRESSION_SCHEDULE_OPERATION_COUNT = SET_EXPRESSION_SCHEDULE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SolutionPropagatorFunction <em>Solution Propagator Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4391,6 +5386,27 @@ public interface SchedulerCalcPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResourcePropagatorFunction_Resource();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction <em>Candidate Expression Propagator Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Candidate Expression Propagator Function</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction
+	 * @generated
+	 */
+	EClass getCandidateExpressionPropagatorFunction();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction#getCandidateValueExpression <em>Candidate Value Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Candidate Value Expression</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction#getCandidateValueExpression()
+	 * @see #getCandidateExpressionPropagatorFunction()
+	 * @generated
+	 */
+	EReference getCandidateExpressionPropagatorFunction_CandidateValueExpression();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction <em>Resource Expression Propagator Function</em>}'.
@@ -4581,6 +5597,37 @@ public interface SchedulerCalcPackage extends EPackage {
 	EReference getSetResourceSchedule_ConcreteParent();
 
 	/**
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule <em>Set Expression Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Set Expression Schedule</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetExpressionSchedule
+	 * @generated
+	 */
+	EClass getSetExpressionSchedule();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule#getConcreteParent <em>Concrete Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Concrete Parent</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetExpressionSchedule#getConcreteParent()
+	 * @see #getSetExpressionSchedule()
+	 * @generated
+	 */
+	EReference getSetExpressionSchedule_ConcreteParent();
+
+	/**
+	 * Returns the meta object for class '{@link com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule <em>Set Float Expression Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Set Float Expression Schedule</em>'.
+	 * @see com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule
+	 * @generated
+	 */
+	EClass getSetFloatExpressionSchedule();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4656,6 +5703,24 @@ public interface SchedulerCalcPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESOURCE_PROPAGATOR_FUNCTION__RESOURCE = eINSTANCE.getResourcePropagatorFunction_Resource();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.CandidateExpressionPropagatorFunctionImpl <em>Candidate Expression Propagator Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.schedulercalc.impl.CandidateExpressionPropagatorFunctionImpl
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getCandidateExpressionPropagatorFunction()
+		 * @generated
+		 */
+		EClass CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION = eINSTANCE.getCandidateExpressionPropagatorFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Candidate Value Expression</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__CANDIDATE_VALUE_EXPRESSION = eINSTANCE.getCandidateExpressionPropagatorFunction_CandidateValueExpression();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.ResourceExpressionPropagatorFunctionImpl <em>Resource Expression Propagator Function</em>}' class.
@@ -4820,6 +5885,34 @@ public interface SchedulerCalcPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SET_RESOURCE_SCHEDULE__CONCRETE_PARENT = eINSTANCE.getSetResourceSchedule_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetExpressionScheduleImpl <em>Set Expression Schedule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SetExpressionScheduleImpl
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetExpressionSchedule()
+		 * @generated
+		 */
+		EClass SET_EXPRESSION_SCHEDULE = eINSTANCE.getSetExpressionSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>Concrete Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SET_EXPRESSION_SCHEDULE__CONCRETE_PARENT = eINSTANCE.getSetExpressionSchedule_ConcreteParent();
+
+		/**
+		 * The meta object literal for the '{@link com.misc.common.moplaf.schedulercalc.impl.SetFloatExpressionScheduleImpl <em>Set Float Expression Schedule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SetFloatExpressionScheduleImpl
+		 * @see com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl#getSetFloatExpressionSchedule()
+		 * @generated
+		 */
+		EClass SET_FLOAT_EXPRESSION_SCHEDULE = eINSTANCE.getSetFloatExpressionSchedule();
 
 	}
 

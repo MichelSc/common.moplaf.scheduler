@@ -1,10 +1,12 @@
 /**
  */
-package com.misc.common.moplaf.scheduler.provider;
+package com.misc.common.moplaf.schedulercalc.provider;
 
 
-import com.misc.common.moplaf.scheduler.FloatExpression;
-import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.propagator2.provider.PropagatorFunctionBindingsItemProvider;
+
+import com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction;
+import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,25 +14,25 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.misc.common.moplaf.scheduler.FloatExpression} object.
+ * This is the item provider adapter for a {@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FloatExpressionItemProvider extends ValueExpressionItemProvider {
+public class CandidateExpressionPropagatorFunctionItemProvider extends PropagatorFunctionBindingsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FloatExpressionItemProvider(AdapterFactory adapterFactory) {
+	public CandidateExpressionPropagatorFunctionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,42 +47,42 @@ public class FloatExpressionItemProvider extends ValueExpressionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
+			addCandidateValueExpressionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the Candidate Value Expression feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addCandidateValueExpressionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FloatExpression_Value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FloatExpression_Value_feature", "_UI_FloatExpression_type"),
-				 SchedulerPackage.Literals.FLOAT_EXPRESSION__VALUE,
-				 true,
+				 getString("_UI_CandidateExpressionPropagatorFunction_CandidateValueExpression_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CandidateExpressionPropagatorFunction_CandidateValueExpression_feature", "_UI_CandidateExpressionPropagatorFunction_type"),
+				 SchedulerCalcPackage.Literals.CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__CANDIDATE_VALUE_EXPRESSION,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI__30SolutionPropertyCategory"),
+				 false,
+				 null,
+				 null,
 				 null));
 	}
 
 	/**
-	 * This returns FloatExpression.gif.
+	 * This returns CandidateExpressionPropagatorFunction.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FloatExpression"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CandidateExpressionPropagatorFunction"));
 	}
 
 	/**
@@ -91,10 +93,8 @@ public class FloatExpressionItemProvider extends ValueExpressionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FloatExpression)object).getOwner();
-		return label == null || label.length() == 0 ?
-			getString("_UI_FloatExpression_type") :
-			getString("_UI_FloatExpression_type") + " " + label;
+		CandidateExpressionPropagatorFunction candidateExpressionPropagatorFunction = (CandidateExpressionPropagatorFunction)object;
+		return getString("_UI_CandidateExpressionPropagatorFunction_type") + " " + candidateExpressionPropagatorFunction.isTouched();
 	}
 	
 
@@ -108,12 +108,6 @@ public class FloatExpressionItemProvider extends ValueExpressionItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(FloatExpression.class)) {
-			case SchedulerPackage.FLOAT_EXPRESSION__VALUE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -127,6 +121,17 @@ public class FloatExpressionItemProvider extends ValueExpressionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return SchedulerEditPlugin.INSTANCE;
 	}
 
 }

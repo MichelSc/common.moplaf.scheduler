@@ -83,6 +83,10 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 				return createResourcePropagatorFunctionAdapter();
 			}
 			@Override
+			public Adapter caseCandidateExpressionPropagatorFunction(CandidateExpressionPropagatorFunction object) {
+				return createCandidateExpressionPropagatorFunctionAdapter();
+			}
+			@Override
 			public Adapter caseResourceExpressionPropagatorFunction(ResourceExpressionPropagatorFunction object) {
 				return createResourceExpressionPropagatorFunctionAdapter();
 			}
@@ -121,6 +125,14 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSetResourceSchedule(SetResourceSchedule object) {
 				return createSetResourceScheduleAdapter();
+			}
+			@Override
+			public Adapter caseSetExpressionSchedule(SetExpressionSchedule object) {
+				return createSetExpressionScheduleAdapter();
+			}
+			@Override
+			public Adapter caseSetFloatExpressionSchedule(SetFloatExpressionSchedule object) {
+				return createSetFloatExpressionScheduleAdapter();
 			}
 			@Override
 			public Adapter casePropagatorFunction(PropagatorFunction object) {
@@ -189,6 +201,20 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResourcePropagatorFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction <em>Candidate Expression Propagator Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction
+	 * @generated
+	 */
+	public Adapter createCandidateExpressionPropagatorFunctionAdapter() {
 		return null;
 	}
 
@@ -329,6 +355,34 @@ public class SchedulerCalcAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSetResourceScheduleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule <em>Set Expression Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetExpressionSchedule
+	 * @generated
+	 */
+	public Adapter createSetExpressionScheduleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule <em>Set Float Expression Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule
+	 * @generated
+	 */
+	public Adapter createSetFloatExpressionScheduleAdapter() {
 		return null;
 	}
 

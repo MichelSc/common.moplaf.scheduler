@@ -9,6 +9,58 @@ import org.eclipse.emf.common.util.EList;
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Solution</b></em>'.
+ * <p>
+ * A solution implements a schedule of the tasks on the resources. 
+ * The schedule is qualified by expressions, that may be defined on task, on resource or on solution levels.
+ * So a schedule is composed of the following elements
+ * <ul>
+ * <li>at Solution level
+ * 	<ul>
+ * 	<li>the Nr of tasks scheduled</li>
+ * 	<li>a set of expressions</li>
+ * 	</ul>
+ * </li>
+ * <li>at Resource level
+ * 	<ul>
+ * 	<li>the Nr of tasks scheduled </li>
+ * 	<li>the set of tasks scheduled on the resource </li>
+ * 	<li>the first task scheduled on the resource </li>
+ * 	<li>the last task scheduled on the resource </li>
+ * 	<li>a set of expressions</li>
+ * 	</ul>
+ * </li>
+* <li>at Task level
+ * 	<ul>
+ * 	<li>the resource the task is scheduled on</li>
+ * 	<li>the task next to this task in the schedule </li>
+ * 	<li>the task previous to this task in the schedule </li>
+ * 	<li>a set of expressions</li>
+ * 	</ul>
+ * </li>
+ * </ul>
+ * <p>
+ * Two versions of the schedule are maintained by a Solution
+ * <ul>
+ * <li>the 'ActualSchedule', which is the actual current schedule considered </li>
+ * <li>the 'CandidateSchedule', obtained from the actual by executing one Move: the Candidate Move </li>
+ * </ul>
+ * <p>
+ * A solution can be in two states
+ * <ul>
+ * <li>no pending move: the actual and the candidate schedule are equal, a new Move can be done </li>
+ * <li>with pending move: some candidate move has been set; the candidate schedule is different from the actual move
+ * and is the result of applying this move; two operations are possible
+ * 	<ul>
+ * 	<li>'ResetCandidate': move is not done; the candidate schedule is aligned on the actual schedule; both schedules are equal</li>
+ * 	<li>'AcceptCandidate': move is done; the actual schedule is aligned on the candidate schedule; both schedules are equal</li>
+ * </ul>
+ * </ul>
+ * <p>
+ * The implementation is optimized making the assumption that many small moves will be submitted. So setting and resetting 
+ * a move should take a time proportional to the size of the move and constant with respect to the size of the 
+ * solution.
+ * <p>
+ *
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->

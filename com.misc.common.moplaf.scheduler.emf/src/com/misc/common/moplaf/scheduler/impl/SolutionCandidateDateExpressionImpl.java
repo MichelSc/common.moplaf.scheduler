@@ -85,6 +85,15 @@ public class SolutionCandidateDateExpressionImpl extends CandidateDateExpression
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getSolution();
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSolution(Solution newSolution) {

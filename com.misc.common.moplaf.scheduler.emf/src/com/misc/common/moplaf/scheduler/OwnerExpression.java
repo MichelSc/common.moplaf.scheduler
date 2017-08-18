@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.common.moplaf.scheduler.OwnerExpression#getOwner <em>Owner</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.OwnerExpression#getRole <em>Role</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.OwnerExpression#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.OwnerExpression#getExpressionSolution <em>Expression Solution</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getOwnerExpression()
@@ -78,5 +79,20 @@ public interface OwnerExpression extends EObject {
 	 * @generated
 	 */
 	String getDescription();
+
+	/**
+	 * Returns the value of the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Expression Solution</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expression Solution</em>' reference.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getOwnerExpression_ExpressionSolution()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	Solution getExpressionSolution();
 
 } // OwnerExpression

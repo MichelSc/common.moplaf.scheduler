@@ -141,6 +141,29 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CandidateExpressionPropagatorFunctionItemProvider candidateExpressionPropagatorFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCandidateExpressionPropagatorFunctionAdapter() {
+		if (candidateExpressionPropagatorFunctionItemProvider == null) {
+			candidateExpressionPropagatorFunctionItemProvider = new CandidateExpressionPropagatorFunctionItemProvider(this);
+		}
+
+		return candidateExpressionPropagatorFunctionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,6 +394,52 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SetExpressionScheduleItemProvider setExpressionScheduleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSetExpressionScheduleAdapter() {
+		if (setExpressionScheduleItemProvider == null) {
+			setExpressionScheduleItemProvider = new SetExpressionScheduleItemProvider(this);
+		}
+
+		return setExpressionScheduleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SetFloatExpressionScheduleItemProvider setFloatExpressionScheduleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSetFloatExpressionScheduleAdapter() {
+		if (setFloatExpressionScheduleItemProvider == null) {
+			setFloatExpressionScheduleItemProvider = new SetFloatExpressionScheduleItemProvider(this);
+		}
+
+		return setFloatExpressionScheduleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,6 +541,7 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 		if (solutionPropagatorFunctionItemProvider != null) solutionPropagatorFunctionItemProvider.dispose();
 		if (solutionExpressionPropagatorFunctionItemProvider != null) solutionExpressionPropagatorFunctionItemProvider.dispose();
 		if (resourcePropagatorFunctionItemProvider != null) resourcePropagatorFunctionItemProvider.dispose();
+		if (candidateExpressionPropagatorFunctionItemProvider != null) candidateExpressionPropagatorFunctionItemProvider.dispose();
 		if (resourceExpressionPropagatorFunctionItemProvider != null) resourceExpressionPropagatorFunctionItemProvider.dispose();
 		if (taskPropagatorFunctionItemProvider != null) taskPropagatorFunctionItemProvider.dispose();
 		if (taskExpressionPropagatorFunctionItemProvider != null) taskExpressionPropagatorFunctionItemProvider.dispose();
@@ -482,6 +552,8 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 		if (setSolutionExpressionCandidateValueItemProvider != null) setSolutionExpressionCandidateValueItemProvider.dispose();
 		if (setResourceExpressionCandidateValueItemProvider != null) setResourceExpressionCandidateValueItemProvider.dispose();
 		if (setResourceScheduleItemProvider != null) setResourceScheduleItemProvider.dispose();
+		if (setExpressionScheduleItemProvider != null) setExpressionScheduleItemProvider.dispose();
+		if (setFloatExpressionScheduleItemProvider != null) setFloatExpressionScheduleItemProvider.dispose();
 	}
 
 }

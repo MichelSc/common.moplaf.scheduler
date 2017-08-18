@@ -597,6 +597,7 @@ public class SolutionImpl extends ObjectWithPropagatorFunctionsImpl implements S
 
 		// there is no pending move
 		this.setPendingCandidateMove(false);
+		this.setCandidateMove(null);
 		// at this point, nothing touched, everything is up to date
 	}
 

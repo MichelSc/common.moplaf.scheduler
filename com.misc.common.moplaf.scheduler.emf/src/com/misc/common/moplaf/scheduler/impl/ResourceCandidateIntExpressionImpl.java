@@ -5,6 +5,7 @@ package com.misc.common.moplaf.scheduler.impl;
 import com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -81,6 +82,15 @@ public class ResourceCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	public SolutionResource basicGetResource() {
 		return resource;
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getResource().getSolution();
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

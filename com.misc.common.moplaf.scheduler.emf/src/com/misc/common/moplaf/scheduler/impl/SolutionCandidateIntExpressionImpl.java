@@ -81,6 +81,15 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	public Solution basicGetSolution() {
 		return solution;
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getSolution();
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

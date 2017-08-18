@@ -3,6 +3,7 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionTask;
 import com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression;
 import com.misc.common.moplaf.scheduler.TaskExpression;
@@ -80,6 +81,13 @@ public class TaskCandidateFloatExpressionImpl extends CandidateFloatExpressionIm
 	 */
 	public SolutionTask basicGetTask() {
 		return task;
+	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getTask().getSolution();
 	}
 
 	/**

@@ -7,11 +7,14 @@ import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
 import com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl;
+import com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.ResourcePropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcFactory;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
 import com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope;
+import com.misc.common.moplaf.schedulercalc.SetExpressionSchedule;
+import com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule;
 import com.misc.common.moplaf.schedulercalc.SetResourceExpressionCandidateValue;
 import com.misc.common.moplaf.schedulercalc.SetResourceSchedule;
 import com.misc.common.moplaf.schedulercalc.SetScheduleScope;
@@ -55,6 +58,13 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass candidateExpressionPropagatorFunctionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass setExpressionCandidateValueScopeEClass = null;
 
 	/**
@@ -84,6 +94,20 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * @generated
 	 */
 	private EClass setResourceScheduleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass setExpressionScheduleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass setFloatExpressionScheduleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,6 +261,24 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCandidateExpressionPropagatorFunction() {
+		return candidateExpressionPropagatorFunctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCandidateExpressionPropagatorFunction_CandidateValueExpression() {
+		return (EReference)candidateExpressionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSetExpressionCandidateValueScope() {
 		return setExpressionCandidateValueScopeEClass;
 	}
@@ -311,6 +353,33 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 */
 	public EReference getSetResourceSchedule_ConcreteParent() {
 		return (EReference)setResourceScheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSetExpressionSchedule() {
+		return setExpressionScheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSetExpressionSchedule_ConcreteParent() {
+		return (EReference)setExpressionScheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSetFloatExpressionSchedule() {
+		return setFloatExpressionScheduleEClass;
 	}
 
 	/**
@@ -449,6 +518,9 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		resourcePropagatorFunctionEClass = createEClass(RESOURCE_PROPAGATOR_FUNCTION);
 		createEReference(resourcePropagatorFunctionEClass, RESOURCE_PROPAGATOR_FUNCTION__RESOURCE);
 
+		candidateExpressionPropagatorFunctionEClass = createEClass(CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION);
+		createEReference(candidateExpressionPropagatorFunctionEClass, CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__CANDIDATE_VALUE_EXPRESSION);
+
 		resourceExpressionPropagatorFunctionEClass = createEClass(RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION);
 		createEReference(resourceExpressionPropagatorFunctionEClass, RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__RESOURCE_EXPRESSION);
 
@@ -476,6 +548,11 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 
 		setResourceScheduleEClass = createEClass(SET_RESOURCE_SCHEDULE);
 		createEReference(setResourceScheduleEClass, SET_RESOURCE_SCHEDULE__CONCRETE_PARENT);
+
+		setExpressionScheduleEClass = createEClass(SET_EXPRESSION_SCHEDULE);
+		createEReference(setExpressionScheduleEClass, SET_EXPRESSION_SCHEDULE__CONCRETE_PARENT);
+
+		setFloatExpressionScheduleEClass = createEClass(SET_FLOAT_EXPRESSION_SCHEDULE);
 	}
 
 	/**
@@ -513,6 +590,7 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		solutionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		solutionExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		resourcePropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		candidateExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		resourceExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		taskPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		taskExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
@@ -523,6 +601,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		setSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
 		setResourceExpressionCandidateValueEClass.getESuperTypes().add(this.getResourceExpressionPropagatorFunction());
 		setResourceScheduleEClass.getESuperTypes().add(this.getResourcePropagatorFunction());
+		setExpressionScheduleEClass.getESuperTypes().add(this.getCandidateExpressionPropagatorFunction());
+		setFloatExpressionScheduleEClass.getESuperTypes().add(this.getSetExpressionSchedule());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(solutionPropagatorFunctionEClass, SolutionPropagatorFunction.class, "SolutionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -533,6 +613,9 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 
 		initEClass(resourcePropagatorFunctionEClass, ResourcePropagatorFunction.class, "ResourcePropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourcePropagatorFunction_Resource(), theSchedulerPackage.getSolutionResource(), null, "Resource", null, 1, 1, ResourcePropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(candidateExpressionPropagatorFunctionEClass, CandidateExpressionPropagatorFunction.class, "CandidateExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCandidateExpressionPropagatorFunction_CandidateValueExpression(), theSchedulerPackage.getCandidateValueExpression(), null, "CandidateValueExpression", null, 1, 1, CandidateExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceExpressionPropagatorFunctionEClass, ResourceExpressionPropagatorFunction.class, "ResourceExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceExpressionPropagatorFunction_ResourceExpression(), theSchedulerPackage.getResourceExpression(), null, "ResourceExpression", null, 1, 1, ResourceExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -561,6 +644,11 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 
 		initEClass(setResourceScheduleEClass, SetResourceSchedule.class, "SetResourceSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSetResourceSchedule_ConcreteParent(), this.getSetScheduleScope(), null, "ConcreteParent", null, 1, 1, SetResourceSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(setExpressionScheduleEClass, SetExpressionSchedule.class, "SetExpressionSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetExpressionSchedule_ConcreteParent(), this.getSetScheduleScope(), null, "ConcreteParent", null, 1, 1, SetExpressionSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(setFloatExpressionScheduleEClass, SetFloatExpressionSchedule.class, "SetFloatExpressionSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

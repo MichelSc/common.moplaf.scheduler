@@ -53,7 +53,7 @@ public class CandidateValueExpressionItemProvider extends ObjectWithPropagatorFu
 
 			addOwnerPropertyDescriptor(object);
 			addRolePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
+			addExpressionSolutionPropertyDescriptor(object);
 			addCandidateValueAsStringPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -99,28 +99,28 @@ public class CandidateValueExpressionItemProvider extends ObjectWithPropagatorFu
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ExpressionPropertyCategory"),
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Expression Solution feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addExpressionSolutionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OwnerExpression_Description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OwnerExpression_Description_feature", "_UI_OwnerExpression_type"),
-				 SchedulerPackage.Literals.OWNER_EXPRESSION__DESCRIPTION,
+				 getString("_UI_OwnerExpression_ExpressionSolution_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OwnerExpression_ExpressionSolution_feature", "_UI_OwnerExpression_type"),
+				 SchedulerPackage.Literals.OWNER_EXPRESSION__EXPRESSION_SOLUTION,
 				 false,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 null,
 				 null));
 	}
@@ -143,7 +143,7 @@ public class CandidateValueExpressionItemProvider extends ObjectWithPropagatorFu
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 

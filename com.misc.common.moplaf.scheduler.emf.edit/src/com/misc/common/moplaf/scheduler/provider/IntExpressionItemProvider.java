@@ -68,7 +68,7 @@ public class IntExpressionItemProvider extends ValueExpressionItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 

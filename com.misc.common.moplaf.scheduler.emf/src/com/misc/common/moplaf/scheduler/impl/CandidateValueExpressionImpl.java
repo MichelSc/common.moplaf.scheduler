@@ -7,6 +7,7 @@ import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl
 import com.misc.common.moplaf.scheduler.CandidateValueExpression;
 import com.misc.common.moplaf.scheduler.OwnerExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.ValueExpression;
 
 import java.lang.reflect.InvocationTargetException;
@@ -17,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -30,6 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.CandidateValueExpressionImpl#getOwner <em>Owner</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.CandidateValueExpressionImpl#getRole <em>Role</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.CandidateValueExpressionImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.CandidateValueExpressionImpl#getExpressionSolution <em>Expression Solution</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.CandidateValueExpressionImpl#getCandidateValueAsString <em>Candidate Value As String</em>}</li>
  * </ul>
  *
@@ -151,6 +154,28 @@ public abstract class CandidateValueExpressionImpl extends ObjectWithPropagatorF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Solution getExpressionSolution() {
+		Solution expressionSolution = basicGetExpressionSolution();
+		return expressionSolution != null && expressionSolution.eIsProxy() ? (Solution)eResolveProxy((InternalEObject)expressionSolution) : expressionSolution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Solution basicGetExpressionSolution() {
+		// TODO: implement this method to return the 'Expression Solution' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCandidateValueAsString() {
 		// TODO: implement this method to return the 'Candidate Value As String' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -204,6 +229,9 @@ public abstract class CandidateValueExpressionImpl extends ObjectWithPropagatorF
 				return getRole();
 			case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__DESCRIPTION:
 				return getDescription();
+			case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION:
+				if (resolve) return getExpressionSolution();
+				return basicGetExpressionSolution();
 			case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__CANDIDATE_VALUE_AS_STRING:
 				return getCandidateValueAsString();
 		}
@@ -254,6 +282,8 @@ public abstract class CandidateValueExpressionImpl extends ObjectWithPropagatorF
 				return ROLE_EDEFAULT == null ? role != null : !ROLE_EDEFAULT.equals(role);
 			case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION:
+				return basicGetExpressionSolution() != null;
 			case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__CANDIDATE_VALUE_AS_STRING:
 				return CANDIDATE_VALUE_AS_STRING_EDEFAULT == null ? getCandidateValueAsString() != null : !CANDIDATE_VALUE_AS_STRING_EDEFAULT.equals(getCandidateValueAsString());
 		}
@@ -272,6 +302,7 @@ public abstract class CandidateValueExpressionImpl extends ObjectWithPropagatorF
 				case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__OWNER: return SchedulerPackage.OWNER_EXPRESSION__OWNER;
 				case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__ROLE: return SchedulerPackage.OWNER_EXPRESSION__ROLE;
 				case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__DESCRIPTION: return SchedulerPackage.OWNER_EXPRESSION__DESCRIPTION;
+				case SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION: return SchedulerPackage.OWNER_EXPRESSION__EXPRESSION_SOLUTION;
 				default: return -1;
 			}
 		}
@@ -295,6 +326,7 @@ public abstract class CandidateValueExpressionImpl extends ObjectWithPropagatorF
 				case SchedulerPackage.OWNER_EXPRESSION__OWNER: return SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__OWNER;
 				case SchedulerPackage.OWNER_EXPRESSION__ROLE: return SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__ROLE;
 				case SchedulerPackage.OWNER_EXPRESSION__DESCRIPTION: return SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__DESCRIPTION;
+				case SchedulerPackage.OWNER_EXPRESSION__EXPRESSION_SOLUTION: return SchedulerPackage.CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION;
 				default: return -1;
 			}
 		}

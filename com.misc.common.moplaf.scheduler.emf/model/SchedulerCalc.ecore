@@ -18,6 +18,12 @@
         eType="ecore:EClass scheduler.ecore#//SolutionResource" changeable="false"
         volatile="true" transient="true" derived="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CandidateExpressionPropagatorFunction"
+      eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateValueExpression"
+        lowerBound="1" eType="ecore:EClass scheduler.ecore#//CandidateValueExpression"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceExpressionPropagatorFunction"
       eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//PropagatorFunctionBindings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceExpression" lowerBound="1"
@@ -62,4 +68,10 @@
         eType="#//SetScheduleScope" changeable="false" volatile="true" transient="true"
         derived="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetExpressionSchedule" eSuperTypes="#//CandidateExpressionPropagatorFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConcreteParent" lowerBound="1"
+        eType="#//SetScheduleScope" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetFloatExpressionSchedule" eSuperTypes="#//SetExpressionSchedule"/>
 </ecore:EPackage>

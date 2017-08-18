@@ -5,6 +5,7 @@ package com.misc.common.moplaf.scheduler.impl;
 import com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -80,6 +81,14 @@ public class ResourceCandidateFloatExpressionImpl extends CandidateFloatExpressi
 	 */
 	public SolutionResource basicGetResource() {
 		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getResource().getSolution();
 	}
 
 	/**

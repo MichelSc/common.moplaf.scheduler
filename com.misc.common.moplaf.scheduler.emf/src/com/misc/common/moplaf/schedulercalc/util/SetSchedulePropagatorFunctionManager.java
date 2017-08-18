@@ -48,5 +48,10 @@ public class SetSchedulePropagatorFunctionManager extends PropagatorFunctionMana
 			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(SchedulerPackage.Literals.SOLUTION_RESOURCE) 
 			.addConstructor(SchedulerCalcPackage.Literals.SET_RESOURCE_SCHEDULE)
 			;
+	
+	static PropagatorFunctionsConstructors floatExpressionPropagatorFunctionsConstructors =   
+			propagatorFunctionFactory.constructPropagatorFunctionsConstructors(SchedulerPackage.Literals.CANDIDATE_FLOAT_EXPRESSION) 
+			.addConstructor(SchedulerCalcPackage.Literals.SET_FLOAT_EXPRESSION_SCHEDULE)
+			;
 
 }

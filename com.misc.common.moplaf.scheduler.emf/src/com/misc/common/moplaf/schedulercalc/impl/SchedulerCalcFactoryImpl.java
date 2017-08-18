@@ -59,6 +59,7 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 			case SchedulerCalcPackage.SOLUTION_PROPAGATOR_FUNCTION: return createSolutionPropagatorFunction();
 			case SchedulerCalcPackage.SOLUTION_EXPRESSION_PROPAGATOR_FUNCTION: return createSolutionExpressionPropagatorFunction();
 			case SchedulerCalcPackage.RESOURCE_PROPAGATOR_FUNCTION: return createResourcePropagatorFunction();
+			case SchedulerCalcPackage.CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION: return createCandidateExpressionPropagatorFunction();
 			case SchedulerCalcPackage.RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION: return createResourceExpressionPropagatorFunction();
 			case SchedulerCalcPackage.TASK_PROPAGATOR_FUNCTION: return createTaskPropagatorFunction();
 			case SchedulerCalcPackage.TASK_EXPRESSION_PROPAGATOR_FUNCTION: return createTaskExpressionPropagatorFunction();
@@ -69,6 +70,8 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 			case SchedulerCalcPackage.SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE: return createSetSolutionExpressionCandidateValue();
 			case SchedulerCalcPackage.SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE: return createSetResourceExpressionCandidateValue();
 			case SchedulerCalcPackage.SET_RESOURCE_SCHEDULE: return createSetResourceSchedule();
+			case SchedulerCalcPackage.SET_EXPRESSION_SCHEDULE: return createSetExpressionSchedule();
+			case SchedulerCalcPackage.SET_FLOAT_EXPRESSION_SCHEDULE: return createSetFloatExpressionSchedule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +95,16 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	public ResourcePropagatorFunction createResourcePropagatorFunction() {
 		ResourcePropagatorFunctionImpl resourcePropagatorFunction = new ResourcePropagatorFunctionImpl();
 		return resourcePropagatorFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CandidateExpressionPropagatorFunction createCandidateExpressionPropagatorFunction() {
+		CandidateExpressionPropagatorFunctionImpl candidateExpressionPropagatorFunction = new CandidateExpressionPropagatorFunctionImpl();
+		return candidateExpressionPropagatorFunction;
 	}
 
 	/**
@@ -142,6 +155,26 @@ public class SchedulerCalcFactoryImpl extends EFactoryImpl implements SchedulerC
 	public SetResourceSchedule createSetResourceSchedule() {
 		SetResourceScheduleImpl setResourceSchedule = new SetResourceScheduleImpl();
 		return setResourceSchedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetExpressionSchedule createSetExpressionSchedule() {
+		SetExpressionScheduleImpl setExpressionSchedule = new SetExpressionScheduleImpl();
+		return setExpressionSchedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetFloatExpressionSchedule createSetFloatExpressionSchedule() {
+		SetFloatExpressionScheduleImpl setFloatExpressionSchedule = new SetFloatExpressionScheduleImpl();
+		return setFloatExpressionSchedule;
 	}
 
 	/**

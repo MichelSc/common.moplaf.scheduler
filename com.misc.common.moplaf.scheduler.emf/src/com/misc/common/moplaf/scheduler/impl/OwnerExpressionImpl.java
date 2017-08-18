@@ -5,10 +5,12 @@ package com.misc.common.moplaf.scheduler.impl;
 import com.misc.common.moplaf.scheduler.OwnerExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
+import com.misc.common.moplaf.scheduler.Solution;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -23,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.OwnerExpressionImpl#getOwner <em>Owner</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.OwnerExpressionImpl#getRole <em>Role</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.OwnerExpressionImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.OwnerExpressionImpl#getExpressionSolution <em>Expression Solution</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,6 +138,28 @@ public abstract class OwnerExpressionImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Solution getExpressionSolution() {
+		Solution expressionSolution = basicGetExpressionSolution();
+		return expressionSolution != null && expressionSolution.eIsProxy() ? (Solution)eResolveProxy((InternalEObject)expressionSolution) : expressionSolution;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Solution basicGetExpressionSolution() {
+		// TODO: implement this method to return the 'Expression Solution' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -144,6 +169,9 @@ public abstract class OwnerExpressionImpl extends MinimalEObjectImpl.Container i
 				return getRole();
 			case SchedulerPackage.OWNER_EXPRESSION__DESCRIPTION:
 				return getDescription();
+			case SchedulerPackage.OWNER_EXPRESSION__EXPRESSION_SOLUTION:
+				if (resolve) return getExpressionSolution();
+				return basicGetExpressionSolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -192,6 +220,8 @@ public abstract class OwnerExpressionImpl extends MinimalEObjectImpl.Container i
 				return ROLE_EDEFAULT == null ? role != null : !ROLE_EDEFAULT.equals(role);
 			case SchedulerPackage.OWNER_EXPRESSION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case SchedulerPackage.OWNER_EXPRESSION__EXPRESSION_SOLUTION:
+				return basicGetExpressionSolution() != null;
 		}
 		return super.eIsSet(featureID);
 	}

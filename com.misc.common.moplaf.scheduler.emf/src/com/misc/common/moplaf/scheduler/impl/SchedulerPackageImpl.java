@@ -1456,6 +1456,15 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getOwnerExpression_ExpressionSolution() {
+		return (EReference)ownerExpressionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SchedulerFactory getSchedulerFactory() {
 		return (SchedulerFactory)getEFactoryInstance();
 	}
@@ -1576,6 +1585,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEAttribute(ownerExpressionEClass, OWNER_EXPRESSION__OWNER);
 		createEAttribute(ownerExpressionEClass, OWNER_EXPRESSION__ROLE);
 		createEAttribute(ownerExpressionEClass, OWNER_EXPRESSION__DESCRIPTION);
+		createEReference(ownerExpressionEClass, OWNER_EXPRESSION__EXPRESSION_SOLUTION);
 
 		moveExpressionEClass = createEClass(MOVE_EXPRESSION);
 
@@ -1832,6 +1842,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEAttribute(getOwnerExpression_Owner(), ecorePackage.getEString(), "Owner", null, 0, 1, OwnerExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOwnerExpression_Role(), ecorePackage.getEString(), "Role", null, 0, 1, OwnerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOwnerExpression_Description(), ecorePackage.getEString(), "Description", null, 0, 1, OwnerExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getOwnerExpression_ExpressionSolution(), this.getSolution(), null, "ExpressionSolution", null, 0, 1, OwnerExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(moveExpressionEClass, MoveExpression.class, "MoveExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

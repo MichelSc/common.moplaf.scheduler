@@ -5,7 +5,6 @@ package com.misc.common.moplaf.schedulercalc.impl;
 import com.misc.common.moplaf.propagator2.impl.PropagatorFunctionBindingsImpl;
 import com.misc.common.moplaf.scheduler.Plugin;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
-import com.misc.common.moplaf.scheduler.TaskExpression;
 import com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
 
@@ -62,10 +61,10 @@ public class ResourceExpressionPropagatorFunctionImpl extends PropagatorFunction
 	 */
 	public ResourceExpression basicGetResourceExpression() {
 		EObject container = this.eContainer;
-		if ( container instanceof TaskExpression){
+		if ( container instanceof ResourceExpression){
 			return (ResourceExpression) container;
 		}
-		String logMessage = String.format("The owner of the ResourceExpression %s must be a ResourceExpression and not %s",
+		String logMessage = String.format("The owner of the ResourceExpressionPropagatorFunction %s must be a ResourceExpression and not %s",
                 this.getClass().getName(),
                 container == null ? "null" : container.getClass().getName());
 		Plugin.INSTANCE.logError(logMessage);

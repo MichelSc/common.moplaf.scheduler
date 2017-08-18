@@ -49,6 +49,15 @@ public interface SchedulerCalcFactory extends EFactory {
 	ResourcePropagatorFunction createResourcePropagatorFunction();
 
 	/**
+	 * Returns a new object of class '<em>Candidate Expression Propagator Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Candidate Expression Propagator Function</em>'.
+	 * @generated
+	 */
+	CandidateExpressionPropagatorFunction createCandidateExpressionPropagatorFunction();
+
+	/**
 	 * Returns a new object of class '<em>Resource Expression Propagator Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,6 +146,24 @@ public interface SchedulerCalcFactory extends EFactory {
 	 * @generated
 	 */
 	SetResourceSchedule createSetResourceSchedule();
+
+	/**
+	 * Returns a new object of class '<em>Set Expression Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Expression Schedule</em>'.
+	 * @generated
+	 */
+	SetExpressionSchedule createSetExpressionSchedule();
+
+	/**
+	 * Returns a new object of class '<em>Set Float Expression Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Float Expression Schedule</em>'.
+	 * @generated
+	 */
+	SetFloatExpressionSchedule createSetFloatExpressionSchedule();
 
 	/**
 	 * Returns the package supported by this factory.

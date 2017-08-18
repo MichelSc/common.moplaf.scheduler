@@ -1684,13 +1684,22 @@ public interface SchedulerPackage extends EPackage {
 	int OWNER_EXPRESSION__DESCRIPTION = 2;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OWNER_EXPRESSION__EXPRESSION_SOLUTION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Owner Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OWNER_EXPRESSION_FEATURE_COUNT = 3;
+	int OWNER_EXPRESSION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Owner Expression</em>' class.
@@ -1727,6 +1736,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_EXPRESSION__EXPRESSION_SOLUTION = OWNER_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The number of structural features of the '<em>Move Expression</em>' class.
@@ -1772,6 +1790,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_EXPRESSION__EXPRESSION_SOLUTION = OWNER_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Solution</b></em>' reference.
@@ -1828,6 +1855,15 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_EXPRESSION__EXPRESSION_SOLUTION = OWNER_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1880,6 +1916,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_EXPRESSION__EXPRESSION_SOLUTION = OWNER_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -1936,6 +1981,15 @@ public interface SchedulerPackage extends EPackage {
 	int VALUE_EXPRESSION__DESCRIPTION = OWNER_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_EXPRESSION__EXPRESSION_SOLUTION = OWNER_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The number of structural features of the '<em>Value Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1988,6 +2042,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLOAT_EXPRESSION__DESCRIPTION = VALUE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_EXPRESSION__EXPRESSION_SOLUTION = VALUE_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2053,6 +2116,15 @@ public interface SchedulerPackage extends EPackage {
 	int INT_EXPRESSION__DESCRIPTION = VALUE_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INT_EXPRESSION__EXPRESSION_SOLUTION = VALUE_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2114,6 +2186,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_EXPRESSION__DESCRIPTION = VALUE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_EXPRESSION__EXPRESSION_SOLUTION = VALUE_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2188,13 +2269,22 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_VALUE_EXPRESSION__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CANDIDATE_VALUE_EXPRESSION__CANDIDATE_VALUE_AS_STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
+	int CANDIDATE_VALUE_EXPRESSION__CANDIDATE_VALUE_AS_STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Candidate Value Expression</em>' class.
@@ -2203,7 +2293,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CANDIDATE_VALUE_EXPRESSION_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
+	int CANDIDATE_VALUE_EXPRESSION_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -2303,6 +2393,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION = CANDIDATE_VALUE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -2440,6 +2539,15 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_VALUE_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2575,6 +2683,15 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_INT_EXPRESSION__DESCRIPTION = CANDIDATE_VALUE_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_VALUE_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2708,6 +2825,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -2852,6 +2978,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION = CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -3018,6 +3153,15 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_INT_EXPRESSION__DESCRIPTION = CANDIDATE_INT_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3160,6 +3304,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -3306,6 +3459,15 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION = CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3448,6 +3610,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_CANDIDATE_INT_EXPRESSION__DESCRIPTION = CANDIDATE_INT_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -3604,6 +3775,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_DATE_EXPRESSION__DESCRIPTION = CANDIDATE_DATE_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_DATE_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3758,6 +3938,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION = CANDIDATE_FLOAT_EXPRESSION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_FLOAT_EXPRESSION__EXPRESSION_SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3910,6 +4099,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_CANDIDATE_INT_EXPRESSION__DESCRIPTION = CANDIDATE_INT_EXPRESSION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Expression Solution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION = CANDIDATE_INT_EXPRESSION__EXPRESSION_SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Candidate Value As String</b></em>' attribute.
@@ -5286,6 +5484,17 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getOwnerExpression_Description();
 
 	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.OwnerExpression#getExpressionSolution <em>Expression Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Expression Solution</em>'.
+	 * @see com.misc.common.moplaf.scheduler.OwnerExpression#getExpressionSolution()
+	 * @see #getOwnerExpression()
+	 * @generated
+	 */
+	EReference getOwnerExpression_ExpressionSolution();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6331,6 +6540,14 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OWNER_EXPRESSION__DESCRIPTION = eINSTANCE.getOwnerExpression_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression Solution</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OWNER_EXPRESSION__EXPRESSION_SOLUTION = eINSTANCE.getOwnerExpression_ExpressionSolution();
 
 	}
 

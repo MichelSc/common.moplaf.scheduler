@@ -93,6 +93,14 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SchedulerCalcPackage.CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION: {
+				CandidateExpressionPropagatorFunction candidateExpressionPropagatorFunction = (CandidateExpressionPropagatorFunction)theEObject;
+				T result = caseCandidateExpressionPropagatorFunction(candidateExpressionPropagatorFunction);
+				if (result == null) result = casePropagatorFunctionBindings(candidateExpressionPropagatorFunction);
+				if (result == null) result = casePropagatorFunction(candidateExpressionPropagatorFunction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SchedulerCalcPackage.RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION: {
 				ResourceExpressionPropagatorFunction resourceExpressionPropagatorFunction = (ResourceExpressionPropagatorFunction)theEObject;
 				T result = caseResourceExpressionPropagatorFunction(resourceExpressionPropagatorFunction);
@@ -180,6 +188,25 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SchedulerCalcPackage.SET_EXPRESSION_SCHEDULE: {
+				SetExpressionSchedule setExpressionSchedule = (SetExpressionSchedule)theEObject;
+				T result = caseSetExpressionSchedule(setExpressionSchedule);
+				if (result == null) result = caseCandidateExpressionPropagatorFunction(setExpressionSchedule);
+				if (result == null) result = casePropagatorFunctionBindings(setExpressionSchedule);
+				if (result == null) result = casePropagatorFunction(setExpressionSchedule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerCalcPackage.SET_FLOAT_EXPRESSION_SCHEDULE: {
+				SetFloatExpressionSchedule setFloatExpressionSchedule = (SetFloatExpressionSchedule)theEObject;
+				T result = caseSetFloatExpressionSchedule(setFloatExpressionSchedule);
+				if (result == null) result = caseSetExpressionSchedule(setFloatExpressionSchedule);
+				if (result == null) result = caseCandidateExpressionPropagatorFunction(setFloatExpressionSchedule);
+				if (result == null) result = casePropagatorFunctionBindings(setFloatExpressionSchedule);
+				if (result == null) result = casePropagatorFunction(setFloatExpressionSchedule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -226,6 +253,21 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResourcePropagatorFunction(ResourcePropagatorFunction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Candidate Expression Propagator Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Candidate Expression Propagator Function</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCandidateExpressionPropagatorFunction(CandidateExpressionPropagatorFunction object) {
 		return null;
 	}
 
@@ -376,6 +418,36 @@ public class SchedulerCalcSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSetResourceSchedule(SetResourceSchedule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Expression Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Expression Schedule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetExpressionSchedule(SetExpressionSchedule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Set Float Expression Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Set Float Expression Schedule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSetFloatExpressionSchedule(SetFloatExpressionSchedule object) {
 		return null;
 	}
 

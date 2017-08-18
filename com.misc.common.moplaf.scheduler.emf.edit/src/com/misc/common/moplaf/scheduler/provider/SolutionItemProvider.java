@@ -302,7 +302,7 @@ public class SolutionItemProvider
 	@Override
 	public String getText(Object object) {
 		Solution solution = (Solution)object;
-		return getString("_UI_Solution_type") + " " + solution.isPendingCandidateMove();
+		return getString("_UI_Solution_type") + " " + solution.getSolutionNr();
 	}
 	
 
