@@ -25,28 +25,26 @@ package com.misc.common.moplaf.scheduler;
  */
 public interface TaskExpression extends OwnerExpression {
 	/**
-	 * Returns the value of the '<em><b>Task</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionTask#getExpressions <em>Expressions</em>}'.
+	 * Returns the value of the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Task</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Task</em>' container reference.
+	 * @return the value of the '<em>Task</em>' reference.
 	 * @see #setTask(SolutionTask)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTaskExpression_Task()
-	 * @see com.misc.common.moplaf.scheduler.SolutionTask#getExpressions
-	 * @model opposite="Expressions" required="true" transient="false"
+	 * @model
 	 * @generated
 	 */
 	SolutionTask getTask();
 
 	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}' container reference.
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.TaskExpression#getTask <em>Task</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Task</em>' container reference.
+	 * @param value the new value of the '<em>Task</em>' reference.
 	 * @see #getTask()
 	 * @generated
 	 */

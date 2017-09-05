@@ -141,6 +141,29 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CandidateExpressionPropagatorFunctionItemProvider candidateExpressionPropagatorFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCandidateExpressionPropagatorFunctionAdapter() {
+		if (candidateExpressionPropagatorFunctionItemProvider == null) {
+			candidateExpressionPropagatorFunctionItemProvider = new CandidateExpressionPropagatorFunctionItemProvider(this);
+		}
+
+		return candidateExpressionPropagatorFunctionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -210,348 +233,210 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CalcSolutionAllExpressionCandidateValues} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetScheduleScope} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcSolutionAllExpressionCandidateValuesItemProvider calcSolutionAllExpressionCandidateValuesItemProvider;
+	protected SetScheduleScopeItemProvider setScheduleScopeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CalcSolutionAllExpressionCandidateValues}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetScheduleScope}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCalcSolutionAllExpressionCandidateValuesAdapter() {
-		if (calcSolutionAllExpressionCandidateValuesItemProvider == null) {
-			calcSolutionAllExpressionCandidateValuesItemProvider = new CalcSolutionAllExpressionCandidateValuesItemProvider(this);
+	public Adapter createSetScheduleScopeAdapter() {
+		if (setScheduleScopeItemProvider == null) {
+			setScheduleScopeItemProvider = new SetScheduleScopeItemProvider(this);
 		}
 
-		return calcSolutionAllExpressionCandidateValuesItemProvider;
+		return setScheduleScopeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CalcSolutionExpressionCandidateValue} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetTaskSchedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcSolutionExpressionCandidateValueItemProvider calcSolutionExpressionCandidateValueItemProvider;
+	protected SetTaskScheduleItemProvider setTaskScheduleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CalcSolutionExpressionCandidateValue}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetTaskSchedule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCalcSolutionExpressionCandidateValueAdapter() {
-		if (calcSolutionExpressionCandidateValueItemProvider == null) {
-			calcSolutionExpressionCandidateValueItemProvider = new CalcSolutionExpressionCandidateValueItemProvider(this);
+	public Adapter createSetTaskScheduleAdapter() {
+		if (setTaskScheduleItemProvider == null) {
+			setTaskScheduleItemProvider = new SetTaskScheduleItemProvider(this);
 		}
 
-		return calcSolutionExpressionCandidateValueItemProvider;
+		return setTaskScheduleItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CalcResourceExpressionCandidateValue} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcResourceExpressionCandidateValueItemProvider calcResourceExpressionCandidateValueItemProvider;
+	protected SetExpressionCandidateValueScopeItemProvider setExpressionCandidateValueScopeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CalcResourceExpressionCandidateValue}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCalcResourceExpressionCandidateValueAdapter() {
-		if (calcResourceExpressionCandidateValueItemProvider == null) {
-			calcResourceExpressionCandidateValueItemProvider = new CalcResourceExpressionCandidateValueItemProvider(this);
+	public Adapter createSetExpressionCandidateValueScopeAdapter() {
+		if (setExpressionCandidateValueScopeItemProvider == null) {
+			setExpressionCandidateValueScopeItemProvider = new SetExpressionCandidateValueScopeItemProvider(this);
 		}
 
-		return calcResourceExpressionCandidateValueItemProvider;
+		return setExpressionCandidateValueScopeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CalcTaskExpressionCandidateValue} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcTaskExpressionCandidateValueItemProvider calcTaskExpressionCandidateValueItemProvider;
+	protected SetTaskExpressionCandidateValueItemProvider setTaskExpressionCandidateValueItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CalcTaskExpressionCandidateValue}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCalcTaskExpressionCandidateValueAdapter() {
-		if (calcTaskExpressionCandidateValueItemProvider == null) {
-			calcTaskExpressionCandidateValueItemProvider = new CalcTaskExpressionCandidateValueItemProvider(this);
+	public Adapter createSetTaskExpressionCandidateValueAdapter() {
+		if (setTaskExpressionCandidateValueItemProvider == null) {
+			setTaskExpressionCandidateValueItemProvider = new SetTaskExpressionCandidateValueItemProvider(this);
 		}
 
-		return calcTaskExpressionCandidateValueItemProvider;
+		return setTaskExpressionCandidateValueItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.CalcTaksExpressionCandidateValueCumulative} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CalcTaksExpressionCandidateValueCumulativeItemProvider calcTaksExpressionCandidateValueCumulativeItemProvider;
+	protected SetSolutionExpressionCandidateValueItemProvider setSolutionExpressionCandidateValueItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.CalcTaksExpressionCandidateValueCumulative}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCalcTaksExpressionCandidateValueCumulativeAdapter() {
-		if (calcTaksExpressionCandidateValueCumulativeItemProvider == null) {
-			calcTaksExpressionCandidateValueCumulativeItemProvider = new CalcTaksExpressionCandidateValueCumulativeItemProvider(this);
+	public Adapter createSetSolutionExpressionCandidateValueAdapter() {
+		if (setSolutionExpressionCandidateValueItemProvider == null) {
+			setSolutionExpressionCandidateValueItemProvider = new SetSolutionExpressionCandidateValueItemProvider(this);
 		}
 
-		return calcTaksExpressionCandidateValueCumulativeItemProvider;
+		return setSolutionExpressionCandidateValueItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetSolutionAllExpressionCandidateValues} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetResourceExpressionCandidateValue} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResetSolutionAllExpressionCandidateValuesItemProvider resetSolutionAllExpressionCandidateValuesItemProvider;
+	protected SetResourceExpressionCandidateValueItemProvider setResourceExpressionCandidateValueItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetSolutionAllExpressionCandidateValues}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetResourceExpressionCandidateValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createResetSolutionAllExpressionCandidateValuesAdapter() {
-		if (resetSolutionAllExpressionCandidateValuesItemProvider == null) {
-			resetSolutionAllExpressionCandidateValuesItemProvider = new ResetSolutionAllExpressionCandidateValuesItemProvider(this);
+	public Adapter createSetResourceExpressionCandidateValueAdapter() {
+		if (setResourceExpressionCandidateValueItemProvider == null) {
+			setResourceExpressionCandidateValueItemProvider = new SetResourceExpressionCandidateValueItemProvider(this);
 		}
 
-		return resetSolutionAllExpressionCandidateValuesItemProvider;
+		return setResourceExpressionCandidateValueItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetSolutionExpressionCandidateValue} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetResourceSchedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResetSolutionExpressionCandidateValueItemProvider resetSolutionExpressionCandidateValueItemProvider;
+	protected SetResourceScheduleItemProvider setResourceScheduleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetSolutionExpressionCandidateValue}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetResourceSchedule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createResetSolutionExpressionCandidateValueAdapter() {
-		if (resetSolutionExpressionCandidateValueItemProvider == null) {
-			resetSolutionExpressionCandidateValueItemProvider = new ResetSolutionExpressionCandidateValueItemProvider(this);
+	public Adapter createSetResourceScheduleAdapter() {
+		if (setResourceScheduleItemProvider == null) {
+			setResourceScheduleItemProvider = new SetResourceScheduleItemProvider(this);
 		}
 
-		return resetSolutionExpressionCandidateValueItemProvider;
+		return setResourceScheduleItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetResourceExpressionCandidateValue} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResetResourceExpressionCandidateValueItemProvider resetResourceExpressionCandidateValueItemProvider;
+	protected SetExpressionScheduleItemProvider setExpressionScheduleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetResourceExpressionCandidateValue}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetExpressionSchedule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createResetResourceExpressionCandidateValueAdapter() {
-		if (resetResourceExpressionCandidateValueItemProvider == null) {
-			resetResourceExpressionCandidateValueItemProvider = new ResetResourceExpressionCandidateValueItemProvider(this);
+	public Adapter createSetExpressionScheduleAdapter() {
+		if (setExpressionScheduleItemProvider == null) {
+			setExpressionScheduleItemProvider = new SetExpressionScheduleItemProvider(this);
 		}
 
-		return resetResourceExpressionCandidateValueItemProvider;
+		return setExpressionScheduleItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetTaskExpressionCandidateValue} instances.
+	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResetTaskExpressionCandidateValueItemProvider resetTaskExpressionCandidateValueItemProvider;
+	protected SetFloatExpressionScheduleItemProvider setFloatExpressionScheduleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskExpressionCandidateValue}.
+	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createResetTaskExpressionCandidateValueAdapter() {
-		if (resetTaskExpressionCandidateValueItemProvider == null) {
-			resetTaskExpressionCandidateValueItemProvider = new ResetTaskExpressionCandidateValueItemProvider(this);
+	public Adapter createSetFloatExpressionScheduleAdapter() {
+		if (setFloatExpressionScheduleItemProvider == null) {
+			setFloatExpressionScheduleItemProvider = new SetFloatExpressionScheduleItemProvider(this);
 		}
 
-		return resetTaskExpressionCandidateValueItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResetTaskCandidateNextItemProvider resetTaskCandidateNextItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResetTaskCandidateNextAdapter() {
-		if (resetTaskCandidateNextItemProvider == null) {
-			resetTaskCandidateNextItemProvider = new ResetTaskCandidateNextItemProvider(this);
-		}
-
-		return resetTaskCandidateNextItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResetTaskCandidateScheduledResourceItemProvider resetTaskCandidateScheduledResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResetTaskCandidateScheduledResourceAdapter() {
-		if (resetTaskCandidateScheduledResourceItemProvider == null) {
-			resetTaskCandidateScheduledResourceItemProvider = new ResetTaskCandidateScheduledResourceItemProvider(this);
-		}
-
-		return resetTaskCandidateScheduledResourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResetResourceTasksCandidateNextItemProvider resetResourceTasksCandidateNextItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResetResourceTasksCandidateNextAdapter() {
-		if (resetResourceTasksCandidateNextItemProvider == null) {
-			resetResourceTasksCandidateNextItemProvider = new ResetResourceTasksCandidateNextItemProvider(this);
-		}
-
-		return resetResourceTasksCandidateNextItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResetResourceTasksCandidateScheduledResourceItemProvider resetResourceTasksCandidateScheduledResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResetResourceTasksCandidateScheduledResourceAdapter() {
-		if (resetResourceTasksCandidateScheduledResourceItemProvider == null) {
-			resetResourceTasksCandidateScheduledResourceItemProvider = new ResetResourceTasksCandidateScheduledResourceItemProvider(this);
-		}
-
-		return resetResourceTasksCandidateScheduledResourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SetTaskCandidateScheduledResourceScopeItemProvider setTaskCandidateScheduledResourceScopeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSetTaskCandidateScheduledResourceScopeAdapter() {
-		if (setTaskCandidateScheduledResourceScopeItemProvider == null) {
-			setTaskCandidateScheduledResourceScopeItemProvider = new SetTaskCandidateScheduledResourceScopeItemProvider(this);
-		}
-
-		return setTaskCandidateScheduledResourceScopeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SetTaskCandidateScheduledResourceItemProvider setTaskCandidateScheduledResourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSetTaskCandidateScheduledResourceAdapter() {
-		if (setTaskCandidateScheduledResourceItemProvider == null) {
-			setTaskCandidateScheduledResourceItemProvider = new SetTaskCandidateScheduledResourceItemProvider(this);
-		}
-
-		return setTaskCandidateScheduledResourceItemProvider;
+		return setFloatExpressionScheduleItemProvider;
 	}
 
 	/**
@@ -656,24 +541,19 @@ public class SchedulerCalcItemProviderAdapterFactory extends SchedulerCalcAdapte
 		if (solutionPropagatorFunctionItemProvider != null) solutionPropagatorFunctionItemProvider.dispose();
 		if (solutionExpressionPropagatorFunctionItemProvider != null) solutionExpressionPropagatorFunctionItemProvider.dispose();
 		if (resourcePropagatorFunctionItemProvider != null) resourcePropagatorFunctionItemProvider.dispose();
+		if (candidateExpressionPropagatorFunctionItemProvider != null) candidateExpressionPropagatorFunctionItemProvider.dispose();
 		if (resourceExpressionPropagatorFunctionItemProvider != null) resourceExpressionPropagatorFunctionItemProvider.dispose();
 		if (taskPropagatorFunctionItemProvider != null) taskPropagatorFunctionItemProvider.dispose();
 		if (taskExpressionPropagatorFunctionItemProvider != null) taskExpressionPropagatorFunctionItemProvider.dispose();
-		if (calcSolutionAllExpressionCandidateValuesItemProvider != null) calcSolutionAllExpressionCandidateValuesItemProvider.dispose();
-		if (calcSolutionExpressionCandidateValueItemProvider != null) calcSolutionExpressionCandidateValueItemProvider.dispose();
-		if (calcResourceExpressionCandidateValueItemProvider != null) calcResourceExpressionCandidateValueItemProvider.dispose();
-		if (calcTaskExpressionCandidateValueItemProvider != null) calcTaskExpressionCandidateValueItemProvider.dispose();
-		if (calcTaksExpressionCandidateValueCumulativeItemProvider != null) calcTaksExpressionCandidateValueCumulativeItemProvider.dispose();
-		if (resetSolutionAllExpressionCandidateValuesItemProvider != null) resetSolutionAllExpressionCandidateValuesItemProvider.dispose();
-		if (resetSolutionExpressionCandidateValueItemProvider != null) resetSolutionExpressionCandidateValueItemProvider.dispose();
-		if (resetResourceExpressionCandidateValueItemProvider != null) resetResourceExpressionCandidateValueItemProvider.dispose();
-		if (resetTaskExpressionCandidateValueItemProvider != null) resetTaskExpressionCandidateValueItemProvider.dispose();
-		if (resetTaskCandidateNextItemProvider != null) resetTaskCandidateNextItemProvider.dispose();
-		if (resetTaskCandidateScheduledResourceItemProvider != null) resetTaskCandidateScheduledResourceItemProvider.dispose();
-		if (resetResourceTasksCandidateNextItemProvider != null) resetResourceTasksCandidateNextItemProvider.dispose();
-		if (resetResourceTasksCandidateScheduledResourceItemProvider != null) resetResourceTasksCandidateScheduledResourceItemProvider.dispose();
-		if (setTaskCandidateScheduledResourceScopeItemProvider != null) setTaskCandidateScheduledResourceScopeItemProvider.dispose();
-		if (setTaskCandidateScheduledResourceItemProvider != null) setTaskCandidateScheduledResourceItemProvider.dispose();
+		if (setScheduleScopeItemProvider != null) setScheduleScopeItemProvider.dispose();
+		if (setTaskScheduleItemProvider != null) setTaskScheduleItemProvider.dispose();
+		if (setExpressionCandidateValueScopeItemProvider != null) setExpressionCandidateValueScopeItemProvider.dispose();
+		if (setTaskExpressionCandidateValueItemProvider != null) setTaskExpressionCandidateValueItemProvider.dispose();
+		if (setSolutionExpressionCandidateValueItemProvider != null) setSolutionExpressionCandidateValueItemProvider.dispose();
+		if (setResourceExpressionCandidateValueItemProvider != null) setResourceExpressionCandidateValueItemProvider.dispose();
+		if (setResourceScheduleItemProvider != null) setResourceScheduleItemProvider.dispose();
+		if (setExpressionScheduleItemProvider != null) setExpressionScheduleItemProvider.dispose();
+		if (setFloatExpressionScheduleItemProvider != null) setFloatExpressionScheduleItemProvider.dispose();
 	}
 
 }

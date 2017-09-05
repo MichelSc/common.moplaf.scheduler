@@ -5,17 +5,14 @@ package com.misc.common.moplaf.scheduler.impl;
 import com.misc.common.moplaf.scheduler.ResourceCandidateDateExpression;
 import com.misc.common.moplaf.scheduler.ResourceExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
+import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +28,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class ResourceCandidateDateExpressionImpl extends CandidateDateExpressionImpl implements ResourceCandidateDateExpression {
+	/**
+	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResource()
+	 * @generated
+	 * @ordered
+	 */
+	protected SolutionResource resource;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,8 +63,15 @@ public class ResourceCandidateDateExpressionImpl extends CandidateDateExpression
 	 * @generated
 	 */
 	public SolutionResource getResource() {
-		if (eContainerFeatureID() != SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE) return null;
-		return (SolutionResource)eInternalContainer();
+		if (resource != null && resource.eIsProxy()) {
+			InternalEObject oldResource = (InternalEObject)resource;
+			resource = (SolutionResource)eResolveProxy(oldResource);
+			if (resource != oldResource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE, oldResource, resource));
+			}
+		}
+		return resource;
 	}
 
 	/**
@@ -65,10 +79,18 @@ public class ResourceCandidateDateExpressionImpl extends CandidateDateExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetResource(SolutionResource newResource, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newResource, SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE, msgs);
-		return msgs;
+	public SolutionResource basicGetResource() {
+		return resource;
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getResource().getSolution();
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,63 +98,10 @@ public class ResourceCandidateDateExpressionImpl extends CandidateDateExpression
 	 * @generated
 	 */
 	public void setResource(SolutionResource newResource) {
-		if (newResource != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE && newResource != null)) {
-			if (EcoreUtil.isAncestor(this, newResource))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newResource != null)
-				msgs = ((InternalEObject)newResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SolutionResource.class, msgs);
-			msgs = basicSetResource(newResource, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE, newResource, newResource));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetResource((SolutionResource)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE:
-				return basicSetResource(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__EXPRESSIONS, SolutionResource.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
+		SolutionResource oldResource = resource;
+		resource = newResource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE, oldResource, resource));
 	}
 
 	/**
@@ -144,7 +113,8 @@ public class ResourceCandidateDateExpressionImpl extends CandidateDateExpression
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE:
-				return getResource();
+				if (resolve) return getResource();
+				return basicGetResource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,7 +158,7 @@ public class ResourceCandidateDateExpressionImpl extends CandidateDateExpression
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION__RESOURCE:
-				return getResource() != null;
+				return resource != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -20,28 +20,26 @@ package com.misc.common.moplaf.scheduler;
  */
 public interface ResourceExpression extends OwnerExpression {
 	/**
-	 * Returns the value of the '<em><b>Resource</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.SolutionResource#getExpressions <em>Expressions</em>}'.
+	 * Returns the value of the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resource</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource</em>' container reference.
+	 * @return the value of the '<em>Resource</em>' reference.
 	 * @see #setResource(SolutionResource)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResourceExpression_Resource()
-	 * @see com.misc.common.moplaf.scheduler.SolutionResource#getExpressions
-	 * @model opposite="Expressions" required="true" transient="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	SolutionResource getResource();
 
 	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.ResourceExpression#getResource <em>Resource</em>}' container reference.
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.ResourceExpression#getResource <em>Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource</em>' container reference.
+	 * @param value the new value of the '<em>Resource</em>' reference.
 	 * @see #getResource()
 	 * @generated
 	 */

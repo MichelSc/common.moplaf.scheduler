@@ -761,12 +761,12 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 		if (candidateFloatExpressionItemProvider != null) candidateFloatExpressionItemProvider.dispose();
 		if (candidateDateExpressionItemProvider != null) candidateDateExpressionItemProvider.dispose();
 		if (candidateIntExpressionItemProvider != null) candidateIntExpressionItemProvider.dispose();
-		if (taskCandidateFloatExpressionItemProvider != null) taskCandidateFloatExpressionItemProvider.dispose();
 		if (taskCandidateDateExpressionItemProvider != null) taskCandidateDateExpressionItemProvider.dispose();
-		if (resourceCandidateFloatExpressionItemProvider != null) resourceCandidateFloatExpressionItemProvider.dispose();
-		if (resourceCandidateDateExpressionItemProvider != null) resourceCandidateDateExpressionItemProvider.dispose();
-		if (resourceCandidateIntExpressionItemProvider != null) resourceCandidateIntExpressionItemProvider.dispose();
+		if (taskCandidateFloatExpressionItemProvider != null) taskCandidateFloatExpressionItemProvider.dispose();
 		if (taskCandidateIntExpressionItemProvider != null) taskCandidateIntExpressionItemProvider.dispose();
+		if (resourceCandidateDateExpressionItemProvider != null) resourceCandidateDateExpressionItemProvider.dispose();
+		if (resourceCandidateFloatExpressionItemProvider != null) resourceCandidateFloatExpressionItemProvider.dispose();
+		if (resourceCandidateIntExpressionItemProvider != null) resourceCandidateIntExpressionItemProvider.dispose();
 		if (solutionCandidateDateExpressionItemProvider != null) solutionCandidateDateExpressionItemProvider.dispose();
 		if (solutionCandidateFloatExpressionItemProvider != null) solutionCandidateFloatExpressionItemProvider.dispose();
 		if (solutionCandidateIntExpressionItemProvider != null) solutionCandidateIntExpressionItemProvider.dispose();

@@ -266,19 +266,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: {
-				TaskCandidateFloatExpression taskCandidateFloatExpression = (TaskCandidateFloatExpression)theEObject;
-				T result = caseTaskCandidateFloatExpression(taskCandidateFloatExpression);
-				if (result == null) result = caseCandidateFloatExpression(taskCandidateFloatExpression);
-				if (result == null) result = caseTaskExpression(taskCandidateFloatExpression);
-				if (result == null) result = caseCandidateValueExpression(taskCandidateFloatExpression);
-				if (result == null) result = caseFloatExpression(taskCandidateFloatExpression);
-				if (result == null) result = caseObjectWithPropagatorFunctions(taskCandidateFloatExpression);
-				if (result == null) result = caseValueExpression(taskCandidateFloatExpression);
-				if (result == null) result = caseOwnerExpression(taskCandidateFloatExpression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SchedulerPackage.TASK_CANDIDATE_DATE_EXPRESSION: {
 				TaskCandidateDateExpression taskCandidateDateExpression = (TaskCandidateDateExpression)theEObject;
 				T result = caseTaskCandidateDateExpression(taskCandidateDateExpression);
@@ -292,16 +279,29 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: {
-				ResourceCandidateFloatExpression resourceCandidateFloatExpression = (ResourceCandidateFloatExpression)theEObject;
-				T result = caseResourceCandidateFloatExpression(resourceCandidateFloatExpression);
-				if (result == null) result = caseCandidateFloatExpression(resourceCandidateFloatExpression);
-				if (result == null) result = caseResourceExpression(resourceCandidateFloatExpression);
-				if (result == null) result = caseCandidateValueExpression(resourceCandidateFloatExpression);
-				if (result == null) result = caseFloatExpression(resourceCandidateFloatExpression);
-				if (result == null) result = caseObjectWithPropagatorFunctions(resourceCandidateFloatExpression);
-				if (result == null) result = caseValueExpression(resourceCandidateFloatExpression);
-				if (result == null) result = caseOwnerExpression(resourceCandidateFloatExpression);
+			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: {
+				TaskCandidateFloatExpression taskCandidateFloatExpression = (TaskCandidateFloatExpression)theEObject;
+				T result = caseTaskCandidateFloatExpression(taskCandidateFloatExpression);
+				if (result == null) result = caseCandidateFloatExpression(taskCandidateFloatExpression);
+				if (result == null) result = caseTaskExpression(taskCandidateFloatExpression);
+				if (result == null) result = caseCandidateValueExpression(taskCandidateFloatExpression);
+				if (result == null) result = caseFloatExpression(taskCandidateFloatExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(taskCandidateFloatExpression);
+				if (result == null) result = caseValueExpression(taskCandidateFloatExpression);
+				if (result == null) result = caseOwnerExpression(taskCandidateFloatExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SchedulerPackage.TASK_CANDIDATE_INT_EXPRESSION: {
+				TaskCandidateIntExpression taskCandidateIntExpression = (TaskCandidateIntExpression)theEObject;
+				T result = caseTaskCandidateIntExpression(taskCandidateIntExpression);
+				if (result == null) result = caseCandidateIntExpression(taskCandidateIntExpression);
+				if (result == null) result = caseTaskExpression(taskCandidateIntExpression);
+				if (result == null) result = caseCandidateValueExpression(taskCandidateIntExpression);
+				if (result == null) result = caseIntExpression(taskCandidateIntExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(taskCandidateIntExpression);
+				if (result == null) result = caseValueExpression(taskCandidateIntExpression);
+				if (result == null) result = caseOwnerExpression(taskCandidateIntExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -318,6 +318,19 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: {
+				ResourceCandidateFloatExpression resourceCandidateFloatExpression = (ResourceCandidateFloatExpression)theEObject;
+				T result = caseResourceCandidateFloatExpression(resourceCandidateFloatExpression);
+				if (result == null) result = caseCandidateFloatExpression(resourceCandidateFloatExpression);
+				if (result == null) result = caseResourceExpression(resourceCandidateFloatExpression);
+				if (result == null) result = caseCandidateValueExpression(resourceCandidateFloatExpression);
+				if (result == null) result = caseFloatExpression(resourceCandidateFloatExpression);
+				if (result == null) result = caseObjectWithPropagatorFunctions(resourceCandidateFloatExpression);
+				if (result == null) result = caseValueExpression(resourceCandidateFloatExpression);
+				if (result == null) result = caseOwnerExpression(resourceCandidateFloatExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: {
 				ResourceCandidateIntExpression resourceCandidateIntExpression = (ResourceCandidateIntExpression)theEObject;
 				T result = caseResourceCandidateIntExpression(resourceCandidateIntExpression);
@@ -328,19 +341,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseObjectWithPropagatorFunctions(resourceCandidateIntExpression);
 				if (result == null) result = caseValueExpression(resourceCandidateIntExpression);
 				if (result == null) result = caseOwnerExpression(resourceCandidateIntExpression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerPackage.TASK_CANDIDATE_INT_EXPRESSION: {
-				TaskCandidateIntExpression taskCandidateIntExpression = (TaskCandidateIntExpression)theEObject;
-				T result = caseTaskCandidateIntExpression(taskCandidateIntExpression);
-				if (result == null) result = caseCandidateIntExpression(taskCandidateIntExpression);
-				if (result == null) result = caseTaskExpression(taskCandidateIntExpression);
-				if (result == null) result = caseCandidateValueExpression(taskCandidateIntExpression);
-				if (result == null) result = caseIntExpression(taskCandidateIntExpression);
-				if (result == null) result = caseObjectWithPropagatorFunctions(taskCandidateIntExpression);
-				if (result == null) result = caseValueExpression(taskCandidateIntExpression);
-				if (result == null) result = caseOwnerExpression(taskCandidateIntExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

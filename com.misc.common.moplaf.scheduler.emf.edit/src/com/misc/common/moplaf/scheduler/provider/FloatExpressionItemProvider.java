@@ -68,7 +68,7 @@ public class FloatExpressionItemProvider extends ValueExpressionItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 

@@ -64,7 +64,6 @@ public class OwnerExpressionItemProvider
 
 			addOwnerPropertyDescriptor(object);
 			addRolePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -87,7 +86,7 @@ public class OwnerExpressionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ExpressionPropertyCategory"),
 				 null));
 	}
 
@@ -109,29 +108,7 @@ public class OwnerExpressionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_OwnerExpression_Description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OwnerExpression_Description_feature", "_UI_OwnerExpression_type"),
-				 SchedulerPackage.Literals.OWNER_EXPRESSION__DESCRIPTION,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10ExpressionPropertyCategory"),
 				 null));
 	}
 

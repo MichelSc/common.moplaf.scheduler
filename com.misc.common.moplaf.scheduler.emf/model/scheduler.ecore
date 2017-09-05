@@ -13,7 +13,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solutions" upperBound="-1"
         eType="#//Solution" containment="true" eOpposite="#//Solution/Scheduler"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CurrentSolutionntr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CurrentSolutionNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resources" upperBound="-1"
@@ -23,26 +23,43 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Update the candidate solution with the parameter Move.&#xA;"/>
     </eAnnotations>
-    <eOperations name="clone" eType="#//Solution"/>
-    <eOperations name="setCandidate">
-      <eParameters name="move" eType="#//Move"/>
-    </eOperations>
-    <eOperations name="resetCandidate">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Reset the candidate solution to this Solution&#xA;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="acceptCandidate">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Change this Solution into the candidate Solution"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="reset">
+    <eOperations name="initialize">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Initialiaze the solution to the zero solution (no Task is scheduled)&#xA;"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="constructExpressions"/>
+    <eOperations name="clone" eType="#//Solution">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Create a new solution in the reset state (no candidate move, candidate values are reset to the solution values)"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="setCandidate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Set the candidate move. The candidate expression values are updated as a function of the new candidate move."/>
+      </eAnnotations>
+      <eParameters name="move" eType="#//Move"/>
+    </eOperations>
+    <eOperations name="resetCandidate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Reset the candidate solution to this Solution. The candidate expression values are aligned to the solution expression values.&#xA;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="acceptCandidate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Change this Solution into the candidate Solution. The solutions expression values are updated with the candidate expression values."/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pendingCandidateMove" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="setCandidateMoveEnabled"
+        eType="#//EnabledFeedback" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resetCandidateMoveEnabled"
+        eType="#//EnabledFeedback" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acceptCandidateMoveEnabled"
+        eType="#//EnabledFeedback" changeable="false" volatile="true" transient="true"
+        derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Moves" upperBound="-1"
         eType="#//Move" containment="true" eOpposite="#//Move/Solution"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Tasks" upperBound="-1"
@@ -51,30 +68,38 @@
         eType="#//SolutionResource" containment="true" eOpposite="#//SolutionResource/Solution"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateMove" eType="#//Move"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//SolutionExpression" containment="true" eOpposite="#//SolutionExpression/Solution"/>
+        eType="#//CandidateValueExpression"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="SolutionNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Scheduler" eType="#//Scheduler"
         eOpposite="#//Scheduler/Solutions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrCandidateScheduledTasks"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrScheduledTasks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionResource" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="constructExpressions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
-        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledTasks" upperBound="-1"
-        eType="#//SolutionTask" eOpposite="#//SolutionTask/ScheduledResource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledTasks"
-        upperBound="-1" eType="#//SolutionTask" eOpposite="#//SolutionTask/CandidateScheduledResource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateFirstTask" eType="#//SolutionTask"
-        eOpposite="#//SolutionTask/ResourceAsCandidateFirstTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateLastTask" eType="#//SolutionTask"
-        eOpposite="#//SolutionTask/ResourceAsCandidateLastTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//ResourceExpression" containment="true" eOpposite="#//ResourceExpression/Resource"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
         eType="#//Solution" eOpposite="#//Solution/Resources"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrCandidateScheduledTasks"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledTasks" upperBound="-1"
+        eType="#//SolutionTask" changeable="false" volatile="true" transient="true"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FirstTask" eType="#//SolutionTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LastTask" eType="#//SolutionTask"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrScheduledTasks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledTasks"
+        upperBound="-1" eType="#//SolutionTask" changeable="false" volatile="true"
+        transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateFirstTask" eType="#//SolutionTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateLastTask" eType="#//SolutionTask"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
+        eType="#//CandidateValueExpression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionTask" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
     <eOperations name="unsetCandidatePreviousNext"/>
@@ -84,24 +109,22 @@
       <eParameters name="next" eType="#//SolutionTask"/>
     </eOperations>
     <eOperations name="constructExpressions"/>
+    <eOperations name="scheduleCandidateResource">
+      <eParameters name="resource" eType="#//SolutionResource"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="NextTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/PreviousTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousTask" eType="#//SolutionTask"
         eOpposite="#//SolutionTask/NextTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//SolutionResource"
-        eOpposite="#//SolutionResource/ScheduledTasks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//SolutionResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateNextTask" eType="#//SolutionTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidatePreviousTask"
         eType="#//SolutionTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceAsCandidateFirstTask"
-        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateFirstTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ResourceAsCandidateLastTask"
-        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateLastTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CandidateScheduledResource"
-        eType="#//SolutionResource" eOpposite="#//SolutionResource/CandidateScheduledTasks"/>
+        eType="#//SolutionResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Expressions" upperBound="-1"
-        eType="#//TaskExpression" containment="true" eOpposite="#//TaskExpression/Task"/>
+        eType="#//CandidateValueExpression"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
@@ -148,24 +171,25 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ExpressionSolution" eType="#//Solution"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MoveExpression" abstract="true" eSuperTypes="#//OwnerExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionExpression" abstract="true"
       eSuperTypes="#//OwnerExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Solution" lowerBound="1"
-        eType="#//Solution" eOpposite="#//Solution/Expressions"/>
+        eType="#//Solution"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceExpression" abstract="true"
       eSuperTypes="#//OwnerExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
-        eType="#//SolutionResource" eOpposite="#//SolutionResource/Expressions"/>
+        eType="#//SolutionResource"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaskExpression" abstract="true" eSuperTypes="#//OwnerExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="An Expression for a Task in a Solution.&#xA;The Expression maintains 2 values: 1) the value of the expression for the Task in the Solution and 2) the candidate value, that is the value of the Expression in the Solution resulting from performing the candidate Move on this Solution."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Task" lowerBound="1" eType="#//SolutionTask"
-        eOpposite="#//SolutionTask/Expressions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Task" eType="#//SolutionTask"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ValueExpression" abstract="true" eSuperTypes="#//OwnerExpression">
     <eOperations name="setValue">
@@ -212,13 +236,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CandidateValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//TaskExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="TaskCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//TaskExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//ResourceExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//ResourceExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//TaskExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="TaskCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//TaskExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//ResourceExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//ResourceExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionCandidateDateExpression" eSuperTypes="#//CandidateDateExpression #//SolutionExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionCandidateFloatExpression" eSuperTypes="#//CandidateFloatExpression #//SolutionExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="SolutionCandidateIntExpression" eSuperTypes="#//CandidateIntExpression #//SolutionExpression"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EnabledFeedback" instanceClassName="com.misc.common.moplaf.common.EnabledFeedback"/>
 </ecore:EPackage>

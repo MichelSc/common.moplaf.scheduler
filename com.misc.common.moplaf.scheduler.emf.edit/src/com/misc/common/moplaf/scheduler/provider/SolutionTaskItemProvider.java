@@ -57,8 +57,6 @@ public class SolutionTaskItemProvider
 			addScheduledResourcePropertyDescriptor(object);
 			addCandidateNextTaskPropertyDescriptor(object);
 			addCandidatePreviousTaskPropertyDescriptor(object);
-			addResourceAsCandidateFirstTaskPropertyDescriptor(object);
-			addResourceAsCandidateLastTaskPropertyDescriptor(object);
 			addCandidateScheduledResourcePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
@@ -212,50 +210,6 @@ public class SolutionTaskItemProvider
 				 getString("_UI_SolutionTask_CandidatePreviousTask_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_CandidatePreviousTask_feature", "_UI_SolutionTask_type"),
 				 SchedulerPackage.Literals.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI__20CandidatePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Resource As Candidate First Task feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResourceAsCandidateFirstTaskPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SolutionTask_ResourceAsCandidateFirstTask_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_ResourceAsCandidateFirstTask_feature", "_UI_SolutionTask_type"),
-				 SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI__20CandidatePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Resource As Candidate Last Task feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResourceAsCandidateLastTaskPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SolutionTask_ResourceAsCandidateLastTask_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SolutionTask_ResourceAsCandidateLastTask_feature", "_UI_SolutionTask_type"),
-				 SchedulerPackage.Literals.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK,
 				 true,
 				 false,
 				 true,

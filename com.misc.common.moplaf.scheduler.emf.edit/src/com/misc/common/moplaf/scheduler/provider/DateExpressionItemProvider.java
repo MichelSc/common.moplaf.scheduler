@@ -68,7 +68,7 @@ public class DateExpressionItemProvider extends ValueExpressionItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 

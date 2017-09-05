@@ -3,12 +3,11 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
+import com.misc.common.moplaf.scheduler.CandidateValueExpression;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Solution;
 import com.misc.common.moplaf.scheduler.SolutionResource;
 import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.scheduler.TaskExpression;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -22,9 +21,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,8 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getScheduledResource <em>Scheduled Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidateNextTask <em>Candidate Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidatePreviousTask <em>Candidate Previous Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getResourceAsCandidateFirstTask <em>Resource As Candidate First Task</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getResourceAsCandidateLastTask <em>Resource As Candidate Last Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getCandidateScheduledResource <em>Candidate Scheduled Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getExpressions <em>Expressions</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SolutionTaskImpl#getDescription <em>Description</em>}</li>
@@ -113,26 +109,6 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	protected SolutionTask candidatePreviousTask;
 
 	/**
-	 * The cached value of the '{@link #getResourceAsCandidateFirstTask() <em>Resource As Candidate First Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResourceAsCandidateFirstTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected SolutionResource resourceAsCandidateFirstTask;
-
-	/**
-	 * The cached value of the '{@link #getResourceAsCandidateLastTask() <em>Resource As Candidate Last Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResourceAsCandidateLastTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected SolutionResource resourceAsCandidateLastTask;
-
-	/**
 	 * The cached value of the '{@link #getCandidateScheduledResource() <em>Candidate Scheduled Resource</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -143,14 +119,14 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	protected SolutionResource candidateScheduledResource;
 
 	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' containment reference list.
+	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpressions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaskExpression> expressions;
+	protected EList<CandidateValueExpression> expressions;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -390,33 +366,11 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetScheduledResource(SolutionResource newScheduledResource, NotificationChain msgs) {
+	public void setScheduledResource(SolutionResource newScheduledResource) {
 		SolutionResource oldScheduledResource = scheduledResource;
 		scheduledResource = newScheduledResource;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE, oldScheduledResource, newScheduledResource);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setScheduledResource(SolutionResource newScheduledResource) {
-		if (newScheduledResource != scheduledResource) {
-			NotificationChain msgs = null;
-			if (scheduledResource != null)
-				msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SolutionResource.class, msgs);
-			if (newScheduledResource != null)
-				msgs = ((InternalEObject)newScheduledResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SolutionResource.class, msgs);
-			msgs = basicSetScheduledResource(newScheduledResource, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE, newScheduledResource, newScheduledResource));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE, oldScheduledResource, scheduledResource));
 	}
 
 	/**
@@ -450,33 +404,11 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCandidateScheduledResource(SolutionResource newCandidateScheduledResource, NotificationChain msgs) {
+	public void setCandidateScheduledResource(SolutionResource newCandidateScheduledResource) {
 		SolutionResource oldCandidateScheduledResource = candidateScheduledResource;
 		candidateScheduledResource = newCandidateScheduledResource;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE, oldCandidateScheduledResource, newCandidateScheduledResource);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCandidateScheduledResource(SolutionResource newCandidateScheduledResource) {
-		if (newCandidateScheduledResource != candidateScheduledResource) {
-			NotificationChain msgs = null;
-			if (candidateScheduledResource != null)
-				msgs = ((InternalEObject)candidateScheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SolutionResource.class, msgs);
-			if (newCandidateScheduledResource != null)
-				msgs = ((InternalEObject)newCandidateScheduledResource).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SolutionResource.class, msgs);
-			msgs = basicSetCandidateScheduledResource(newCandidateScheduledResource, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE, newCandidateScheduledResource, newCandidateScheduledResource));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE, oldCandidateScheduledResource, candidateScheduledResource));
 	}
 
 	/**
@@ -560,129 +492,9 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SolutionResource getResourceAsCandidateFirstTask() {
-		if (resourceAsCandidateFirstTask != null && resourceAsCandidateFirstTask.eIsProxy()) {
-			InternalEObject oldResourceAsCandidateFirstTask = (InternalEObject)resourceAsCandidateFirstTask;
-			resourceAsCandidateFirstTask = (SolutionResource)eResolveProxy(oldResourceAsCandidateFirstTask);
-			if (resourceAsCandidateFirstTask != oldResourceAsCandidateFirstTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK, oldResourceAsCandidateFirstTask, resourceAsCandidateFirstTask));
-			}
-		}
-		return resourceAsCandidateFirstTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolutionResource basicGetResourceAsCandidateFirstTask() {
-		return resourceAsCandidateFirstTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetResourceAsCandidateFirstTask(SolutionResource newResourceAsCandidateFirstTask, NotificationChain msgs) {
-		SolutionResource oldResourceAsCandidateFirstTask = resourceAsCandidateFirstTask;
-		resourceAsCandidateFirstTask = newResourceAsCandidateFirstTask;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK, oldResourceAsCandidateFirstTask, newResourceAsCandidateFirstTask);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResourceAsCandidateFirstTask(SolutionResource newResourceAsCandidateFirstTask) {
-		if (newResourceAsCandidateFirstTask != resourceAsCandidateFirstTask) {
-			NotificationChain msgs = null;
-			if (resourceAsCandidateFirstTask != null)
-				msgs = ((InternalEObject)resourceAsCandidateFirstTask).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK, SolutionResource.class, msgs);
-			if (newResourceAsCandidateFirstTask != null)
-				msgs = ((InternalEObject)newResourceAsCandidateFirstTask).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK, SolutionResource.class, msgs);
-			msgs = basicSetResourceAsCandidateFirstTask(newResourceAsCandidateFirstTask, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK, newResourceAsCandidateFirstTask, newResourceAsCandidateFirstTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolutionResource getResourceAsCandidateLastTask() {
-		if (resourceAsCandidateLastTask != null && resourceAsCandidateLastTask.eIsProxy()) {
-			InternalEObject oldResourceAsCandidateLastTask = (InternalEObject)resourceAsCandidateLastTask;
-			resourceAsCandidateLastTask = (SolutionResource)eResolveProxy(oldResourceAsCandidateLastTask);
-			if (resourceAsCandidateLastTask != oldResourceAsCandidateLastTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK, oldResourceAsCandidateLastTask, resourceAsCandidateLastTask));
-			}
-		}
-		return resourceAsCandidateLastTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SolutionResource basicGetResourceAsCandidateLastTask() {
-		return resourceAsCandidateLastTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetResourceAsCandidateLastTask(SolutionResource newResourceAsCandidateLastTask, NotificationChain msgs) {
-		SolutionResource oldResourceAsCandidateLastTask = resourceAsCandidateLastTask;
-		resourceAsCandidateLastTask = newResourceAsCandidateLastTask;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK, oldResourceAsCandidateLastTask, newResourceAsCandidateLastTask);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResourceAsCandidateLastTask(SolutionResource newResourceAsCandidateLastTask) {
-		if (newResourceAsCandidateLastTask != resourceAsCandidateLastTask) {
-			NotificationChain msgs = null;
-			if (resourceAsCandidateLastTask != null)
-				msgs = ((InternalEObject)resourceAsCandidateLastTask).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK, SolutionResource.class, msgs);
-			if (newResourceAsCandidateLastTask != null)
-				msgs = ((InternalEObject)newResourceAsCandidateLastTask).eInverseAdd(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK, SolutionResource.class, msgs);
-			msgs = basicSetResourceAsCandidateLastTask(newResourceAsCandidateLastTask, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK, newResourceAsCandidateLastTask, newResourceAsCandidateLastTask));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<TaskExpression> getExpressions() {
+	public EList<CandidateValueExpression> getExpressions() {
 		if (expressions == null) {
-			expressions = new EObjectContainmentWithInverseEList<TaskExpression>(TaskExpression.class, this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS, SchedulerPackage.TASK_EXPRESSION__TASK);
+			expressions = new EObjectResolvingEList<CandidateValueExpression>(CandidateValueExpression.class, this, SchedulerPackage.SOLUTION_TASK__EXPRESSIONS);
 		}
 		return expressions;
 	}
@@ -767,25 +579,25 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 		// precondition: this task is scheduled
 		SolutionTask previous = this.getCandidatePreviousTask();
 		SolutionTask next = this.getCandidateNextTask();
-		SolutionResource resource_asfirst = this.getResourceAsCandidateFirstTask();
-		SolutionResource resource_aslast  = this.getResourceAsCandidateLastTask();
+		SolutionResource resource_asis = this.getScheduledResource();
+		
 		// before
 		if ( previous!=null) {
 			previous.setCandidateNextTask(next);
-		} else if ( resource_asfirst!=null ) {
-			resource_asfirst.setCandidateFirstTask(next);
-		} else {
-			assert false;
-		}
+		} else if ( resource_asis!=null){
+			// this task was the first task
+			resource_asis.setCandidateFirstTask(next);
+		} 
 		this.setCandidatePreviousTask(null);
+
 		// after
 		if ( next!=null) {
 			next.setCandidatePreviousTask(previous);
-		} else if ( resource_aslast!=null) {
-			resource_aslast.setCandidateLastTask(previous);
-		} else {
-			assert false;
-		}
+		} else if ( resource_asis!=null){
+			// this task was the last task
+			resource_asis.setCandidateLastTask(previous);
+		} 
+		
 		this.setCandidateNextTask(null);
 	}
 
@@ -827,6 +639,24 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	public void scheduleCandidateResource(SolutionResource resource) {
+		SolutionResource resource_asis = this.getCandidateScheduledResource();
+		SolutionResource resource_tobe = resource;
+		if ( resource_asis != resource_tobe ) {
+			if ( resource_asis!=null ) {
+				resource_asis.setNrCandidateScheduledTasks(resource_asis.getNrCandidateScheduledTasks()-1);
+			}
+			if ( resource_tobe!=null ) {
+				resource_tobe.setNrCandidateScheduledTasks(resource_tobe.getNrCandidateScheduledTasks()+1);
+			}
+			this.setCandidateScheduledResource(resource_tobe);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -841,24 +671,6 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 				if (previousTask != null)
 					msgs = ((InternalEObject)previousTask).eInverseRemove(this, SchedulerPackage.SOLUTION_TASK__NEXT_TASK, SolutionTask.class, msgs);
 				return basicSetPreviousTask((SolutionTask)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
-				if (scheduledResource != null)
-					msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__SCHEDULED_TASKS, SolutionResource.class, msgs);
-				return basicSetScheduledResource((SolutionResource)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK:
-				if (resourceAsCandidateFirstTask != null)
-					msgs = ((InternalEObject)resourceAsCandidateFirstTask).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK, SolutionResource.class, msgs);
-				return basicSetResourceAsCandidateFirstTask((SolutionResource)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK:
-				if (resourceAsCandidateLastTask != null)
-					msgs = ((InternalEObject)resourceAsCandidateLastTask).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_LAST_TASK, SolutionResource.class, msgs);
-				return basicSetResourceAsCandidateLastTask((SolutionResource)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
-				if (candidateScheduledResource != null)
-					msgs = ((InternalEObject)candidateScheduledResource).eInverseRemove(this, SchedulerPackage.SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS, SolutionResource.class, msgs);
-				return basicSetCandidateScheduledResource((SolutionResource)otherEnd, msgs);
-			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExpressions()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -879,16 +691,6 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 				return basicSetNextTask(null, msgs);
 			case SchedulerPackage.SOLUTION_TASK__PREVIOUS_TASK:
 				return basicSetPreviousTask(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__SCHEDULED_RESOURCE:
-				return basicSetScheduledResource(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK:
-				return basicSetResourceAsCandidateFirstTask(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK:
-				return basicSetResourceAsCandidateLastTask(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
-				return basicSetCandidateScheduledResource(null, msgs);
-			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
-				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				return basicSetSolution(null, msgs);
 		}
@@ -935,12 +737,6 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK:
 				if (resolve) return getCandidatePreviousTask();
 				return basicGetCandidatePreviousTask();
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK:
-				if (resolve) return getResourceAsCandidateFirstTask();
-				return basicGetResourceAsCandidateFirstTask();
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK:
-				if (resolve) return getResourceAsCandidateLastTask();
-				return basicGetResourceAsCandidateLastTask();
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
 				if (resolve) return getCandidateScheduledResource();
 				return basicGetCandidateScheduledResource();
@@ -983,18 +779,12 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK:
 				setCandidatePreviousTask((SolutionTask)newValue);
 				return;
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK:
-				setResourceAsCandidateFirstTask((SolutionResource)newValue);
-				return;
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK:
-				setResourceAsCandidateLastTask((SolutionResource)newValue);
-				return;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
 				setCandidateScheduledResource((SolutionResource)newValue);
 				return;
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
 				getExpressions().clear();
-				getExpressions().addAll((Collection<? extends TaskExpression>)newValue);
+				getExpressions().addAll((Collection<? extends CandidateValueExpression>)newValue);
 				return;
 			case SchedulerPackage.SOLUTION_TASK__SOLUTION:
 				setSolution((Solution)newValue);
@@ -1032,12 +822,6 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK:
 				setCandidatePreviousTask((SolutionTask)null);
 				return;
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK:
-				setResourceAsCandidateFirstTask((SolutionResource)null);
-				return;
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK:
-				setResourceAsCandidateLastTask((SolutionResource)null);
-				return;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
 				setCandidateScheduledResource((SolutionResource)null);
 				return;
@@ -1074,10 +858,6 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 				return candidateNextTask != null;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK:
 				return candidatePreviousTask != null;
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_FIRST_TASK:
-				return resourceAsCandidateFirstTask != null;
-			case SchedulerPackage.SOLUTION_TASK__RESOURCE_AS_CANDIDATE_LAST_TASK:
-				return resourceAsCandidateLastTask != null;
 			case SchedulerPackage.SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE:
 				return candidateScheduledResource != null;
 			case SchedulerPackage.SOLUTION_TASK__EXPRESSIONS:
@@ -1108,6 +888,9 @@ public class SolutionTaskImpl extends ObjectWithPropagatorFunctionsImpl implemen
 				return null;
 			case SchedulerPackage.SOLUTION_TASK___CONSTRUCT_EXPRESSIONS:
 				constructExpressions();
+				return null;
+			case SchedulerPackage.SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE:
+				scheduleCandidateResource((SolutionResource)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

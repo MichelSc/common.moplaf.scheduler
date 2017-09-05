@@ -57,24 +57,15 @@ public class ScheduleBeforeImpl extends MoveChangeTaskImpl implements ScheduleBe
 	@Override
 	public boolean change() {
 		SolutionTask task = this.getTaskToSchedule();
-//		SolutionResource asis_resource = task.getCandidateScheduledResource();
 		SolutionTask to_be_task_after = this.getInsertionPoint();
 		SolutionResource tobe_resource = to_be_task_after.getCandidateScheduledResource();
-//		EList<SolutionTask> tobe_task_sequence = tobe_resource.getCandidateScheduledTasks();
-
-		// association scheduled tasks
-//		int index = tobe_task_sequence.indexOf(to_be_task_after);
-//		if ( asis_resource==tobe_resource) {
-//			tobe_task_sequence.move(index, task);
-//		} else {
-//			if ( asis_resource!=null) {
-//				asis_resource.getScheduledTasks().remove(task);
-//			}
-//			tobe_task_sequence.add(index, task);
-//		}
 			
 		// association previous next
 		task.setCandidatePreviousNext(tobe_resource, to_be_task_after.getCandidatePreviousTask(), to_be_task_after);
+
+		// reference to scheduled resource
+		task.scheduleCandidateResource(tobe_resource);
+
 		return true;
 	}
 } //ScheduleBeforeImpl

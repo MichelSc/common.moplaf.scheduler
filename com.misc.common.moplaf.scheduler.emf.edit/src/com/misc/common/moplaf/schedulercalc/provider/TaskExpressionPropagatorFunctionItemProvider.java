@@ -75,17 +75,6 @@ public class TaskExpressionPropagatorFunctionItemProvider extends PropagatorFunc
 	}
 
 	/**
-	 * This returns TaskExpressionPropagatorFunction.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskExpressionPropagatorFunction"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class TaskExpressionPropagatorFunctionItemProvider extends PropagatorFunc
 	 */
 	@Override
 	public String getText(Object object) {
-		TaskExpressionPropagatorFunction taskExpressionPropagatorFunction = (TaskExpressionPropagatorFunction)object;
-		return getString("_UI_TaskExpressionPropagatorFunction_type") + " " + taskExpressionPropagatorFunction.isTouched();
+		String label = ((TaskExpressionPropagatorFunction)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TaskExpressionPropagatorFunction_type") :
+			getString("_UI_TaskExpressionPropagatorFunction_type") + " " + label;
 	}
 	
 

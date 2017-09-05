@@ -2,9 +2,11 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.common.EnabledFeedback;
 import com.misc.common.moplaf.scheduler.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -72,17 +74,47 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			case SchedulerPackage.CANDIDATE_FLOAT_EXPRESSION: return createCandidateFloatExpression();
 			case SchedulerPackage.CANDIDATE_DATE_EXPRESSION: return createCandidateDateExpression();
 			case SchedulerPackage.CANDIDATE_INT_EXPRESSION: return createCandidateIntExpression();
-			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: return createTaskCandidateFloatExpression();
 			case SchedulerPackage.TASK_CANDIDATE_DATE_EXPRESSION: return createTaskCandidateDateExpression();
-			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: return createResourceCandidateFloatExpression();
-			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION: return createResourceCandidateDateExpression();
-			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: return createResourceCandidateIntExpression();
+			case SchedulerPackage.TASK_CANDIDATE_FLOAT_EXPRESSION: return createTaskCandidateFloatExpression();
 			case SchedulerPackage.TASK_CANDIDATE_INT_EXPRESSION: return createTaskCandidateIntExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_DATE_EXPRESSION: return createResourceCandidateDateExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_FLOAT_EXPRESSION: return createResourceCandidateFloatExpression();
+			case SchedulerPackage.RESOURCE_CANDIDATE_INT_EXPRESSION: return createResourceCandidateIntExpression();
 			case SchedulerPackage.SOLUTION_CANDIDATE_DATE_EXPRESSION: return createSolutionCandidateDateExpression();
 			case SchedulerPackage.SOLUTION_CANDIDATE_FLOAT_EXPRESSION: return createSolutionCandidateFloatExpression();
 			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION: return createSolutionCandidateIntExpression();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case SchedulerPackage.ENABLED_FEEDBACK:
+				return createEnabledFeedbackFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case SchedulerPackage.ENABLED_FEEDBACK:
+				return convertEnabledFeedbackToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -334,6 +366,24 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public SolutionCandidateIntExpression createSolutionCandidateIntExpression() {
 		SolutionCandidateIntExpressionImpl solutionCandidateIntExpression = new SolutionCandidateIntExpressionImpl();
 		return solutionCandidateIntExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnabledFeedback createEnabledFeedbackFromString(EDataType eDataType, String initialValue) {
+		return (EnabledFeedback)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEnabledFeedbackToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

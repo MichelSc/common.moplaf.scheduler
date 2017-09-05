@@ -69,7 +69,7 @@ public class CandidateIntExpressionItemProvider extends CandidateValueExpression
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__30SolutionPropertyCategory"),
 				 null));
 	}
 
@@ -91,7 +91,7 @@ public class CandidateIntExpressionItemProvider extends CandidateValueExpression
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20CandidatePropertyCategory"),
 				 null));
 	}
 

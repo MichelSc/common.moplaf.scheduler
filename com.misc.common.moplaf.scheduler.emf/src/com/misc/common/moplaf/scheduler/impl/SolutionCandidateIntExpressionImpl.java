@@ -8,14 +8,10 @@ import com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression;
 import com.misc.common.moplaf.scheduler.SolutionExpression;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +27,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionImpl implements SolutionCandidateIntExpression {
+	/**
+	 * The cached value of the '{@link #getSolution() <em>Solution</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSolution()
+	 * @generated
+	 * @ordered
+	 */
+	protected Solution solution;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,8 +62,15 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	 * @generated
 	 */
 	public Solution getSolution() {
-		if (eContainerFeatureID() != SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION) return null;
-		return (Solution)eInternalContainer();
+		if (solution != null && solution.eIsProxy()) {
+			InternalEObject oldSolution = (InternalEObject)solution;
+			solution = (Solution)eResolveProxy(oldSolution);
+			if (solution != oldSolution) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, oldSolution, solution));
+			}
+		}
+		return solution;
 	}
 
 	/**
@@ -65,10 +78,18 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSolution(Solution newSolution, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newSolution, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, msgs);
-		return msgs;
+	public Solution basicGetSolution() {
+		return solution;
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public Solution basicGetExpressionSolution() {
+		return this.getSolution();
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,63 +97,10 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	 * @generated
 	 */
 	public void setSolution(Solution newSolution) {
-		if (newSolution != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION && newSolution != null)) {
-			if (EcoreUtil.isAncestor(this, newSolution))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newSolution != null)
-				msgs = ((InternalEObject)newSolution).eInverseAdd(this, SchedulerPackage.SOLUTION__EXPRESSIONS, Solution.class, msgs);
-			msgs = basicSetSolution(newSolution, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, newSolution, newSolution));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSolution((Solution)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				return basicSetSolution(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SOLUTION__EXPRESSIONS, Solution.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
+		Solution oldSolution = solution;
+		solution = newSolution;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION, oldSolution, solution));
 	}
 
 	/**
@@ -144,7 +112,8 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				return getSolution();
+				if (resolve) return getSolution();
+				return basicGetSolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,7 +157,7 @@ public class SolutionCandidateIntExpressionImpl extends CandidateIntExpressionIm
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case SchedulerPackage.SOLUTION_CANDIDATE_INT_EXPRESSION__SOLUTION:
-				return getSolution() != null;
+				return solution != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -75,17 +75,6 @@ public class TaskPropagatorFunctionItemProvider extends PropagatorFunctionBindin
 	}
 
 	/**
-	 * This returns TaskPropagatorFunction.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskPropagatorFunction"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,8 +82,10 @@ public class TaskPropagatorFunctionItemProvider extends PropagatorFunctionBindin
 	 */
 	@Override
 	public String getText(Object object) {
-		TaskPropagatorFunction taskPropagatorFunction = (TaskPropagatorFunction)object;
-		return getString("_UI_TaskPropagatorFunction_type") + " " + taskPropagatorFunction.isTouched();
+		String label = ((TaskPropagatorFunction)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TaskPropagatorFunction_type") :
+			getString("_UI_TaskPropagatorFunction_type") + " " + label;
 	}
 	
 

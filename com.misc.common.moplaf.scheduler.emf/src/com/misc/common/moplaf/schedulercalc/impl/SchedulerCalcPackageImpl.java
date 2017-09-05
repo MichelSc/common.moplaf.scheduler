@@ -7,25 +7,20 @@ import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
 import com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl;
-import com.misc.common.moplaf.schedulercalc.CalcResourceExpressionCandidateValue;
-import com.misc.common.moplaf.schedulercalc.CalcSolutionAllExpressionCandidateValues;
-import com.misc.common.moplaf.schedulercalc.CalcSolutionExpressionCandidateValue;
-import com.misc.common.moplaf.schedulercalc.CalcTaksExpressionCandidateValueCumulative;
-import com.misc.common.moplaf.schedulercalc.CalcTaskExpressionCandidateValue;
-import com.misc.common.moplaf.schedulercalc.ResetResourceExpressionCandidateValue;
-import com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateNext;
-import com.misc.common.moplaf.schedulercalc.ResetResourceTasksCandidateScheduledResource;
-import com.misc.common.moplaf.schedulercalc.ResetSolutionAllExpressionCandidateValues;
-import com.misc.common.moplaf.schedulercalc.ResetSolutionExpressionCandidateValue;
-import com.misc.common.moplaf.schedulercalc.ResetTaskCandidateNext;
-import com.misc.common.moplaf.schedulercalc.ResetTaskCandidateScheduledResource;
-import com.misc.common.moplaf.schedulercalc.ResetTaskExpressionCandidateValue;
+import com.misc.common.moplaf.schedulercalc.CandidateExpressionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.ResourceExpressionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.ResourcePropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcFactory;
 import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
-import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResource;
-import com.misc.common.moplaf.schedulercalc.SetTaskCandidateScheduledResourceScope;
+import com.misc.common.moplaf.schedulercalc.SetExpressionCandidateValueScope;
+import com.misc.common.moplaf.schedulercalc.SetExpressionSchedule;
+import com.misc.common.moplaf.schedulercalc.SetFloatExpressionSchedule;
+import com.misc.common.moplaf.schedulercalc.SetResourceExpressionCandidateValue;
+import com.misc.common.moplaf.schedulercalc.SetResourceSchedule;
+import com.misc.common.moplaf.schedulercalc.SetScheduleScope;
+import com.misc.common.moplaf.schedulercalc.SetSolutionExpressionCandidateValue;
+import com.misc.common.moplaf.schedulercalc.SetTaskExpressionCandidateValue;
+import com.misc.common.moplaf.schedulercalc.SetTaskSchedule;
 import com.misc.common.moplaf.schedulercalc.SolutionExpressionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.SolutionPropagatorFunction;
 import com.misc.common.moplaf.schedulercalc.TaskExpressionPropagatorFunction;
@@ -49,20 +44,6 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calcSolutionAllExpressionCandidateValuesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resetSolutionAllExpressionCandidateValuesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass solutionExpressionPropagatorFunctionEClass = null;
 
 	/**
@@ -77,77 +58,56 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetSolutionExpressionCandidateValueEClass = null;
+	private EClass candidateExpressionPropagatorFunctionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calcResourceExpressionCandidateValueEClass = null;
+	private EClass setExpressionCandidateValueScopeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetResourceExpressionCandidateValueEClass = null;
+	private EClass setTaskExpressionCandidateValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calcTaskExpressionCandidateValueEClass = null;
+	private EClass setSolutionExpressionCandidateValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetTaskExpressionCandidateValueEClass = null;
+	private EClass setResourceExpressionCandidateValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetTaskCandidateNextEClass = null;
+	private EClass setResourceScheduleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetTaskCandidateScheduledResourceEClass = null;
+	private EClass setExpressionScheduleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resetResourceTasksCandidateNextEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resetResourceTasksCandidateScheduledResourceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass setTaskCandidateScheduledResourceScopeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass setTaskCandidateScheduledResourceEClass = null;
+	private EClass setFloatExpressionScheduleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -168,13 +128,6 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calcSolutionExpressionCandidateValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass taskExpressionPropagatorFunctionEClass = null;
 
 	/**
@@ -182,14 +135,21 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass solutionPropagatorFunctionEClass = null;
+	private EClass setScheduleScopeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass calcTaksExpressionCandidateValueCumulativeEClass = null;
+	private EClass setTaskScheduleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass solutionPropagatorFunctionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -265,24 +225,6 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCalcSolutionAllExpressionCandidateValues() {
-		return calcSolutionAllExpressionCandidateValuesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResetSolutionAllExpressionCandidateValues() {
-		return resetSolutionAllExpressionCandidateValuesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSolutionExpressionPropagatorFunction() {
 		return solutionExpressionPropagatorFunctionEClass;
 	}
@@ -319,8 +261,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetSolutionExpressionCandidateValue() {
-		return resetSolutionExpressionCandidateValueEClass;
+	public EClass getCandidateExpressionPropagatorFunction() {
+		return candidateExpressionPropagatorFunctionEClass;
 	}
 
 	/**
@@ -328,8 +270,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCalcResourceExpressionCandidateValue() {
-		return calcResourceExpressionCandidateValueEClass;
+	public EReference getCandidateExpressionPropagatorFunction_CandidateValueExpression() {
+		return (EReference)candidateExpressionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -337,8 +279,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetResourceExpressionCandidateValue() {
-		return resetResourceExpressionCandidateValueEClass;
+	public EClass getSetExpressionCandidateValueScope() {
+		return setExpressionCandidateValueScopeEClass;
 	}
 
 	/**
@@ -346,8 +288,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCalcTaskExpressionCandidateValue() {
-		return calcTaskExpressionCandidateValueEClass;
+	public EClass getSetTaskExpressionCandidateValue() {
+		return setTaskExpressionCandidateValueEClass;
 	}
 
 	/**
@@ -355,8 +297,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetTaskExpressionCandidateValue() {
-		return resetTaskExpressionCandidateValueEClass;
+	public EReference getSetTaskExpressionCandidateValue_ConcreteParent() {
+		return (EReference)setTaskExpressionCandidateValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -364,8 +306,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetTaskCandidateNext() {
-		return resetTaskCandidateNextEClass;
+	public EClass getSetSolutionExpressionCandidateValue() {
+		return setSolutionExpressionCandidateValueEClass;
 	}
 
 	/**
@@ -373,8 +315,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetTaskCandidateScheduledResource() {
-		return resetTaskCandidateScheduledResourceEClass;
+	public EReference getSetSolutionExpressionCandidateValue_ConcreteParent() {
+		return (EReference)setSolutionExpressionCandidateValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -382,8 +324,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetResourceTasksCandidateNext() {
-		return resetResourceTasksCandidateNextEClass;
+	public EClass getSetResourceExpressionCandidateValue() {
+		return setResourceExpressionCandidateValueEClass;
 	}
 
 	/**
@@ -391,8 +333,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResetResourceTasksCandidateScheduledResource() {
-		return resetResourceTasksCandidateScheduledResourceEClass;
+	public EReference getSetResourceExpressionCandidateValue_ConcreteParent() {
+		return (EReference)setResourceExpressionCandidateValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -400,8 +342,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSetTaskCandidateScheduledResourceScope() {
-		return setTaskCandidateScheduledResourceScopeEClass;
+	public EClass getSetResourceSchedule() {
+		return setResourceScheduleEClass;
 	}
 
 	/**
@@ -409,8 +351,8 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSetTaskCandidateScheduledResource() {
-		return setTaskCandidateScheduledResourceEClass;
+	public EReference getSetResourceSchedule_ConcreteParent() {
+		return (EReference)setResourceScheduleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -418,8 +360,26 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSetTaskCandidateScheduledResource_ConcreteParent() {
-		return (EReference)setTaskCandidateScheduledResourceEClass.getEStructuralFeatures().get(0);
+	public EClass getSetExpressionSchedule() {
+		return setExpressionScheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSetExpressionSchedule_ConcreteParent() {
+		return (EReference)setExpressionScheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSetFloatExpressionSchedule() {
+		return setFloatExpressionScheduleEClass;
 	}
 
 	/**
@@ -463,15 +423,6 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCalcSolutionExpressionCandidateValue() {
-		return calcSolutionExpressionCandidateValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskExpressionPropagatorFunction() {
 		return taskExpressionPropagatorFunctionEClass;
 	}
@@ -490,6 +441,33 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSetScheduleScope() {
+		return setScheduleScopeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSetTaskSchedule() {
+		return setTaskScheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSetTaskSchedule_ConcreteParent() {
+		return (EReference)setTaskScheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSolutionPropagatorFunction() {
 		return solutionPropagatorFunctionEClass;
 	}
@@ -501,15 +479,6 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 	 */
 	public EReference getSolutionPropagatorFunction_Solution() {
 		return (EReference)solutionPropagatorFunctionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCalcTaksExpressionCandidateValueCumulative() {
-		return calcTaksExpressionCandidateValueCumulativeEClass;
 	}
 
 	/**
@@ -549,6 +518,9 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		resourcePropagatorFunctionEClass = createEClass(RESOURCE_PROPAGATOR_FUNCTION);
 		createEReference(resourcePropagatorFunctionEClass, RESOURCE_PROPAGATOR_FUNCTION__RESOURCE);
 
+		candidateExpressionPropagatorFunctionEClass = createEClass(CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION);
+		createEReference(candidateExpressionPropagatorFunctionEClass, CANDIDATE_EXPRESSION_PROPAGATOR_FUNCTION__CANDIDATE_VALUE_EXPRESSION);
+
 		resourceExpressionPropagatorFunctionEClass = createEClass(RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION);
 		createEReference(resourceExpressionPropagatorFunctionEClass, RESOURCE_EXPRESSION_PROPAGATOR_FUNCTION__RESOURCE_EXPRESSION);
 
@@ -558,36 +530,29 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		taskExpressionPropagatorFunctionEClass = createEClass(TASK_EXPRESSION_PROPAGATOR_FUNCTION);
 		createEReference(taskExpressionPropagatorFunctionEClass, TASK_EXPRESSION_PROPAGATOR_FUNCTION__TASK_EXPRESSION);
 
-		calcSolutionAllExpressionCandidateValuesEClass = createEClass(CALC_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES);
+		setScheduleScopeEClass = createEClass(SET_SCHEDULE_SCOPE);
 
-		calcSolutionExpressionCandidateValueEClass = createEClass(CALC_SOLUTION_EXPRESSION_CANDIDATE_VALUE);
+		setTaskScheduleEClass = createEClass(SET_TASK_SCHEDULE);
+		createEReference(setTaskScheduleEClass, SET_TASK_SCHEDULE__CONCRETE_PARENT);
 
-		calcResourceExpressionCandidateValueEClass = createEClass(CALC_RESOURCE_EXPRESSION_CANDIDATE_VALUE);
+		setExpressionCandidateValueScopeEClass = createEClass(SET_EXPRESSION_CANDIDATE_VALUE_SCOPE);
 
-		calcTaskExpressionCandidateValueEClass = createEClass(CALC_TASK_EXPRESSION_CANDIDATE_VALUE);
+		setTaskExpressionCandidateValueEClass = createEClass(SET_TASK_EXPRESSION_CANDIDATE_VALUE);
+		createEReference(setTaskExpressionCandidateValueEClass, SET_TASK_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT);
 
-		calcTaksExpressionCandidateValueCumulativeEClass = createEClass(CALC_TAKS_EXPRESSION_CANDIDATE_VALUE_CUMULATIVE);
+		setSolutionExpressionCandidateValueEClass = createEClass(SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE);
+		createEReference(setSolutionExpressionCandidateValueEClass, SET_SOLUTION_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT);
 
-		resetSolutionAllExpressionCandidateValuesEClass = createEClass(RESET_SOLUTION_ALL_EXPRESSION_CANDIDATE_VALUES);
+		setResourceExpressionCandidateValueEClass = createEClass(SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE);
+		createEReference(setResourceExpressionCandidateValueEClass, SET_RESOURCE_EXPRESSION_CANDIDATE_VALUE__CONCRETE_PARENT);
 
-		resetSolutionExpressionCandidateValueEClass = createEClass(RESET_SOLUTION_EXPRESSION_CANDIDATE_VALUE);
+		setResourceScheduleEClass = createEClass(SET_RESOURCE_SCHEDULE);
+		createEReference(setResourceScheduleEClass, SET_RESOURCE_SCHEDULE__CONCRETE_PARENT);
 
-		resetResourceExpressionCandidateValueEClass = createEClass(RESET_RESOURCE_EXPRESSION_CANDIDATE_VALUE);
+		setExpressionScheduleEClass = createEClass(SET_EXPRESSION_SCHEDULE);
+		createEReference(setExpressionScheduleEClass, SET_EXPRESSION_SCHEDULE__CONCRETE_PARENT);
 
-		resetTaskExpressionCandidateValueEClass = createEClass(RESET_TASK_EXPRESSION_CANDIDATE_VALUE);
-
-		resetTaskCandidateNextEClass = createEClass(RESET_TASK_CANDIDATE_NEXT);
-
-		resetTaskCandidateScheduledResourceEClass = createEClass(RESET_TASK_CANDIDATE_SCHEDULED_RESOURCE);
-
-		resetResourceTasksCandidateNextEClass = createEClass(RESET_RESOURCE_TASKS_CANDIDATE_NEXT);
-
-		resetResourceTasksCandidateScheduledResourceEClass = createEClass(RESET_RESOURCE_TASKS_CANDIDATE_SCHEDULED_RESOURCE);
-
-		setTaskCandidateScheduledResourceScopeEClass = createEClass(SET_TASK_CANDIDATE_SCHEDULED_RESOURCE_SCOPE);
-
-		setTaskCandidateScheduledResourceEClass = createEClass(SET_TASK_CANDIDATE_SCHEDULED_RESOURCE);
-		createEReference(setTaskCandidateScheduledResourceEClass, SET_TASK_CANDIDATE_SCHEDULED_RESOURCE__CONCRETE_PARENT);
+		setFloatExpressionScheduleEClass = createEClass(SET_FLOAT_EXPRESSION_SCHEDULE);
 	}
 
 	/**
@@ -625,24 +590,19 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		solutionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		solutionExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		resourcePropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
+		candidateExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		resourceExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		taskPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
 		taskExpressionPropagatorFunctionEClass.getESuperTypes().add(thePropagatorPackage.getPropagatorFunctionBindings());
-		calcSolutionAllExpressionCandidateValuesEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
-		calcSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
-		calcResourceExpressionCandidateValueEClass.getESuperTypes().add(this.getResourceExpressionPropagatorFunction());
-		calcTaskExpressionCandidateValueEClass.getESuperTypes().add(this.getTaskExpressionPropagatorFunction());
-		calcTaksExpressionCandidateValueCumulativeEClass.getESuperTypes().add(this.getCalcTaskExpressionCandidateValue());
-		resetSolutionAllExpressionCandidateValuesEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
-		resetSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
-		resetResourceExpressionCandidateValueEClass.getESuperTypes().add(this.getResourceExpressionPropagatorFunction());
-		resetTaskExpressionCandidateValueEClass.getESuperTypes().add(this.getTaskExpressionPropagatorFunction());
-		resetTaskCandidateNextEClass.getESuperTypes().add(this.getTaskPropagatorFunction());
-		resetTaskCandidateScheduledResourceEClass.getESuperTypes().add(this.getTaskPropagatorFunction());
-		resetResourceTasksCandidateNextEClass.getESuperTypes().add(this.getResourcePropagatorFunction());
-		resetResourceTasksCandidateScheduledResourceEClass.getESuperTypes().add(this.getResourcePropagatorFunction());
-		setTaskCandidateScheduledResourceScopeEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
-		setTaskCandidateScheduledResourceEClass.getESuperTypes().add(this.getTaskPropagatorFunction());
+		setScheduleScopeEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
+		setTaskScheduleEClass.getESuperTypes().add(this.getTaskPropagatorFunction());
+		setExpressionCandidateValueScopeEClass.getESuperTypes().add(this.getSolutionPropagatorFunction());
+		setTaskExpressionCandidateValueEClass.getESuperTypes().add(this.getTaskExpressionPropagatorFunction());
+		setSolutionExpressionCandidateValueEClass.getESuperTypes().add(this.getSolutionExpressionPropagatorFunction());
+		setResourceExpressionCandidateValueEClass.getESuperTypes().add(this.getResourceExpressionPropagatorFunction());
+		setResourceScheduleEClass.getESuperTypes().add(this.getResourcePropagatorFunction());
+		setExpressionScheduleEClass.getESuperTypes().add(this.getCandidateExpressionPropagatorFunction());
+		setFloatExpressionScheduleEClass.getESuperTypes().add(this.getSetExpressionSchedule());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(solutionPropagatorFunctionEClass, SolutionPropagatorFunction.class, "SolutionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -654,6 +614,9 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		initEClass(resourcePropagatorFunctionEClass, ResourcePropagatorFunction.class, "ResourcePropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourcePropagatorFunction_Resource(), theSchedulerPackage.getSolutionResource(), null, "Resource", null, 1, 1, ResourcePropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
+		initEClass(candidateExpressionPropagatorFunctionEClass, CandidateExpressionPropagatorFunction.class, "CandidateExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCandidateExpressionPropagatorFunction_CandidateValueExpression(), theSchedulerPackage.getCandidateValueExpression(), null, "CandidateValueExpression", null, 1, 1, CandidateExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
 		initEClass(resourceExpressionPropagatorFunctionEClass, ResourceExpressionPropagatorFunction.class, "ResourceExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceExpressionPropagatorFunction_ResourceExpression(), theSchedulerPackage.getResourceExpression(), null, "ResourceExpression", null, 1, 1, ResourceExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
@@ -663,36 +626,29 @@ public class SchedulerCalcPackageImpl extends EPackageImpl implements SchedulerC
 		initEClass(taskExpressionPropagatorFunctionEClass, TaskExpressionPropagatorFunction.class, "TaskExpressionPropagatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskExpressionPropagatorFunction_TaskExpression(), theSchedulerPackage.getTaskExpression(), null, "TaskExpression", null, 1, 1, TaskExpressionPropagatorFunction.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(calcSolutionAllExpressionCandidateValuesEClass, CalcSolutionAllExpressionCandidateValues.class, "CalcSolutionAllExpressionCandidateValues", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setScheduleScopeEClass, SetScheduleScope.class, "SetScheduleScope", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(calcSolutionExpressionCandidateValueEClass, CalcSolutionExpressionCandidateValue.class, "CalcSolutionExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setTaskScheduleEClass, SetTaskSchedule.class, "SetTaskSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetTaskSchedule_ConcreteParent(), this.getSetScheduleScope(), null, "ConcreteParent", null, 1, 1, SetTaskSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(calcResourceExpressionCandidateValueEClass, CalcResourceExpressionCandidateValue.class, "CalcResourceExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setExpressionCandidateValueScopeEClass, SetExpressionCandidateValueScope.class, "SetExpressionCandidateValueScope", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(calcTaskExpressionCandidateValueEClass, CalcTaskExpressionCandidateValue.class, "CalcTaskExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setTaskExpressionCandidateValueEClass, SetTaskExpressionCandidateValue.class, "SetTaskExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetTaskExpressionCandidateValue_ConcreteParent(), this.getSetExpressionCandidateValueScope(), null, "ConcreteParent", null, 1, 1, SetTaskExpressionCandidateValue.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(calcTaksExpressionCandidateValueCumulativeEClass, CalcTaksExpressionCandidateValueCumulative.class, "CalcTaksExpressionCandidateValueCumulative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setSolutionExpressionCandidateValueEClass, SetSolutionExpressionCandidateValue.class, "SetSolutionExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetSolutionExpressionCandidateValue_ConcreteParent(), this.getSetExpressionCandidateValueScope(), null, "ConcreteParent", null, 1, 1, SetSolutionExpressionCandidateValue.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(resetSolutionAllExpressionCandidateValuesEClass, ResetSolutionAllExpressionCandidateValues.class, "ResetSolutionAllExpressionCandidateValues", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setResourceExpressionCandidateValueEClass, SetResourceExpressionCandidateValue.class, "SetResourceExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetResourceExpressionCandidateValue_ConcreteParent(), this.getSetExpressionCandidateValueScope(), null, "ConcreteParent", null, 1, 1, SetResourceExpressionCandidateValue.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(resetSolutionExpressionCandidateValueEClass, ResetSolutionExpressionCandidateValue.class, "ResetSolutionExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setResourceScheduleEClass, SetResourceSchedule.class, "SetResourceSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetResourceSchedule_ConcreteParent(), this.getSetScheduleScope(), null, "ConcreteParent", null, 1, 1, SetResourceSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(resetResourceExpressionCandidateValueEClass, ResetResourceExpressionCandidateValue.class, "ResetResourceExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(setExpressionScheduleEClass, SetExpressionSchedule.class, "SetExpressionSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetExpressionSchedule_ConcreteParent(), this.getSetScheduleScope(), null, "ConcreteParent", null, 1, 1, SetExpressionSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(resetTaskExpressionCandidateValueEClass, ResetTaskExpressionCandidateValue.class, "ResetTaskExpressionCandidateValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetTaskCandidateNextEClass, ResetTaskCandidateNext.class, "ResetTaskCandidateNext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetTaskCandidateScheduledResourceEClass, ResetTaskCandidateScheduledResource.class, "ResetTaskCandidateScheduledResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetResourceTasksCandidateNextEClass, ResetResourceTasksCandidateNext.class, "ResetResourceTasksCandidateNext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resetResourceTasksCandidateScheduledResourceEClass, ResetResourceTasksCandidateScheduledResource.class, "ResetResourceTasksCandidateScheduledResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(setTaskCandidateScheduledResourceScopeEClass, SetTaskCandidateScheduledResourceScope.class, "SetTaskCandidateScheduledResourceScope", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(setTaskCandidateScheduledResourceEClass, SetTaskCandidateScheduledResource.class, "SetTaskCandidateScheduledResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSetTaskCandidateScheduledResource_ConcreteParent(), this.getSetTaskCandidateScheduledResourceScope(), null, "ConcreteParent", null, 1, 1, SetTaskCandidateScheduledResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEClass(setFloatExpressionScheduleEClass, SetFloatExpressionSchedule.class, "SetFloatExpressionSchedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
