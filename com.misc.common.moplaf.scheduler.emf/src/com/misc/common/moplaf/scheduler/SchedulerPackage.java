@@ -269,6 +269,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Clone</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -459,6 +468,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_RESOURCE___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_RESOURCE___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Construct Expressions</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -638,6 +656,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_TASK___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Unset Candidate Previous Next</em>' operation.
@@ -2115,6 +2142,15 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2239,6 +2275,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2367,6 +2412,15 @@ public interface SchedulerPackage extends EPackage {
 	int CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2491,6 +2545,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_VALUE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_VALUE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2628,6 +2691,15 @@ public interface SchedulerPackage extends EPackage {
 	int TASK_CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2761,6 +2833,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -2898,6 +2979,15 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3031,6 +3121,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -3178,6 +3277,15 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3321,6 +3429,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
@@ -3468,6 +3585,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_DATE_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_DATE_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3613,6 +3739,15 @@ public interface SchedulerPackage extends EPackage {
 	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_FLOAT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
 
 	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_FLOAT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
+
+	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3756,6 +3891,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOLUTION_CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS = CANDIDATE_INT_EXPRESSION___GET_PROPAGATOR_FUNCTION__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Add Propagator Functions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOLUTION_CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING = CANDIDATE_INT_EXPRESSION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
 	 * The operation id for the '<em>Set Value</em>' operation.
