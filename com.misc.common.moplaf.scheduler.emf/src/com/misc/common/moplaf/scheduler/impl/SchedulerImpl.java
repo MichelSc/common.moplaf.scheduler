@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getSolutions <em>Solutions</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getSchedulers <em>Schedulers</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getCurrentSolutionNr <em>Current Solution Nr</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.SchedulerImpl#getTasks <em>Tasks</em>}</li>
@@ -46,14 +46,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class SchedulerImpl extends MinimalEObjectImpl.Container implements Scheduler {
 	/**
-	 * The cached value of the '{@link #getSolutions() <em>Solutions</em>}' containment reference list.
+	 * The cached value of the '{@link #getSchedulers() <em>Schedulers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSolutions()
+	 * @see #getSchedulers()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Schedule> solutions;
+	protected EList<Schedule> schedulers;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -139,11 +139,11 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Schedule> getSolutions() {
-		if (solutions == null) {
-			solutions = new EObjectContainmentWithInverseEList<Schedule>(Schedule.class, this, SchedulerPackage.SCHEDULER__SOLUTIONS, SchedulerPackage.SCHEDULE__SCHEDULER);
+	public EList<Schedule> getSchedulers() {
+		if (schedulers == null) {
+			schedulers = new EObjectContainmentWithInverseEList<Schedule>(Schedule.class, this, SchedulerPackage.SCHEDULER__SCHEDULERS, SchedulerPackage.SCHEDULE__SCHEDULER);
 		}
-		return solutions;
+		return schedulers;
 	}
 
 	/**
@@ -248,8 +248,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSolutions()).basicAdd(otherEnd, msgs);
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSchedulers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -262,8 +262,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-				return ((InternalEList<?>)getSolutions()).basicRemove(otherEnd, msgs);
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+				return ((InternalEList<?>)getSchedulers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -276,8 +276,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-				return getSolutions();
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+				return getSchedulers();
 			case SchedulerPackage.SCHEDULER__NAME:
 				return getName();
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
@@ -299,9 +299,9 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-				getSolutions().clear();
-				getSolutions().addAll((Collection<? extends Schedule>)newValue);
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+				getSchedulers().clear();
+				getSchedulers().addAll((Collection<? extends Schedule>)newValue);
 				return;
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName((String)newValue);
@@ -329,8 +329,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-				getSolutions().clear();
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+				getSchedulers().clear();
 				return;
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName(NAME_EDEFAULT);
@@ -356,8 +356,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
-				return solutions != null && !solutions.isEmpty();
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+				return schedulers != null && !schedulers.isEmpty();
 			case SchedulerPackage.SCHEDULER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:

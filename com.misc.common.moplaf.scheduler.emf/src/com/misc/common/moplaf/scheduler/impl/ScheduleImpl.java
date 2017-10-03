@@ -223,7 +223,7 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newScheduler != null)
-				msgs = ((InternalEObject)newScheduler).eInverseAdd(this, SchedulerPackage.SCHEDULER__SOLUTIONS, Scheduler.class, msgs);
+				msgs = ((InternalEObject)newScheduler).eInverseAdd(this, SchedulerPackage.SCHEDULER__SCHEDULERS, Scheduler.class, msgs);
 			msgs = basicSetScheduler(newScheduler, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -289,17 +289,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Schedule clone() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -343,7 +332,7 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SCHEDULER__SOLUTIONS, Scheduler.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SCHEDULER__SCHEDULERS, Scheduler.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -470,8 +459,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			case SchedulerPackage.SCHEDULE___INITIALIZE:
 				initialize();
 				return null;
-			case SchedulerPackage.SCHEDULE___CLONE:
-				return clone();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -72,13 +72,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Solutions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Schedulers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__SOLUTIONS = 0;
+	int SCHEDULER__SCHEDULERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -316,22 +316,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE___INITIALIZE = LocalSearchPackage.SOLUTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Clone</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE___CLONE = LocalSearchPackage.SOLUTION_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Schedule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_OPERATION_COUNT = LocalSearchPackage.SOLUTION_OPERATION_COUNT + 2;
+	int SCHEDULE_OPERATION_COUNT = LocalSearchPackage.SOLUTION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl <em>Resource</em>}' class.
@@ -1641,15 +1632,15 @@ public interface SchedulerPackage extends EPackage {
 	EClass getScheduler();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getSolutions <em>Solutions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedulers <em>Schedulers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Solutions</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSolutions()
+	 * @return the meta object for the containment reference list '<em>Schedulers</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedulers()
 	 * @see #getScheduler()
 	 * @generated
 	 */
-	EReference getScheduler_Solutions();
+	EReference getScheduler_Schedulers();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Scheduler#getName <em>Name</em>}'.
@@ -1810,16 +1801,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSchedule__Initialize();
-
-	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Schedule#clone() <em>Clone</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Clone</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Schedule#clone()
-	 * @generated
-	 */
-	EOperation getSchedule__Clone();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Resource <em>Resource</em>}'.
@@ -2205,12 +2186,12 @@ public interface SchedulerPackage extends EPackage {
 		EClass SCHEDULER = eINSTANCE.getScheduler();
 
 		/**
-		 * The meta object literal for the '<em><b>Solutions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Schedulers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHEDULER__SOLUTIONS = eINSTANCE.getScheduler_Solutions();
+		EReference SCHEDULER__SCHEDULERS = eINSTANCE.getScheduler_Schedulers();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2333,14 +2314,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SCHEDULE___INITIALIZE = eINSTANCE.getSchedule__Initialize();
-
-		/**
-		 * The meta object literal for the '<em><b>Clone</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SCHEDULE___CLONE = eINSTANCE.getSchedule__Clone();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl <em>Resource</em>}' class.

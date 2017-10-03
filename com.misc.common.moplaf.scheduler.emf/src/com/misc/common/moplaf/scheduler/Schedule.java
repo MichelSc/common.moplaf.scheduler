@@ -97,7 +97,7 @@ public interface Schedule extends Solution {
 
 	/**
 	 * Returns the value of the '<em><b>Scheduler</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Scheduler#getSolutions <em>Solutions</em>}'.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedulers <em>Schedulers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scheduler</em>' container reference isn't clear,
@@ -107,8 +107,8 @@ public interface Schedule extends Solution {
 	 * @return the value of the '<em>Scheduler</em>' container reference.
 	 * @see #setScheduler(Scheduler)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSchedule_Scheduler()
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSolutions
-	 * @model opposite="Solutions" transient="false"
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedulers
+	 * @model opposite="Schedulers" transient="false"
 	 * @generated
 	 */
 	Scheduler getScheduler();
@@ -186,16 +186,5 @@ public interface Schedule extends Solution {
 	 * @generated
 	 */
 	void initialize();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Create a new solution in the reset state (no candidate move, candidate values are reset to the solution values)
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	Schedule clone();
 
 } // Schedule

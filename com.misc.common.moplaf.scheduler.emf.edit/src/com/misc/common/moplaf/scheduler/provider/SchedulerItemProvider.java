@@ -175,7 +175,7 @@ public class SchedulerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__SOLUTIONS);
+			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__SCHEDULERS);
 		}
 		return childrenFeatures;
 	}
@@ -237,7 +237,7 @@ public class SchedulerItemProvider
 			case SchedulerPackage.SCHEDULER__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SchedulerPackage.SCHEDULER__SOLUTIONS:
+			case SchedulerPackage.SCHEDULER__SCHEDULERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -257,7 +257,7 @@ public class SchedulerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__SOLUTIONS,
+				(SchedulerPackage.Literals.SCHEDULER__SCHEDULERS,
 				 SchedulerFactory.eINSTANCE.createSchedule()));
 	}
 
