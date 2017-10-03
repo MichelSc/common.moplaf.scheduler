@@ -13,6 +13,5 @@ package com.misc.common.moplaf.scheduler;
  * @model
  * @generated
  */
-public interface ScheduleAfter extends MoveChangeTask {
-
+public interface ScheduleAfter extends MoveTask {
 } // ScheduleAfter

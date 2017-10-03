@@ -3,8 +3,8 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.scheduler.SolutionResource;
-import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.scheduler.Resource;
+import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.Unschedule;
 
 import org.eclipse.emf.ecore.EClass;
@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class UnscheduleImpl extends MoveChangeImpl implements Unschedule {
+public class UnscheduleImpl extends MoveScheduleImpl implements Unschedule {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,20 +55,32 @@ public class UnscheduleImpl extends MoveChangeImpl implements Unschedule {
 	 * 
 	 */
 	@Override
-	public boolean change() {
-		SolutionTask task = this.getTaskToSchedule();
-		SolutionResource scheduled_resource = task.getCandidateScheduledResource();
+	public String isValidFeedback() {
+		String feedback = super.isValidFeedback();
+		if ( feedback!=null) {
+			return feedback;
+		} else if ( this.getTaskToSchedule().getScheduledResource()==null) {
+			return "Task not scedulerd";
+		}
+		return null;
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public void apply() {
+		Task task = this.getTaskToSchedule();
+		Resource scheduled_resource = task.getScheduledResource();
 		if ( scheduled_resource==null) {
-			return false;
 		}
 
 		// association previous next
-		task.unsetCandidatePreviousNext();
+		task.unsetPreviousNext();
 
 		// reference to scheduled resource
-		task.scheduleCandidateResource(null);
+		task.scheduleResource(null);
 
-		return true;
 	}
 
 } //UnscheduleImpl

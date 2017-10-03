@@ -13,5 +13,5 @@ package com.misc.common.moplaf.scheduler;
  * @model
  * @generated
  */
-public interface Unschedule extends MoveChange {
+public interface Unschedule extends MoveSchedule {
 } // Unschedule

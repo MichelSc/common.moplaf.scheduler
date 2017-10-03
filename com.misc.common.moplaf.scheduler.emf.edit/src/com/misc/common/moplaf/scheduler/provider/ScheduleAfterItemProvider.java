@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScheduleAfterItemProvider extends MoveChangeTaskItemProvider {
+public class ScheduleAfterItemProvider extends MoveTaskItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,8 @@ public class ScheduleAfterItemProvider extends MoveChangeTaskItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScheduleAfter)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ScheduleAfter_type") :
-			getString("_UI_ScheduleAfter_type") + " " + label;
+		ScheduleAfter scheduleAfter = (ScheduleAfter)object;
+		return getString("_UI_ScheduleAfter_type") + " " + scheduleAfter.isValid();
 	}
 	
 

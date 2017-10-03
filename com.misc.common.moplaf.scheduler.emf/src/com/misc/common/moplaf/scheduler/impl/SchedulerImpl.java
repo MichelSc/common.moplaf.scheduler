@@ -2,14 +2,12 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.common.util.Util;
+import com.misc.common.moplaf.scheduler.Resource;
+import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.scheduler.Solution;
-import com.misc.common.moplaf.scheduler.SolutionResource;
-import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.schedulercalc.util.SetSchedulePropagatorFunctionManager;
+import com.misc.common.moplaf.scheduler.Task;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -55,7 +53,7 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Solution> solutions;
+	protected EList<Schedule> solutions;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -141,9 +139,9 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Solution> getSolutions() {
+	public EList<Schedule> getSolutions() {
 		if (solutions == null) {
-			solutions = new EObjectContainmentWithInverseEList<Solution>(Solution.class, this, SchedulerPackage.SCHEDULER__SOLUTIONS, SchedulerPackage.SOLUTION__SCHEDULER);
+			solutions = new EObjectContainmentWithInverseEList<Schedule>(Schedule.class, this, SchedulerPackage.SCHEDULER__SOLUTIONS, SchedulerPackage.SCHEDULE__SCHEDULER);
 		}
 		return solutions;
 	}
@@ -164,8 +162,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public SolutionTask constructTask(EObject task) {
-		SolutionTask new_task = SchedulerFactory.eINSTANCE.createSolutionTask();
+	public Task constructTask(EObject task) {
+		Task new_task = SchedulerFactory.eINSTANCE.createTask();
 		return new_task;
 	}
 
@@ -173,8 +171,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public SolutionResource constructResource(EObject resource) {
-		SolutionResource new_resource = SchedulerFactory.eINSTANCE.createSolutionResource();
+	public Resource constructResource(EObject resource) {
+		Resource new_resource = SchedulerFactory.eINSTANCE.createResource();
 		return new_resource;
 	}
 
@@ -183,7 +181,8 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	 * <!-- end-user-doc -->
 	 */
 	public void enable() {
-		Util.adapt(this, SetSchedulePropagatorFunctionManager.class, true ); // true = create
+		// to be overriden by the concrete implementation
+		//Util.adapt(this, SetSchedulePropagatorFunctionManager.class, true ); // true = create
 	}
 
 	/**
@@ -302,7 +301,7 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 		switch (featureID) {
 			case SchedulerPackage.SCHEDULER__SOLUTIONS:
 				getSolutions().clear();
-				getSolutions().addAll((Collection<? extends Solution>)newValue);
+				getSolutions().addAll((Collection<? extends Schedule>)newValue);
 				return;
 			case SchedulerPackage.SCHEDULER__NAME:
 				setName((String)newValue);

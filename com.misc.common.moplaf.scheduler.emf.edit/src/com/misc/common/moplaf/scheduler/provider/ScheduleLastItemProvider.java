@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScheduleLastItemProvider extends MoveChangeResourceItemProvider {
+public class ScheduleLastItemProvider extends MoveResourceItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,8 @@ public class ScheduleLastItemProvider extends MoveChangeResourceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScheduleLast)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ScheduleLast_type") :
-			getString("_UI_ScheduleLast_type") + " " + label;
+		ScheduleLast scheduleLast = (ScheduleLast)object;
+		return getString("_UI_ScheduleLast_type") + " " + scheduleLast.isValid();
 	}
 	
 

@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler.provider;
 
+import com.misc.common.moplaf.localsearch.provider.LocalsearchEditPlugin;
 import com.misc.common.moplaf.propagator2.provider.PropagatorEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -40,6 +41,7 @@ public final class SchedulerEditPlugin extends EMFPlugin {
 	public SchedulerEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     LocalsearchEditPlugin.INSTANCE,
 		     PropagatorEditPlugin.INSTANCE,
 		   });
 	}

@@ -4,8 +4,8 @@ package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.scheduler.SolutionResource;
-import com.misc.common.moplaf.scheduler.SolutionTask;
+import com.misc.common.moplaf.scheduler.Resource;
+import com.misc.common.moplaf.scheduler.Task;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ScheduleAfterImpl extends MoveChangeTaskImpl implements ScheduleAfter {
+public class ScheduleAfterImpl extends MoveTaskImpl implements ScheduleAfter {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,17 +55,15 @@ public class ScheduleAfterImpl extends MoveChangeTaskImpl implements ScheduleAft
 	 * 
 	 */
 	@Override
-	public boolean change() {
-		SolutionTask task = this.getTaskToSchedule();
-		SolutionTask to_be_task_before = this.getInsertionPoint();
-		SolutionResource tobe_resource = to_be_task_before.getCandidateScheduledResource();
+	public void apply() {
+		Task task = this.getTaskToSchedule();
+		Task to_be_task_before = this.getInsertionPoint();
+		Resource tobe_resource = to_be_task_before.getScheduledResource();
 			
 		// association previous next
-		task.setCandidatePreviousNext(tobe_resource, to_be_task_before, to_be_task_before.getCandidateNextTask());
+		task.setPreviousNext(tobe_resource, to_be_task_before, to_be_task_before.getNextTask());
 
 		// reference to scheduled resource
-		task.scheduleCandidateResource(tobe_resource);
-		
-		return true;
+		task.scheduleResource(tobe_resource);
 	}
 } //ScheduleAfterImpl

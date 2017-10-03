@@ -13,6 +13,5 @@ package com.misc.common.moplaf.scheduler;
  * @model
  * @generated
  */
-public interface ScheduleFirst extends MoveChangeResource {
-
+public interface ScheduleFirst extends MoveResource {
 } // ScheduleFirst

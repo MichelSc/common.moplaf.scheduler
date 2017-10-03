@@ -2,25 +2,13 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.common.EnabledFeedback;
+import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.propagator2.PropagatorPackage;
-import com.misc.common.moplaf.scheduler.CandidateDateExpression;
-import com.misc.common.moplaf.scheduler.CandidateFloatExpression;
-import com.misc.common.moplaf.scheduler.CandidateIntExpression;
-import com.misc.common.moplaf.scheduler.CandidateValueExpression;
-import com.misc.common.moplaf.scheduler.DateExpression;
-import com.misc.common.moplaf.scheduler.FloatExpression;
-import com.misc.common.moplaf.scheduler.IntExpression;
-import com.misc.common.moplaf.scheduler.Move;
-import com.misc.common.moplaf.scheduler.MoveChange;
-import com.misc.common.moplaf.scheduler.MoveChangeResource;
-import com.misc.common.moplaf.scheduler.MoveChangeTask;
-import com.misc.common.moplaf.scheduler.MoveExpression;
-import com.misc.common.moplaf.scheduler.OwnerExpression;
-import com.misc.common.moplaf.scheduler.ResourceCandidateDateExpression;
-import com.misc.common.moplaf.scheduler.ResourceCandidateFloatExpression;
-import com.misc.common.moplaf.scheduler.ResourceCandidateIntExpression;
-import com.misc.common.moplaf.scheduler.ResourceExpression;
+import com.misc.common.moplaf.scheduler.MoveResource;
+import com.misc.common.moplaf.scheduler.MoveSchedule;
+import com.misc.common.moplaf.scheduler.MoveTask;
+import com.misc.common.moplaf.scheduler.Resource;
+import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.ScheduleBefore;
 import com.misc.common.moplaf.scheduler.ScheduleFirst;
@@ -28,24 +16,10 @@ import com.misc.common.moplaf.scheduler.ScheduleLast;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.scheduler.Solution;
-import com.misc.common.moplaf.scheduler.SolutionCandidateDateExpression;
-import com.misc.common.moplaf.scheduler.SolutionCandidateFloatExpression;
-import com.misc.common.moplaf.scheduler.SolutionCandidateIntExpression;
-import com.misc.common.moplaf.scheduler.SolutionExpression;
-import com.misc.common.moplaf.scheduler.SolutionResource;
-import com.misc.common.moplaf.scheduler.SolutionTask;
-import com.misc.common.moplaf.scheduler.TaskCandidateDateExpression;
-import com.misc.common.moplaf.scheduler.TaskCandidateFloatExpression;
-import com.misc.common.moplaf.scheduler.TaskCandidateIntExpression;
-import com.misc.common.moplaf.scheduler.TaskExpression;
+import com.misc.common.moplaf.scheduler.Task;
 import com.misc.common.moplaf.scheduler.Unschedule;
-import com.misc.common.moplaf.scheduler.ValueExpression;
-import com.misc.common.moplaf.schedulercalc.SchedulerCalcPackage;
-import com.misc.common.moplaf.schedulercalc.impl.SchedulerCalcPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -71,196 +45,35 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass solutionEClass = null;
+	private EClass scheduleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass moveEClass = null;
+	private EClass resourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass solutionResourceEClass = null;
+	private EClass taskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass solutionTaskEClass = null;
+	private EClass moveScheduleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass solutionExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass moveExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass valueExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass floatExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass intExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dateExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass candidateValueExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass candidateFloatExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass candidateDateExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass candidateIntExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskCandidateFloatExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskCandidateDateExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceCandidateFloatExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceCandidateDateExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceCandidateIntExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskCandidateIntExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solutionCandidateDateExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solutionCandidateFloatExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass solutionCandidateIntExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType enabledFeedbackEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass moveChangeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass moveChangeTaskEClass = null;
+	private EClass moveTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,7 +94,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass moveChangeResourceEClass = null;
+	private EClass moveResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,13 +116,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	private EClass unscheduleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ownerExpressionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -358,18 +164,14 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		isInited = true;
 
 		// Initialize simple dependencies
+		LocalSearchPackage.eINSTANCE.eClass();
 		PropagatorPackage.eINSTANCE.eClass();
-
-		// Obtain or create and register interdependencies
-		SchedulerCalcPackageImpl theSchedulerCalcPackage = (SchedulerCalcPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchedulerCalcPackage.eNS_URI) instanceof SchedulerCalcPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchedulerCalcPackage.eNS_URI) : SchedulerCalcPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theSchedulerPackage.createPackageContents();
-		theSchedulerCalcPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSchedulerPackage.initializePackageContents();
-		theSchedulerCalcPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSchedulerPackage.freeze();
@@ -439,6 +241,321 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSchedule() {
+		return scheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSchedule_Tasks() {
+		return (EReference)scheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSchedule_Resources() {
+		return (EReference)scheduleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchedule_SolutionNr() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSchedule_Scheduler() {
+		return (EReference)scheduleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchedule_NrCandidateScheduledTasks() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchedule_NrScheduledTasks() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSchedule__Initialize() {
+		return scheduleEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSchedule__Clone() {
+		return scheduleEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getResource() {
+		return resourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResource_Schedule() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResource_Resource() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResource_Name() {
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResource_Description() {
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResource_NrCandidateScheduledTasks() {
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResource_ScheduledTasks() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResource_FirstTask() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResource_LastTask() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResource_NrScheduledTasks() {
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTask() {
+		return taskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_Task() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_NextTask() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_PreviousTask() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_ScheduledResource() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTask_Description() {
+		return (EAttribute)taskEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_Schedule() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTask_Name() {
+		return (EAttribute)taskEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTask__UnsetPreviousNext() {
+		return taskEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTask__SetPreviousNext__Resource_Task_Task() {
+		return taskEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTask__ScheduleResource__Resource() {
+		return taskEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveSchedule() {
+		return moveScheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMoveSchedule_TaskToSchedule() {
+		return (EReference)moveScheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveSchedule_Description() {
+		return (EAttribute)moveScheduleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveTask() {
+		return moveTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMoveTask_InsertionPoint() {
+		return (EReference)moveTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getScheduler_Tasks() {
 		return (EReference)schedulerEClass.getEStructuralFeatures().get(3);
 	}
@@ -466,897 +583,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSolution() {
-		return solutionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolution_Moves() {
-		return (EReference)solutionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolution_Resources() {
-		return (EReference)solutionEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolution_Tasks() {
-		return (EReference)solutionEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolution_CandidateMove() {
-		return (EReference)solutionEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolution_Expressions() {
-		return (EReference)solutionEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_SolutionNr() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolution_Scheduler() {
-		return (EReference)solutionEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_NrCandidateScheduledTasks() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_NrScheduledTasks() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_PendingCandidateMove() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_SetCandidateMoveEnabled() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_ResetCandidateMoveEnabled() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolution_AcceptCandidateMoveEnabled() {
-		return (EAttribute)solutionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolution__Initialize() {
-		return solutionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolution__Clone() {
-		return solutionEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolution__SetCandidate__Move() {
-		return solutionEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolution__ResetCandidate() {
-		return solutionEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolution__AcceptCandidate() {
-		return solutionEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolution__ConstructExpressions() {
-		return solutionEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMove() {
-		return moveEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMove_Expressions() {
-		return (EReference)moveEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMove_Changes() {
-		return (EReference)moveEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMove_Name() {
-		return (EAttribute)moveEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMove_Solution() {
-		return (EReference)moveEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionResource() {
-		return solutionResourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_Resource() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_ScheduledTasks() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_CandidateScheduledTasks() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_CandidateFirstTask() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_CandidateLastTask() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_Expressions() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolutionResource_Description() {
-		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_Solution() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolutionResource_Name() {
-		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolutionResource_NrScheduledTasks() {
-		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolutionResource_NrCandidateScheduledTasks() {
-		return (EAttribute)solutionResourceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_FirstTask() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionResource_LastTask() {
-		return (EReference)solutionResourceEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolutionResource__ConstructExpressions() {
-		return solutionResourceEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionTask() {
-		return solutionTaskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_Task() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_NextTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_PreviousTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_ScheduledResource() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_CandidateScheduledResource() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_CandidateNextTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_CandidatePreviousTask() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_Expressions() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolutionTask_Description() {
-		return (EAttribute)solutionTaskEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionTask_Solution() {
-		return (EReference)solutionTaskEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSolutionTask_Name() {
-		return (EAttribute)solutionTaskEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolutionTask__UnsetCandidatePreviousNext() {
-		return solutionTaskEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolutionTask__SetCandidatePreviousNext__SolutionResource_SolutionTask_SolutionTask() {
-		return solutionTaskEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolutionTask__ConstructExpressions() {
-		return solutionTaskEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSolutionTask__ScheduleCandidateResource__SolutionResource() {
-		return solutionTaskEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionExpression() {
-		return solutionExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSolutionExpression_Solution() {
-		return (EReference)solutionExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMoveExpression() {
-		return moveExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResourceExpression() {
-		return resourceExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getResourceExpression_Resource() {
-		return (EReference)resourceExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTaskExpression() {
-		return taskExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTaskExpression_Task() {
-		return (EReference)taskExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getValueExpression() {
-		return valueExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getValueExpression__SetValue__CandidateValueExpression() {
-		return valueExpressionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getFloatExpression() {
-		return floatExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFloatExpression_Value() {
-		return (EAttribute)floatExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIntExpression() {
-		return intExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIntExpression_Value() {
-		return (EAttribute)intExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDateExpression() {
-		return dateExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDateExpression_Value() {
-		return (EAttribute)dateExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCandidateValueExpression() {
-		return candidateValueExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCandidateValueExpression_CandidateValueAsString() {
-		return (EAttribute)candidateValueExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCandidateValueExpression__RefreshValueCandidate() {
-		return candidateValueExpressionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCandidateValueExpression__SetValue() {
-		return candidateValueExpressionEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCandidateFloatExpression() {
-		return candidateFloatExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCandidateFloatExpression_CandidateValue() {
-		return (EAttribute)candidateFloatExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCandidateDateExpression() {
-		return candidateDateExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCandidateDateExpression_CandidateValue() {
-		return (EAttribute)candidateDateExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCandidateIntExpression() {
-		return candidateIntExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCandidateIntExpression_CandidateValue() {
-		return (EAttribute)candidateIntExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTaskCandidateFloatExpression() {
-		return taskCandidateFloatExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTaskCandidateDateExpression() {
-		return taskCandidateDateExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResourceCandidateFloatExpression() {
-		return resourceCandidateFloatExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResourceCandidateDateExpression() {
-		return resourceCandidateDateExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResourceCandidateIntExpression() {
-		return resourceCandidateIntExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTaskCandidateIntExpression() {
-		return taskCandidateIntExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionCandidateDateExpression() {
-		return solutionCandidateDateExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionCandidateFloatExpression() {
-		return solutionCandidateFloatExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSolutionCandidateIntExpression() {
-		return solutionCandidateIntExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getEnabledFeedback() {
-		return enabledFeedbackEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMoveChange() {
-		return moveChangeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMoveChange_TaskToSchedule() {
-		return (EReference)moveChangeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMoveChange_Description() {
-		return (EAttribute)moveChangeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMoveChange_Valid() {
-		return (EAttribute)moveChangeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMoveChange_Move() {
-		return (EReference)moveChangeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMoveChange__Change() {
-		return moveChangeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMoveChangeTask() {
-		return moveChangeTaskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMoveChangeTask_InsertionPoint() {
-		return (EReference)moveChangeTaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getScheduleAfter() {
 		return scheduleAfterEClass;
 	}
@@ -1375,8 +601,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMoveChangeResource() {
-		return moveChangeResourceEClass;
+	public EClass getMoveResource() {
+		return moveResourceEClass;
 	}
 
 	/**
@@ -1384,8 +610,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMoveChangeResource_InsertionPoint() {
-		return (EReference)moveChangeResourceEClass.getEStructuralFeatures().get(0);
+	public EReference getMoveResource_InsertionPoint() {
+		return (EReference)moveResourceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1413,51 +639,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 */
 	public EClass getUnschedule() {
 		return unscheduleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getOwnerExpression() {
-		return ownerExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOwnerExpression_Owner() {
-		return (EAttribute)ownerExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOwnerExpression_Role() {
-		return (EAttribute)ownerExpressionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getOwnerExpression_Description() {
-		return (EAttribute)ownerExpressionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getOwnerExpression_ExpressionSolution() {
-		return (EReference)ownerExpressionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1498,152 +679,58 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT);
 		createEOperation(schedulerEClass, SCHEDULER___ENABLE);
 
-		solutionEClass = createEClass(SOLUTION);
-		createEAttribute(solutionEClass, SOLUTION__PENDING_CANDIDATE_MOVE);
-		createEAttribute(solutionEClass, SOLUTION__SET_CANDIDATE_MOVE_ENABLED);
-		createEAttribute(solutionEClass, SOLUTION__RESET_CANDIDATE_MOVE_ENABLED);
-		createEAttribute(solutionEClass, SOLUTION__ACCEPT_CANDIDATE_MOVE_ENABLED);
-		createEReference(solutionEClass, SOLUTION__MOVES);
-		createEReference(solutionEClass, SOLUTION__TASKS);
-		createEReference(solutionEClass, SOLUTION__RESOURCES);
-		createEReference(solutionEClass, SOLUTION__CANDIDATE_MOVE);
-		createEReference(solutionEClass, SOLUTION__EXPRESSIONS);
-		createEAttribute(solutionEClass, SOLUTION__SOLUTION_NR);
-		createEReference(solutionEClass, SOLUTION__SCHEDULER);
-		createEAttribute(solutionEClass, SOLUTION__NR_CANDIDATE_SCHEDULED_TASKS);
-		createEAttribute(solutionEClass, SOLUTION__NR_SCHEDULED_TASKS);
-		createEOperation(solutionEClass, SOLUTION___INITIALIZE);
-		createEOperation(solutionEClass, SOLUTION___CONSTRUCT_EXPRESSIONS);
-		createEOperation(solutionEClass, SOLUTION___CLONE);
-		createEOperation(solutionEClass, SOLUTION___SET_CANDIDATE__MOVE);
-		createEOperation(solutionEClass, SOLUTION___RESET_CANDIDATE);
-		createEOperation(solutionEClass, SOLUTION___ACCEPT_CANDIDATE);
+		scheduleEClass = createEClass(SCHEDULE);
+		createEReference(scheduleEClass, SCHEDULE__TASKS);
+		createEReference(scheduleEClass, SCHEDULE__RESOURCES);
+		createEAttribute(scheduleEClass, SCHEDULE__SOLUTION_NR);
+		createEReference(scheduleEClass, SCHEDULE__SCHEDULER);
+		createEAttribute(scheduleEClass, SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS);
+		createEAttribute(scheduleEClass, SCHEDULE__NR_SCHEDULED_TASKS);
+		createEOperation(scheduleEClass, SCHEDULE___INITIALIZE);
+		createEOperation(scheduleEClass, SCHEDULE___CLONE);
 
-		solutionResourceEClass = createEClass(SOLUTION_RESOURCE);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__SOLUTION);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__RESOURCE);
-		createEAttribute(solutionResourceEClass, SOLUTION_RESOURCE__NAME);
-		createEAttribute(solutionResourceEClass, SOLUTION_RESOURCE__DESCRIPTION);
-		createEAttribute(solutionResourceEClass, SOLUTION_RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__SCHEDULED_TASKS);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__FIRST_TASK);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__LAST_TASK);
-		createEAttribute(solutionResourceEClass, SOLUTION_RESOURCE__NR_SCHEDULED_TASKS);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__CANDIDATE_SCHEDULED_TASKS);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__CANDIDATE_FIRST_TASK);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__CANDIDATE_LAST_TASK);
-		createEReference(solutionResourceEClass, SOLUTION_RESOURCE__EXPRESSIONS);
-		createEOperation(solutionResourceEClass, SOLUTION_RESOURCE___CONSTRUCT_EXPRESSIONS);
+		resourceEClass = createEClass(RESOURCE);
+		createEReference(resourceEClass, RESOURCE__SCHEDULE);
+		createEReference(resourceEClass, RESOURCE__RESOURCE);
+		createEAttribute(resourceEClass, RESOURCE__NAME);
+		createEAttribute(resourceEClass, RESOURCE__DESCRIPTION);
+		createEAttribute(resourceEClass, RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS);
+		createEReference(resourceEClass, RESOURCE__SCHEDULED_TASKS);
+		createEReference(resourceEClass, RESOURCE__FIRST_TASK);
+		createEReference(resourceEClass, RESOURCE__LAST_TASK);
+		createEAttribute(resourceEClass, RESOURCE__NR_SCHEDULED_TASKS);
 
-		solutionTaskEClass = createEClass(SOLUTION_TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__NEXT_TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__PREVIOUS_TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__SCHEDULED_RESOURCE);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__CANDIDATE_NEXT_TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__CANDIDATE_PREVIOUS_TASK);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__CANDIDATE_SCHEDULED_RESOURCE);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__EXPRESSIONS);
-		createEAttribute(solutionTaskEClass, SOLUTION_TASK__DESCRIPTION);
-		createEReference(solutionTaskEClass, SOLUTION_TASK__SOLUTION);
-		createEAttribute(solutionTaskEClass, SOLUTION_TASK__NAME);
-		createEOperation(solutionTaskEClass, SOLUTION_TASK___UNSET_CANDIDATE_PREVIOUS_NEXT);
-		createEOperation(solutionTaskEClass, SOLUTION_TASK___SET_CANDIDATE_PREVIOUS_NEXT__SOLUTIONRESOURCE_SOLUTIONTASK_SOLUTIONTASK);
-		createEOperation(solutionTaskEClass, SOLUTION_TASK___CONSTRUCT_EXPRESSIONS);
-		createEOperation(solutionTaskEClass, SOLUTION_TASK___SCHEDULE_CANDIDATE_RESOURCE__SOLUTIONRESOURCE);
+		taskEClass = createEClass(TASK);
+		createEReference(taskEClass, TASK__TASK);
+		createEReference(taskEClass, TASK__NEXT_TASK);
+		createEReference(taskEClass, TASK__PREVIOUS_TASK);
+		createEReference(taskEClass, TASK__SCHEDULED_RESOURCE);
+		createEAttribute(taskEClass, TASK__DESCRIPTION);
+		createEReference(taskEClass, TASK__SCHEDULE);
+		createEAttribute(taskEClass, TASK__NAME);
+		createEOperation(taskEClass, TASK___UNSET_PREVIOUS_NEXT);
+		createEOperation(taskEClass, TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK);
+		createEOperation(taskEClass, TASK___SCHEDULE_RESOURCE__RESOURCE);
 
-		moveEClass = createEClass(MOVE);
-		createEReference(moveEClass, MOVE__EXPRESSIONS);
-		createEReference(moveEClass, MOVE__CHANGES);
-		createEAttribute(moveEClass, MOVE__NAME);
-		createEReference(moveEClass, MOVE__SOLUTION);
+		moveScheduleEClass = createEClass(MOVE_SCHEDULE);
+		createEReference(moveScheduleEClass, MOVE_SCHEDULE__TASK_TO_SCHEDULE);
+		createEAttribute(moveScheduleEClass, MOVE_SCHEDULE__DESCRIPTION);
 
-		moveChangeEClass = createEClass(MOVE_CHANGE);
-		createEReference(moveChangeEClass, MOVE_CHANGE__TASK_TO_SCHEDULE);
-		createEAttribute(moveChangeEClass, MOVE_CHANGE__DESCRIPTION);
-		createEAttribute(moveChangeEClass, MOVE_CHANGE__VALID);
-		createEReference(moveChangeEClass, MOVE_CHANGE__MOVE);
-		createEOperation(moveChangeEClass, MOVE_CHANGE___CHANGE);
-
-		moveChangeTaskEClass = createEClass(MOVE_CHANGE_TASK);
-		createEReference(moveChangeTaskEClass, MOVE_CHANGE_TASK__INSERTION_POINT);
+		moveTaskEClass = createEClass(MOVE_TASK);
+		createEReference(moveTaskEClass, MOVE_TASK__INSERTION_POINT);
 
 		scheduleAfterEClass = createEClass(SCHEDULE_AFTER);
 
 		scheduleBeforeEClass = createEClass(SCHEDULE_BEFORE);
 
-		moveChangeResourceEClass = createEClass(MOVE_CHANGE_RESOURCE);
-		createEReference(moveChangeResourceEClass, MOVE_CHANGE_RESOURCE__INSERTION_POINT);
+		moveResourceEClass = createEClass(MOVE_RESOURCE);
+		createEReference(moveResourceEClass, MOVE_RESOURCE__INSERTION_POINT);
 
 		scheduleFirstEClass = createEClass(SCHEDULE_FIRST);
 
 		scheduleLastEClass = createEClass(SCHEDULE_LAST);
 
 		unscheduleEClass = createEClass(UNSCHEDULE);
-
-		ownerExpressionEClass = createEClass(OWNER_EXPRESSION);
-		createEAttribute(ownerExpressionEClass, OWNER_EXPRESSION__OWNER);
-		createEAttribute(ownerExpressionEClass, OWNER_EXPRESSION__ROLE);
-		createEAttribute(ownerExpressionEClass, OWNER_EXPRESSION__DESCRIPTION);
-		createEReference(ownerExpressionEClass, OWNER_EXPRESSION__EXPRESSION_SOLUTION);
-
-		moveExpressionEClass = createEClass(MOVE_EXPRESSION);
-
-		solutionExpressionEClass = createEClass(SOLUTION_EXPRESSION);
-		createEReference(solutionExpressionEClass, SOLUTION_EXPRESSION__SOLUTION);
-
-		resourceExpressionEClass = createEClass(RESOURCE_EXPRESSION);
-		createEReference(resourceExpressionEClass, RESOURCE_EXPRESSION__RESOURCE);
-
-		taskExpressionEClass = createEClass(TASK_EXPRESSION);
-		createEReference(taskExpressionEClass, TASK_EXPRESSION__TASK);
-
-		valueExpressionEClass = createEClass(VALUE_EXPRESSION);
-		createEOperation(valueExpressionEClass, VALUE_EXPRESSION___SET_VALUE__CANDIDATEVALUEEXPRESSION);
-
-		floatExpressionEClass = createEClass(FLOAT_EXPRESSION);
-		createEAttribute(floatExpressionEClass, FLOAT_EXPRESSION__VALUE);
-
-		intExpressionEClass = createEClass(INT_EXPRESSION);
-		createEAttribute(intExpressionEClass, INT_EXPRESSION__VALUE);
-
-		dateExpressionEClass = createEClass(DATE_EXPRESSION);
-		createEAttribute(dateExpressionEClass, DATE_EXPRESSION__VALUE);
-
-		candidateValueExpressionEClass = createEClass(CANDIDATE_VALUE_EXPRESSION);
-		createEAttribute(candidateValueExpressionEClass, CANDIDATE_VALUE_EXPRESSION__CANDIDATE_VALUE_AS_STRING);
-		createEOperation(candidateValueExpressionEClass, CANDIDATE_VALUE_EXPRESSION___REFRESH_VALUE_CANDIDATE);
-		createEOperation(candidateValueExpressionEClass, CANDIDATE_VALUE_EXPRESSION___SET_VALUE);
-
-		candidateFloatExpressionEClass = createEClass(CANDIDATE_FLOAT_EXPRESSION);
-		createEAttribute(candidateFloatExpressionEClass, CANDIDATE_FLOAT_EXPRESSION__CANDIDATE_VALUE);
-
-		candidateDateExpressionEClass = createEClass(CANDIDATE_DATE_EXPRESSION);
-		createEAttribute(candidateDateExpressionEClass, CANDIDATE_DATE_EXPRESSION__CANDIDATE_VALUE);
-
-		candidateIntExpressionEClass = createEClass(CANDIDATE_INT_EXPRESSION);
-		createEAttribute(candidateIntExpressionEClass, CANDIDATE_INT_EXPRESSION__CANDIDATE_VALUE);
-
-		taskCandidateDateExpressionEClass = createEClass(TASK_CANDIDATE_DATE_EXPRESSION);
-
-		taskCandidateFloatExpressionEClass = createEClass(TASK_CANDIDATE_FLOAT_EXPRESSION);
-
-		taskCandidateIntExpressionEClass = createEClass(TASK_CANDIDATE_INT_EXPRESSION);
-
-		resourceCandidateDateExpressionEClass = createEClass(RESOURCE_CANDIDATE_DATE_EXPRESSION);
-
-		resourceCandidateFloatExpressionEClass = createEClass(RESOURCE_CANDIDATE_FLOAT_EXPRESSION);
-
-		resourceCandidateIntExpressionEClass = createEClass(RESOURCE_CANDIDATE_INT_EXPRESSION);
-
-		solutionCandidateDateExpressionEClass = createEClass(SOLUTION_CANDIDATE_DATE_EXPRESSION);
-
-		solutionCandidateFloatExpressionEClass = createEClass(SOLUTION_CANDIDATE_FLOAT_EXPRESSION);
-
-		solutionCandidateIntExpressionEClass = createEClass(SOLUTION_CANDIDATE_INT_EXPRESSION);
-
-		// Create data types
-		enabledFeedbackEDataType = createEDataType(ENABLED_FEEDBACK);
 	}
 
 	/**
@@ -1670,6 +757,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		LocalSearchPackage theLocalSearchPackage = (LocalSearchPackage)EPackage.Registry.INSTANCE.getEPackage(LocalSearchPackage.eNS_URI);
 		PropagatorPackage thePropagatorPackage = (PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(PropagatorPackage.eNS_URI);
 
 		// Create type parameters
@@ -1677,160 +765,89 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		solutionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		solutionResourceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		solutionTaskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		moveChangeTaskEClass.getESuperTypes().add(this.getMoveChange());
-		scheduleAfterEClass.getESuperTypes().add(this.getMoveChangeTask());
-		scheduleBeforeEClass.getESuperTypes().add(this.getMoveChangeTask());
-		moveChangeResourceEClass.getESuperTypes().add(this.getMoveChange());
-		scheduleFirstEClass.getESuperTypes().add(this.getMoveChangeResource());
-		scheduleLastEClass.getESuperTypes().add(this.getMoveChangeResource());
-		unscheduleEClass.getESuperTypes().add(this.getMoveChange());
-		moveExpressionEClass.getESuperTypes().add(this.getOwnerExpression());
-		solutionExpressionEClass.getESuperTypes().add(this.getOwnerExpression());
-		resourceExpressionEClass.getESuperTypes().add(this.getOwnerExpression());
-		taskExpressionEClass.getESuperTypes().add(this.getOwnerExpression());
-		valueExpressionEClass.getESuperTypes().add(this.getOwnerExpression());
-		floatExpressionEClass.getESuperTypes().add(this.getValueExpression());
-		intExpressionEClass.getESuperTypes().add(this.getValueExpression());
-		dateExpressionEClass.getESuperTypes().add(this.getValueExpression());
-		candidateValueExpressionEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
-		candidateValueExpressionEClass.getESuperTypes().add(this.getValueExpression());
-		candidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateValueExpression());
-		candidateFloatExpressionEClass.getESuperTypes().add(this.getFloatExpression());
-		candidateDateExpressionEClass.getESuperTypes().add(this.getCandidateValueExpression());
-		candidateDateExpressionEClass.getESuperTypes().add(this.getDateExpression());
-		candidateIntExpressionEClass.getESuperTypes().add(this.getCandidateValueExpression());
-		candidateIntExpressionEClass.getESuperTypes().add(this.getIntExpression());
-		taskCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
-		taskCandidateDateExpressionEClass.getESuperTypes().add(this.getTaskExpression());
-		taskCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
-		taskCandidateFloatExpressionEClass.getESuperTypes().add(this.getTaskExpression());
-		taskCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
-		taskCandidateIntExpressionEClass.getESuperTypes().add(this.getTaskExpression());
-		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
-		resourceCandidateDateExpressionEClass.getESuperTypes().add(this.getResourceExpression());
-		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
-		resourceCandidateFloatExpressionEClass.getESuperTypes().add(this.getResourceExpression());
-		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
-		resourceCandidateIntExpressionEClass.getESuperTypes().add(this.getResourceExpression());
-		solutionCandidateDateExpressionEClass.getESuperTypes().add(this.getCandidateDateExpression());
-		solutionCandidateDateExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
-		solutionCandidateFloatExpressionEClass.getESuperTypes().add(this.getCandidateFloatExpression());
-		solutionCandidateFloatExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
-		solutionCandidateIntExpressionEClass.getESuperTypes().add(this.getCandidateIntExpression());
-		solutionCandidateIntExpressionEClass.getESuperTypes().add(this.getSolutionExpression());
+		scheduleEClass.getESuperTypes().add(theLocalSearchPackage.getSolution());
+		resourceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		taskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
+		moveScheduleEClass.getESuperTypes().add(theLocalSearchPackage.getMove());
+		moveTaskEClass.getESuperTypes().add(this.getMoveSchedule());
+		scheduleAfterEClass.getESuperTypes().add(this.getMoveTask());
+		scheduleBeforeEClass.getESuperTypes().add(this.getMoveTask());
+		moveResourceEClass.getESuperTypes().add(this.getMoveSchedule());
+		scheduleFirstEClass.getESuperTypes().add(this.getMoveResource());
+		scheduleLastEClass.getESuperTypes().add(this.getMoveResource());
+		unscheduleEClass.getESuperTypes().add(this.getMoveSchedule());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScheduler_Solutions(), this.getSolution(), this.getSolution_Scheduler(), "Solutions", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScheduler_Solutions(), this.getSchedule(), this.getSchedule_Scheduler(), "Solutions", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScheduler_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScheduler_CurrentSolutionNr(), ecorePackage.getEInt(), "CurrentSolutionNr", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScheduler_Tasks(), ecorePackage.getEObject(), null, "Tasks", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScheduler_Resources(), ecorePackage.getEObject(), null, "Resources", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getScheduler__ConstructTask__EObject(), this.getSolutionTask(), "constructTask", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getScheduler__ConstructTask__EObject(), this.getTask(), "constructTask", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEObject(), "task", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getScheduler__ConstructResource__EObject(), this.getSolutionResource(), "constructResource", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getScheduler__ConstructResource__EObject(), this.getResource(), "constructResource", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEObject(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getScheduler__Enable(), null, "enable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(solutionEClass, Solution.class, "Solution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSolution_PendingCandidateMove(), ecorePackage.getEBoolean(), "pendingCandidateMove", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolution_SetCandidateMoveEnabled(), this.getEnabledFeedback(), "setCandidateMoveEnabled", null, 0, 1, Solution.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolution_ResetCandidateMoveEnabled(), this.getEnabledFeedback(), "resetCandidateMoveEnabled", null, 0, 1, Solution.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolution_AcceptCandidateMoveEnabled(), this.getEnabledFeedback(), "acceptCandidateMoveEnabled", null, 0, 1, Solution.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_Moves(), this.getMove(), this.getMove_Solution(), "Moves", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_Tasks(), this.getSolutionTask(), this.getSolutionTask_Solution(), "Tasks", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_Resources(), this.getSolutionResource(), this.getSolutionResource_Solution(), "Resources", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_CandidateMove(), this.getMove(), null, "CandidateMove", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_Expressions(), this.getCandidateValueExpression(), null, "Expressions", null, 0, -1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolution_SolutionNr(), ecorePackage.getEInt(), "SolutionNr", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolution_Scheduler(), this.getScheduler(), this.getScheduler_Solutions(), "Scheduler", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolution_NrCandidateScheduledTasks(), ecorePackage.getEInt(), "NrCandidateScheduledTasks", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolution_NrScheduledTasks(), ecorePackage.getEInt(), "NrScheduledTasks", null, 0, 1, Solution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(scheduleEClass, Schedule.class, "Schedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSchedule_Tasks(), this.getTask(), this.getTask_Schedule(), "Tasks", null, 0, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSchedule_Resources(), this.getResource(), this.getResource_Schedule(), "Resources", null, 0, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSchedule_SolutionNr(), ecorePackage.getEInt(), "SolutionNr", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSchedule_Scheduler(), this.getScheduler(), this.getScheduler_Solutions(), "Scheduler", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSchedule_NrCandidateScheduledTasks(), ecorePackage.getEInt(), "NrCandidateScheduledTasks", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSchedule_NrScheduledTasks(), ecorePackage.getEInt(), "NrScheduledTasks", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSolution__Initialize(), null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSchedule__Initialize(), null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSolution__ConstructExpressions(), null, "constructExpressions", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSchedule__Clone(), this.getSchedule(), "clone", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSolution__Clone(), this.getSolution(), "clone", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResource_Schedule(), this.getSchedule(), this.getSchedule_Resources(), "Schedule", null, 1, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_Resource(), ecorePackage.getEObject(), null, "Resource", null, 1, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResource_Description(), ecorePackage.getEString(), "Description", null, 0, 1, Resource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResource_NrCandidateScheduledTasks(), ecorePackage.getEInt(), "NrCandidateScheduledTasks", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_ScheduledTasks(), this.getTask(), null, "ScheduledTasks", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_FirstTask(), this.getTask(), null, "FirstTask", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_LastTask(), this.getTask(), null, "LastTask", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResource_NrScheduledTasks(), ecorePackage.getEInt(), "NrScheduledTasks", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getSolution__SetCandidate__Move(), null, "setCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getMove(), "move", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTask_Task(), ecorePackage.getEObject(), null, "Task", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_NextTask(), this.getTask(), this.getTask_PreviousTask(), "NextTask", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_PreviousTask(), this.getTask(), this.getTask_NextTask(), "PreviousTask", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_ScheduledResource(), this.getResource(), null, "ScheduledResource", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTask_Description(), ecorePackage.getEString(), "Description", null, 0, 1, Task.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_Schedule(), this.getSchedule(), this.getSchedule_Tasks(), "Schedule", null, 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSolution__ResetCandidate(), null, "resetCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getTask__UnsetPreviousNext(), null, "unsetPreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSolution__AcceptCandidate(), null, "acceptCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTask__SetPreviousNext__Resource_Task_Task(), null, "setPreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getResource(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTask(), "previous", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTask(), "next", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(solutionResourceEClass, SolutionResource.class, "SolutionResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionResource_Solution(), this.getSolution(), this.getSolution_Resources(), "Solution", null, 1, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_Resource(), ecorePackage.getEObject(), null, "Resource", null, 1, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolutionResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolutionResource_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolutionResource_NrCandidateScheduledTasks(), ecorePackage.getEInt(), "NrCandidateScheduledTasks", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_ScheduledTasks(), this.getSolutionTask(), null, "ScheduledTasks", null, 0, -1, SolutionResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_FirstTask(), this.getSolutionTask(), null, "FirstTask", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_LastTask(), this.getSolutionTask(), null, "LastTask", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolutionResource_NrScheduledTasks(), ecorePackage.getEInt(), "NrScheduledTasks", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_CandidateScheduledTasks(), this.getSolutionTask(), null, "CandidateScheduledTasks", null, 0, -1, SolutionResource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_CandidateFirstTask(), this.getSolutionTask(), null, "CandidateFirstTask", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_CandidateLastTask(), this.getSolutionTask(), null, "CandidateLastTask", null, 0, 1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionResource_Expressions(), this.getCandidateValueExpression(), null, "Expressions", null, 0, -1, SolutionResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		op = initEOperation(getTask__ScheduleResource__Resource(), null, "scheduleResource", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getResource(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSolutionResource__ConstructExpressions(), null, "constructExpressions", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(moveScheduleEClass, MoveSchedule.class, "MoveSchedule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMoveSchedule_TaskToSchedule(), this.getTask(), null, "TaskToSchedule", null, 1, 1, MoveSchedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveSchedule_Description(), ecorePackage.getEString(), "Description", null, 0, 1, MoveSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(solutionTaskEClass, SolutionTask.class, "SolutionTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionTask_Task(), ecorePackage.getEObject(), null, "Task", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_NextTask(), this.getSolutionTask(), this.getSolutionTask_PreviousTask(), "NextTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_PreviousTask(), this.getSolutionTask(), this.getSolutionTask_NextTask(), "PreviousTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_ScheduledResource(), this.getSolutionResource(), null, "ScheduledResource", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_CandidateNextTask(), this.getSolutionTask(), null, "CandidateNextTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_CandidatePreviousTask(), this.getSolutionTask(), null, "CandidatePreviousTask", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_CandidateScheduledResource(), this.getSolutionResource(), null, "CandidateScheduledResource", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_Expressions(), this.getCandidateValueExpression(), null, "Expressions", null, 0, -1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolutionTask_Description(), ecorePackage.getEString(), "Description", null, 0, 1, SolutionTask.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSolutionTask_Solution(), this.getSolution(), this.getSolution_Tasks(), "Solution", null, 1, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSolutionTask_Name(), ecorePackage.getEString(), "Name", null, 0, 1, SolutionTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getSolutionTask__UnsetCandidatePreviousNext(), null, "unsetCandidatePreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getSolutionTask__SetCandidatePreviousNext__SolutionResource_SolutionTask_SolutionTask(), null, "setCandidatePreviousNext", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getSolutionResource(), "solution", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getSolutionTask(), "previous", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getSolutionTask(), "next", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSolutionTask__ConstructExpressions(), null, "constructExpressions", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getSolutionTask__ScheduleCandidateResource__SolutionResource(), null, "scheduleCandidateResource", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getSolutionResource(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(moveEClass, Move.class, "Move", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMove_Expressions(), this.getMoveExpression(), null, "Expressions", null, 0, -1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMove_Changes(), this.getMoveChange(), this.getMoveChange_Move(), "Changes", null, 0, -1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMove_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMove_Solution(), this.getSolution(), this.getSolution_Moves(), "Solution", null, 1, 1, Move.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(moveChangeEClass, MoveChange.class, "MoveChange", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMoveChange_TaskToSchedule(), this.getSolutionTask(), null, "TaskToSchedule", null, 1, 1, MoveChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMoveChange_Description(), ecorePackage.getEString(), "Description", null, 0, 1, MoveChange.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMoveChange_Valid(), ecorePackage.getEBoolean(), "Valid", null, 0, 1, MoveChange.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getMoveChange_Move(), this.getMove(), this.getMove_Changes(), "Move", null, 1, 1, MoveChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getMoveChange__Change(), ecorePackage.getEBoolean(), "change", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(moveChangeTaskEClass, MoveChangeTask.class, "MoveChangeTask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMoveChangeTask_InsertionPoint(), this.getSolutionTask(), null, "InsertionPoint", null, 1, 1, MoveChangeTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(moveTaskEClass, MoveTask.class, "MoveTask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMoveTask_InsertionPoint(), this.getTask(), null, "InsertionPoint", null, 1, 1, MoveTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleAfterEClass, ScheduleAfter.class, "ScheduleAfter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(scheduleBeforeEClass, ScheduleBefore.class, "ScheduleBefore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(moveChangeResourceEClass, MoveChangeResource.class, "MoveChangeResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMoveChangeResource_InsertionPoint(), this.getSolutionResource(), null, "InsertionPoint", null, 1, 1, MoveChangeResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(moveResourceEClass, MoveResource.class, "MoveResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMoveResource_InsertionPoint(), this.getResource(), null, "InsertionPoint", null, 1, 1, MoveResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleFirstEClass, ScheduleFirst.class, "ScheduleFirst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1838,102 +855,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		initEClass(unscheduleEClass, Unschedule.class, "Unschedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(ownerExpressionEClass, OwnerExpression.class, "OwnerExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOwnerExpression_Owner(), ecorePackage.getEString(), "Owner", null, 0, 1, OwnerExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOwnerExpression_Role(), ecorePackage.getEString(), "Role", null, 0, 1, OwnerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOwnerExpression_Description(), ecorePackage.getEString(), "Description", null, 0, 1, OwnerExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getOwnerExpression_ExpressionSolution(), this.getSolution(), null, "ExpressionSolution", null, 0, 1, OwnerExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(moveExpressionEClass, MoveExpression.class, "MoveExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solutionExpressionEClass, SolutionExpression.class, "SolutionExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSolutionExpression_Solution(), this.getSolution(), null, "Solution", null, 1, 1, SolutionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(resourceExpressionEClass, ResourceExpression.class, "ResourceExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceExpression_Resource(), this.getSolutionResource(), null, "Resource", null, 1, 1, ResourceExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(taskExpressionEClass, TaskExpression.class, "TaskExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskExpression_Task(), this.getSolutionTask(), null, "Task", null, 0, 1, TaskExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(valueExpressionEClass, ValueExpression.class, "ValueExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getValueExpression__SetValue__CandidateValueExpression(), null, "setValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getCandidateValueExpression(), "candidate", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(floatExpressionEClass, FloatExpression.class, "FloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFloatExpression_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, FloatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(intExpressionEClass, IntExpression.class, "IntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntExpression_Value(), ecorePackage.getEInt(), "Value", "0", 0, 1, IntExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dateExpressionEClass, DateExpression.class, "DateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDateExpression_Value(), ecorePackage.getEDate(), "Value", null, 0, 1, DateExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(candidateValueExpressionEClass, CandidateValueExpression.class, "CandidateValueExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCandidateValueExpression_CandidateValueAsString(), ecorePackage.getEString(), "CandidateValueAsString", null, 0, 1, CandidateValueExpression.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getCandidateValueExpression__RefreshValueCandidate(), null, "refreshValueCandidate", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getCandidateValueExpression__SetValue(), null, "setValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(candidateFloatExpressionEClass, CandidateFloatExpression.class, "CandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCandidateFloatExpression_CandidateValue(), ecorePackage.getEFloat(), "CandidateValue", null, 0, 1, CandidateFloatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(candidateDateExpressionEClass, CandidateDateExpression.class, "CandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCandidateDateExpression_CandidateValue(), ecorePackage.getEDate(), "CandidateValue", null, 0, 1, CandidateDateExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(candidateIntExpressionEClass, CandidateIntExpression.class, "CandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCandidateIntExpression_CandidateValue(), ecorePackage.getEInt(), "CandidateValue", "0", 0, 1, CandidateIntExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(taskCandidateDateExpressionEClass, TaskCandidateDateExpression.class, "TaskCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(taskCandidateFloatExpressionEClass, TaskCandidateFloatExpression.class, "TaskCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(taskCandidateIntExpressionEClass, TaskCandidateIntExpression.class, "TaskCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resourceCandidateDateExpressionEClass, ResourceCandidateDateExpression.class, "ResourceCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resourceCandidateFloatExpressionEClass, ResourceCandidateFloatExpression.class, "ResourceCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(resourceCandidateIntExpressionEClass, ResourceCandidateIntExpression.class, "ResourceCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solutionCandidateDateExpressionEClass, SolutionCandidateDateExpression.class, "SolutionCandidateDateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solutionCandidateFloatExpressionEClass, SolutionCandidateFloatExpression.class, "SolutionCandidateFloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(solutionCandidateIntExpressionEClass, SolutionCandidateIntExpression.class, "SolutionCandidateIntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		// Initialize data types
-		initEDataType(enabledFeedbackEDataType, EnabledFeedback.class, "EnabledFeedback", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// http://www.obeo.fr/dsl/dnc/archetype
-		createArchetypeAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.obeo.fr/dsl/dnc/archetype</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createArchetypeAnnotations() {
-		String source = "http://www.obeo.fr/dsl/dnc/archetype";	
-		addAnnotation
-		  (intExpressionEClass, 
-		   source, 
-		   new String[] {
-			 "archetype", "MomentInterval"
-		   });	
-		addAnnotation
-		  (candidateIntExpressionEClass, 
-		   source, 
-		   new String[] {
-			 "archetype", "MomentInterval"
-		   });
 	}
 
 } //SchedulerPackageImpl

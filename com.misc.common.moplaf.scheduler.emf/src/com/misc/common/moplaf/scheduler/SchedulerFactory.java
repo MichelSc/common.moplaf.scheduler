@@ -31,40 +31,31 @@ public interface SchedulerFactory extends EFactory {
 	Scheduler createScheduler();
 
 	/**
-	 * Returns a new object of class '<em>Solution</em>'.
+	 * Returns a new object of class '<em>Schedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solution</em>'.
+	 * @return a new object of class '<em>Schedule</em>'.
 	 * @generated
 	 */
-	Solution createSolution();
+	Schedule createSchedule();
 
 	/**
-	 * Returns a new object of class '<em>Solution Resource</em>'.
+	 * Returns a new object of class '<em>Resource</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solution Resource</em>'.
+	 * @return a new object of class '<em>Resource</em>'.
 	 * @generated
 	 */
-	SolutionResource createSolutionResource();
+	Resource createResource();
 
 	/**
-	 * Returns a new object of class '<em>Solution Task</em>'.
+	 * Returns a new object of class '<em>Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solution Task</em>'.
+	 * @return a new object of class '<em>Task</em>'.
 	 * @generated
 	 */
-	SolutionTask createSolutionTask();
-
-	/**
-	 * Returns a new object of class '<em>Move</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Move</em>'.
-	 * @generated
-	 */
-	Move createMove();
+	Task createTask();
 
 	/**
 	 * Returns a new object of class '<em>Schedule After</em>'.
@@ -110,141 +101,6 @@ public interface SchedulerFactory extends EFactory {
 	 * @generated
 	 */
 	Unschedule createUnschedule();
-
-	/**
-	 * Returns a new object of class '<em>Float Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Float Expression</em>'.
-	 * @generated
-	 */
-	FloatExpression createFloatExpression();
-
-	/**
-	 * Returns a new object of class '<em>Int Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Int Expression</em>'.
-	 * @generated
-	 */
-	IntExpression createIntExpression();
-
-	/**
-	 * Returns a new object of class '<em>Date Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Date Expression</em>'.
-	 * @generated
-	 */
-	DateExpression createDateExpression();
-
-	/**
-	 * Returns a new object of class '<em>Candidate Float Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Candidate Float Expression</em>'.
-	 * @generated
-	 */
-	CandidateFloatExpression createCandidateFloatExpression();
-
-	/**
-	 * Returns a new object of class '<em>Candidate Date Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Candidate Date Expression</em>'.
-	 * @generated
-	 */
-	CandidateDateExpression createCandidateDateExpression();
-
-	/**
-	 * Returns a new object of class '<em>Candidate Int Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Candidate Int Expression</em>'.
-	 * @generated
-	 */
-	CandidateIntExpression createCandidateIntExpression();
-
-	/**
-	 * Returns a new object of class '<em>Task Candidate Float Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Candidate Float Expression</em>'.
-	 * @generated
-	 */
-	TaskCandidateFloatExpression createTaskCandidateFloatExpression();
-
-	/**
-	 * Returns a new object of class '<em>Task Candidate Date Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Candidate Date Expression</em>'.
-	 * @generated
-	 */
-	TaskCandidateDateExpression createTaskCandidateDateExpression();
-
-	/**
-	 * Returns a new object of class '<em>Resource Candidate Float Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Candidate Float Expression</em>'.
-	 * @generated
-	 */
-	ResourceCandidateFloatExpression createResourceCandidateFloatExpression();
-
-	/**
-	 * Returns a new object of class '<em>Resource Candidate Date Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Candidate Date Expression</em>'.
-	 * @generated
-	 */
-	ResourceCandidateDateExpression createResourceCandidateDateExpression();
-
-	/**
-	 * Returns a new object of class '<em>Resource Candidate Int Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Candidate Int Expression</em>'.
-	 * @generated
-	 */
-	ResourceCandidateIntExpression createResourceCandidateIntExpression();
-
-	/**
-	 * Returns a new object of class '<em>Task Candidate Int Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Candidate Int Expression</em>'.
-	 * @generated
-	 */
-	TaskCandidateIntExpression createTaskCandidateIntExpression();
-
-	/**
-	 * Returns a new object of class '<em>Solution Candidate Date Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solution Candidate Date Expression</em>'.
-	 * @generated
-	 */
-	SolutionCandidateDateExpression createSolutionCandidateDateExpression();
-
-	/**
-	 * Returns a new object of class '<em>Solution Candidate Float Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solution Candidate Float Expression</em>'.
-	 * @generated
-	 */
-	SolutionCandidateFloatExpression createSolutionCandidateFloatExpression();
-
-	/**
-	 * Returns a new object of class '<em>Solution Candidate Int Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Solution Candidate Int Expression</em>'.
-	 * @generated
-	 */
-	SolutionCandidateIntExpression createSolutionCandidateIntExpression();
 
 	/**
 	 * Returns the package supported by this factory.

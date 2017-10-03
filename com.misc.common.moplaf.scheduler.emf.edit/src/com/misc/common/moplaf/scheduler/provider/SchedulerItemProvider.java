@@ -9,7 +9,6 @@ import com.misc.common.moplaf.emf.edit.command.EnableCommand;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
-import com.misc.common.moplaf.schedulercalc.provider.SchedulerEditPlugin;
 import java.util.Collection;
 import java.util.List;
 
@@ -259,7 +258,7 @@ public class SchedulerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SchedulerPackage.Literals.SCHEDULER__SOLUTIONS,
-				 SchedulerFactory.eINSTANCE.createSolution()));
+				 SchedulerFactory.eINSTANCE.createSchedule()));
 	}
 
 	/**

@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UnscheduleItemProvider extends MoveChangeItemProvider {
+public class UnscheduleItemProvider extends MoveScheduleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -64,10 +64,8 @@ public class UnscheduleItemProvider extends MoveChangeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Unschedule)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Unschedule_type") :
-			getString("_UI_Unschedule_type") + " " + label;
+		Unschedule unschedule = (Unschedule)object;
+		return getString("_UI_Unschedule_type") + " " + unschedule.isValid();
 	}
 	
 

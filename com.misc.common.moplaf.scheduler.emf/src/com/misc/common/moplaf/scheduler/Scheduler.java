@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.EObject;
 public interface Scheduler extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Solutions</b></em>' containment reference list.
-	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Solution}.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Solution#getScheduler <em>Scheduler</em>}'.
+	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Schedule}.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Schedule#getScheduler <em>Scheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Solutions</em>' containment reference list isn't clear,
@@ -39,67 +39,11 @@ public interface Scheduler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Solutions</em>' containment reference list.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Solutions()
-	 * @see com.misc.common.moplaf.scheduler.Solution#getScheduler
+	 * @see com.misc.common.moplaf.scheduler.Schedule#getScheduler
 	 * @model opposite="Scheduler" containment="true"
 	 * @generated
 	 */
-	EList<Solution> getSolutions();
-
-	/**
-	 * Returns the value of the '<em><b>Resources</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resources</em>' reference list.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Resources()
-	 * @model
-	 * @generated
-	 */
-	EList<EObject> getResources();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	SolutionTask constructTask(EObject task);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	SolutionResource constructResource(EObject resource);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void enable();
-
-	/**
-	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tasks</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tasks</em>' reference list.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Tasks()
-	 * @model
-	 * @generated
-	 */
-	EList<EObject> getTasks();
+	EList<Schedule> getSolutions();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -152,5 +96,61 @@ public interface Scheduler extends EObject {
 	 * @generated
 	 */
 	void setCurrentSolutionNr(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tasks</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tasks</em>' reference list.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Tasks()
+	 * @model
+	 * @generated
+	 */
+	EList<EObject> getTasks();
+
+	/**
+	 * Returns the value of the '<em><b>Resources</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resources</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resources</em>' reference list.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Resources()
+	 * @model
+	 * @generated
+	 */
+	EList<EObject> getResources();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Task constructTask(EObject task);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Resource constructResource(EObject resource);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enable();
 
 } // Scheduler
