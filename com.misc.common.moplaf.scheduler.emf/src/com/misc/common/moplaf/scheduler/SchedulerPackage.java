@@ -199,7 +199,7 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE__PROPAGATOR_FUNCTIONS = LocalSearchPackage.SOLUTION__PROPAGATOR_FUNCTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -670,7 +670,7 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE__VALID = LocalSearchPackage.MOVE__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -779,7 +779,7 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -897,7 +897,7 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER__VALID = MOVE_TASK__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1015,7 +1015,7 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__VALID = MOVE_TASK__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1133,7 +1133,7 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_RESOURCE__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1251,7 +1251,7 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_FIRST__VALID = MOVE_RESOURCE__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1369,7 +1369,7 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_LAST__VALID = MOVE_RESOURCE__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1487,7 +1487,7 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

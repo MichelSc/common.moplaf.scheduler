@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Scheduler extends EObject {

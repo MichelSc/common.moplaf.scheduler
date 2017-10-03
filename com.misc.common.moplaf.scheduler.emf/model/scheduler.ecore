@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scheduler" nsURI="http://www.misc.com/common/moplaf/scheduler/model/0.1"
     nsPrefix="sched">
-  <eClassifiers xsi:type="ecore:EClass" name="Scheduler">
+  <eClassifiers xsi:type="ecore:EClass" name="Scheduler" abstract="true">
     <eOperations name="constructSchedule" eType="#//Schedule"/>
     <eOperations name="constructScore" eType="ecore:EClass ../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score"/>
     <eOperations name="constructTask" eType="#//Task">

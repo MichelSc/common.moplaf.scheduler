@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class SchedulerImpl extends MinimalEObjectImpl.Container implements Scheduler {
+public abstract class SchedulerImpl extends MinimalEObjectImpl.Container implements Scheduler {
 	/**
 	 * The cached value of the '{@link #getSchedulers() <em>Schedulers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

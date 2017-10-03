@@ -72,29 +72,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.Scheduler} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SchedulerItemProvider schedulerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.Scheduler}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSchedulerAdapter() {
-		if (schedulerItemProvider == null) {
-			schedulerItemProvider = new SchedulerItemProvider(this);
-		}
-
-		return schedulerItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.Schedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -377,7 +354,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (schedulerItemProvider != null) schedulerItemProvider.dispose();
 		if (scheduleItemProvider != null) scheduleItemProvider.dispose();
 		if (resourceItemProvider != null) resourceItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
