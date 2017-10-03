@@ -3,6 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scheduler" nsURI="http://www.misc.com/common/moplaf/scheduler/model/0.1"
     nsPrefix="sched">
   <eClassifiers xsi:type="ecore:EClass" name="Scheduler">
+    <eOperations name="constructSchedule" eType="#//Schedule"/>
+    <eOperations name="constructScore" eType="ecore:EClass ../../com.misc.common.moplaf.localsearch.emf/model/localsearch.ecore#//Score"/>
     <eOperations name="constructTask" eType="#//Task">
       <eParameters name="task" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eOperations>

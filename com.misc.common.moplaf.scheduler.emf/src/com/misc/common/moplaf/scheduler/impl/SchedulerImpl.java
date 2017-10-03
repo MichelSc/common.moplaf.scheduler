@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.Scheduler;
@@ -156,6 +157,28 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 			resources = new EObjectResolvingEList<EObject>(EObject.class, this, SchedulerPackage.SCHEDULER__RESOURCES);
 		}
 		return resources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Schedule constructSchedule() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Score constructScore() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -378,6 +401,10 @@ public class SchedulerImpl extends MinimalEObjectImpl.Container implements Sched
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case SchedulerPackage.SCHEDULER___CONSTRUCT_SCHEDULE:
+				return constructSchedule();
+			case SchedulerPackage.SCHEDULER___CONSTRUCT_SCORE:
+				return constructScore();
 			case SchedulerPackage.SCHEDULER___CONSTRUCT_TASK__EOBJECT:
 				return constructTask((EObject)arguments.get(0));
 			case SchedulerPackage.SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT:

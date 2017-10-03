@@ -214,7 +214,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getScheduler__ConstructTask__EObject() {
+	public EOperation getScheduler__ConstructSchedule() {
 		return schedulerEClass.getEOperations().get(0);
 	}
 
@@ -223,7 +223,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getScheduler__ConstructResource__EObject() {
+	public EOperation getScheduler__ConstructScore() {
 		return schedulerEClass.getEOperations().get(1);
 	}
 
@@ -232,8 +232,26 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getScheduler__Enable() {
+	public EOperation getScheduler__ConstructTask__EObject() {
 		return schedulerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getScheduler__ConstructResource__EObject() {
+		return schedulerEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getScheduler__Enable() {
+		return schedulerEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -666,6 +684,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEAttribute(schedulerEClass, SCHEDULER__CURRENT_SOLUTION_NR);
 		createEReference(schedulerEClass, SCHEDULER__TASKS);
 		createEReference(schedulerEClass, SCHEDULER__RESOURCES);
+		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_SCHEDULE);
+		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_SCORE);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_TASK__EOBJECT);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT);
 		createEOperation(schedulerEClass, SCHEDULER___ENABLE);
@@ -774,6 +794,10 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEAttribute(getScheduler_CurrentSolutionNr(), ecorePackage.getEInt(), "CurrentSolutionNr", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScheduler_Tasks(), ecorePackage.getEObject(), null, "Tasks", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScheduler_Resources(), ecorePackage.getEObject(), null, "Resources", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getScheduler__ConstructSchedule(), this.getSchedule(), "constructSchedule", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getScheduler__ConstructScore(), theLocalSearchPackage.getScore(), "constructScore", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		EOperation op = initEOperation(getScheduler__ConstructTask__EObject(), this.getTask(), "constructTask", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEObject(), "task", 0, 1, IS_UNIQUE, IS_ORDERED);

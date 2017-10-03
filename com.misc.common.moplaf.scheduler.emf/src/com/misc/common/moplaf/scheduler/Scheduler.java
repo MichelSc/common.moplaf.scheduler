@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler;
 
+import com.misc.common.moplaf.localsearch.Score;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -128,6 +129,22 @@ public interface Scheduler extends EObject {
 	 * @generated
 	 */
 	EList<EObject> getResources();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Schedule constructSchedule();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Score constructScore();
 
 	/**
 	 * <!-- begin-user-doc -->

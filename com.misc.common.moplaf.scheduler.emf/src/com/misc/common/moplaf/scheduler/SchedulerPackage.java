@@ -126,13 +126,31 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER_FEATURE_COUNT = 5;
 
 	/**
+	 * The operation id for the '<em>Construct Schedule</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___CONSTRUCT_SCHEDULE = 0;
+
+	/**
+	 * The operation id for the '<em>Construct Score</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___CONSTRUCT_SCORE = 1;
+
+	/**
 	 * The operation id for the '<em>Construct Task</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___CONSTRUCT_TASK__EOBJECT = 0;
+	int SCHEDULER___CONSTRUCT_TASK__EOBJECT = 2;
 
 	/**
 	 * The operation id for the '<em>Construct Resource</em>' operation.
@@ -141,7 +159,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = 1;
+	int SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = 3;
 
 	/**
 	 * The operation id for the '<em>Enable</em>' operation.
@@ -150,7 +168,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___ENABLE = 2;
+	int SCHEDULER___ENABLE = 4;
 
 	/**
 	 * The number of operations of the '<em>Scheduler</em>' class.
@@ -159,7 +177,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER_OPERATION_COUNT = 3;
+	int SCHEDULER_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl <em>Schedule</em>}' class.
@@ -179,6 +197,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE__PROPAGATOR_FUNCTIONS = LocalSearchPackage.SOLUTION__PROPAGATOR_FUNCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE__SCORE = LocalSearchPackage.SOLUTION__SCORE;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -269,24 +296,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING = LocalSearchPackage.SOLUTION___ADD_PROPAGATOR_FUNCTIONS__STRING;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE___COMPARE__SCORE = LocalSearchPackage.SOLUTION___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE___COPY__SCORE = LocalSearchPackage.SOLUTION___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Replicate</em>' operation.
@@ -661,6 +670,15 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE__VALID = LocalSearchPackage.MOVE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__SCORE = LocalSearchPackage.MOVE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -686,24 +704,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_SCHEDULE_FEATURE_COUNT = LocalSearchPackage.MOVE_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_SCHEDULE___COMPARE__SCORE = LocalSearchPackage.MOVE___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_SCHEDULE___COPY__SCORE = LocalSearchPackage.MOVE___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -779,6 +779,15 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__SCORE = MOVE_SCHEDULE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -813,24 +822,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_TASK_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_TASK___COMPARE__SCORE = MOVE_SCHEDULE___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_TASK___COPY__SCORE = MOVE_SCHEDULE___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -906,6 +897,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER__VALID = MOVE_TASK__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__SCORE = MOVE_TASK__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,24 +940,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_AFTER_FEATURE_COUNT = MOVE_TASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_AFTER___COMPARE__SCORE = MOVE_TASK___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_AFTER___COPY__SCORE = MOVE_TASK___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -1033,6 +1015,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__VALID = MOVE_TASK__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__SCORE = MOVE_TASK__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1067,24 +1058,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_BEFORE_FEATURE_COUNT = MOVE_TASK_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_BEFORE___COMPARE__SCORE = MOVE_TASK___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_BEFORE___COPY__SCORE = MOVE_TASK___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -1160,6 +1133,15 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_RESOURCE__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__SCORE = MOVE_SCHEDULE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1194,24 +1176,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_RESOURCE_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE___COMPARE__SCORE = MOVE_SCHEDULE___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE___COPY__SCORE = MOVE_SCHEDULE___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -1287,6 +1251,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_FIRST__VALID = MOVE_RESOURCE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__SCORE = MOVE_RESOURCE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1321,24 +1294,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_FIRST_FEATURE_COUNT = MOVE_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST___COMPARE__SCORE = MOVE_RESOURCE___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST___COPY__SCORE = MOVE_RESOURCE___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -1414,6 +1369,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_LAST__VALID = MOVE_RESOURCE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__SCORE = MOVE_RESOURCE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1448,24 +1412,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_LAST_FEATURE_COUNT = MOVE_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST___COMPARE__SCORE = MOVE_RESOURCE___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST___COPY__SCORE = MOVE_RESOURCE___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -1541,6 +1487,15 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Score</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__SCORE = MOVE_SCHEDULE__SCORE;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1566,24 +1521,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNSCHEDULE_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Compare</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNSCHEDULE___COMPARE__SCORE = MOVE_SCHEDULE___COMPARE__SCORE;
-
-	/**
-	 * The operation id for the '<em>Copy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNSCHEDULE___COPY__SCORE = MOVE_SCHEDULE___COPY__SCORE;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -1685,6 +1622,26 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getScheduler_Resources();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructSchedule() <em>Construct Schedule</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Construct Schedule</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#constructSchedule()
+	 * @generated
+	 */
+	EOperation getScheduler__ConstructSchedule();
+
+	/**
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructScore() <em>Construct Score</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Construct Score</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#constructScore()
+	 * @generated
+	 */
+	EOperation getScheduler__ConstructScore();
 
 	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructTask(org.eclipse.emf.ecore.EObject) <em>Construct Task</em>}' operation.
@@ -2224,6 +2181,22 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCHEDULER__RESOURCES = eINSTANCE.getScheduler_Resources();
+
+		/**
+		 * The meta object literal for the '<em><b>Construct Schedule</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SCHEDULER___CONSTRUCT_SCHEDULE = eINSTANCE.getScheduler__ConstructSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>Construct Score</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SCHEDULER___CONSTRUCT_SCORE = eINSTANCE.getScheduler__ConstructScore();
 
 		/**
 		 * The meta object literal for the '<em><b>Construct Task</b></em>' operation.

@@ -3,7 +3,6 @@
 package com.misc.common.moplaf.scheduler.util;
 
 import com.misc.common.moplaf.localsearch.Move;
-import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.scheduler.*;
@@ -122,10 +121,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
 				return createObjectWithPropagatorFunctionsAdapter();
-			}
-			@Override
-			public Adapter caseScore(Score object) {
-				return createScoreAdapter();
 			}
 			@Override
 			public Adapter caseSolution(Solution object) {
@@ -362,20 +357,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObjectWithPropagatorFunctionsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Score <em>Score</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.localsearch.Score
-	 * @generated
-	 */
-	public Adapter createScoreAdapter() {
 		return null;
 	}
 

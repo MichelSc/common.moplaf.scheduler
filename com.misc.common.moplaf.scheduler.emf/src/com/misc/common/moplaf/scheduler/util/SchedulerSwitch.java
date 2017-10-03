@@ -3,7 +3,6 @@
 package com.misc.common.moplaf.scheduler.util;
 
 import com.misc.common.moplaf.localsearch.Move;
-import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.scheduler.*;
@@ -81,7 +80,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				T result = caseSchedule(schedule);
 				if (result == null) result = caseSolution(schedule);
 				if (result == null) result = caseObjectWithPropagatorFunctions(schedule);
-				if (result == null) result = caseScore(schedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,7 +101,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				MoveSchedule moveSchedule = (MoveSchedule)theEObject;
 				T result = caseMoveSchedule(moveSchedule);
 				if (result == null) result = caseMove(moveSchedule);
-				if (result == null) result = caseScore(moveSchedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,7 +109,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				T result = caseMoveTask(moveTask);
 				if (result == null) result = caseMoveSchedule(moveTask);
 				if (result == null) result = caseMove(moveTask);
-				if (result == null) result = caseScore(moveTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -122,7 +118,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMoveTask(scheduleAfter);
 				if (result == null) result = caseMoveSchedule(scheduleAfter);
 				if (result == null) result = caseMove(scheduleAfter);
-				if (result == null) result = caseScore(scheduleAfter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,7 +127,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMoveTask(scheduleBefore);
 				if (result == null) result = caseMoveSchedule(scheduleBefore);
 				if (result == null) result = caseMove(scheduleBefore);
-				if (result == null) result = caseScore(scheduleBefore);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,7 +135,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				T result = caseMoveResource(moveResource);
 				if (result == null) result = caseMoveSchedule(moveResource);
 				if (result == null) result = caseMove(moveResource);
-				if (result == null) result = caseScore(moveResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -151,7 +144,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMoveResource(scheduleFirst);
 				if (result == null) result = caseMoveSchedule(scheduleFirst);
 				if (result == null) result = caseMove(scheduleFirst);
-				if (result == null) result = caseScore(scheduleFirst);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -161,7 +153,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMoveResource(scheduleLast);
 				if (result == null) result = caseMoveSchedule(scheduleLast);
 				if (result == null) result = caseMove(scheduleLast);
-				if (result == null) result = caseScore(scheduleLast);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,7 +161,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				T result = caseUnschedule(unschedule);
 				if (result == null) result = caseMoveSchedule(unschedule);
 				if (result == null) result = caseMove(unschedule);
-				if (result == null) result = caseScore(unschedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -400,21 +390,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Score</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Score</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseScore(Score object) {
 		return null;
 	}
 
