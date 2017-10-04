@@ -2,7 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler.provider;
 
-
 import com.misc.common.moplaf.emf.edit.command.InitializeCommand;
 import com.misc.common.moplaf.localsearch.provider.SolutionItemProvider;
 import com.misc.common.moplaf.scheduler.Schedule;
@@ -12,12 +11,15 @@ import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -256,4 +258,18 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 		}
 	} // class ScheduleIntializeCommand
 
+
+	/**
+	 * 
+	 */
+	@Override
+	public Command createCommand(Object object, EditingDomain domain,
+			Class<? extends Command> commandClass,
+			CommandParameter commandParameter) {
+		if ( commandClass == InitializeCommand.class){
+			return new ScheduleInitializeCommand((Schedule) object); 
+		}
+		return super.createCommand(object, domain, commandClass, commandParameter);
+	} //method createCommand
+	
 }

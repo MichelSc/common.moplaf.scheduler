@@ -298,15 +298,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE___REPLICATE = LocalSearchPackage.SOLUTION___REPLICATE;
 
 	/**
-	 * The operation id for the '<em>Refresh</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE___REFRESH = LocalSearchPackage.SOLUTION___REFRESH;
-
-	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -634,24 +625,6 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_SCHEDULE__NEXT_MOVES = LocalSearchPackage.MOVE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_SCHEDULE__PREVIOUS = LocalSearchPackage.MOVE__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -661,6 +634,42 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE__VALID = LocalSearchPackage.MOVE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__DO_ENABLED_FEEDBACK = LocalSearchPackage.MOVE__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK = LocalSearchPackage.MOVE__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__PREVIOUS = LocalSearchPackage.MOVE__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__NEXT_MOVES = LocalSearchPackage.MOVE__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -668,6 +677,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_SCHEDULE__SCORE = LocalSearchPackage.MOVE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__ACTION = LocalSearchPackage.MOVE__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__CURRENT = LocalSearchPackage.MOVE__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -697,22 +724,22 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE_FEATURE_COUNT = LocalSearchPackage.MOVE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_SCHEDULE___APPLY = LocalSearchPackage.MOVE___APPLY;
+	int MOVE_SCHEDULE___DO_ = LocalSearchPackage.MOVE___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_SCHEDULE___REVERT = LocalSearchPackage.MOVE___REVERT;
+	int MOVE_SCHEDULE___UNDO = LocalSearchPackage.MOVE___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -743,24 +770,6 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK = 5;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_TASK__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_TASK__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -770,6 +779,42 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__DO_ENABLED_FEEDBACK = MOVE_SCHEDULE__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__UNDO_ENABLED_FEEDBACK = MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -777,6 +822,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_TASK__SCORE = MOVE_SCHEDULE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__ACTION = MOVE_SCHEDULE__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__CURRENT = MOVE_SCHEDULE__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -815,22 +878,22 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_TASK___APPLY = MOVE_SCHEDULE___APPLY;
+	int MOVE_TASK___DO_ = MOVE_SCHEDULE___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_TASK___REVERT = MOVE_SCHEDULE___REVERT;
+	int MOVE_TASK___UNDO = MOVE_SCHEDULE___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -861,24 +924,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER = 6;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_AFTER__NEXT_MOVES = MOVE_TASK__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_AFTER__PREVIOUS = MOVE_TASK__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -888,6 +933,42 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER__VALID = MOVE_TASK__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__DO_ENABLED_FEEDBACK = MOVE_TASK__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__UNDO_ENABLED_FEEDBACK = MOVE_TASK__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__PREVIOUS = MOVE_TASK__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__NEXT_MOVES = MOVE_TASK__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -895,6 +976,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_AFTER__SCORE = MOVE_TASK__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__ACTION = MOVE_TASK__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__CURRENT = MOVE_TASK__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -933,22 +1032,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER_FEATURE_COUNT = MOVE_TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER___APPLY = MOVE_TASK___APPLY;
+	int SCHEDULE_AFTER___DO_ = MOVE_TASK___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER___REVERT = MOVE_TASK___REVERT;
+	int SCHEDULE_AFTER___UNDO = MOVE_TASK___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -979,24 +1078,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_BEFORE__NEXT_MOVES = MOVE_TASK__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_BEFORE__PREVIOUS = MOVE_TASK__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1006,6 +1087,42 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__VALID = MOVE_TASK__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__DO_ENABLED_FEEDBACK = MOVE_TASK__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__UNDO_ENABLED_FEEDBACK = MOVE_TASK__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__PREVIOUS = MOVE_TASK__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__NEXT_MOVES = MOVE_TASK__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1013,6 +1130,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_BEFORE__SCORE = MOVE_TASK__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__ACTION = MOVE_TASK__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__CURRENT = MOVE_TASK__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -1051,22 +1186,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE_FEATURE_COUNT = MOVE_TASK_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE___APPLY = MOVE_TASK___APPLY;
+	int SCHEDULE_BEFORE___DO_ = MOVE_TASK___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE___REVERT = MOVE_TASK___REVERT;
+	int SCHEDULE_BEFORE___UNDO = MOVE_TASK___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -1097,24 +1232,6 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_RESOURCE = 8;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1124,6 +1241,42 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_RESOURCE__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__DO_ENABLED_FEEDBACK = MOVE_SCHEDULE__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__UNDO_ENABLED_FEEDBACK = MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1131,6 +1284,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_RESOURCE__SCORE = MOVE_SCHEDULE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__ACTION = MOVE_SCHEDULE__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_RESOURCE__CURRENT = MOVE_SCHEDULE__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -1169,22 +1340,22 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_RESOURCE_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_RESOURCE___APPLY = MOVE_SCHEDULE___APPLY;
+	int MOVE_RESOURCE___DO_ = MOVE_SCHEDULE___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_RESOURCE___REVERT = MOVE_SCHEDULE___REVERT;
+	int MOVE_RESOURCE___UNDO = MOVE_SCHEDULE___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -1215,24 +1386,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_FIRST = 9;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__NEXT_MOVES = MOVE_RESOURCE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__PREVIOUS = MOVE_RESOURCE__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1242,6 +1395,42 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_FIRST__VALID = MOVE_RESOURCE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__DO_ENABLED_FEEDBACK = MOVE_RESOURCE__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__UNDO_ENABLED_FEEDBACK = MOVE_RESOURCE__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__PREVIOUS = MOVE_RESOURCE__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__NEXT_MOVES = MOVE_RESOURCE__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1249,6 +1438,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_FIRST__SCORE = MOVE_RESOURCE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__ACTION = MOVE_RESOURCE__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_FIRST__CURRENT = MOVE_RESOURCE__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -1287,22 +1494,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_FIRST_FEATURE_COUNT = MOVE_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST___APPLY = MOVE_RESOURCE___APPLY;
+	int SCHEDULE_FIRST___DO_ = MOVE_RESOURCE___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FIRST___REVERT = MOVE_RESOURCE___REVERT;
+	int SCHEDULE_FIRST___UNDO = MOVE_RESOURCE___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -1333,24 +1540,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_LAST = 10;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__NEXT_MOVES = MOVE_RESOURCE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__PREVIOUS = MOVE_RESOURCE__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1360,6 +1549,42 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_LAST__VALID = MOVE_RESOURCE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__DO_ENABLED_FEEDBACK = MOVE_RESOURCE__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__UNDO_ENABLED_FEEDBACK = MOVE_RESOURCE__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__PREVIOUS = MOVE_RESOURCE__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__NEXT_MOVES = MOVE_RESOURCE__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1367,6 +1592,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_LAST__SCORE = MOVE_RESOURCE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__ACTION = MOVE_RESOURCE__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_LAST__CURRENT = MOVE_RESOURCE__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -1405,22 +1648,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_LAST_FEATURE_COUNT = MOVE_RESOURCE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST___APPLY = MOVE_RESOURCE___APPLY;
+	int SCHEDULE_LAST___DO_ = MOVE_RESOURCE___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_LAST___REVERT = MOVE_RESOURCE___REVERT;
+	int SCHEDULE_LAST___UNDO = MOVE_RESOURCE___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.
@@ -1451,24 +1694,6 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE = 11;
 
 	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNSCHEDULE__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNSCHEDULE__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
-
-	/**
 	 * The feature id for the '<em><b>Valid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1478,6 +1703,42 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE__VALID = MOVE_SCHEDULE__VALID;
 
 	/**
+	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__DO_ENABLED_FEEDBACK = MOVE_SCHEDULE__DO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__UNDO_ENABLED_FEEDBACK = MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
+
+	/**
 	 * The feature id for the '<em><b>Score</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1485,6 +1746,24 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNSCHEDULE__SCORE = MOVE_SCHEDULE__SCORE;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__ACTION = MOVE_SCHEDULE__ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__CURRENT = MOVE_SCHEDULE__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -1514,22 +1793,22 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Apply</em>' operation.
+	 * The operation id for the '<em>Do </em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNSCHEDULE___APPLY = MOVE_SCHEDULE___APPLY;
+	int UNSCHEDULE___DO_ = MOVE_SCHEDULE___DO_;
 
 	/**
-	 * The operation id for the '<em>Revert</em>' operation.
+	 * The operation id for the '<em>Undo</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNSCHEDULE___REVERT = MOVE_SCHEDULE___REVERT;
+	int UNSCHEDULE___UNDO = MOVE_SCHEDULE___UNDO;
 
 	/**
 	 * The operation id for the '<em>Is Valid Feedback</em>' operation.

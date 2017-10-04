@@ -2,6 +2,8 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+
+import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.impl.SolutionImpl;
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Schedule;
@@ -19,6 +21,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -276,12 +279,25 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void initialize() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// clear everything
+		this.getTasks().clear();
+		this.getResources().clear();
+		// construct everything
+		Scheduler scheduler = this.getScheduler();
+		for ( EObject resource : scheduler.getResources()) {
+			Resource new_resource = scheduler.constructResource(resource);
+			new_resource.setResource(resource);
+			this.getResources().add(new_resource);
+		}
+		for ( EObject task : scheduler.getTasks()) {
+			Task new_task = scheduler.constructTask(task);
+			new_task.setTask(task);
+			this.getTasks().add(new_task);
+		}
+		Score new_score = scheduler.constructScore();
+		this.setScore(new_score);
 	}
 
 	/**

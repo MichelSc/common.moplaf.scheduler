@@ -6,8 +6,6 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import com.misc.common.moplaf.common.Logger;
-import com.misc.common.moplaf.common.Logger.Level;
 
 /**
  * This is the central singleton for the Scheduler model plugin.
@@ -16,12 +14,6 @@ import com.misc.common.moplaf.common.Logger.Level;
  * @generated
  */
 public final class Plugin extends EMFPlugin {
-	private Logger logger = new Logger("Scheduler");
-
-	public Logger getLogger(){
-		return this.logger;
-	}
-	
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -71,19 +63,6 @@ public final class Plugin extends EMFPlugin {
 		return plugin;
 	}
 
-	public void logInfo(String message){
-		this.logger.log(Level.INFO, message);
-	}
-	
-	public void logWarning(String message){
-		this.logger.log(Level.WARNING, message);
-	}
-	
-	public void logError(String message){
-		this.logger.log(Level.ERROR, message);
-	}
-	
-	
 	/**
 	 * The actual implementation of the Eclipse <b>Plugin</b>.
 	 * <!-- begin-user-doc -->
