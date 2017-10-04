@@ -162,12 +162,4 @@ public interface Scheduler extends EObject {
 	 */
 	Resource constructResource(EObject resource);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void enable();
-
 } // Scheduler

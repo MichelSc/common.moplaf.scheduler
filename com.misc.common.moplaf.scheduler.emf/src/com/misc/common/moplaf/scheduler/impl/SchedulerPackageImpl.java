@@ -250,15 +250,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getScheduler__Enable() {
-		return schedulerEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSchedule() {
 		return scheduleEClass;
 	}
@@ -688,7 +679,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_SCORE);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_TASK__EOBJECT);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT);
-		createEOperation(schedulerEClass, SCHEDULER___ENABLE);
 
 		scheduleEClass = createEClass(SCHEDULE);
 		createEReference(scheduleEClass, SCHEDULE__TASKS);
@@ -804,8 +794,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		op = initEOperation(getScheduler__ConstructResource__EObject(), this.getResource(), "constructResource", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEObject(), "resource", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getScheduler__Enable(), null, "enable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(scheduleEClass, Schedule.class, "Schedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSchedule_Tasks(), this.getTask(), this.getTask_Schedule(), "Tasks", null, 0, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

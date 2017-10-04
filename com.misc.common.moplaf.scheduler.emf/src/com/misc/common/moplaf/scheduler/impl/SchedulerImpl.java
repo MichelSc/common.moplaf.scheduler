@@ -199,14 +199,6 @@ public abstract class SchedulerImpl extends MinimalEObjectImpl.Container impleme
 		return new_resource;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void enable() {
-		// to be overriden by the concrete implementation
-		//Util.adapt(this, SetSchedulePropagatorFunctionManager.class, true ); // true = create
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -409,9 +401,6 @@ public abstract class SchedulerImpl extends MinimalEObjectImpl.Container impleme
 				return constructTask((EObject)arguments.get(0));
 			case SchedulerPackage.SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT:
 				return constructResource((EObject)arguments.get(0));
-			case SchedulerPackage.SCHEDULER___ENABLE:
-				enable();
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
