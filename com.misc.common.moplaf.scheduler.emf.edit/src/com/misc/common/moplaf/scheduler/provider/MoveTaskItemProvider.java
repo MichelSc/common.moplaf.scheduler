@@ -78,8 +78,10 @@ public class MoveTaskItemProvider extends MoveScheduleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		MoveTask moveTask = (MoveTask)object;
-		return getString("_UI_MoveTask_type") + " " + moveTask.isValid();
+		String label = ((MoveTask)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MoveTask_type") :
+			getString("_UI_MoveTask_type") + " " + label;
 	}
 	
 

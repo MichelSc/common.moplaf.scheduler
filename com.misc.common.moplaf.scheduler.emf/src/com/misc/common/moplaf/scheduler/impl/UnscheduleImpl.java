@@ -69,7 +69,7 @@ public class UnscheduleImpl extends MoveScheduleImpl implements Unschedule {
 	 * 
 	 */
 	@Override
-	public void apply() {
+	public void doImpl() {
 		Task task = this.getTaskToSchedule();
 		Resource scheduled_resource = task.getScheduledResource();
 		if ( scheduled_resource==null) {

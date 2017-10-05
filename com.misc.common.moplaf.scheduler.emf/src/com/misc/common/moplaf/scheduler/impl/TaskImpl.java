@@ -322,11 +322,33 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScheduledResource(Resource newScheduledResource) {
+	public NotificationChain basicSetScheduledResource(Resource newScheduledResource, NotificationChain msgs) {
 		Resource oldScheduledResource = scheduledResource;
 		scheduledResource = newScheduledResource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__SCHEDULED_RESOURCE, oldScheduledResource, scheduledResource));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__SCHEDULED_RESOURCE, oldScheduledResource, newScheduledResource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScheduledResource(Resource newScheduledResource) {
+		if (newScheduledResource != scheduledResource) {
+			NotificationChain msgs = null;
+			if (scheduledResource != null)
+				msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
+			if (newScheduledResource != null)
+				msgs = ((InternalEObject)newScheduledResource).eInverseAdd(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
+			msgs = basicSetScheduledResource(newScheduledResource, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__SCHEDULED_RESOURCE, newScheduledResource, newScheduledResource));
 	}
 
 	/**
@@ -495,6 +517,10 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				if (previousTask != null)
 					msgs = ((InternalEObject)previousTask).eInverseRemove(this, SchedulerPackage.TASK__NEXT_TASK, Task.class, msgs);
 				return basicSetPreviousTask((Task)otherEnd, msgs);
+			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
+				if (scheduledResource != null)
+					msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
+				return basicSetScheduledResource((Resource)otherEnd, msgs);
 			case SchedulerPackage.TASK__SCHEDULE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -515,6 +541,8 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return basicSetNextTask(null, msgs);
 			case SchedulerPackage.TASK__PREVIOUS_TASK:
 				return basicSetPreviousTask(null, msgs);
+			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
+				return basicSetScheduledResource(null, msgs);
 			case SchedulerPackage.TASK__SCHEDULE:
 				return basicSetSchedule(null, msgs);
 		}

@@ -55,7 +55,7 @@ public class ScheduleFirstImpl extends MoveResourceImpl implements ScheduleFirst
 	 * 
 	 */
 	@Override
-	public void apply() {
+	public void doImpl() {
 		Task task = this.getTaskToSchedule();
 		Resource tobe_resource = this.getInsertionPoint();
 		Task tobe_resource_asis_first = tobe_resource.getFirstTask();

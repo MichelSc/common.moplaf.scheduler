@@ -113,6 +113,7 @@ public interface Task extends ObjectWithPropagatorFunctions {
 
 	/**
 	 * Returns the value of the '<em><b>Scheduled Resource</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Resource#getScheduledTasks <em>Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scheduled Resource</em>' reference isn't clear,
@@ -122,7 +123,8 @@ public interface Task extends ObjectWithPropagatorFunctions {
 	 * @return the value of the '<em>Scheduled Resource</em>' reference.
 	 * @see #setScheduledResource(Resource)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTask_ScheduledResource()
-	 * @model
+	 * @see com.misc.common.moplaf.scheduler.Resource#getScheduledTasks
+	 * @model opposite="ScheduledTasks"
 	 * @generated
 	 */
 	Resource getScheduledResource();

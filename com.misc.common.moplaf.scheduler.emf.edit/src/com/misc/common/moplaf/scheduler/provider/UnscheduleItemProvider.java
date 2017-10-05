@@ -64,8 +64,10 @@ public class UnscheduleItemProvider extends MoveScheduleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Unschedule unschedule = (Unschedule)object;
-		return getString("_UI_Unschedule_type") + " " + unschedule.isValid();
+		String label = ((Unschedule)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Unschedule_type") :
+			getString("_UI_Unschedule_type") + " " + label;
 	}
 	
 

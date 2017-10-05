@@ -177,5 +177,20 @@ public abstract class MoveScheduleImpl extends MoveImpl implements MoveSchedule 
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	/**
+	 * 
+	 */
+	@Override
+	public String isValidFeedback() {
+		String feedback = super.isValidFeedback();
+		if ( feedback!=null) {
+			return feedback;
+		} else if ( this.getTaskToSchedule()==null) {
+			return "No task to schedule";
+		}
+		return null;
+	}
+	
 
 } //MoveScheduleImpl

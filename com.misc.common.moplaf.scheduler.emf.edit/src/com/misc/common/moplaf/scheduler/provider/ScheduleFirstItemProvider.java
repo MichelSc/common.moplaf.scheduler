@@ -62,8 +62,10 @@ public class ScheduleFirstItemProvider extends MoveResourceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ScheduleFirst scheduleFirst = (ScheduleFirst)object;
-		return getString("_UI_ScheduleFirst_type") + " " + scheduleFirst.isValid();
+		String label = ((ScheduleFirst)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScheduleFirst_type") :
+			getString("_UI_ScheduleFirst_type") + " " + label;
 	}
 	
 

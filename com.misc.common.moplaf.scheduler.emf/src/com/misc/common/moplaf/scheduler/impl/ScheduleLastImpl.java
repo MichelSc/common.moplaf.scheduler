@@ -55,7 +55,7 @@ public class ScheduleLastImpl extends MoveResourceImpl implements ScheduleLast {
 	 * 
 	 */
 	@Override
-	public void apply() {
+	public void doImpl() {
 		Task task = this.getTaskToSchedule();
 		Resource tobe_resource = this.getInsertionPoint();
 		Task tobe_resource_asis_last = tobe_resource.getLastTask();

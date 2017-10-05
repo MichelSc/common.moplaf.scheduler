@@ -62,8 +62,10 @@ public class ScheduleLastItemProvider extends MoveResourceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ScheduleLast scheduleLast = (ScheduleLast)object;
-		return getString("_UI_ScheduleLast_type") + " " + scheduleLast.isValid();
+		String label = ((ScheduleLast)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScheduleLast_type") :
+			getString("_UI_ScheduleLast_type") + " " + label;
 	}
 	
 

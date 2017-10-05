@@ -62,8 +62,10 @@ public class ScheduleAfterItemProvider extends MoveTaskItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ScheduleAfter scheduleAfter = (ScheduleAfter)object;
-		return getString("_UI_ScheduleAfter_type") + " " + scheduleAfter.isValid();
+		String label = ((ScheduleAfter)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScheduleAfter_type") :
+			getString("_UI_ScheduleAfter_type") + " " + label;
 	}
 	
 

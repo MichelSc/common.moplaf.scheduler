@@ -78,8 +78,10 @@ public class MoveResourceItemProvider extends MoveScheduleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		MoveResource moveResource = (MoveResource)object;
-		return getString("_UI_MoveResource_type") + " " + moveResource.isValid();
+		String label = ((MoveResource)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MoveResource_type") :
+			getString("_UI_MoveResource_type") + " " + label;
 	}
 	
 

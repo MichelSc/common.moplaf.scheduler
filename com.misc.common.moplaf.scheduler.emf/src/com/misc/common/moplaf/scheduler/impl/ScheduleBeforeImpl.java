@@ -55,7 +55,7 @@ public class ScheduleBeforeImpl extends MoveTaskImpl implements ScheduleBefore {
 	 * 
 	 */
 	@Override
-	public void apply() {
+	public void doImpl() {
 		Task task = this.getTaskToSchedule();
 		Task to_be_task_after = this.getInsertionPoint();
 		Resource tobe_resource = to_be_task_after.getScheduledResource();

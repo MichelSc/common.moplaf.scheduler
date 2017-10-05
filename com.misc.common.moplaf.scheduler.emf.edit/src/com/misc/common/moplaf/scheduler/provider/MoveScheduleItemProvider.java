@@ -3,8 +3,10 @@
 package com.misc.common.moplaf.scheduler.provider;
 
 
+import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.localsearch.provider.MoveItemProvider;
 import com.misc.common.moplaf.scheduler.MoveSchedule;
+import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
 import java.util.Collection;
@@ -106,8 +108,10 @@ public class MoveScheduleItemProvider extends MoveItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		MoveSchedule moveSchedule = (MoveSchedule)object;
-		return getString("_UI_MoveSchedule_type") + " " + moveSchedule.isValid();
+		String label = ((MoveSchedule)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MoveSchedule_type") :
+			getString("_UI_MoveSchedule_type") + " " + label;
 	}
 	
 
@@ -140,6 +144,31 @@ public class MoveScheduleItemProvider extends MoveItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
+				 SchedulerFactory.eINSTANCE.createScheduleAfter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
+				 SchedulerFactory.eINSTANCE.createScheduleBefore()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
+				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
+				 SchedulerFactory.eINSTANCE.createScheduleLast()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
+				 SchedulerFactory.eINSTANCE.createUnschedule()));
 	}
 
 	/**

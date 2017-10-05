@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -312,7 +312,7 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	 */
 	public EList<Task> getScheduledTasks() {
 		if (scheduledTasks == null) {
-			scheduledTasks = new EObjectResolvingEList<Task>(Task.class, this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS);
+			scheduledTasks = new EObjectWithInverseResolvingEList<Task>(Task.class, this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, SchedulerPackage.TASK__SCHEDULED_RESOURCE);
 		}
 		return scheduledTasks;
 	}
@@ -419,6 +419,7 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -426,6 +427,8 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetSchedule((Schedule)otherEnd, msgs);
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScheduledTasks()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -440,6 +443,8 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				return basicSetSchedule(null, msgs);
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				return ((InternalEList<?>)getScheduledTasks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
