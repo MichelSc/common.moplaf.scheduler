@@ -490,11 +490,11 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 
 		if ( resource_asis != resource_tobe ) {
 			if ( resource_asis!=null ) {
-				resource_asis.setNrCandidateScheduledTasks(resource_asis.getNrCandidateScheduledTasks()-1);
+				resource_asis.setNrScheduledTasks(resource_asis.getNrScheduledTasks()-1);
 			}
 
 			if ( resource_tobe!=null ) {
-				resource_tobe.setNrCandidateScheduledTasks(resource_tobe.getNrCandidateScheduledTasks()+1);
+				resource_tobe.setNrScheduledTasks(resource_tobe.getNrScheduledTasks()+1);
 			}
 	
 			this.setScheduledResource(resource_tobe);

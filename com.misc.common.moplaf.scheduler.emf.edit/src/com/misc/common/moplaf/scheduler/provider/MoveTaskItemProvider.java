@@ -14,6 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.misc.common.moplaf.scheduler.MoveTask} object.
@@ -66,7 +67,7 @@ public class MoveTaskItemProvider extends MoveScheduleItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -95,6 +96,12 @@ public class MoveTaskItemProvider extends MoveScheduleItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(MoveTask.class)) {
+			case SchedulerPackage.MOVE_TASK__INSERTION_POINT:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

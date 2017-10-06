@@ -53,7 +53,6 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 			addResourcePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addNrCandidateScheduledTasksPropertyDescriptor(object);
 			addScheduledTasksPropertyDescriptor(object);
 			addFirstTaskPropertyDescriptor(object);
 			addLastTaskPropertyDescriptor(object);
@@ -102,7 +101,7 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -124,29 +123,7 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Nr Candidate Scheduled Tasks feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNrCandidateScheduledTasksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Resource_NrCandidateScheduledTasks_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_NrCandidateScheduledTasks_feature", "_UI_Resource_type"),
-				 SchedulerPackage.Literals.RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -168,7 +145,7 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 false,
 				 null,
-				 null,
+				 getString("_UI__20SchedulePropertyCategory"),
 				 null));
 	}
 
@@ -190,7 +167,7 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -212,7 +189,7 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -234,7 +211,7 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -308,9 +285,13 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 		switch (notification.getFeatureID(Resource.class)) {
 			case SchedulerPackage.RESOURCE__NAME:
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
-			case SchedulerPackage.RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS:
+			case SchedulerPackage.RESOURCE__FIRST_TASK:
+			case SchedulerPackage.RESOURCE__LAST_TASK:
 			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getResource <em>Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getFirstTask <em>First Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getLastTask <em>Last Task</em>}</li>
@@ -127,32 +126,6 @@ public interface Resource extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	String getDescription();
-
-	/**
-	 * Returns the value of the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nr Candidate Scheduled Tasks</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
-	 * @see #setNrCandidateScheduledTasks(int)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResource_NrCandidateScheduledTasks()
-	 * @model
-	 * @generated
-	 */
-	int getNrCandidateScheduledTasks();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Resource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
-	 * @see #getNrCandidateScheduledTasks()
-	 * @generated
-	 */
-	void setNrCandidateScheduledTasks(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Scheduled Tasks</b></em>' reference list.

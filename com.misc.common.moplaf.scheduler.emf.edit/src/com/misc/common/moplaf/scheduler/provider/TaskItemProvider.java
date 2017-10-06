@@ -99,7 +99,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -121,7 +121,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -143,7 +143,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -165,7 +165,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -187,7 +187,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -229,6 +229,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Task.class)) {
+			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 			case SchedulerPackage.TASK__DESCRIPTION:
 			case SchedulerPackage.TASK__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

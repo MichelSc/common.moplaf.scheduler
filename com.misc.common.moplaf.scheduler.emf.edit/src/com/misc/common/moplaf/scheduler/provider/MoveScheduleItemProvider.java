@@ -74,7 +74,7 @@ public class MoveScheduleItemProvider extends MoveItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -96,7 +96,7 @@ public class MoveScheduleItemProvider extends MoveItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
+				 getString("_UI__20SchedulerPropertyCategory"),
 				 null));
 	}
 

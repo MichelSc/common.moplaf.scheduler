@@ -367,17 +367,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResource_NrCandidateScheduledTasks() {
-		return (EAttribute)resourceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getResource_ScheduledTasks() {
-		return (EReference)resourceEClass.getEStructuralFeatures().get(5);
+		return (EReference)resourceEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -386,7 +377,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getResource_FirstTask() {
-		return (EReference)resourceEClass.getEStructuralFeatures().get(6);
+		return (EReference)resourceEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -395,7 +386,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getResource_LastTask() {
-		return (EReference)resourceEClass.getEStructuralFeatures().get(7);
+		return (EReference)resourceEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -404,7 +395,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getResource_NrScheduledTasks() {
-		return (EAttribute)resourceEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)resourceEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -694,7 +685,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(resourceEClass, RESOURCE__RESOURCE);
 		createEAttribute(resourceEClass, RESOURCE__NAME);
 		createEAttribute(resourceEClass, RESOURCE__DESCRIPTION);
-		createEAttribute(resourceEClass, RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS);
 		createEReference(resourceEClass, RESOURCE__SCHEDULED_TASKS);
 		createEReference(resourceEClass, RESOURCE__FIRST_TASK);
 		createEReference(resourceEClass, RESOURCE__LAST_TASK);
@@ -810,7 +800,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getResource_Resource(), ecorePackage.getEObject(), null, "Resource", null, 1, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResource_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResource_Description(), ecorePackage.getEString(), "Description", null, 0, 1, Resource.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResource_NrCandidateScheduledTasks(), ecorePackage.getEInt(), "NrCandidateScheduledTasks", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResource_ScheduledTasks(), this.getTask(), this.getTask_ScheduledResource(), "ScheduledTasks", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResource_FirstTask(), this.getTask(), null, "FirstTask", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResource_LastTask(), this.getTask(), null, "LastTask", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

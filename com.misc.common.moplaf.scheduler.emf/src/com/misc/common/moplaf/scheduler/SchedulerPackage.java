@@ -371,22 +371,13 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
+	int RESOURCE__SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>First Task</b></em>' reference.
@@ -395,7 +386,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+	int RESOURCE__FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Last Task</b></em>' reference.
@@ -404,7 +395,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
+	int RESOURCE__LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
@@ -413,7 +404,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
+	int RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
@@ -422,7 +413,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 9;
+	int RESOURCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -2074,17 +2065,6 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getResource_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Resource#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nr Candidate Scheduled Tasks</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Resource#getNrCandidateScheduledTasks()
-	 * @see #getResource()
-	 * @generated
-	 */
-	EAttribute getResource_NrCandidateScheduledTasks();
-
-	/**
 	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Resource#getScheduledTasks <em>Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2581,14 +2561,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RESOURCE__DESCRIPTION = eINSTANCE.getResource_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE__NR_CANDIDATE_SCHEDULED_TASKS = eINSTANCE.getResource_NrCandidateScheduledTasks();
 
 		/**
 		 * The meta object literal for the '<em><b>Scheduled Tasks</b></em>' reference list feature.
