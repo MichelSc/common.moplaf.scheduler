@@ -42,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getResources <em>Resources</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getSolutionNr <em>Solution Nr</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getScheduler <em>Scheduler</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
  * </ul>
  *
@@ -88,26 +87,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	 * @ordered
 	 */
 	protected int solutionNr = SOLUTION_NR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNrCandidateScheduledTasks() <em>Nr Candidate Scheduled Tasks</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNrCandidateScheduledTasks()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getNrCandidateScheduledTasks() <em>Nr Candidate Scheduled Tasks</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNrCandidateScheduledTasks()
-	 * @generated
-	 * @ordered
-	 */
-	protected int nrCandidateScheduledTasks = NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
@@ -239,27 +218,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNrCandidateScheduledTasks() {
-		return nrCandidateScheduledTasks;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNrCandidateScheduledTasks(int newNrCandidateScheduledTasks) {
-		int oldNrCandidateScheduledTasks = nrCandidateScheduledTasks;
-		nrCandidateScheduledTasks = newNrCandidateScheduledTasks;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS, oldNrCandidateScheduledTasks, nrCandidateScheduledTasks));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getNrScheduledTasks() {
 		return nrScheduledTasks;
 	}
@@ -369,8 +327,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 				return getSolutionNr();
 			case SchedulerPackage.SCHEDULE__SCHEDULER:
 				return getScheduler();
-			case SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS:
-				return getNrCandidateScheduledTasks();
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				return getNrScheduledTasks();
 		}
@@ -400,9 +356,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			case SchedulerPackage.SCHEDULE__SCHEDULER:
 				setScheduler((Scheduler)newValue);
 				return;
-			case SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS:
-				setNrCandidateScheduledTasks((Integer)newValue);
-				return;
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				setNrScheduledTasks((Integer)newValue);
 				return;
@@ -430,9 +383,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			case SchedulerPackage.SCHEDULE__SCHEDULER:
 				setScheduler((Scheduler)null);
 				return;
-			case SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS:
-				setNrCandidateScheduledTasks(NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT);
-				return;
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				setNrScheduledTasks(NR_SCHEDULED_TASKS_EDEFAULT);
 				return;
@@ -456,8 +406,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 				return solutionNr != SOLUTION_NR_EDEFAULT;
 			case SchedulerPackage.SCHEDULE__SCHEDULER:
 				return getScheduler() != null;
-			case SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS:
-				return nrCandidateScheduledTasks != NR_CANDIDATE_SCHEDULED_TASKS_EDEFAULT;
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				return nrScheduledTasks != NR_SCHEDULED_TASKS_EDEFAULT;
 		}
@@ -491,8 +439,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (SolutionNr: ");
 		result.append(solutionNr);
-		result.append(", NrCandidateScheduledTasks: ");
-		result.append(nrCandidateScheduledTasks);
 		result.append(", NrScheduledTasks: ");
 		result.append(nrScheduledTasks);
 		result.append(')');

@@ -53,7 +53,6 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addSolutionNrPropertyDescriptor(object);
-			addNrCandidateScheduledTasksPropertyDescriptor(object);
 			addNrScheduledTasksPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -73,28 +72,6 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 				 getString("_UI_Schedule_SolutionNr_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Schedule_SolutionNr_feature", "_UI_Schedule_type"),
 				 SchedulerPackage.Literals.SCHEDULE__SOLUTION_NR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Nr Candidate Scheduled Tasks feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNrCandidateScheduledTasksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Schedule_NrCandidateScheduledTasks_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Schedule_NrCandidateScheduledTasks_feature", "_UI_Schedule_type"),
-				 SchedulerPackage.Literals.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS,
 				 true,
 				 false,
 				 false,
@@ -193,7 +170,6 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 
 		switch (notification.getFeatureID(Schedule.class)) {
 			case SchedulerPackage.SCHEDULE__SOLUTION_NR:
-			case SchedulerPackage.SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS:
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

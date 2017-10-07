@@ -235,22 +235,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE__SCHEDULER = LocalSearchPackage.SOLUTION_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS = LocalSearchPackage.SOLUTION_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__NR_SCHEDULED_TASKS = LocalSearchPackage.SOLUTION_FEATURE_COUNT + 5;
+	int SCHEDULE__NR_SCHEDULED_TASKS = LocalSearchPackage.SOLUTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Schedule</em>' class.
@@ -259,7 +250,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FEATURE_COUNT = LocalSearchPackage.SOLUTION_FEATURE_COUNT + 6;
+	int SCHEDULE_FEATURE_COUNT = LocalSearchPackage.SOLUTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1988,17 +1979,6 @@ public interface SchedulerPackage extends EPackage {
 	EReference getSchedule_Scheduler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Schedule#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nr Candidate Scheduled Tasks</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Schedule#getNrCandidateScheduledTasks()
-	 * @see #getSchedule()
-	 * @generated
-	 */
-	EAttribute getSchedule_NrCandidateScheduledTasks();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Schedule#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2504,14 +2484,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCHEDULE__SCHEDULER = eINSTANCE.getSchedule_Scheduler();
-
-		/**
-		 * The meta object literal for the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS = eINSTANCE.getSchedule_NrCandidateScheduledTasks();
 
 		/**
 		 * The meta object literal for the '<em><b>Nr Scheduled Tasks</b></em>' attribute feature.

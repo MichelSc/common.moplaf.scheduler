@@ -24,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getResources <em>Resources</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getSolutionNr <em>Solution Nr</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getScheduler <em>Scheduler</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
  * </ul>
  *
@@ -122,32 +121,6 @@ public interface Schedule extends Solution {
 	 * @generated
 	 */
 	void setScheduler(Scheduler value);
-
-	/**
-	 * Returns the value of the '<em><b>Nr Candidate Scheduled Tasks</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nr Candidate Scheduled Tasks</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
-	 * @see #setNrCandidateScheduledTasks(int)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSchedule_NrCandidateScheduledTasks()
-	 * @model
-	 * @generated
-	 */
-	int getNrCandidateScheduledTasks();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Schedule#getNrCandidateScheduledTasks <em>Nr Candidate Scheduled Tasks</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nr Candidate Scheduled Tasks</em>' attribute.
-	 * @see #getNrCandidateScheduledTasks()
-	 * @generated
-	 */
-	void setNrCandidateScheduledTasks(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Nr Scheduled Tasks</b></em>' attribute.

@@ -295,17 +295,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSchedule_NrCandidateScheduledTasks() {
-		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSchedule_NrScheduledTasks() {
-		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -676,7 +667,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		createEReference(scheduleEClass, SCHEDULE__RESOURCES);
 		createEAttribute(scheduleEClass, SCHEDULE__SOLUTION_NR);
 		createEReference(scheduleEClass, SCHEDULE__SCHEDULER);
-		createEAttribute(scheduleEClass, SCHEDULE__NR_CANDIDATE_SCHEDULED_TASKS);
 		createEAttribute(scheduleEClass, SCHEDULE__NR_SCHEDULED_TASKS);
 		createEOperation(scheduleEClass, SCHEDULE___INITIALIZE);
 
@@ -790,7 +780,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		initEReference(getSchedule_Resources(), this.getResource(), this.getResource_Schedule(), "Resources", null, 0, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSchedule_SolutionNr(), ecorePackage.getEInt(), "SolutionNr", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchedule_Scheduler(), this.getScheduler(), this.getScheduler_Schedulers(), "Scheduler", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSchedule_NrCandidateScheduledTasks(), ecorePackage.getEInt(), "NrCandidateScheduledTasks", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSchedule_NrScheduledTasks(), ecorePackage.getEInt(), "NrScheduledTasks", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getSchedule__Initialize(), null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
