@@ -25,11 +25,10 @@
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="scheduler.ecore#//Schedule">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Tasks"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Resources"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Tasks"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Resources"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//Schedule/SolutionNr"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Scheduler"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//Schedule/NrCandidateScheduledTasks"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scheduler.ecore#//Schedule/NrScheduledTasks"/>
       <genOperations ecoreOperation="scheduler.ecore#//Schedule/initialize"/>
     </genClasses>
@@ -71,8 +70,8 @@
       </genOperations>
     </genClasses>
     <genClasses image="false" ecoreClass="scheduler.ecore#//MoveSchedule" labelFeature="#//scheduler/MoveSchedule/Description">
-      <genFeatures notify="false" createChild="false" propertyCategory="20 Scheduler"
-          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//MoveSchedule/TaskToSchedule"/>
+      <genFeatures createChild="false" propertyCategory="20 Scheduler" propertySortChoices="true"
+          ecoreFeature="ecore:EReference scheduler.ecore#//MoveSchedule/TaskToSchedule"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="20 Scheduler"
           ecoreFeature="ecore:EAttribute scheduler.ecore#//MoveSchedule/Description"/>
     </genClasses>

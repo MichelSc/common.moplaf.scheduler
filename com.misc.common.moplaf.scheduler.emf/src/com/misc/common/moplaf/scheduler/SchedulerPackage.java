@@ -289,13 +289,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE___ADD_PROPAGATOR_FUNCTIONS__STRING = LocalSearchPackage.SOLUTION___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Replicate</em>' operation.
+	 * The operation id for the '<em>Clone</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE___REPLICATE = LocalSearchPackage.SOLUTION___REPLICATE;
+	int SCHEDULE___CLONE = LocalSearchPackage.SOLUTION___CLONE;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.

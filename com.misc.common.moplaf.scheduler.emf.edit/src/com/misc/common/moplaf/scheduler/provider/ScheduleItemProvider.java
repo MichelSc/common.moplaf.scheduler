@@ -5,7 +5,6 @@ package com.misc.common.moplaf.scheduler.provider;
 import com.misc.common.moplaf.emf.edit.command.InitializeCommand;
 import com.misc.common.moplaf.localsearch.provider.SolutionItemProvider;
 import com.misc.common.moplaf.scheduler.Schedule;
-import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 
 import java.util.Collection;
@@ -216,16 +215,6 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULE__TASKS,
-				 SchedulerFactory.eINSTANCE.createTask()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULE__RESOURCES,
-				 SchedulerFactory.eINSTANCE.createResource()));
 	}
 
 	/**

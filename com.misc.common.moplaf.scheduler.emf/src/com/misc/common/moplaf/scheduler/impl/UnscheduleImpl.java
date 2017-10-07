@@ -60,7 +60,7 @@ public class UnscheduleImpl extends MoveScheduleImpl implements Unschedule {
 		if ( feedback!=null) {
 			return feedback;
 		} else if ( this.getTaskToSchedule().getScheduledResource()==null) {
-			return "Task not scedulerd";
+			return "Task not sceduled";
 		}
 		return null;
 	}

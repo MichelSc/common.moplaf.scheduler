@@ -127,6 +127,7 @@ public class MoveScheduleItemProvider extends MoveItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MoveSchedule.class)) {
+			case SchedulerPackage.MOVE_SCHEDULE__TASK_TO_SCHEDULE:
 			case SchedulerPackage.MOVE_SCHEDULE__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
