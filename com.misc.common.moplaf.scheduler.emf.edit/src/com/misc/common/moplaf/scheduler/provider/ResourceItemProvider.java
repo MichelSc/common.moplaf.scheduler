@@ -51,12 +51,12 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 			super.getPropertyDescriptors(object);
 
 			addResourcePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addScheduledTasksPropertyDescriptor(object);
 			addFirstTaskPropertyDescriptor(object);
 			addLastTaskPropertyDescriptor(object);
 			addNrScheduledTasksPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,28 +79,6 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Resource_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_Name_feature", "_UI_Resource_type"),
-				 SchedulerPackage.Literals.RESOURCE__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
@@ -216,6 +194,28 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Resource_Name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_Name_feature", "_UI_Resource_type"),
+				 SchedulerPackage.Literals.RESOURCE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI__10SchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -283,11 +283,11 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Resource.class)) {
-			case SchedulerPackage.RESOURCE__NAME:
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 			case SchedulerPackage.RESOURCE__FIRST_TASK:
 			case SchedulerPackage.RESOURCE__LAST_TASK:
 			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
+			case SchedulerPackage.RESOURCE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:

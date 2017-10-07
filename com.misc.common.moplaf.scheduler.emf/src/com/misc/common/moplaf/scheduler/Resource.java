@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getResource <em>Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getFirstTask <em>First Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getLastTask <em>Last Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResource()
@@ -85,32 +85,6 @@ public interface Resource extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setResource(EObject value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResource_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Resource#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
@@ -222,5 +196,31 @@ public interface Resource extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setNrScheduledTasks(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResource_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Resource#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Resource

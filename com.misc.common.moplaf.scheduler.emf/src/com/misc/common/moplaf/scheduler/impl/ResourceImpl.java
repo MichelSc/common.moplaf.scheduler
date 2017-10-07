@@ -33,12 +33,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getResource <em>Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getFirstTask <em>First Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getLastTask <em>Last Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,26 +53,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	 * @ordered
 	 */
 	protected EObject resource;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -133,6 +113,26 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	 * @ordered
 	 */
 	protected int nrScheduledTasks = NR_SCHEDULED_TASKS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -230,27 +230,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		resource = newResource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE__RESOURCE, oldResource, resource));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE__NAME, oldName, name));
 	}
 
 	/**
@@ -377,6 +356,27 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -434,8 +434,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 			case SchedulerPackage.RESOURCE__RESOURCE:
 				if (resolve) return getResource();
 				return basicGetResource();
-			case SchedulerPackage.RESOURCE__NAME:
-				return getName();
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 				return getDescription();
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
@@ -448,6 +446,8 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				return basicGetLastTask();
 			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
 				return getNrScheduledTasks();
+			case SchedulerPackage.RESOURCE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -467,9 +467,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 			case SchedulerPackage.RESOURCE__RESOURCE:
 				setResource((EObject)newValue);
 				return;
-			case SchedulerPackage.RESOURCE__NAME:
-				setName((String)newValue);
-				return;
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
 				getScheduledTasks().clear();
 				getScheduledTasks().addAll((Collection<? extends Task>)newValue);
@@ -482,6 +479,9 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				return;
 			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
 				setNrScheduledTasks((Integer)newValue);
+				return;
+			case SchedulerPackage.RESOURCE__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -501,9 +501,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 			case SchedulerPackage.RESOURCE__RESOURCE:
 				setResource((EObject)null);
 				return;
-			case SchedulerPackage.RESOURCE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
 				getScheduledTasks().clear();
 				return;
@@ -515,6 +512,9 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				return;
 			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
 				setNrScheduledTasks(NR_SCHEDULED_TASKS_EDEFAULT);
+				return;
+			case SchedulerPackage.RESOURCE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -532,8 +532,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				return getSchedule() != null;
 			case SchedulerPackage.RESOURCE__RESOURCE:
 				return resource != null;
-			case SchedulerPackage.RESOURCE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
@@ -544,6 +542,8 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				return lastTask != null;
 			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
 				return nrScheduledTasks != NR_SCHEDULED_TASKS_EDEFAULT;
+			case SchedulerPackage.RESOURCE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -558,10 +558,10 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(", NrScheduledTasks: ");
+		result.append(" (NrScheduledTasks: ");
 		result.append(nrScheduledTasks);
+		result.append(", Name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

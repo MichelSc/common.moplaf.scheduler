@@ -73,11 +73,11 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 				 getString("_UI_Task_Task_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Task_Task_feature", "_UI_Task_type"),
 				 SchedulerPackage.Literals.TASK__TASK,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
