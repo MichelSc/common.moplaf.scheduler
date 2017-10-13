@@ -41,13 +41,9 @@ public class UnscheduleImpl extends MoveScheduleImpl implements Unschedule {
 	 */
 	@Override
 	public String getDescription() {
-		String is_valid_feedback = this.isValidFeedback();
-		if ( is_valid_feedback!=null ) {
-			return is_valid_feedback;
-		}
-		
+		Task task1 = this.getTaskToSchedule();
 		String description = String.format("Unschedule %s", 
-				                           this.getTaskToSchedule().getName());
+											task1 == null ? "null" : task1.getName());
 		return description;
 	}
 
@@ -55,8 +51,8 @@ public class UnscheduleImpl extends MoveScheduleImpl implements Unschedule {
 	 * 
 	 */
 	@Override
-	public String isValidFeedback() {
-		String feedback = super.isValidFeedback();
+	public String getValidFeedback() {
+		String feedback = super.getValidFeedback();
 		if ( feedback!=null) {
 			return feedback;
 		} else if ( this.getTaskToSchedule().getScheduledResource()==null) {

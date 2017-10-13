@@ -40,14 +40,11 @@ public class ScheduleAfterImpl extends MoveTaskImpl implements ScheduleAfter {
 	 */
 	@Override
 	public String getDescription() {
-		String is_valid_feedback = this.isValidFeedback();
-		if ( is_valid_feedback!=null ) {
-			return is_valid_feedback;
-		}
-		
+		Task task1 = this.getTaskToSchedule();
+		Task task2 = this.getInsertionPoint();
 		String description = String.format("Schedule %s after %s", 
-				                           this.getTaskToSchedule().getName(),
-				                           this.getInsertionPoint().getName());
+						task1 == null ? "null" : task1.getName(),
+                        task2 == null ? "null" : task2.getName());
 		return description;
 	}
 

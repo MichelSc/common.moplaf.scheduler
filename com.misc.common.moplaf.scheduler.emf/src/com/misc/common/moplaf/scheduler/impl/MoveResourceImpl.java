@@ -157,8 +157,8 @@ public abstract class MoveResourceImpl extends MoveScheduleImpl implements MoveR
 	 * 
 	 */
 	@Override
-	public String isValidFeedback() {
-		String feedback = super.isValidFeedback();
+	public String getValidFeedback() {
+		String feedback = super.getValidFeedback();
 		if ( feedback!=null) {
 			return feedback;
 		} else if ( this.getInsertionPoint()==null) {

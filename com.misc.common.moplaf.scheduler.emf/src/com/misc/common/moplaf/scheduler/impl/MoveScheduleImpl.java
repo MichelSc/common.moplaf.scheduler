@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveScheduleImpl#getTaskToSchedule <em>Task To Schedule</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveScheduleImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,16 +35,6 @@ public abstract class MoveScheduleImpl extends MoveImpl implements MoveSchedule 
 	 * @ordered
 	 */
 	protected Task taskToSchedule;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,25 +98,12 @@ public abstract class MoveScheduleImpl extends MoveImpl implements MoveSchedule 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		// TODO: implement this method to return the 'Description' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SchedulerPackage.MOVE_SCHEDULE__TASK_TO_SCHEDULE:
 				if (resolve) return getTaskToSchedule();
 				return basicGetTaskToSchedule();
-			case SchedulerPackage.MOVE_SCHEDULE__DESCRIPTION:
-				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,8 +148,6 @@ public abstract class MoveScheduleImpl extends MoveImpl implements MoveSchedule 
 		switch (featureID) {
 			case SchedulerPackage.MOVE_SCHEDULE__TASK_TO_SCHEDULE:
 				return taskToSchedule != null;
-			case SchedulerPackage.MOVE_SCHEDULE__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -182,8 +156,8 @@ public abstract class MoveScheduleImpl extends MoveImpl implements MoveSchedule 
 	 * 
 	 */
 	@Override
-	public String isValidFeedback() {
-		String feedback = super.isValidFeedback();
+	public String getValidFeedback() {
+		String feedback = super.getValidFeedback();
 		if ( feedback!=null) {
 			return feedback;
 		} else if ( this.getTaskToSchedule()==null) {

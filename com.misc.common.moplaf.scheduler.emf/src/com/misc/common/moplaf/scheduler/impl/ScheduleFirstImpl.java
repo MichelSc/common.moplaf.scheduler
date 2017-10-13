@@ -40,14 +40,11 @@ public class ScheduleFirstImpl extends MoveResourceImpl implements ScheduleFirst
 	 */
 	@Override
 	public String getDescription() {
-		String is_valid_feedback = this.isValidFeedback();
-		if ( is_valid_feedback!=null ) {
-			return is_valid_feedback;
-		}
-		
+		Task task1 = this.getTaskToSchedule();
+		Resource resource = this.getInsertionPoint();
 		String description = String.format("Schedule %s first in %s", 
-				                           this.getTaskToSchedule().getName(),
-				                           this.getInsertionPoint().getName());
+						task1 == null ? "null" : task1.getName(),
+                        resource == null ? "null" : resource.getName());
 		return description;
 	}
 

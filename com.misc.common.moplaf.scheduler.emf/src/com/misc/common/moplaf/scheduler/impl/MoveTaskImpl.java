@@ -158,8 +158,8 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 	 */
 
 	@Override
-	public String isValidFeedback() {
-		String feedback = super.isValidFeedback();
+	public String getValidFeedback() {
+		String feedback = super.getValidFeedback();
 		if ( feedback!=null) {
 			return feedback;
 		} else if ( this.getInsertionPoint()==null) {

@@ -511,15 +511,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMoveSchedule_Description() {
-		return (EAttribute)moveScheduleEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMoveTask() {
 		return moveTaskEClass;
 	}
@@ -694,7 +685,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		moveScheduleEClass = createEClass(MOVE_SCHEDULE);
 		createEReference(moveScheduleEClass, MOVE_SCHEDULE__TASK_TO_SCHEDULE);
-		createEAttribute(moveScheduleEClass, MOVE_SCHEDULE__DESCRIPTION);
 
 		moveTaskEClass = createEClass(MOVE_TASK);
 		createEReference(moveTaskEClass, MOVE_TASK__INSERTION_POINT);
@@ -815,7 +805,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		initEClass(moveScheduleEClass, MoveSchedule.class, "MoveSchedule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMoveSchedule_TaskToSchedule(), this.getTask(), null, "TaskToSchedule", null, 1, 1, MoveSchedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMoveSchedule_Description(), ecorePackage.getEString(), "Description", null, 0, 1, MoveSchedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(moveTaskEClass, MoveTask.class, "MoveTask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMoveTask_InsertionPoint(), this.getTask(), null, "InsertionPoint", null, 1, 1, MoveTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
