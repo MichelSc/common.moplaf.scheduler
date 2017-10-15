@@ -869,13 +869,22 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK__INSERTION_POINT = MOVE_SCHEDULE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__RESOURCE = MOVE_SCHEDULE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Move Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_TASK_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 1;
+	int MOVE_TASK_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Do </em>' operation.
@@ -1021,6 +1030,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCHEDULE_AFTER__INSERTION_POINT = MOVE_TASK__INSERTION_POINT;
+
+	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__RESOURCE = MOVE_TASK__RESOURCE;
 
 	/**
 	 * The number of structural features of the '<em>Schedule After</em>' class.
@@ -1177,6 +1195,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__INSERTION_POINT = MOVE_TASK__INSERTION_POINT;
 
 	/**
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__RESOURCE = MOVE_TASK__RESOURCE;
+
+	/**
 	 * The number of structural features of the '<em>Schedule Before</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1213,468 +1240,6 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE_OPERATION_COUNT = MOVE_TASK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.MoveResourceImpl <em>Move Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.MoveResourceImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveResource()
-	 * @generated
-	 */
-	int MOVE_RESOURCE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Action</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__ACTION = MOVE_SCHEDULE__ACTION;
-
-	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__SCORE = MOVE_SCHEDULE__SCORE;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__PREVIOUS = MOVE_SCHEDULE__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__NEXT_MOVES = MOVE_SCHEDULE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__DESCRIPTION = MOVE_SCHEDULE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__VALID_FEEDBACK = MOVE_SCHEDULE__VALID_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__DO_ENABLED_FEEDBACK = MOVE_SCHEDULE__DO_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__UNDO_ENABLED_FEEDBACK = MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__VALID = MOVE_SCHEDULE__VALID;
-
-	/**
-	 * The feature id for the '<em><b>Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__CURRENT = MOVE_SCHEDULE__CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__TASK_TO_SCHEDULE = MOVE_SCHEDULE__TASK_TO_SCHEDULE;
-
-	/**
-	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE__INSERTION_POINT = MOVE_SCHEDULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Move Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE_FEATURE_COUNT = MOVE_SCHEDULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Do </em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE___DO_ = MOVE_SCHEDULE___DO_;
-
-	/**
-	 * The operation id for the '<em>Undo</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE___UNDO = MOVE_SCHEDULE___UNDO;
-
-	/**
-	 * The number of operations of the '<em>Move Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOVE_RESOURCE_OPERATION_COUNT = MOVE_SCHEDULE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleFirstImpl <em>Schedule First</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.ScheduleFirstImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleFirst()
-	 * @generated
-	 */
-	int SCHEDULE_FIRST = 9;
-
-	/**
-	 * The feature id for the '<em><b>Action</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__ACTION = MOVE_RESOURCE__ACTION;
-
-	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__SCORE = MOVE_RESOURCE__SCORE;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__PREVIOUS = MOVE_RESOURCE__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__NEXT_MOVES = MOVE_RESOURCE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__DESCRIPTION = MOVE_RESOURCE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__VALID_FEEDBACK = MOVE_RESOURCE__VALID_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__DO_ENABLED_FEEDBACK = MOVE_RESOURCE__DO_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__UNDO_ENABLED_FEEDBACK = MOVE_RESOURCE__UNDO_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__VALID = MOVE_RESOURCE__VALID;
-
-	/**
-	 * The feature id for the '<em><b>Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__CURRENT = MOVE_RESOURCE__CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__TASK_TO_SCHEDULE = MOVE_RESOURCE__TASK_TO_SCHEDULE;
-
-	/**
-	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST__INSERTION_POINT = MOVE_RESOURCE__INSERTION_POINT;
-
-	/**
-	 * The number of structural features of the '<em>Schedule First</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST_FEATURE_COUNT = MOVE_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Do </em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST___DO_ = MOVE_RESOURCE___DO_;
-
-	/**
-	 * The operation id for the '<em>Undo</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST___UNDO = MOVE_RESOURCE___UNDO;
-
-	/**
-	 * The number of operations of the '<em>Schedule First</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_FIRST_OPERATION_COUNT = MOVE_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleLastImpl <em>Schedule Last</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.misc.common.moplaf.scheduler.impl.ScheduleLastImpl
-	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleLast()
-	 * @generated
-	 */
-	int SCHEDULE_LAST = 10;
-
-	/**
-	 * The feature id for the '<em><b>Action</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__ACTION = MOVE_RESOURCE__ACTION;
-
-	/**
-	 * The feature id for the '<em><b>Score</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__SCORE = MOVE_RESOURCE__SCORE;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__PREVIOUS = MOVE_RESOURCE__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next Moves</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__NEXT_MOVES = MOVE_RESOURCE__NEXT_MOVES;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__DESCRIPTION = MOVE_RESOURCE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__VALID_FEEDBACK = MOVE_RESOURCE__VALID_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Do Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__DO_ENABLED_FEEDBACK = MOVE_RESOURCE__DO_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Undo Enabled Feedback</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__UNDO_ENABLED_FEEDBACK = MOVE_RESOURCE__UNDO_ENABLED_FEEDBACK;
-
-	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__VALID = MOVE_RESOURCE__VALID;
-
-	/**
-	 * The feature id for the '<em><b>Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__CURRENT = MOVE_RESOURCE__CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__TASK_TO_SCHEDULE = MOVE_RESOURCE__TASK_TO_SCHEDULE;
-
-	/**
-	 * The feature id for the '<em><b>Insertion Point</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST__INSERTION_POINT = MOVE_RESOURCE__INSERTION_POINT;
-
-	/**
-	 * The number of structural features of the '<em>Schedule Last</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST_FEATURE_COUNT = MOVE_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Do </em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST___DO_ = MOVE_RESOURCE___DO_;
-
-	/**
-	 * The operation id for the '<em>Undo</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST___UNDO = MOVE_RESOURCE___UNDO;
-
-	/**
-	 * The number of operations of the '<em>Schedule Last</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULE_LAST_OPERATION_COUNT = MOVE_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.UnscheduleImpl <em>Unschedule</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1682,7 +1247,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getUnschedule()
 	 * @generated
 	 */
-	int UNSCHEDULE = 11;
+	int UNSCHEDULE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Action</b></em>' reference.
@@ -2257,6 +1822,17 @@ public interface SchedulerPackage extends EPackage {
 	EReference getMoveTask_InsertionPoint();
 
 	/**
+	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.MoveTask#getResource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Resource</em>'.
+	 * @see com.misc.common.moplaf.scheduler.MoveTask#getResource()
+	 * @see #getMoveTask()
+	 * @generated
+	 */
+	EReference getMoveTask_Resource();
+
+	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleAfter <em>Schedule After</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2275,47 +1851,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getScheduleBefore();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.MoveResource <em>Move Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Move Resource</em>'.
-	 * @see com.misc.common.moplaf.scheduler.MoveResource
-	 * @generated
-	 */
-	EClass getMoveResource();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.MoveResource#getInsertionPoint <em>Insertion Point</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Insertion Point</em>'.
-	 * @see com.misc.common.moplaf.scheduler.MoveResource#getInsertionPoint()
-	 * @see #getMoveResource()
-	 * @generated
-	 */
-	EReference getMoveResource_InsertionPoint();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleFirst <em>Schedule First</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Schedule First</em>'.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleFirst
-	 * @generated
-	 */
-	EClass getScheduleFirst();
-
-	/**
-	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.ScheduleLast <em>Schedule Last</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Schedule Last</em>'.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleLast
-	 * @generated
-	 */
-	EClass getScheduleLast();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Unschedule <em>Unschedule</em>}'.
@@ -2691,6 +2226,14 @@ public interface SchedulerPackage extends EPackage {
 		EReference MOVE_TASK__INSERTION_POINT = eINSTANCE.getMoveTask_InsertionPoint();
 
 		/**
+		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOVE_TASK__RESOURCE = eINSTANCE.getMoveTask_Resource();
+
+		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleAfterImpl <em>Schedule After</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2709,44 +2252,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SCHEDULE_BEFORE = eINSTANCE.getScheduleBefore();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveResourceImpl <em>Move Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.scheduler.impl.MoveResourceImpl
-		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getMoveResource()
-		 * @generated
-		 */
-		EClass MOVE_RESOURCE = eINSTANCE.getMoveResource();
-
-		/**
-		 * The meta object literal for the '<em><b>Insertion Point</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MOVE_RESOURCE__INSERTION_POINT = eINSTANCE.getMoveResource_InsertionPoint();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleFirstImpl <em>Schedule First</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.scheduler.impl.ScheduleFirstImpl
-		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleFirst()
-		 * @generated
-		 */
-		EClass SCHEDULE_FIRST = eINSTANCE.getScheduleFirst();
-
-		/**
-		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleLastImpl <em>Schedule Last</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.misc.common.moplaf.scheduler.impl.ScheduleLastImpl
-		 * @see com.misc.common.moplaf.scheduler.impl.SchedulerPackageImpl#getScheduleLast()
-		 * @generated
-		 */
-		EClass SCHEDULE_LAST = eINSTANCE.getScheduleLast();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.UnscheduleImpl <em>Unschedule</em>}' class.

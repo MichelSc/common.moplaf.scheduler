@@ -82,14 +82,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="MoveTask" abstract="true" eSuperTypes="#//MoveSchedule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="InsertionPoint" lowerBound="1"
         eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Resource" lowerBound="1"
+        eType="#//Resource"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ScheduleAfter" eSuperTypes="#//MoveTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="ScheduleBefore" eSuperTypes="#//MoveTask"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MoveResource" abstract="true" eSuperTypes="#//MoveSchedule">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="InsertionPoint" lowerBound="1"
-        eType="#//Resource"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ScheduleFirst" eSuperTypes="#//MoveResource"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ScheduleLast" eSuperTypes="#//MoveResource"/>
   <eClassifiers xsi:type="ecore:EClass" name="Unschedule" eSuperTypes="#//MoveSchedule"/>
 </ecore:EPackage>

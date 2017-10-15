@@ -45,6 +45,7 @@ public class MoveTaskItemProvider extends MoveScheduleItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addInsertionPointPropertyDescriptor(object);
+			addResourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class MoveTaskItemProvider extends MoveScheduleItemProvider {
 				 true,
 				 null,
 				 getString("_UI__20SchedulerPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resource feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResourcePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MoveTask_Resource_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MoveTask_Resource_feature", "_UI_MoveTask_type"),
+				 SchedulerPackage.Literals.MOVE_TASK__RESOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
 				 null));
 	}
 

@@ -4,15 +4,12 @@ package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.propagator2.PropagatorPackage;
-import com.misc.common.moplaf.scheduler.MoveResource;
 import com.misc.common.moplaf.scheduler.MoveSchedule;
 import com.misc.common.moplaf.scheduler.MoveTask;
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.ScheduleAfter;
 import com.misc.common.moplaf.scheduler.ScheduleBefore;
-import com.misc.common.moplaf.scheduler.ScheduleFirst;
-import com.misc.common.moplaf.scheduler.ScheduleLast;
 import com.misc.common.moplaf.scheduler.Scheduler;
 import com.misc.common.moplaf.scheduler.SchedulerFactory;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
@@ -88,27 +85,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	private EClass scheduleBeforeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass moveResourceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass scheduleFirstEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass scheduleLastEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -529,6 +505,15 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMoveTask_Resource() {
+		return (EReference)moveTaskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getScheduler_Tasks() {
 		return (EReference)schedulerEClass.getEStructuralFeatures().get(3);
 	}
@@ -567,42 +552,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 */
 	public EClass getScheduleBefore() {
 		return scheduleBeforeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMoveResource() {
-		return moveResourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMoveResource_InsertionPoint() {
-		return (EReference)moveResourceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getScheduleFirst() {
-		return scheduleFirstEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getScheduleLast() {
-		return scheduleLastEClass;
 	}
 
 	/**
@@ -688,17 +637,11 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		moveTaskEClass = createEClass(MOVE_TASK);
 		createEReference(moveTaskEClass, MOVE_TASK__INSERTION_POINT);
+		createEReference(moveTaskEClass, MOVE_TASK__RESOURCE);
 
 		scheduleAfterEClass = createEClass(SCHEDULE_AFTER);
 
 		scheduleBeforeEClass = createEClass(SCHEDULE_BEFORE);
-
-		moveResourceEClass = createEClass(MOVE_RESOURCE);
-		createEReference(moveResourceEClass, MOVE_RESOURCE__INSERTION_POINT);
-
-		scheduleFirstEClass = createEClass(SCHEDULE_FIRST);
-
-		scheduleLastEClass = createEClass(SCHEDULE_LAST);
 
 		unscheduleEClass = createEClass(UNSCHEDULE);
 	}
@@ -742,9 +685,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		moveTaskEClass.getESuperTypes().add(this.getMoveSchedule());
 		scheduleAfterEClass.getESuperTypes().add(this.getMoveTask());
 		scheduleBeforeEClass.getESuperTypes().add(this.getMoveTask());
-		moveResourceEClass.getESuperTypes().add(this.getMoveSchedule());
-		scheduleFirstEClass.getESuperTypes().add(this.getMoveResource());
-		scheduleLastEClass.getESuperTypes().add(this.getMoveResource());
 		unscheduleEClass.getESuperTypes().add(this.getMoveSchedule());
 
 		// Initialize classes, features, and operations; add parameters
@@ -808,17 +748,11 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		initEClass(moveTaskEClass, MoveTask.class, "MoveTask", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMoveTask_InsertionPoint(), this.getTask(), null, "InsertionPoint", null, 1, 1, MoveTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMoveTask_Resource(), this.getResource(), null, "Resource", null, 1, 1, MoveTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scheduleAfterEClass, ScheduleAfter.class, "ScheduleAfter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(scheduleBeforeEClass, ScheduleBefore.class, "ScheduleBefore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(moveResourceEClass, MoveResource.class, "MoveResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMoveResource_InsertionPoint(), this.getResource(), null, "InsertionPoint", null, 1, 1, MoveResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(scheduleFirstEClass, ScheduleFirst.class, "ScheduleFirst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(scheduleLastEClass, ScheduleLast.class, "ScheduleLast", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(unscheduleEClass, Unschedule.class, "Unschedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

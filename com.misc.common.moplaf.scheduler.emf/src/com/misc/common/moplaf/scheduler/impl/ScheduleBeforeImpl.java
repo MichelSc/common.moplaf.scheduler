@@ -44,7 +44,7 @@ public class ScheduleBeforeImpl extends MoveTaskImpl implements ScheduleBefore {
 		Task task2 = this.getInsertionPoint();
 		String description = String.format("Schedule %s before %s", 
 						task1 == null ? "null" : task1.getName(),
-                        task2 == null ? "null" : task2.getName());
+                        task2 == null ? "after last" : task2.getName());
 		return description;
 	}
 	
@@ -55,10 +55,15 @@ public class ScheduleBeforeImpl extends MoveTaskImpl implements ScheduleBefore {
 	public void doImpl() {
 		Task task = this.getTaskToSchedule();
 		Task to_be_task_after = this.getInsertionPoint();
-		Resource tobe_resource = to_be_task_after.getScheduledResource();
+		Task to_be_task_before = to_be_task_after==null 
+	                           ? this.getResource().getLastTask()
+	                           : to_be_task_after.getPreviousTask();
+        Resource tobe_resource = to_be_task_after==null 
+                               ? this.getResource()
+                               : to_be_task_after.getScheduledResource();
 			
 		// association previous next
-		task.setPreviousNext(tobe_resource, to_be_task_after.getPreviousTask(), to_be_task_after);
+		task.setPreviousNext(tobe_resource, to_be_task_before, to_be_task_after);
 
 		// reference to scheduled resource
 		task.scheduleResource(tobe_resource);

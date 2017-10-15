@@ -61,8 +61,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			case SchedulerPackage.TASK: return createTask();
 			case SchedulerPackage.SCHEDULE_AFTER: return createScheduleAfter();
 			case SchedulerPackage.SCHEDULE_BEFORE: return createScheduleBefore();
-			case SchedulerPackage.SCHEDULE_FIRST: return createScheduleFirst();
-			case SchedulerPackage.SCHEDULE_LAST: return createScheduleLast();
 			case SchedulerPackage.UNSCHEDULE: return createUnschedule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -117,26 +115,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	public ScheduleBefore createScheduleBefore() {
 		ScheduleBeforeImpl scheduleBefore = new ScheduleBeforeImpl();
 		return scheduleBefore;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScheduleFirst createScheduleFirst() {
-		ScheduleFirstImpl scheduleFirst = new ScheduleFirstImpl();
-		return scheduleFirst;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScheduleLast createScheduleLast() {
-		ScheduleLastImpl scheduleLast = new ScheduleLastImpl();
-		return scheduleLast;
 	}
 
 	/**

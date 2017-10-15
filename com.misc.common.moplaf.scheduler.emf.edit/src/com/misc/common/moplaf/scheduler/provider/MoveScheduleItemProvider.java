@@ -134,16 +134,6 @@ public class MoveScheduleItemProvider extends MoveItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
-				 SchedulerFactory.eINSTANCE.createScheduleFirst()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
-				 SchedulerFactory.eINSTANCE.createScheduleLast()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LocalSearchPackage.Literals.MOVE__NEXT_MOVES,
 				 SchedulerFactory.eINSTANCE.createUnschedule()));
 	}
 

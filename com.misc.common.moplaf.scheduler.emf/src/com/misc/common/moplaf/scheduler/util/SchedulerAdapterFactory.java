@@ -103,18 +103,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 				return createScheduleBeforeAdapter();
 			}
 			@Override
-			public Adapter caseMoveResource(MoveResource object) {
-				return createMoveResourceAdapter();
-			}
-			@Override
-			public Adapter caseScheduleFirst(ScheduleFirst object) {
-				return createScheduleFirstAdapter();
-			}
-			@Override
-			public Adapter caseScheduleLast(ScheduleLast object) {
-				return createScheduleLastAdapter();
-			}
-			@Override
 			public Adapter caseUnschedule(Unschedule object) {
 				return createUnscheduleAdapter();
 			}
@@ -287,48 +275,6 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScheduleBeforeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.MoveResource <em>Move Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.scheduler.MoveResource
-	 * @generated
-	 */
-	public Adapter createMoveResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ScheduleFirst <em>Schedule First</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleFirst
-	 * @generated
-	 */
-	public Adapter createScheduleFirstAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.scheduler.ScheduleLast <em>Schedule Last</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.misc.common.moplaf.scheduler.ScheduleLast
-	 * @generated
-	 */
-	public Adapter createScheduleLastAdapter() {
 		return null;
 	}
 

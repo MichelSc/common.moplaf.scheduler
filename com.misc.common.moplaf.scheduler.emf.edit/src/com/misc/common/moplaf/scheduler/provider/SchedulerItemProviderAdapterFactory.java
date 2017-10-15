@@ -187,52 +187,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.ScheduleFirst} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScheduleFirstItemProvider scheduleFirstItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.ScheduleFirst}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScheduleFirstAdapter() {
-		if (scheduleFirstItemProvider == null) {
-			scheduleFirstItemProvider = new ScheduleFirstItemProvider(this);
-		}
-
-		return scheduleFirstItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.ScheduleLast} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScheduleLastItemProvider scheduleLastItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.misc.common.moplaf.scheduler.ScheduleLast}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScheduleLastAdapter() {
-		if (scheduleLastItemProvider == null) {
-			scheduleLastItemProvider = new ScheduleLastItemProvider(this);
-		}
-
-		return scheduleLastItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.misc.common.moplaf.scheduler.Unschedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,8 +313,6 @@ public class SchedulerItemProviderAdapterFactory extends SchedulerAdapterFactory
 		if (taskItemProvider != null) taskItemProvider.dispose();
 		if (scheduleAfterItemProvider != null) scheduleAfterItemProvider.dispose();
 		if (scheduleBeforeItemProvider != null) scheduleBeforeItemProvider.dispose();
-		if (scheduleFirstItemProvider != null) scheduleFirstItemProvider.dispose();
-		if (scheduleLastItemProvider != null) scheduleLastItemProvider.dispose();
 		if (unscheduleItemProvider != null) unscheduleItemProvider.dispose();
 	}
 

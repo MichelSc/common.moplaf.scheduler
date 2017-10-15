@@ -67,24 +67,6 @@ public interface SchedulerFactory extends EFactory {
 	ScheduleBefore createScheduleBefore();
 
 	/**
-	 * Returns a new object of class '<em>Schedule First</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schedule First</em>'.
-	 * @generated
-	 */
-	ScheduleFirst createScheduleFirst();
-
-	/**
-	 * Returns a new object of class '<em>Schedule Last</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schedule Last</em>'.
-	 * @generated
-	 */
-	ScheduleLast createScheduleLast();
-
-	/**
 	 * Returns a new object of class '<em>Unschedule</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

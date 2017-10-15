@@ -3,6 +3,7 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.scheduler.MoveTask;
+import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Task;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveTaskImpl#getInsertionPoint <em>Insertion Point</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.MoveTaskImpl#getResource <em>Resource</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,6 +38,16 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 	 * @ordered
 	 */
 	protected Task insertionPoint;
+
+	/**
+	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResource()
+	 * @generated
+	 * @ordered
+	 */
+	protected Resource resource;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,12 +111,53 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Resource getResource() {
+		if (resource != null && resource.eIsProxy()) {
+			InternalEObject oldResource = (InternalEObject)resource;
+			resource = (Resource)eResolveProxy(oldResource);
+			if (resource != oldResource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.MOVE_TASK__RESOURCE, oldResource, resource));
+			}
+		}
+		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Resource basicGetResource() {
+		return resource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResource(Resource newResource) {
+		Resource oldResource = resource;
+		resource = newResource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.MOVE_TASK__RESOURCE, oldResource, resource));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SchedulerPackage.MOVE_TASK__INSERTION_POINT:
 				if (resolve) return getInsertionPoint();
 				return basicGetInsertionPoint();
+			case SchedulerPackage.MOVE_TASK__RESOURCE:
+				if (resolve) return getResource();
+				return basicGetResource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,6 +172,9 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 		switch (featureID) {
 			case SchedulerPackage.MOVE_TASK__INSERTION_POINT:
 				setInsertionPoint((Task)newValue);
+				return;
+			case SchedulerPackage.MOVE_TASK__RESOURCE:
+				setResource((Resource)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,6 +191,9 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 			case SchedulerPackage.MOVE_TASK__INSERTION_POINT:
 				setInsertionPoint((Task)null);
 				return;
+			case SchedulerPackage.MOVE_TASK__RESOURCE:
+				setResource((Resource)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -149,6 +208,8 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 		switch (featureID) {
 			case SchedulerPackage.MOVE_TASK__INSERTION_POINT:
 				return insertionPoint != null;
+			case SchedulerPackage.MOVE_TASK__RESOURCE:
+				return resource != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -162,8 +223,8 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 		String feedback = super.getValidFeedback();
 		if ( feedback!=null) {
 			return feedback;
-		} else if ( this.getInsertionPoint()==null) {
-			return "No insertion point task";
+		} else if ( this.getInsertionPoint()==null || this.getResource()==null) {
+			return "No insertion point task and not Resource";
 
 		} else if ( this.getTaskToSchedule()==this.getInsertionPoint()) {
 			return "Insertion point equal to task to schedule";

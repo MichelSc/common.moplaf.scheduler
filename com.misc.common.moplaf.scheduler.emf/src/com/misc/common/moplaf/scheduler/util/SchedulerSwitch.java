@@ -130,32 +130,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SchedulerPackage.MOVE_RESOURCE: {
-				MoveResource moveResource = (MoveResource)theEObject;
-				T result = caseMoveResource(moveResource);
-				if (result == null) result = caseMoveSchedule(moveResource);
-				if (result == null) result = caseMove(moveResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerPackage.SCHEDULE_FIRST: {
-				ScheduleFirst scheduleFirst = (ScheduleFirst)theEObject;
-				T result = caseScheduleFirst(scheduleFirst);
-				if (result == null) result = caseMoveResource(scheduleFirst);
-				if (result == null) result = caseMoveSchedule(scheduleFirst);
-				if (result == null) result = caseMove(scheduleFirst);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SchedulerPackage.SCHEDULE_LAST: {
-				ScheduleLast scheduleLast = (ScheduleLast)theEObject;
-				T result = caseScheduleLast(scheduleLast);
-				if (result == null) result = caseMoveResource(scheduleLast);
-				if (result == null) result = caseMoveSchedule(scheduleLast);
-				if (result == null) result = caseMove(scheduleLast);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SchedulerPackage.UNSCHEDULE: {
 				Unschedule unschedule = (Unschedule)theEObject;
 				T result = caseUnschedule(unschedule);
@@ -315,51 +289,6 @@ public class SchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseScheduleBefore(ScheduleBefore object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Move Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Move Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMoveResource(MoveResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Schedule First</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Schedule First</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseScheduleFirst(ScheduleFirst object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Schedule Last</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Schedule Last</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseScheduleLast(ScheduleLast object) {
 		return null;
 	}
 
