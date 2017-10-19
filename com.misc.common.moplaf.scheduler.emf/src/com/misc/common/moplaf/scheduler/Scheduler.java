@@ -16,11 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedulers <em>Schedulers</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedules <em>Schedules</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getName <em>Name</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getCurrentSolutionNr <em>Current Solution Nr</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler()
@@ -29,22 +27,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Scheduler extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Schedulers</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Schedules</b></em>' containment reference list.
 	 * The list contents are of type {@link com.misc.common.moplaf.scheduler.Schedule}.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Schedule#getScheduler <em>Scheduler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Schedulers</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Schedules</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Schedulers</em>' containment reference list.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Schedulers()
+	 * @return the value of the '<em>Schedules</em>' containment reference list.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Schedules()
 	 * @see com.misc.common.moplaf.scheduler.Schedule#getScheduler
 	 * @model opposite="Scheduler" containment="true"
 	 * @generated
 	 */
-	EList<Schedule> getSchedulers();
+	EList<Schedule> getSchedules();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -99,38 +97,6 @@ public interface Scheduler extends EObject {
 	void setCurrentSolutionNr(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tasks</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tasks</em>' reference list.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Tasks()
-	 * @model
-	 * @generated
-	 */
-	EList<EObject> getTasks();
-
-	/**
-	 * Returns the value of the '<em><b>Resources</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resources</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resources</em>' reference list.
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getScheduler_Resources()
-	 * @model
-	 * @generated
-	 */
-	EList<EObject> getResources();
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -152,7 +118,7 @@ public interface Scheduler extends EObject {
 	 * @model
 	 * @generated
 	 */
-	Task constructTask(EObject task);
+	void generateTasks(Schedule schedule);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,6 +126,6 @@ public interface Scheduler extends EObject {
 	 * @model
 	 * @generated
 	 */
-	Resource constructResource(EObject resource);
+	void generateResources(Schedule schedule);
 
 } // Scheduler

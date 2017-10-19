@@ -96,7 +96,7 @@ public interface Schedule extends Solution {
 
 	/**
 	 * Returns the value of the '<em><b>Scheduler</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedulers <em>Schedulers</em>}'.
+	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedules <em>Schedules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scheduler</em>' container reference isn't clear,
@@ -106,8 +106,8 @@ public interface Schedule extends Solution {
 	 * @return the value of the '<em>Scheduler</em>' container reference.
 	 * @see #setScheduler(Scheduler)
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSchedule_Scheduler()
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedulers
-	 * @model opposite="Schedulers" transient="false"
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedules
+	 * @model opposite="Schedules" transient="false"
 	 * @generated
 	 */
 	Scheduler getScheduler();

@@ -76,7 +76,7 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 
@@ -98,7 +98,7 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
+				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
 

@@ -15,7 +15,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getSchedule <em>Schedule</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getResource <em>Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ResourceImpl#getFirstTask <em>First Task</em>}</li>
@@ -44,16 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements Resource {
-	/**
-	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResource()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject resource;
-
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -192,44 +180,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE__SCHEDULE, newSchedule, newSchedule));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject getResource() {
-		if (resource != null && resource.eIsProxy()) {
-			InternalEObject oldResource = (InternalEObject)resource;
-			resource = eResolveProxy(oldResource);
-			if (resource != oldResource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.RESOURCE__RESOURCE, oldResource, resource));
-			}
-		}
-		return resource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetResource() {
-		return resource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResource(EObject newResource) {
-		EObject oldResource = resource;
-		resource = newResource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.RESOURCE__RESOURCE, oldResource, resource));
 	}
 
 	/**
@@ -431,9 +381,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				return getSchedule();
-			case SchedulerPackage.RESOURCE__RESOURCE:
-				if (resolve) return getResource();
-				return basicGetResource();
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 				return getDescription();
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
@@ -463,9 +410,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				setSchedule((Schedule)newValue);
-				return;
-			case SchedulerPackage.RESOURCE__RESOURCE:
-				setResource((EObject)newValue);
 				return;
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
 				getScheduledTasks().clear();
@@ -498,9 +442,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				setSchedule((Schedule)null);
 				return;
-			case SchedulerPackage.RESOURCE__RESOURCE:
-				setResource((EObject)null);
-				return;
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
 				getScheduledTasks().clear();
 				return;
@@ -530,8 +471,6 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				return getSchedule() != null;
-			case SchedulerPackage.RESOURCE__RESOURCE:
-				return resource != null;
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:

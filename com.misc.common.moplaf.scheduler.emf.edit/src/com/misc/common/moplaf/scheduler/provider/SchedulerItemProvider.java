@@ -62,8 +62,6 @@ public class SchedulerItemProvider
 
 			addNamePropertyDescriptor(object);
 			addCurrentSolutionNrPropertyDescriptor(object);
-			addTasksPropertyDescriptor(object);
-			addResourcesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,50 +106,6 @@ public class SchedulerItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Tasks feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTasksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scheduler_Tasks_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scheduler_Tasks_feature", "_UI_Scheduler_type"),
-				 SchedulerPackage.Literals.SCHEDULER__TASKS,
-				 true,
-				 false,
-				 false,
-				 null,
-				 getString("_UI__10SchedulerPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Resources feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResourcesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scheduler_Resources_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scheduler_Resources_feature", "_UI_Scheduler_type"),
-				 SchedulerPackage.Literals.SCHEDULER__RESOURCES,
-				 true,
-				 false,
-				 false,
-				 null,
 				 getString("_UI__10SchedulerPropertyCategory"),
 				 null));
 	}
@@ -168,7 +122,7 @@ public class SchedulerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__SCHEDULERS);
+			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULER__SCHEDULES);
 		}
 		return childrenFeatures;
 	}
@@ -226,11 +180,9 @@ public class SchedulerItemProvider
 		switch (notification.getFeatureID(Scheduler.class)) {
 			case SchedulerPackage.SCHEDULER__NAME:
 			case SchedulerPackage.SCHEDULER__CURRENT_SOLUTION_NR:
-			case SchedulerPackage.SCHEDULER__TASKS:
-			case SchedulerPackage.SCHEDULER__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SchedulerPackage.SCHEDULER__SCHEDULERS:
+			case SchedulerPackage.SCHEDULER__SCHEDULES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,7 +202,7 @@ public class SchedulerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SchedulerPackage.Literals.SCHEDULER__SCHEDULERS,
+				(SchedulerPackage.Literals.SCHEDULER__SCHEDULES,
 				 SchedulerFactory.eINSTANCE.createSchedule()));
 	}
 

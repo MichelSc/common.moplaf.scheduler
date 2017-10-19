@@ -49,7 +49,6 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTaskPropertyDescriptor(object);
 			addNextTaskPropertyDescriptor(object);
 			addPreviousTaskPropertyDescriptor(object);
 			addScheduledResourcePropertyDescriptor(object);
@@ -57,28 +56,6 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Task feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTaskPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_Task_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_Task_feature", "_UI_Task_type"),
-				 SchedulerPackage.Literals.TASK__TASK,
-				 false,
-				 false,
-				 true,
-				 null,
-				 getString("_UI__10SchedulerPropertyCategory"),
-				 null));
 	}
 
 	/**

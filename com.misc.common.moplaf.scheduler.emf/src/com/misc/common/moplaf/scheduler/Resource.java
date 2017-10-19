@@ -6,8 +6,6 @@ import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Resource</b></em>'.
@@ -18,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getSchedule <em>Schedule</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getResource <em>Resource</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getScheduledTasks <em>Scheduled Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Resource#getFirstTask <em>First Task</em>}</li>
@@ -59,32 +56,6 @@ public interface Resource extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setSchedule(Schedule value);
-
-	/**
-	 * Returns the value of the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resource</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource</em>' reference.
-	 * @see #setResource(EObject)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getResource_Resource()
-	 * @model required="true"
-	 * @generated
-	 */
-	EObject getResource();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Resource#getResource <em>Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource</em>' reference.
-	 * @see #getResource()
-	 * @generated
-	 */
-	void setResource(EObject value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

@@ -50,7 +50,6 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResourcePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addScheduledTasksPropertyDescriptor(object);
 			addFirstTaskPropertyDescriptor(object);
@@ -59,28 +58,6 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Resource feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Resource_Resource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_Resource_feature", "_UI_Resource_type"),
-				 SchedulerPackage.Literals.RESOURCE__RESOURCE,
-				 false,
-				 false,
-				 true,
-				 null,
-				 getString("_UI__10SchedulerPropertyCategory"),
-				 null));
 	}
 
 	/**

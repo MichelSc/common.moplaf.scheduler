@@ -4,8 +4,6 @@ package com.misc.common.moplaf.scheduler;
 
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Task</b></em>'.
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.Task#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getPreviousTask <em>Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getScheduledResource <em>Scheduled Resource</em>}</li>
@@ -29,32 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Task extends ObjectWithPropagatorFunctions {
-	/**
-	 * Returns the value of the '<em><b>Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Task</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Task</em>' reference.
-	 * @see #setTask(EObject)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTask_Task()
-	 * @model required="true"
-	 * @generated
-	 */
-	EObject getTask();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Task#getTask <em>Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Task</em>' reference.
-	 * @see #getTask()
-	 * @generated
-	 */
-	void setTask(EObject value);
-
 	/**
 	 * Returns the value of the '<em><b>Next Task</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Task#getPreviousTask <em>Previous Task</em>}'.

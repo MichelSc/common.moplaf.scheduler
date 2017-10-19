@@ -2,7 +2,6 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.impl.SolutionImpl;
 import com.misc.common.moplaf.scheduler.Resource;
@@ -21,7 +20,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -205,7 +203,7 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newScheduler != null)
-				msgs = ((InternalEObject)newScheduler).eInverseAdd(this, SchedulerPackage.SCHEDULER__SCHEDULERS, Scheduler.class, msgs);
+				msgs = ((InternalEObject)newScheduler).eInverseAdd(this, SchedulerPackage.SCHEDULER__SCHEDULES, Scheduler.class, msgs);
 			msgs = basicSetScheduler(newScheduler, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -242,18 +240,10 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 		// clear everything
 		this.getTasks().clear();
 		this.getResources().clear();
-		// construct everything
+		// construct tasks and resources
 		Scheduler scheduler = this.getScheduler();
-		for ( EObject resource : scheduler.getResources()) {
-			Resource new_resource = scheduler.constructResource(resource);
-			new_resource.setResource(resource);
-			this.getResources().add(new_resource);
-		}
-		for ( EObject task : scheduler.getTasks()) {
-			Task new_task = scheduler.constructTask(task);
-			new_task.setTask(task);
-			this.getTasks().add(new_task);
-		}
+		scheduler.generateResources(this);
+		scheduler.generateTasks(this);
 		Score new_score = scheduler.constructScore();
 		this.setScore(new_score);
 	}
@@ -306,7 +296,7 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SCHEDULER__SCHEDULERS, Scheduler.class, msgs);
+				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SCHEDULER__SCHEDULES, Scheduler.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

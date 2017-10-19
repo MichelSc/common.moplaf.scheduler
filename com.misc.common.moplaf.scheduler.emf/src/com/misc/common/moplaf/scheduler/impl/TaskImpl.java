@@ -17,7 +17,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getTask <em>Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getPreviousTask <em>Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getScheduledResource <em>Scheduled Resource</em>}</li>
@@ -44,16 +42,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task {
-	/**
-	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTask()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject task;
-
 	/**
 	 * The cached value of the '{@link #getNextTask() <em>Next Task</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -131,44 +119,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	protected EClass eStaticClass() {
 		return SchedulerPackage.Literals.TASK;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject getTask() {
-		if (task != null && task.eIsProxy()) {
-			InternalEObject oldTask = (InternalEObject)task;
-			task = eResolveProxy(oldTask);
-			if (task != oldTask) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SchedulerPackage.TASK__TASK, oldTask, task));
-			}
-		}
-		return task;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetTask() {
-		return task;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTask(EObject newTask) {
-		EObject oldTask = task;
-		task = newTask;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__TASK, oldTask, task));
 	}
 
 	/**
@@ -571,9 +521,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SchedulerPackage.TASK__TASK:
-				if (resolve) return getTask();
-				return basicGetTask();
 			case SchedulerPackage.TASK__NEXT_TASK:
 				if (resolve) return getNextTask();
 				return basicGetNextTask();
@@ -601,9 +548,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SchedulerPackage.TASK__TASK:
-				setTask((EObject)newValue);
-				return;
 			case SchedulerPackage.TASK__NEXT_TASK:
 				setNextTask((Task)newValue);
 				return;
@@ -631,9 +575,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.TASK__TASK:
-				setTask((EObject)null);
-				return;
 			case SchedulerPackage.TASK__NEXT_TASK:
 				setNextTask((Task)null);
 				return;
@@ -661,8 +602,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SchedulerPackage.TASK__TASK:
-				return task != null;
 			case SchedulerPackage.TASK__NEXT_TASK:
 				return nextTask != null;
 			case SchedulerPackage.TASK__PREVIOUS_TASK:

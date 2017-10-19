@@ -72,13 +72,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Schedulers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__SCHEDULERS = 0;
+	int SCHEDULER__SCHEDULES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -99,31 +99,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__CURRENT_SOLUTION_NR = 2;
 
 	/**
-	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULER__TASKS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Resources</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEDULER__RESOURCES = 4;
-
-	/**
 	 * The number of structural features of the '<em>Scheduler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER_FEATURE_COUNT = 5;
+	int SCHEDULER_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Construct Schedule</em>' operation.
@@ -144,22 +126,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER___CONSTRUCT_SCORE = 1;
 
 	/**
-	 * The operation id for the '<em>Construct Task</em>' operation.
+	 * The operation id for the '<em>Generate Tasks</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___CONSTRUCT_TASK__EOBJECT = 2;
+	int SCHEDULER___GENERATE_TASKS__SCHEDULE = 2;
 
 	/**
-	 * The operation id for the '<em>Construct Resource</em>' operation.
+	 * The operation id for the '<em>Generate Resources</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = 3;
+	int SCHEDULER___GENERATE_RESOURCES__SCHEDULE = 3;
 
 	/**
 	 * The number of operations of the '<em>Scheduler</em>' class.
@@ -344,22 +326,13 @@ public interface SchedulerPackage extends EPackage {
 	int RESOURCE__SCHEDULE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE__RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
+	int RESOURCE__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Tasks</b></em>' reference list.
@@ -368,7 +341,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
+	int RESOURCE__SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>First Task</b></em>' reference.
@@ -377,7 +350,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
+	int RESOURCE__FIRST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Last Task</b></em>' reference.
@@ -386,7 +359,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
+	int RESOURCE__LAST_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Nr Scheduled Tasks</b></em>' attribute.
@@ -395,7 +368,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+	int RESOURCE__NR_SCHEDULED_TASKS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -404,7 +377,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
+	int RESOURCE__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
@@ -413,7 +386,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 8;
+	int RESOURCE_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -471,22 +444,13 @@ public interface SchedulerPackage extends EPackage {
 	int TASK__PROPAGATOR_FUNCTIONS = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS__PROPAGATOR_FUNCTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Next Task</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__NEXT_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
+	int TASK__NEXT_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Previous Task</b></em>' reference.
@@ -495,7 +459,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__PREVIOUS_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
+	int TASK__PREVIOUS_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Resource</b></em>' reference.
@@ -504,7 +468,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__SCHEDULED_RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
+	int TASK__SCHEDULED_RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -513,7 +477,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
+	int TASK__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Schedule</b></em>' container reference.
@@ -522,7 +486,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__SCHEDULE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
+	int TASK__SCHEDULE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -531,7 +495,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+	int TASK__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Task</em>' class.
@@ -540,7 +504,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
+	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1395,15 +1359,15 @@ public interface SchedulerPackage extends EPackage {
 	EClass getScheduler();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedulers <em>Schedulers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedules <em>Schedules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Schedulers</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedulers()
+	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedules()
 	 * @see #getScheduler()
 	 * @generated
 	 */
-	EReference getScheduler_Schedulers();
+	EReference getScheduler_Schedules();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Scheduler#getName <em>Name</em>}'.
@@ -1428,28 +1392,6 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getScheduler_CurrentSolutionNr();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getTasks <em>Tasks</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Tasks</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getTasks()
-	 * @see #getScheduler()
-	 * @generated
-	 */
-	EReference getScheduler_Tasks();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.misc.common.moplaf.scheduler.Scheduler#getResources <em>Resources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Resources</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getResources()
-	 * @see #getScheduler()
-	 * @generated
-	 */
-	EReference getScheduler_Resources();
-
-	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructSchedule() <em>Construct Schedule</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1470,24 +1412,24 @@ public interface SchedulerPackage extends EPackage {
 	EOperation getScheduler__ConstructScore();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructTask(org.eclipse.emf.ecore.EObject) <em>Construct Task</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#generateTasks(com.misc.common.moplaf.scheduler.Schedule) <em>Generate Tasks</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Construct Task</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#constructTask(org.eclipse.emf.ecore.EObject)
+	 * @return the meta object for the '<em>Generate Tasks</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#generateTasks(com.misc.common.moplaf.scheduler.Schedule)
 	 * @generated
 	 */
-	EOperation getScheduler__ConstructTask__EObject();
+	EOperation getScheduler__GenerateTasks__Schedule();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructResource(org.eclipse.emf.ecore.EObject) <em>Construct Resource</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#generateResources(com.misc.common.moplaf.scheduler.Schedule) <em>Generate Resources</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Construct Resource</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#constructResource(org.eclipse.emf.ecore.EObject)
+	 * @return the meta object for the '<em>Generate Resources</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Scheduler#generateResources(com.misc.common.moplaf.scheduler.Schedule)
 	 * @generated
 	 */
-	EOperation getScheduler__ConstructResource__EObject();
+	EOperation getScheduler__GenerateResources__Schedule();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.Schedule <em>Schedule</em>}'.
@@ -1586,17 +1528,6 @@ public interface SchedulerPackage extends EPackage {
 	EReference getResource_Schedule();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.Resource#getResource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Resource</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Resource#getResource()
-	 * @see #getResource()
-	 * @generated
-	 */
-	EReference getResource_Resource();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Resource#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1671,17 +1602,6 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTask();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.Task#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Task</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Task#getTask()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_Task();
 
 	/**
 	 * Returns the meta object for the reference '{@link com.misc.common.moplaf.scheduler.Task#getNextTask <em>Next Task</em>}'.
@@ -1896,12 +1816,12 @@ public interface SchedulerPackage extends EPackage {
 		EClass SCHEDULER = eINSTANCE.getScheduler();
 
 		/**
-		 * The meta object literal for the '<em><b>Schedulers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHEDULER__SCHEDULERS = eINSTANCE.getScheduler_Schedulers();
+		EReference SCHEDULER__SCHEDULES = eINSTANCE.getScheduler_Schedules();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1920,22 +1840,6 @@ public interface SchedulerPackage extends EPackage {
 		EAttribute SCHEDULER__CURRENT_SOLUTION_NR = eINSTANCE.getScheduler_CurrentSolutionNr();
 
 		/**
-		 * The meta object literal for the '<em><b>Tasks</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEDULER__TASKS = eINSTANCE.getScheduler_Tasks();
-
-		/**
-		 * The meta object literal for the '<em><b>Resources</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEDULER__RESOURCES = eINSTANCE.getScheduler_Resources();
-
-		/**
 		 * The meta object literal for the '<em><b>Construct Schedule</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1952,20 +1856,20 @@ public interface SchedulerPackage extends EPackage {
 		EOperation SCHEDULER___CONSTRUCT_SCORE = eINSTANCE.getScheduler__ConstructScore();
 
 		/**
-		 * The meta object literal for the '<em><b>Construct Task</b></em>' operation.
+		 * The meta object literal for the '<em><b>Generate Tasks</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SCHEDULER___CONSTRUCT_TASK__EOBJECT = eINSTANCE.getScheduler__ConstructTask__EObject();
+		EOperation SCHEDULER___GENERATE_TASKS__SCHEDULE = eINSTANCE.getScheduler__GenerateTasks__Schedule();
 
 		/**
-		 * The meta object literal for the '<em><b>Construct Resource</b></em>' operation.
+		 * The meta object literal for the '<em><b>Generate Resources</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SCHEDULER___CONSTRUCT_RESOURCE__EOBJECT = eINSTANCE.getScheduler__ConstructResource__EObject();
+		EOperation SCHEDULER___GENERATE_RESOURCES__SCHEDULE = eINSTANCE.getScheduler__GenerateResources__Schedule();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl <em>Schedule</em>}' class.
@@ -2044,14 +1948,6 @@ public interface SchedulerPackage extends EPackage {
 		EReference RESOURCE__SCHEDULE = eINSTANCE.getResource_Schedule();
 
 		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESOURCE__RESOURCE = eINSTANCE.getResource_Resource();
-
-		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2108,14 +2004,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TASK = eINSTANCE.getTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__TASK = eINSTANCE.getTask_Task();
 
 		/**
 		 * The meta object literal for the '<em><b>Next Task</b></em>' reference feature.
