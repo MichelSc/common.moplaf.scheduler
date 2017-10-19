@@ -223,7 +223,7 @@ public abstract class MoveTaskImpl extends MoveScheduleImpl implements MoveTask 
 		String feedback = super.getValidFeedback();
 		if ( feedback!=null) {
 			return feedback;
-		} else if ( this.getInsertionPoint()==null || this.getResource()==null) {
+		} else if ( this.getInsertionPoint()==null && this.getResource()==null) {
 			return "No insertion point task and not Resource";
 
 		} else if ( this.getTaskToSchedule()==this.getInsertionPoint()) {
