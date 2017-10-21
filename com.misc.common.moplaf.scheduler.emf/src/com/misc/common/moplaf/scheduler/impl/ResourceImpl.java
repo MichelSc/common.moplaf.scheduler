@@ -3,8 +3,6 @@
 package com.misc.common.moplaf.scheduler.impl;
 
 import com.misc.common.moplaf.common.util.EObjectListDerived;
-import com.misc.common.moplaf.localsearch.Plugin;
-import com.misc.common.moplaf.localsearch.Solution;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 
 import com.misc.common.moplaf.scheduler.Resource;

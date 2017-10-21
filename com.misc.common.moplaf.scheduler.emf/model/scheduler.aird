@@ -285,10 +285,10 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xAD2pag1Eeep39QvNzSKCA" x="23" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_xAD2pqg1Eeep39QvNzSKCA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xAD2p6g1Eeep39QvNzSKCA" x="-3" y="41"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xAD2p6g1Eeep39QvNzSKCA" x="17" y="-22"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_xAD2qKg1Eeep39QvNzSKCA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xAD2qag1Eeep39QvNzSKCA" x="21" y="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xAD2qag1Eeep39QvNzSKCA" x="32" y="-66"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_xAD2oag1Eeep39QvNzSKCA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_xAD2oqg1Eeep39QvNzSKCA" fontName="Segoe UI" fontHeight="8"/>

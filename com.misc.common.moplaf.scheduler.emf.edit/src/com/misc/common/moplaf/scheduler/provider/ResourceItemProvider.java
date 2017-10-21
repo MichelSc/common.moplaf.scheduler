@@ -253,7 +253,6 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public void notifyChanged(Notification notification) {
@@ -263,12 +262,14 @@ public class ResourceItemProvider extends ObjectWithPropagatorFunctionsItemProvi
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 			case SchedulerPackage.RESOURCE__FIRST_TASK:
 			case SchedulerPackage.RESOURCE__LAST_TASK:
-			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
 			case SchedulerPackage.RESOURCE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+			case SchedulerPackage.RESOURCE__NR_SCHEDULED_TASKS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, true));
 				return;
 		}
 		super.notifyChanged(notification);
