@@ -56,7 +56,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case SchedulerPackage.SCHEDULE: return createSchedule();
 			case SchedulerPackage.RESOURCE: return createResource();
 			case SchedulerPackage.TASK: return createTask();
 			case SchedulerPackage.SCHEDULE_AFTER: return createScheduleAfter();
@@ -65,16 +64,6 @@ public class SchedulerFactoryImpl extends EFactoryImpl implements SchedulerFacto
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Schedule createSchedule() {
-		ScheduleImpl schedule = new ScheduleImpl();
-		return schedule;
 	}
 
 	/**

@@ -173,16 +173,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getScheduler_Schedules() {
-		return (EReference)schedulerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getScheduler__ConstructSchedule() {
-		return schedulerEClass.getEOperations().get(0);
+		return (EReference)schedulerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -191,7 +182,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EOperation getScheduler__ConstructScore() {
-		return schedulerEClass.getEOperations().get(1);
+		return schedulerEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -200,7 +191,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EOperation getScheduler__GenerateTasks__Schedule() {
-		return schedulerEClass.getEOperations().get(2);
+		return schedulerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -209,7 +200,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EOperation getScheduler__GenerateResources__Schedule() {
-		return schedulerEClass.getEOperations().get(3);
+		return schedulerEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -244,15 +235,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSchedule_SolutionNr() {
-		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getSchedule_Scheduler() {
 		return (EReference)scheduleEClass.getEStructuralFeatures().get(3);
 	}
@@ -263,7 +245,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getSchedule_NrScheduledTasks() {
-		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -488,16 +470,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EAttribute getScheduler_Name() {
-		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getScheduler_CurrentSolutionNr() {
-		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -556,10 +529,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		// Create classes and their features
 		schedulerEClass = createEClass(SCHEDULER);
-		createEReference(schedulerEClass, SCHEDULER__SCHEDULES);
 		createEAttribute(schedulerEClass, SCHEDULER__NAME);
-		createEAttribute(schedulerEClass, SCHEDULER__CURRENT_SOLUTION_NR);
-		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_SCHEDULE);
+		createEReference(schedulerEClass, SCHEDULER__SCHEDULES);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_SCORE);
 		createEOperation(schedulerEClass, SCHEDULER___GENERATE_TASKS__SCHEDULE);
 		createEOperation(schedulerEClass, SCHEDULER___GENERATE_RESOURCES__SCHEDULE);
@@ -567,9 +538,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		scheduleEClass = createEClass(SCHEDULE);
 		createEReference(scheduleEClass, SCHEDULE__TASKS);
 		createEReference(scheduleEClass, SCHEDULE__RESOURCES);
-		createEAttribute(scheduleEClass, SCHEDULE__SOLUTION_NR);
-		createEReference(scheduleEClass, SCHEDULE__SCHEDULER);
 		createEAttribute(scheduleEClass, SCHEDULE__NR_SCHEDULED_TASKS);
+		createEReference(scheduleEClass, SCHEDULE__SCHEDULER);
 		createEOperation(scheduleEClass, SCHEDULE___INITIALIZE);
 
 		resourceEClass = createEClass(RESOURCE);
@@ -638,6 +608,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		schedulerEClass.getESuperTypes().add(theLocalSearchPackage.getStrategy());
 		scheduleEClass.getESuperTypes().add(theLocalSearchPackage.getSolution());
 		resourceEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
 		taskEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctions());
@@ -649,11 +620,8 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScheduler_Schedules(), this.getSchedule(), this.getSchedule_Scheduler(), "Schedules", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScheduler_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getScheduler_CurrentSolutionNr(), ecorePackage.getEInt(), "CurrentSolutionNr", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getScheduler__ConstructSchedule(), this.getSchedule(), "constructSchedule", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEReference(getScheduler_Schedules(), this.getSchedule(), null, "Schedules", null, 0, -1, Scheduler.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getScheduler__ConstructScore(), theLocalSearchPackage.getScore(), "constructScore", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -663,12 +631,11 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		op = initEOperation(getScheduler__GenerateResources__Schedule(), null, "generateResources", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getSchedule(), "schedule", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(scheduleEClass, Schedule.class, "Schedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(scheduleEClass, Schedule.class, "Schedule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSchedule_Tasks(), this.getTask(), this.getTask_Schedule(), "Tasks", null, 0, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchedule_Resources(), this.getResource(), this.getResource_Schedule(), "Resources", null, 0, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSchedule_SolutionNr(), ecorePackage.getEInt(), "SolutionNr", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSchedule_Scheduler(), this.getScheduler(), this.getScheduler_Schedules(), "Scheduler", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSchedule_NrScheduledTasks(), ecorePackage.getEInt(), "NrScheduledTasks", null, 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSchedule_Scheduler(), this.getScheduler(), null, "Scheduler", null, 1, 1, Schedule.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getSchedule__Initialize(), null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 

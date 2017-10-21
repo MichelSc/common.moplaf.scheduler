@@ -4,6 +4,7 @@ package com.misc.common.moplaf.scheduler.util;
 
 import com.misc.common.moplaf.localsearch.Move;
 import com.misc.common.moplaf.localsearch.Solution;
+import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.scheduler.*;
 
@@ -72,6 +73,7 @@ public class SchedulerSwitch<T> extends Switch<T> {
 			case SchedulerPackage.SCHEDULER: {
 				Scheduler scheduler = (Scheduler)theEObject;
 				T result = caseScheduler(scheduler);
+				if (result == null) result = caseStrategy(scheduler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -304,6 +306,21 @@ public class SchedulerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUnschedule(Unschedule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strategy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strategy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrategy(Strategy object) {
 		return null;
 	}
 

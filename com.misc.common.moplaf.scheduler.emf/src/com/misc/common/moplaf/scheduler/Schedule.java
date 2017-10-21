@@ -22,13 +22,12 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getSolutionNr <em>Solution Nr</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getScheduler <em>Scheduler</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Schedule#getScheduler <em>Scheduler</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSchedule()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Schedule extends Solution {
@@ -69,58 +68,19 @@ public interface Schedule extends Solution {
 	EList<Resource> getResources();
 
 	/**
-	 * Returns the value of the '<em><b>Solution Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Solution Nr</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Solution Nr</em>' attribute.
-	 * @see #setSolutionNr(int)
-	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSchedule_SolutionNr()
-	 * @model
-	 * @generated
-	 */
-	int getSolutionNr();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Schedule#getSolutionNr <em>Solution Nr</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Solution Nr</em>' attribute.
-	 * @see #getSolutionNr()
-	 * @generated
-	 */
-	void setSolutionNr(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Scheduler</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link com.misc.common.moplaf.scheduler.Scheduler#getSchedules <em>Schedules</em>}'.
+	 * Returns the value of the '<em><b>Scheduler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scheduler</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scheduler</em>' container reference.
-	 * @see #setScheduler(Scheduler)
+	 * @return the value of the '<em>Scheduler</em>' reference.
 	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getSchedule_Scheduler()
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getSchedules
-	 * @model opposite="Schedules" transient="false"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	Scheduler getScheduler();
-
-	/**
-	 * Sets the value of the '{@link com.misc.common.moplaf.scheduler.Schedule#getScheduler <em>Scheduler</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scheduler</em>' container reference.
-	 * @see #getScheduler()
-	 * @generated
-	 */
-	void setScheduler(Scheduler value);
 
 	/**
 	 * Returns the value of the '<em><b>Nr Scheduled Tasks</b></em>' attribute.

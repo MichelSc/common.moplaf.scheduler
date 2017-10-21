@@ -9,10 +9,8 @@
   <genPackages prefix="Scheduler" basePackage="com.misc.common.moplaf" disposableProviderFactory="true"
       ecorePackage="scheduler.ecore#/">
     <genClasses ecoreClass="scheduler.ecore#//Scheduler">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Schedules"/>
       <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/Name"/>
-      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/CurrentSolutionNr"/>
-      <genOperations ecoreOperation="scheduler.ecore#//Scheduler/constructSchedule"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Schedules"/>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/constructScore"/>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/generateTasks">
         <genParameters ecoreParameter="scheduler.ecore#//Scheduler/generateTasks/schedule"/>
@@ -24,9 +22,8 @@
     <genClasses ecoreClass="scheduler.ecore#//Schedule">
       <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Tasks"/>
       <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Resources"/>
-      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Schedule/SolutionNr"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Scheduler"/>
       <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Schedule/NrScheduledTasks"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Scheduler"/>
       <genOperations ecoreOperation="scheduler.ecore#//Schedule/initialize"/>
     </genClasses>
     <genClasses ecoreClass="scheduler.ecore#//Resource">

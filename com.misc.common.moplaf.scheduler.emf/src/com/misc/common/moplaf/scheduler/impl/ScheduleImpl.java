@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.localsearch.Plugin;
 import com.misc.common.moplaf.localsearch.Score;
 import com.misc.common.moplaf.localsearch.impl.SolutionImpl;
 import com.misc.common.moplaf.scheduler.Resource;
@@ -20,12 +21,12 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -38,14 +39,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getResources <em>Resources</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getSolutionNr <em>Solution Nr</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getScheduler <em>Scheduler</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getNrScheduledTasks <em>Nr Scheduled Tasks</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.ScheduleImpl#getScheduler <em>Scheduler</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ScheduleImpl extends SolutionImpl implements Schedule {
+public abstract class ScheduleImpl extends SolutionImpl implements Schedule {
 	/**
 	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -65,26 +65,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	 * @ordered
 	 */
 	protected EList<Resource> resources;
-
-	/**
-	 * The default value of the '{@link #getSolutionNr() <em>Solution Nr</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSolutionNr()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int SOLUTION_NR_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getSolutionNr() <em>Solution Nr</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSolutionNr()
-	 * @generated
-	 * @ordered
-	 */
-	protected int solutionNr = SOLUTION_NR_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNrScheduledTasks() <em>Nr Scheduled Tasks</em>}' attribute.
@@ -154,61 +134,25 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getSolutionNr() {
-		return solutionNr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSolutionNr(int newSolutionNr) {
-		int oldSolutionNr = solutionNr;
-		solutionNr = newSolutionNr;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SCHEDULE__SOLUTION_NR, oldSolutionNr, solutionNr));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Scheduler getScheduler() {
-		if (eContainerFeatureID() != SchedulerPackage.SCHEDULE__SCHEDULER) return null;
-		return (Scheduler)eInternalContainer();
+		Scheduler scheduler = basicGetScheduler();
+		return scheduler != null && scheduler.eIsProxy() ? (Scheduler)eResolveProxy((InternalEObject)scheduler) : scheduler;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
-	public NotificationChain basicSetScheduler(Scheduler newScheduler, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newScheduler, SchedulerPackage.SCHEDULE__SCHEDULER, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setScheduler(Scheduler newScheduler) {
-		if (newScheduler != eInternalContainer() || (eContainerFeatureID() != SchedulerPackage.SCHEDULE__SCHEDULER && newScheduler != null)) {
-			if (EcoreUtil.isAncestor(this, newScheduler))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newScheduler != null)
-				msgs = ((InternalEObject)newScheduler).eInverseAdd(this, SchedulerPackage.SCHEDULER__SCHEDULES, Scheduler.class, msgs);
-			msgs = basicSetScheduler(newScheduler, msgs);
-			if (msgs != null) msgs.dispatch();
+	public Scheduler basicGetScheduler() {
+		EObject container = this.eContainer();
+		if ( container instanceof Scheduler ) {
+			return (Scheduler)container;
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.SCHEDULE__SCHEDULER, newScheduler, newScheduler));
+		String logMessage = String.format("The owner of the Scheduler %s must be a Scheduler and not %s",
+                this.getClass().getName(),
+                container == null ? "null" : container.getClass().getName());
+		Plugin.INSTANCE.logError(logMessage);
+		return null;
 	}
 
 	/**
@@ -261,10 +205,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTasks()).basicAdd(otherEnd, msgs);
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResources()).basicAdd(otherEnd, msgs);
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetScheduler((Scheduler)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -281,24 +221,8 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 				return ((InternalEList<?>)getTasks()).basicRemove(otherEnd, msgs);
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				return basicSetScheduler(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				return eInternalContainer().eInverseRemove(this, SchedulerPackage.SCHEDULER__SCHEDULES, Scheduler.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -313,12 +237,11 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 				return getTasks();
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				return getResources();
-			case SchedulerPackage.SCHEDULE__SOLUTION_NR:
-				return getSolutionNr();
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				return getScheduler();
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				return getNrScheduledTasks();
+			case SchedulerPackage.SCHEDULE__SCHEDULER:
+				if (resolve) return getScheduler();
+				return basicGetScheduler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -339,12 +262,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				getResources().clear();
 				getResources().addAll((Collection<? extends Resource>)newValue);
-				return;
-			case SchedulerPackage.SCHEDULE__SOLUTION_NR:
-				setSolutionNr((Integer)newValue);
-				return;
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				setScheduler((Scheduler)newValue);
 				return;
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				setNrScheduledTasks((Integer)newValue);
@@ -367,12 +284,6 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				getResources().clear();
 				return;
-			case SchedulerPackage.SCHEDULE__SOLUTION_NR:
-				setSolutionNr(SOLUTION_NR_EDEFAULT);
-				return;
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				setScheduler((Scheduler)null);
-				return;
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				setNrScheduledTasks(NR_SCHEDULED_TASKS_EDEFAULT);
 				return;
@@ -392,12 +303,10 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 				return tasks != null && !tasks.isEmpty();
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				return resources != null && !resources.isEmpty();
-			case SchedulerPackage.SCHEDULE__SOLUTION_NR:
-				return solutionNr != SOLUTION_NR_EDEFAULT;
-			case SchedulerPackage.SCHEDULE__SCHEDULER:
-				return getScheduler() != null;
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				return nrScheduledTasks != NR_SCHEDULED_TASKS_EDEFAULT;
+			case SchedulerPackage.SCHEDULE__SCHEDULER:
+				return basicGetScheduler() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -427,9 +336,7 @@ public class ScheduleImpl extends SolutionImpl implements Schedule {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (SolutionNr: ");
-		result.append(solutionNr);
-		result.append(", NrScheduledTasks: ");
+		result.append(" (NrScheduledTasks: ");
 		result.append(nrScheduledTasks);
 		result.append(')');
 		return result.toString();

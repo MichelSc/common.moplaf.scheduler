@@ -4,6 +4,7 @@ package com.misc.common.moplaf.scheduler.util;
 
 import com.misc.common.moplaf.localsearch.Move;
 import com.misc.common.moplaf.localsearch.Solution;
+import com.misc.common.moplaf.localsearch.Strategy;
 import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
 import com.misc.common.moplaf.scheduler.*;
 
@@ -105,6 +106,10 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUnschedule(Unschedule object) {
 				return createUnscheduleAdapter();
+			}
+			@Override
+			public Adapter caseStrategy(Strategy object) {
+				return createStrategyAdapter();
 			}
 			@Override
 			public Adapter caseObjectWithPropagatorFunctions(ObjectWithPropagatorFunctions object) {
@@ -289,6 +294,20 @@ public class SchedulerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUnscheduleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.localsearch.Strategy <em>Strategy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.localsearch.Strategy
+	 * @generated
+	 */
+	public Adapter createStrategyAdapter() {
 		return null;
 	}
 
