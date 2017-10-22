@@ -172,11 +172,10 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 	 * This returns Task.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Task"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/barcode.png"));
 	}
 
 	/**

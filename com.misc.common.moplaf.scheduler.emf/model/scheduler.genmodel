@@ -8,7 +8,7 @@
   <foreignModel>scheduler.ecore</foreignModel>
   <genPackages prefix="Scheduler" basePackage="com.misc.common.moplaf" disposableProviderFactory="true"
       ecorePackage="scheduler.ecore#/">
-    <genClasses ecoreClass="scheduler.ecore#//Scheduler">
+    <genClasses image="false" ecoreClass="scheduler.ecore#//Scheduler">
       <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/Name"/>
       <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Schedules"/>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/constructScore"/>
@@ -19,7 +19,7 @@
         <genParameters ecoreParameter="scheduler.ecore#//Scheduler/generateResources/schedule"/>
       </genOperations>
     </genClasses>
-    <genClasses ecoreClass="scheduler.ecore#//Schedule">
+    <genClasses image="false" ecoreClass="scheduler.ecore#//Schedule">
       <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Tasks"/>
       <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Schedule/Resources"/>
       <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Schedule/NrScheduledTasks"/>
@@ -69,8 +69,8 @@
           ecoreFeature="ecore:EReference scheduler.ecore#//MoveTask/InsertionPoint"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//MoveTask/Resource"/>
     </genClasses>
-    <genClasses ecoreClass="scheduler.ecore#//ScheduleAfter" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description"/>
-    <genClasses ecoreClass="scheduler.ecore#//ScheduleBefore"/>
-    <genClasses ecoreClass="scheduler.ecore#//Unschedule" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description"/>
+    <genClasses image="false" ecoreClass="scheduler.ecore#//ScheduleAfter" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description"/>
+    <genClasses image="false" ecoreClass="scheduler.ecore#//ScheduleBefore"/>
+    <genClasses image="false" ecoreClass="scheduler.ecore#//Unschedule" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description"/>
   </genPackages>
 </genmodel:GenModel>
