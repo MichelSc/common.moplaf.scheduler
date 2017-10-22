@@ -91,7 +91,6 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULE__TASKS);
 			childrenFeatures.add(SchedulerPackage.Literals.SCHEDULE__RESOURCES);
 		}
 		return childrenFeatures;
@@ -135,10 +134,10 @@ public class ScheduleItemProvider extends SolutionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Schedule.class)) {
+			case SchedulerPackage.SCHEDULE__TASKS:
 			case SchedulerPackage.SCHEDULE__NR_SCHEDULED_TASKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SchedulerPackage.SCHEDULE__TASKS:
 			case SchedulerPackage.SCHEDULE__RESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
