@@ -62,10 +62,6 @@ public class ScheduleAfterImpl extends MoveTaskImpl implements ScheduleAfter {
 	                           ? this.getResource()
 	                           : to_be_task_before.getScheduledResource();
 			
-		// association previous next
-		task.setPreviousNext(tobe_resource, to_be_task_before, to_be_task_after);
-
-		// reference to scheduled resource
-		task.scheduleResource(tobe_resource);
+		task.schedule(tobe_resource, to_be_task_before, to_be_task_after);
 	}
 } //ScheduleAfterImpl

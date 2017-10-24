@@ -597,31 +597,22 @@ public interface SchedulerPackage extends EPackage {
 	int TASK___ADD_PROPAGATOR_FUNCTIONS__STRING = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS___ADD_PROPAGATOR_FUNCTIONS__STRING;
 
 	/**
-	 * The operation id for the '<em>Unset Previous Next</em>' operation.
+	 * The operation id for the '<em>Schedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK___UNSET_PREVIOUS_NEXT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
+	int TASK___SCHEDULE__RESOURCE_TASK_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Set Previous Next</em>' operation.
+	 * The operation id for the '<em>Unschedule</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Schedule Resource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK___SCHEDULE_RESOURCE__RESOURCE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
+	int TASK___UNSCHEDULE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -630,7 +621,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 3;
+	int TASK_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link com.misc.common.moplaf.scheduler.impl.MoveScheduleImpl <em>Move Schedule</em>}' class.
@@ -688,6 +679,15 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE__DESCRIPTION = LocalSearchPackage.MOVE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__VALID = LocalSearchPackage.MOVE__VALID;
+
+	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -715,13 +715,13 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK = LocalSearchPackage.MOVE__UNDO_ENABLED_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Enabled Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_SCHEDULE__VALID = LocalSearchPackage.MOVE__VALID;
+	int MOVE_SCHEDULE__SELECT_ENABLED_FEEDBACK = LocalSearchPackage.MOVE__SELECT_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Current</b></em>' attribute.
@@ -833,6 +833,15 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK__DESCRIPTION = MOVE_SCHEDULE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__VALID = MOVE_SCHEDULE__VALID;
+
+	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -860,13 +869,13 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_TASK__UNDO_ENABLED_FEEDBACK = MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Enabled Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOVE_TASK__VALID = MOVE_SCHEDULE__VALID;
+	int MOVE_TASK__SELECT_ENABLED_FEEDBACK = MOVE_SCHEDULE__SELECT_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Current</b></em>' attribute.
@@ -996,6 +1005,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER__DESCRIPTION = MOVE_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__VALID = MOVE_TASK__VALID;
+
+	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1023,13 +1041,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER__UNDO_ENABLED_FEEDBACK = MOVE_TASK__UNDO_ENABLED_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Enabled Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_AFTER__VALID = MOVE_TASK__VALID;
+	int SCHEDULE_AFTER__SELECT_ENABLED_FEEDBACK = MOVE_TASK__SELECT_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Current</b></em>' attribute.
@@ -1159,6 +1177,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__DESCRIPTION = MOVE_TASK__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__VALID = MOVE_TASK__VALID;
+
+	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1186,13 +1213,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__UNDO_ENABLED_FEEDBACK = MOVE_TASK__UNDO_ENABLED_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Enabled Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_BEFORE__VALID = MOVE_TASK__VALID;
+	int SCHEDULE_BEFORE__SELECT_ENABLED_FEEDBACK = MOVE_TASK__SELECT_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Current</b></em>' attribute.
@@ -1322,6 +1349,15 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE__DESCRIPTION = MOVE_SCHEDULE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__VALID = MOVE_SCHEDULE__VALID;
+
+	/**
 	 * The feature id for the '<em><b>Valid Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1349,13 +1385,13 @@ public interface SchedulerPackage extends EPackage {
 	int UNSCHEDULE__UNDO_ENABLED_FEEDBACK = MOVE_SCHEDULE__UNDO_ENABLED_FEEDBACK;
 
 	/**
-	 * The feature id for the '<em><b>Valid</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Enabled Feedback</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNSCHEDULE__VALID = MOVE_SCHEDULE__VALID;
+	int UNSCHEDULE__SELECT_ENABLED_FEEDBACK = MOVE_SCHEDULE__SELECT_ENABLED_FEEDBACK;
 
 	/**
 	 * The feature id for the '<em><b>Current</b></em>' attribute.
@@ -1701,34 +1737,24 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getTask_Name();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Task#unsetPreviousNext() <em>Unset Previous Next</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Task#schedule(com.misc.common.moplaf.scheduler.Resource, com.misc.common.moplaf.scheduler.Task, com.misc.common.moplaf.scheduler.Task) <em>Schedule</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Unset Previous Next</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Task#unsetPreviousNext()
+	 * @return the meta object for the '<em>Schedule</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Task#schedule(com.misc.common.moplaf.scheduler.Resource, com.misc.common.moplaf.scheduler.Task, com.misc.common.moplaf.scheduler.Task)
 	 * @generated
 	 */
-	EOperation getTask__UnsetPreviousNext();
+	EOperation getTask__Schedule__Resource_Task_Task();
 
 	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Task#setPreviousNext(com.misc.common.moplaf.scheduler.Resource, com.misc.common.moplaf.scheduler.Task, com.misc.common.moplaf.scheduler.Task) <em>Set Previous Next</em>}' operation.
+	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Task#unschedule() <em>Unschedule</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Previous Next</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Task#setPreviousNext(com.misc.common.moplaf.scheduler.Resource, com.misc.common.moplaf.scheduler.Task, com.misc.common.moplaf.scheduler.Task)
+	 * @return the meta object for the '<em>Unschedule</em>' operation.
+	 * @see com.misc.common.moplaf.scheduler.Task#unschedule()
 	 * @generated
 	 */
-	EOperation getTask__SetPreviousNext__Resource_Task_Task();
-
-	/**
-	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Task#scheduleResource(com.misc.common.moplaf.scheduler.Resource) <em>Schedule Resource</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Schedule Resource</em>' operation.
-	 * @see com.misc.common.moplaf.scheduler.Task#scheduleResource(com.misc.common.moplaf.scheduler.Resource)
-	 * @generated
-	 */
-	EOperation getTask__ScheduleResource__Resource();
+	EOperation getTask__Unschedule();
 
 	/**
 	 * Returns the meta object for class '{@link com.misc.common.moplaf.scheduler.MoveSchedule <em>Move Schedule</em>}'.
@@ -2061,28 +2087,20 @@ public interface SchedulerPackage extends EPackage {
 		EAttribute TASK__NAME = eINSTANCE.getTask_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Unset Previous Next</b></em>' operation.
+		 * The meta object literal for the '<em><b>Schedule</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TASK___UNSET_PREVIOUS_NEXT = eINSTANCE.getTask__UnsetPreviousNext();
+		EOperation TASK___SCHEDULE__RESOURCE_TASK_TASK = eINSTANCE.getTask__Schedule__Resource_Task_Task();
 
 		/**
-		 * The meta object literal for the '<em><b>Set Previous Next</b></em>' operation.
+		 * The meta object literal for the '<em><b>Unschedule</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK = eINSTANCE.getTask__SetPreviousNext__Resource_Task_Task();
-
-		/**
-		 * The meta object literal for the '<em><b>Schedule Resource</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TASK___SCHEDULE_RESOURCE__RESOURCE = eINSTANCE.getTask__ScheduleResource__Resource();
+		EOperation TASK___UNSCHEDULE = eINSTANCE.getTask__Unschedule();
 
 		/**
 		 * The meta object literal for the '{@link com.misc.common.moplaf.scheduler.impl.MoveScheduleImpl <em>Move Schedule</em>}' class.

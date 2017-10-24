@@ -71,12 +71,7 @@ public class UnscheduleImpl extends MoveScheduleImpl implements Unschedule {
 		if ( scheduled_resource==null) {
 		}
 
-		// association previous next
-		task.unsetPreviousNext();
-
-		// reference to scheduled resource
-		task.scheduleResource(null);
-
+		task.unschedule();
 	}
 
 } //UnscheduleImpl

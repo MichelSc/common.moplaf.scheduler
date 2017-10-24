@@ -37,27 +37,25 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledTasks" upperBound="-1"
-        eType="#//Task" changeable="false" volatile="true" transient="true" derived="true"/>
+        eType="#//Task" eOpposite="#//Task/ScheduledResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="FirstTask" eType="#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="LastTask" eType="#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="NrScheduledTasks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="../../com.misc.common.moplaf.propagator2/model/propagator.ecore#//ObjectWithPropagatorFunctions">
-    <eOperations name="unsetPreviousNext"/>
-    <eOperations name="setPreviousNext">
+    <eOperations name="schedule">
       <eParameters name="resource" eType="#//Resource"/>
       <eParameters name="previous" eType="#//Task"/>
       <eParameters name="next" eType="#//Task"/>
     </eOperations>
-    <eOperations name="scheduleResource">
-      <eParameters name="resource" eType="#//Resource"/>
-    </eOperations>
+    <eOperations name="unschedule"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="NextTask" eType="#//Task"
         eOpposite="#//Task/PreviousTask"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="PreviousTask" eType="#//Task"
         eOpposite="#//Task/NextTask"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ScheduledResource" eType="#//Resource"
+        eOpposite="#//Resource/ScheduledTasks"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Schedule" lowerBound="1"

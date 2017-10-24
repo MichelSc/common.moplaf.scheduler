@@ -272,11 +272,33 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScheduledResource(Resource newScheduledResource) {
+	public NotificationChain basicSetScheduledResource(Resource newScheduledResource, NotificationChain msgs) {
 		Resource oldScheduledResource = scheduledResource;
 		scheduledResource = newScheduledResource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__SCHEDULED_RESOURCE, oldScheduledResource, scheduledResource));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__SCHEDULED_RESOURCE, oldScheduledResource, newScheduledResource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScheduledResource(Resource newScheduledResource) {
+		if (newScheduledResource != scheduledResource) {
+			NotificationChain msgs = null;
+			if (scheduledResource != null)
+				msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
+			if (newScheduledResource != null)
+				msgs = ((InternalEObject)newScheduledResource).eInverseAdd(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
+			msgs = basicSetScheduledResource(newScheduledResource, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SchedulerPackage.TASK__SCHEDULED_RESOURCE, newScheduledResource, newScheduledResource));
 	}
 
 	/**
@@ -356,42 +378,13 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void unsetPreviousNext() {
-		// precondition: this task is scheduled
-		Task previous = this.getPreviousTask();
-		Task next = this.getNextTask();
-		Resource resource_asis = this.getScheduledResource();
-
-		// before
-		if ( previous!=null) {
-			previous.setNextTask(next);
-		} else if ( resource_asis!=null){
-			// this task was the first task
-			resource_asis.setFirstTask(next);
-		} 
-
-		this.setPreviousTask(null);
-		// after
-		if ( next!=null) {
-			next.setPreviousTask(previous);
-		} else if ( resource_asis!=null){
-			// this task was the last task
-			resource_asis.setLastTask(previous);
-		} 
-		this.setNextTask(null);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void setPreviousNext(Resource resource, Task previous, Task next) {
+	public void schedule(Resource resource, Task previous, Task next) {
 		// assert previous.next = next.previous
 		// or previous is null and next is first
 		// or next is null and previous is last
 
+		// set previous and next
 		this.unsetPreviousNext();
-		// before: set previous
 		if ( previous==null ) {
 			resource.setFirstTask(this);
 		} else {
@@ -406,26 +399,73 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 			next.setPreviousTask(this);
 			this.setNextTask(next);
 		}	
+		
+		// set the association Task/Resource
+		int position = next==null ? resource.getScheduledTasks().size() : resource.getScheduledTasks().indexOf(next);
+		this.scheduleResource(resource, position);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void scheduleResource(Resource resource) {
+	public void unschedule() {
+		// set previous and next
+		this.unsetPreviousNext();
+		
+		// set the association Task/Resource
+		this.scheduleResource(null, 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	private void unsetPreviousNext() {
+		// precondition: this task is scheduled
+		Task previous = this.getPreviousTask();
+		Task next = this.getNextTask();
+		Resource resource_asis = this.getScheduledResource();
+
+		if ( resource_asis!=null) {
+			// before
+			if ( previous==null ) {
+				// this task was the first task
+				resource_asis.setFirstTask(next);
+			} else {
+				previous.setNextTask(next);
+				this.setPreviousTask(null);
+			} 
+	
+			// after
+			if ( next==null) {
+				// this task was the last task
+				resource_asis.setLastTask(previous);
+			} else {
+				next.setPreviousTask(previous);
+				this.setNextTask(null);
+			}
+		}
+	}
+
+	private void scheduleResource(Resource resource, int position) {
 		Resource resource_asis = this.getScheduledResource();
 		Resource resource_tobe = resource;
 
 		if ( resource_asis != resource_tobe ) {
 			if ( resource_asis!=null ) {
 				resource_asis.setNrScheduledTasks(resource_asis.getNrScheduledTasks()-1);
+				resource_asis.getScheduledTasks().remove(this);
 			}
 
 			if ( resource_tobe!=null ) {
 				resource_tobe.setNrScheduledTasks(resource_tobe.getNrScheduledTasks()+1);
+				resource_tobe.getScheduledTasks().add(position, this);
 			}
 	
 			this.setScheduledResource(resource_tobe);
+		} else {
+			resource.getScheduledTasks().move(position, this);
 		}
 	}
 
@@ -445,6 +485,10 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				if (previousTask != null)
 					msgs = ((InternalEObject)previousTask).eInverseRemove(this, SchedulerPackage.TASK__NEXT_TASK, Task.class, msgs);
 				return basicSetPreviousTask((Task)otherEnd, msgs);
+			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
+				if (scheduledResource != null)
+					msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
+				return basicSetScheduledResource((Resource)otherEnd, msgs);
 			case SchedulerPackage.TASK__SCHEDULE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -465,6 +509,8 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return basicSetNextTask(null, msgs);
 			case SchedulerPackage.TASK__PREVIOUS_TASK:
 				return basicSetPreviousTask(null, msgs);
+			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
+				return basicSetScheduledResource(null, msgs);
 			case SchedulerPackage.TASK__SCHEDULE:
 				return basicSetSchedule(null, msgs);
 		}
@@ -598,14 +644,11 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SchedulerPackage.TASK___UNSET_PREVIOUS_NEXT:
-				unsetPreviousNext();
+			case SchedulerPackage.TASK___SCHEDULE__RESOURCE_TASK_TASK:
+				schedule((Resource)arguments.get(0), (Task)arguments.get(1), (Task)arguments.get(2));
 				return null;
-			case SchedulerPackage.TASK___SET_PREVIOUS_NEXT__RESOURCE_TASK_TASK:
-				setPreviousNext((Resource)arguments.get(0), (Task)arguments.get(1), (Task)arguments.get(2));
-				return null;
-			case SchedulerPackage.TASK___SCHEDULE_RESOURCE__RESOURCE:
-				scheduleResource((Resource)arguments.get(0));
+			case SchedulerPackage.TASK___UNSCHEDULE:
+				unschedule();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

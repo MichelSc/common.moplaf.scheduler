@@ -2,13 +2,13 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
-import com.misc.common.moplaf.common.util.EObjectListDerived;
 import com.misc.common.moplaf.propagator2.impl.ObjectWithPropagatorFunctionsImpl;
 
 import com.misc.common.moplaf.scheduler.Resource;
 import com.misc.common.moplaf.scheduler.Schedule;
 import com.misc.common.moplaf.scheduler.SchedulerPackage;
 import com.misc.common.moplaf.scheduler.Task;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -18,7 +18,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,6 +51,16 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getScheduledTasks() <em>Scheduled Tasks</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScheduledTasks()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Task> scheduledTasks;
 
 	/**
 	 * The cached value of the '{@link #getFirstTask() <em>First Task</em>}' reference.
@@ -183,18 +195,13 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public EList<Task> getScheduledTasks() {
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		EList<Task> new_list = new EObjectListDerived<Task>(Task.class, this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, true);
-		Task current_task = this.getFirstTask();
-		while ( current_task!=null) {
-			new_list.add(current_task);
-			current_task = current_task.getNextTask();
+		if (scheduledTasks == null) {
+			scheduledTasks = new EObjectWithInverseResolvingEList<Task>(Task.class, this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, SchedulerPackage.TASK__SCHEDULED_RESOURCE);
 		}
-		return new_list;
+		return scheduledTasks;
 	}
 
 	/**
@@ -328,6 +335,8 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetSchedule((Schedule)otherEnd, msgs);
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScheduledTasks()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -342,6 +351,8 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				return basicSetSchedule(null, msgs);
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				return ((InternalEList<?>)getScheduledTasks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -400,6 +411,10 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				setSchedule((Schedule)newValue);
 				return;
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				getScheduledTasks().clear();
+				getScheduledTasks().addAll((Collection<? extends Task>)newValue);
+				return;
 			case SchedulerPackage.RESOURCE__FIRST_TASK:
 				setFirstTask((Task)newValue);
 				return;
@@ -426,6 +441,9 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 		switch (featureID) {
 			case SchedulerPackage.RESOURCE__SCHEDULE:
 				setSchedule((Schedule)null);
+				return;
+			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
+				getScheduledTasks().clear();
 				return;
 			case SchedulerPackage.RESOURCE__FIRST_TASK:
 				setFirstTask((Task)null);
@@ -456,7 +474,7 @@ public class ResourceImpl extends ObjectWithPropagatorFunctionsImpl implements R
 			case SchedulerPackage.RESOURCE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case SchedulerPackage.RESOURCE__SCHEDULED_TASKS:
-				return !getScheduledTasks().isEmpty();
+				return scheduledTasks != null && !scheduledTasks.isEmpty();
 			case SchedulerPackage.RESOURCE__FIRST_TASK:
 				return firstTask != null;
 			case SchedulerPackage.RESOURCE__LAST_TASK:
