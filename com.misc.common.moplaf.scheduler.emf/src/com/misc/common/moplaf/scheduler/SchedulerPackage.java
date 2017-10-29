@@ -733,6 +733,15 @@ public interface SchedulerPackage extends EPackage {
 	int MOVE_SCHEDULE__CURRENT = LocalSearchPackage.MOVE__CURRENT;
 
 	/**
+	 * The feature id for the '<em><b>Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_SCHEDULE__SOLUTION = LocalSearchPackage.MOVE__SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -885,6 +894,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int MOVE_TASK__CURRENT = MOVE_SCHEDULE__CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_TASK__SOLUTION = MOVE_SCHEDULE__SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
@@ -1059,6 +1077,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_AFTER__CURRENT = MOVE_TASK__CURRENT;
 
 	/**
+	 * The feature id for the '<em><b>Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_AFTER__SOLUTION = MOVE_TASK__SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1231,6 +1258,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULE_BEFORE__CURRENT = MOVE_TASK__CURRENT;
 
 	/**
+	 * The feature id for the '<em><b>Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULE_BEFORE__SOLUTION = MOVE_TASK__SOLUTION;
+
+	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1401,6 +1437,15 @@ public interface SchedulerPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNSCHEDULE__CURRENT = MOVE_SCHEDULE__CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Solution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNSCHEDULE__SOLUTION = MOVE_SCHEDULE__SOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Task To Schedule</b></em>' reference.

@@ -50,15 +50,12 @@
           ecoreFeature="ecore:EAttribute scheduler.ecore#//Task/Description"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Task/Schedule"/>
       <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Task/Name"/>
-      <genOperations ecoreOperation="scheduler.ecore#//Task/unsetPreviousNext"/>
-      <genOperations ecoreOperation="scheduler.ecore#//Task/setPreviousNext">
-        <genParameters ecoreParameter="scheduler.ecore#//Task/setPreviousNext/resource"/>
-        <genParameters ecoreParameter="scheduler.ecore#//Task/setPreviousNext/previous"/>
-        <genParameters ecoreParameter="scheduler.ecore#//Task/setPreviousNext/next"/>
+      <genOperations ecoreOperation="scheduler.ecore#//Task/schedule">
+        <genParameters ecoreParameter="scheduler.ecore#//Task/schedule/resource"/>
+        <genParameters ecoreParameter="scheduler.ecore#//Task/schedule/previous"/>
+        <genParameters ecoreParameter="scheduler.ecore#//Task/schedule/next"/>
       </genOperations>
-      <genOperations ecoreOperation="scheduler.ecore#//Task/scheduleResource">
-        <genParameters ecoreParameter="scheduler.ecore#//Task/scheduleResource/resource"/>
-      </genOperations>
+      <genOperations ecoreOperation="scheduler.ecore#//Task/unschedule"/>
     </genClasses>
     <genClasses image="false" ecoreClass="scheduler.ecore#//MoveSchedule" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description">
       <genFeatures createChild="false" propertyCategory="20 Scheduler" propertySortChoices="true"
@@ -67,7 +64,8 @@
     <genClasses image="false" ecoreClass="scheduler.ecore#//MoveTask" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description">
       <genFeatures createChild="false" propertyCategory="20 Scheduler" propertySortChoices="true"
           ecoreFeature="ecore:EReference scheduler.ecore#//MoveTask/InsertionPoint"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//MoveTask/Resource"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="20 Scheduler"
+          propertySortChoices="true" ecoreFeature="ecore:EReference scheduler.ecore#//MoveTask/Resource"/>
     </genClasses>
     <genClasses image="false" ecoreClass="scheduler.ecore#//ScheduleAfter" labelFeature="../../com.misc.common.moplaf.localsearch.emf/model/localsearch.genmodel#//localsearch/Move/Description"/>
     <genClasses image="false" ecoreClass="scheduler.ecore#//ScheduleBefore"/>
