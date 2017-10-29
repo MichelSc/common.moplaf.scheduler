@@ -90,7 +90,7 @@ public class MoveTaskItemProvider extends MoveScheduleItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
+				 getString("_UI__20SchedulerPropertyCategory"),
 				 null));
 	}
 
