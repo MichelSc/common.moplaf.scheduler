@@ -108,13 +108,31 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__CURRENT_SOLUTION_NR = LocalSearchPackage.STRATEGY__CURRENT_SOLUTION_NR;
 
 	/**
+	 * The feature id for the '<em><b>Max Nr Solutions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__MAX_NR_SOLUTIONS = LocalSearchPackage.STRATEGY__MAX_NR_SOLUTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__NAME = LocalSearchPackage.STRATEGY_FEATURE_COUNT + 0;
+	int SCHEDULER__NAME = LocalSearchPackage.STRATEGY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Select Chance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__SELECT_CHANCE = LocalSearchPackage.STRATEGY__SELECT_CHANCE;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
@@ -123,7 +141,7 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__SCHEDULES = LocalSearchPackage.STRATEGY_FEATURE_COUNT + 1;
+	int SCHEDULER__SCHEDULES = LocalSearchPackage.STRATEGY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Scheduler</em>' class.
@@ -132,25 +150,34 @@ public interface SchedulerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER_FEATURE_COUNT = LocalSearchPackage.STRATEGY_FEATURE_COUNT + 2;
+	int SCHEDULER_FEATURE_COUNT = LocalSearchPackage.STRATEGY_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Select Solutions To Improve</em>' operation.
+	 * The operation id for the '<em>Select Solution To Improve</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___SELECT_SOLUTIONS_TO_IMPROVE = LocalSearchPackage.STRATEGY___SELECT_SOLUTIONS_TO_IMPROVE;
+	int SCHEDULER___SELECT_SOLUTION_TO_IMPROVE = LocalSearchPackage.STRATEGY___SELECT_SOLUTION_TO_IMPROVE;
 
 	/**
-	 * The operation id for the '<em>Prune Solution</em>' operation.
+	 * The operation id for the '<em>Run</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___PRUNE_SOLUTION = LocalSearchPackage.STRATEGY___PRUNE_SOLUTION;
+	int SCHEDULER___RUN = LocalSearchPackage.STRATEGY___RUN;
+
+	/**
+	 * The operation id for the '<em>Prune</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___PRUNE = LocalSearchPackage.STRATEGY___PRUNE;
 
 	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
@@ -1514,17 +1541,6 @@ public interface SchedulerPackage extends EPackage {
 	EReference getScheduler_Schedules();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Scheduler#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.misc.common.moplaf.scheduler.Scheduler#getName()
-	 * @see #getScheduler()
-	 * @generated
-	 */
-	EAttribute getScheduler_Name();
-
-	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Scheduler#constructScore() <em>Construct Score</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1924,14 +1940,6 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCHEDULER__SCHEDULES = eINSTANCE.getScheduler_Schedules();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULER__NAME = eINSTANCE.getScheduler_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Construct Score</b></em>' operation.

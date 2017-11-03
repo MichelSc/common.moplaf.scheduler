@@ -173,7 +173,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * @generated
 	 */
 	public EReference getScheduler_Schedules() {
-		return (EReference)schedulerEClass.getEStructuralFeatures().get(1);
+		return (EReference)schedulerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -460,15 +460,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getScheduler_Name() {
-		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getScheduleAfter() {
 		return scheduleAfterEClass;
 	}
@@ -520,7 +511,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		// Create classes and their features
 		schedulerEClass = createEClass(SCHEDULER);
-		createEAttribute(schedulerEClass, SCHEDULER__NAME);
 		createEReference(schedulerEClass, SCHEDULER__SCHEDULES);
 		createEOperation(schedulerEClass, SCHEDULER___CONSTRUCT_SCORE);
 		createEOperation(schedulerEClass, SCHEDULER___GENERATE_TASKS__SCHEDULE);
@@ -610,7 +600,6 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getScheduler_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScheduler_Schedules(), this.getSchedule(), null, "Schedules", null, 0, -1, Scheduler.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getScheduler__ConstructScore(), theLocalSearchPackage.getScore(), "constructScore", 0, 1, IS_UNIQUE, IS_ORDERED);

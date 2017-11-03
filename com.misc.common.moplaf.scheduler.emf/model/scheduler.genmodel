@@ -9,7 +9,6 @@
   <genPackages prefix="Scheduler" basePackage="com.misc.common.moplaf" disposableProviderFactory="true"
       ecorePackage="scheduler.ecore#/">
     <genClasses image="false" ecoreClass="scheduler.ecore#//Scheduler">
-      <genFeatures createChild="false" propertyCategory="10 Scheduler" ecoreFeature="ecore:EAttribute scheduler.ecore#//Scheduler/Name"/>
       <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference scheduler.ecore#//Scheduler/Schedules"/>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/constructScore"/>
       <genOperations ecoreOperation="scheduler.ecore#//Scheduler/generateTasks">
