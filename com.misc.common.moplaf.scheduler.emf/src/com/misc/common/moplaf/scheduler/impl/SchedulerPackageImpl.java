@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler.impl;
 
+import com.misc.common.moplaf.job.JobPackage;
 import com.misc.common.moplaf.localsearch.LocalSearchPackage;
 import com.misc.common.moplaf.propagator2.PropagatorPackage;
 import com.misc.common.moplaf.scheduler.MoveSchedule;
@@ -142,6 +143,7 @@ public class SchedulerPackageImpl extends EPackageImpl implements SchedulerPacka
 		// Initialize simple dependencies
 		LocalSearchPackage.eINSTANCE.eClass();
 		PropagatorPackage.eINSTANCE.eClass();
+		JobPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSchedulerPackage.createPackageContents();

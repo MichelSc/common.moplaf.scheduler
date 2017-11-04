@@ -2,6 +2,7 @@
  */
 package com.misc.common.moplaf.scheduler.provider;
 
+import com.misc.common.moplaf.job.provider.JobEditPlugin;
 import com.misc.common.moplaf.localsearch.provider.LocalsearchEditPlugin;
 import com.misc.common.moplaf.propagator2.provider.PropagatorEditPlugin;
 
@@ -43,6 +44,7 @@ public final class SchedulerEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     LocalsearchEditPlugin.INSTANCE,
 		     PropagatorEditPlugin.INSTANCE,
+		     JobEditPlugin.INSTANCE,
 		   });
 	}
 

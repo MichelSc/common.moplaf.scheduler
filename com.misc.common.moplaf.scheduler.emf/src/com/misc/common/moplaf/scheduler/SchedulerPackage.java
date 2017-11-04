@@ -72,6 +72,69 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER = 0;
 
 	/**
+	 * The feature id for the '<em><b>Run Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__RUN_FEEDBACK = LocalSearchPackage.STRATEGY__RUN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__CANCEL_FEEDBACK = LocalSearchPackage.STRATEGY__CANCEL_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Reset Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__RESET_FEEDBACK = LocalSearchPackage.STRATEGY__RESET_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Canceled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__CANCELED = LocalSearchPackage.STRATEGY__CANCELED;
+
+	/**
+	 * The feature id for the '<em><b>Return Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__RETURN_SUCCESS = LocalSearchPackage.STRATEGY__RETURN_SUCCESS;
+
+	/**
+	 * The feature id for the '<em><b>Return Feedback</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__RETURN_FEEDBACK = LocalSearchPackage.STRATEGY__RETURN_FEEDBACK;
+
+	/**
+	 * The feature id for the '<em><b>Return Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__RETURN_INFORMATION = LocalSearchPackage.STRATEGY__RETURN_INFORMATION;
+
+	/**
 	 * The feature id for the '<em><b>Improvments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126,13 +189,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__NAME = LocalSearchPackage.STRATEGY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Select Chance</b></em>' attribute.
+	 * The feature id for the '<em><b>Chance Select Best</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__SELECT_CHANCE = LocalSearchPackage.STRATEGY__SELECT_CHANCE;
+	int SCHEDULER__CHANCE_SELECT_BEST = LocalSearchPackage.STRATEGY__CHANCE_SELECT_BEST;
+
+	/**
+	 * The feature id for the '<em><b>Chance Select Worst</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__CHANCE_SELECT_WORST = LocalSearchPackage.STRATEGY__CHANCE_SELECT_WORST;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
@@ -153,13 +225,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER_FEATURE_COUNT = LocalSearchPackage.STRATEGY_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Select Solution To Improve</em>' operation.
+	 * The operation id for the '<em>Copy Params</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___SELECT_SOLUTION_TO_IMPROVE = LocalSearchPackage.STRATEGY___SELECT_SOLUTION_TO_IMPROVE;
+	int SCHEDULER___COPY_PARAMS__RUNPARAMS = LocalSearchPackage.STRATEGY___COPY_PARAMS__RUNPARAMS;
+
+	/**
+	 * The operation id for the '<em>Reset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___RESET = LocalSearchPackage.STRATEGY___RESET;
 
 	/**
 	 * The operation id for the '<em>Run</em>' operation.
@@ -171,13 +252,85 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER___RUN = LocalSearchPackage.STRATEGY___RUN;
 
 	/**
-	 * The operation id for the '<em>Prune</em>' operation.
+	 * The operation id for the '<em>Run</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER___PRUNE = LocalSearchPackage.STRATEGY___PRUNE;
+	int SCHEDULER___RUN__RUNCONTEXT = LocalSearchPackage.STRATEGY___RUN__RUNCONTEXT;
+
+	/**
+	 * The operation id for the '<em>Cancel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___CANCEL = LocalSearchPackage.STRATEGY___CANCEL;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___SET_PROGRESS__STRING_FLOAT = LocalSearchPackage.STRATEGY___SET_PROGRESS__STRING_FLOAT;
+
+	/**
+	 * The operation id for the '<em>Set Progress</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___SET_PROGRESS__PROGRESSFEEDBACK = LocalSearchPackage.STRATEGY___SET_PROGRESS__PROGRESSFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Get Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___GET_RETURN = LocalSearchPackage.STRATEGY___GET_RETURN;
+
+	/**
+	 * The operation id for the '<em>Set Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___SET_RETURN__RETURNFEEDBACK = LocalSearchPackage.STRATEGY___SET_RETURN__RETURNFEEDBACK;
+
+	/**
+	 * The operation id for the '<em>Construct Params</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___CONSTRUCT_PARAMS = LocalSearchPackage.STRATEGY___CONSTRUCT_PARAMS;
+
+	/**
+	 * The operation id for the '<em>Select Good Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___SELECT_GOOD_SOLUTION = LocalSearchPackage.STRATEGY___SELECT_GOOD_SOLUTION;
+
+	/**
+	 * The operation id for the '<em>Select Bad Solution</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___SELECT_BAD_SOLUTION = LocalSearchPackage.STRATEGY___SELECT_BAD_SOLUTION;
 
 	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
