@@ -54,6 +54,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 			addScheduledResourcePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addScheduledPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -169,6 +170,28 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 	}
 
 	/**
+	 * This adds a property descriptor for the Scheduled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addScheduledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Task_Scheduled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Task_Scheduled_feature", "_UI_Task_type"),
+				 SchedulerPackage.Literals.TASK__SCHEDULED,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Task.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -208,6 +231,7 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 			case SchedulerPackage.TASK__DESCRIPTION:
 			case SchedulerPackage.TASK__NAME:
+			case SchedulerPackage.TASK__SCHEDULED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

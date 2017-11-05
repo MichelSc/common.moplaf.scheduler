@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#isScheduled <em>Scheduled</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +102,16 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isScheduled() <em>Scheduled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isScheduled()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SCHEDULED_EDEFAULT = false;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -378,6 +389,14 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	public boolean isScheduled() {
+		return this.getScheduledResource()!=null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	public void schedule(Resource resource, Task previous, Task next) {
 		// assert previous.next = next.previous
 		// or previous is null and next is first
@@ -554,6 +573,8 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return getSchedule();
 			case SchedulerPackage.TASK__NAME:
 				return getName();
+			case SchedulerPackage.TASK__SCHEDULED:
+				return isScheduled();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -632,6 +653,8 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return getSchedule() != null;
 			case SchedulerPackage.TASK__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.TASK__SCHEDULED:
+				return isScheduled() != SCHEDULED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -19,6 +19,7 @@ import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Task#isScheduled <em>Scheduled</em>}</li>
  * </ul>
  *
  * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTask()
@@ -178,6 +179,21 @@ public interface Task extends ObjectWithPropagatorFunctions {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Scheduled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scheduled</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Scheduled</em>' attribute.
+	 * @see com.misc.common.moplaf.scheduler.SchedulerPackage#getTask_Scheduled()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	boolean isScheduled();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -135,13 +135,13 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__RETURN_INFORMATION = LocalSearchPackage.STRATEGY__RETURN_INFORMATION;
 
 	/**
-	 * The feature id for the '<em><b>Improvments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Improvements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__IMPROVMENTS = LocalSearchPackage.STRATEGY__IMPROVMENTS;
+	int SCHEDULER__IMPROVEMENTS = LocalSearchPackage.STRATEGY__IMPROVEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Best Solution</b></em>' reference.
@@ -189,22 +189,22 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER__NAME = LocalSearchPackage.STRATEGY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Chance Select Best</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Best Chance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__CHANCE_SELECT_BEST = LocalSearchPackage.STRATEGY__CHANCE_SELECT_BEST;
+	int SCHEDULER__SELECT_BEST_CHANCE = LocalSearchPackage.STRATEGY__SELECT_BEST_CHANCE;
 
 	/**
-	 * The feature id for the '<em><b>Chance Select Worst</b></em>' attribute.
+	 * The feature id for the '<em><b>Select Worst Chance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULER__CHANCE_SELECT_WORST = LocalSearchPackage.STRATEGY__CHANCE_SELECT_WORST;
+	int SCHEDULER__SELECT_WORST_CHANCE = LocalSearchPackage.STRATEGY__SELECT_WORST_CHANCE;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' reference list.
@@ -750,13 +750,22 @@ public interface SchedulerPackage extends EPackage {
 	int TASK__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Scheduled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__SCHEDULED = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 6;
+	int TASK_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTIONS_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function</em>' operation.
@@ -1960,6 +1969,17 @@ public interface SchedulerPackage extends EPackage {
 	EAttribute getTask_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.misc.common.moplaf.scheduler.Task#isScheduled <em>Scheduled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Scheduled</em>'.
+	 * @see com.misc.common.moplaf.scheduler.Task#isScheduled()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EAttribute getTask_Scheduled();
+
+	/**
 	 * Returns the meta object for the '{@link com.misc.common.moplaf.scheduler.Task#schedule(com.misc.common.moplaf.scheduler.Resource, com.misc.common.moplaf.scheduler.Task, com.misc.common.moplaf.scheduler.Task) <em>Schedule</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2300,6 +2320,14 @@ public interface SchedulerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK__NAME = eINSTANCE.getTask_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Scheduled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK__SCHEDULED = eINSTANCE.getTask_Scheduled();
 
 		/**
 		 * The meta object literal for the '<em><b>Schedule</b></em>' operation.
