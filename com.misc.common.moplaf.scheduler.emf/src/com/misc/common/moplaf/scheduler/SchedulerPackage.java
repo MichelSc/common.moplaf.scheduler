@@ -333,6 +333,15 @@ public interface SchedulerPackage extends EPackage {
 	int SCHEDULER___SELECT_BAD_SOLUTION = LocalSearchPackage.STRATEGY___SELECT_BAD_SOLUTION;
 
 	/**
+	 * The operation id for the '<em>Sort Solutions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___SORT_SOLUTIONS = LocalSearchPackage.STRATEGY___SORT_SOLUTIONS;
+
+	/**
 	 * The operation id for the '<em>Construct Score</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
