@@ -31,12 +31,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getPreviousTask <em>Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getScheduledResource <em>Scheduled Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.impl.TaskImpl#isScheduled <em>Scheduled</em>}</li>
  * </ul>
  *
@@ -74,16 +74,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	protected Resource scheduledResource;
 
 	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,6 +92,16 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #isScheduled() <em>Scheduled</em>}' attribute.
@@ -496,6 +496,10 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case SchedulerPackage.TASK__SCHEDULE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetSchedule((Schedule)otherEnd, msgs);
 			case SchedulerPackage.TASK__NEXT_TASK:
 				if (nextTask != null)
 					msgs = ((InternalEObject)nextTask).eInverseRemove(this, SchedulerPackage.TASK__PREVIOUS_TASK, Task.class, msgs);
@@ -508,10 +512,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				if (scheduledResource != null)
 					msgs = ((InternalEObject)scheduledResource).eInverseRemove(this, SchedulerPackage.RESOURCE__SCHEDULED_TASKS, Resource.class, msgs);
 				return basicSetScheduledResource((Resource)otherEnd, msgs);
-			case SchedulerPackage.TASK__SCHEDULE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSchedule((Schedule)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -524,14 +524,14 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case SchedulerPackage.TASK__SCHEDULE:
+				return basicSetSchedule(null, msgs);
 			case SchedulerPackage.TASK__NEXT_TASK:
 				return basicSetNextTask(null, msgs);
 			case SchedulerPackage.TASK__PREVIOUS_TASK:
 				return basicSetPreviousTask(null, msgs);
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 				return basicSetScheduledResource(null, msgs);
-			case SchedulerPackage.TASK__SCHEDULE:
-				return basicSetSchedule(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -558,6 +558,8 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SchedulerPackage.TASK__SCHEDULE:
+				return getSchedule();
 			case SchedulerPackage.TASK__NEXT_TASK:
 				if (resolve) return getNextTask();
 				return basicGetNextTask();
@@ -567,12 +569,10 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 				if (resolve) return getScheduledResource();
 				return basicGetScheduledResource();
-			case SchedulerPackage.TASK__DESCRIPTION:
-				return getDescription();
-			case SchedulerPackage.TASK__SCHEDULE:
-				return getSchedule();
 			case SchedulerPackage.TASK__NAME:
 				return getName();
+			case SchedulerPackage.TASK__DESCRIPTION:
+				return getDescription();
 			case SchedulerPackage.TASK__SCHEDULED:
 				return isScheduled();
 		}
@@ -587,6 +587,9 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SchedulerPackage.TASK__SCHEDULE:
+				setSchedule((Schedule)newValue);
+				return;
 			case SchedulerPackage.TASK__NEXT_TASK:
 				setNextTask((Task)newValue);
 				return;
@@ -595,9 +598,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return;
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 				setScheduledResource((Resource)newValue);
-				return;
-			case SchedulerPackage.TASK__SCHEDULE:
-				setSchedule((Schedule)newValue);
 				return;
 			case SchedulerPackage.TASK__NAME:
 				setName((String)newValue);
@@ -614,6 +614,9 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SchedulerPackage.TASK__SCHEDULE:
+				setSchedule((Schedule)null);
+				return;
 			case SchedulerPackage.TASK__NEXT_TASK:
 				setNextTask((Task)null);
 				return;
@@ -622,9 +625,6 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 				return;
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 				setScheduledResource((Resource)null);
-				return;
-			case SchedulerPackage.TASK__SCHEDULE:
-				setSchedule((Schedule)null);
 				return;
 			case SchedulerPackage.TASK__NAME:
 				setName(NAME_EDEFAULT);
@@ -641,18 +641,18 @@ public class TaskImpl extends ObjectWithPropagatorFunctionsImpl implements Task 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SchedulerPackage.TASK__SCHEDULE:
+				return getSchedule() != null;
 			case SchedulerPackage.TASK__NEXT_TASK:
 				return nextTask != null;
 			case SchedulerPackage.TASK__PREVIOUS_TASK:
 				return previousTask != null;
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
 				return scheduledResource != null;
-			case SchedulerPackage.TASK__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
-			case SchedulerPackage.TASK__SCHEDULE:
-				return getSchedule() != null;
 			case SchedulerPackage.TASK__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SchedulerPackage.TASK__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 			case SchedulerPackage.TASK__SCHEDULED:
 				return isScheduled() != SCHEDULED_EDEFAULT;
 		}

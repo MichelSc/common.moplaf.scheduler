@@ -52,8 +52,8 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 			addNextTaskPropertyDescriptor(object);
 			addPreviousTaskPropertyDescriptor(object);
 			addScheduledResourcePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 			addScheduledPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -229,8 +229,8 @@ public class TaskItemProvider extends ObjectWithPropagatorFunctionsItemProvider 
 
 		switch (notification.getFeatureID(Task.class)) {
 			case SchedulerPackage.TASK__SCHEDULED_RESOURCE:
-			case SchedulerPackage.TASK__DESCRIPTION:
 			case SchedulerPackage.TASK__NAME:
+			case SchedulerPackage.TASK__DESCRIPTION:
 			case SchedulerPackage.TASK__SCHEDULED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -13,12 +13,12 @@ import com.misc.common.moplaf.propagator2.ObjectWithPropagatorFunctions;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Task#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getNextTask <em>Next Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getPreviousTask <em>Previous Task</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getScheduledResource <em>Scheduled Resource</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Task#getDescription <em>Description</em>}</li>
- *   <li>{@link com.misc.common.moplaf.scheduler.Task#getSchedule <em>Schedule</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#getName <em>Name</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.scheduler.Task#getDescription <em>Description</em>}</li>
  *   <li>{@link com.misc.common.moplaf.scheduler.Task#isScheduled <em>Scheduled</em>}</li>
  * </ul>
  *
