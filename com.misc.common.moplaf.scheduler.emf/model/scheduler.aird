@@ -80,6 +80,13 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_0IC0sMLjEeeYx8RjuzoF3A" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <labelFormat>italic</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='Abstract%20EClass']"/>
+        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_MKkkoHhpEeem-fEfK1ad5g" source="GMF_DIAGRAMS">
@@ -343,17 +350,16 @@
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N7B1oHhpEeem-fEfK1ad5g" name="Scheduler" tooltipText="" outgoingEdges="_LWnbQLY6EeeNPLFSfb0d6w" incomingEdges="_G_lwoLY6EeeNPLFSfb0d6w" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N7B1oHhpEeem-fEfK1ad5g" name="Scheduler" tooltipText="&#xA;ERROR : The feature 'eAllSuperTypes' of 'EClass{platform:/resource/com.misc.common.moplaf.scheduler.emf/model/scheduler.ecore#//Scheduler}' contains an unresolved proxy 'EClass{platform:/resource/com.misc.common.moplaf.job.emf/model/job.ecore#//Run}'" outgoingEdges="_LWnbQLY6EeeNPLFSfb0d6w" incomingEdges="_G_lwoLY6EeeNPLFSfb0d6w" width="12" height="10">
       <target xmi:type="ecore:EClass" href="scheduler.ecore#//Scheduler"/>
       <semanticElements xmi:type="ecore:EClass" href="scheduler.ecore#//Scheduler"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_0yhjQLY5EeeNPLFSfb0d6w" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" backgroundColor="227,164,156" foregroundColor="227,164,156">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_0IC0scLjEeeYx8RjuzoF3A" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" labelColor="239,41,41" description="_0IC0sMLjEeeYx8RjuzoF3A" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" backgroundColor="227,164,156" foregroundColor="227,164,156">
         <customFeatures>backgroundColor</customFeatures>
         <customFeatures>foregroundColor</customFeatures>
         <labelFormat>italic</labelFormat>
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_yAQxkKhEEeefHcOEkF7e9A" name="constructScore() : Score" tooltipText="constructScore() : Score">
